@@ -5,10 +5,21 @@
 @use "variables" as v;
 
 .navbar {
-  box-shadow: none;
-  border-bottom: 1px solid var(--global-divider-color);
-  background-color: var(--global-bg-color);
-  opacity: 0.95;
+  box-shadow: 0 1px 0 0 var(--global-divider-color);
+  border-bottom: none;
+  background-color: var(--global-nav-bg-color);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+}
+
+// Fix dropdown caret arrow – prevent it from being hidden by the
+// underline animation pseudo-element defined in _typography.scss
+.navbar .nav-link.dropdown-toggle::after {
+  display: inline-block;
+  position: static;
+  width: auto;
+  height: auto;
+  background-color: transparent;
 }
 
 .navbar .dropdown-menu,
@@ -67,7 +78,7 @@
     }
   }
 
-  .navbar-nav .nav-item.active > .nav-link {
+  .navbar-nav .nav-item.active>.nav-link {
     background-color: inherit;
     font-weight: bolder;
     color: var(--global-theme-color);

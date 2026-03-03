@@ -4,13 +4,18 @@
 
 @use "variables" as v;
 
-p,
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
+h6 {
+  color: var(--global-text-color);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+p,
 em,
 div,
 li,
@@ -24,6 +29,7 @@ hr {
 }
 
 table {
+
   td,
   th {
     font-size: 1rem;
@@ -38,10 +44,28 @@ table {
 a,
 table.table a {
   color: var(--global-theme-color);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--global-theme-color);
+    transition: width 0.3s ease;
+  }
 
   &:hover {
     color: var(--global-theme-color);
-    text-decoration: underline;
+    text-decoration: none;
+
+    &::after {
+      width: 100%;
+    }
   }
 
   &:hover:after :not(.nav-item.dropdown) {
@@ -51,6 +75,7 @@ table.table a {
 
 .table-dark {
   background-color: transparent;
+
   &.table-bordered {
     border: 1px solid var(--global-divider-color) !important;
   }
