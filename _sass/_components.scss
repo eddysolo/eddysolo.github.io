@@ -271,3 +271,58 @@ ul.task-list input[type="checkbox"] {
 .d2h-diff-table {
   position: relative;
 }
+
+/*******************************************************************************
+ * Glass-box Sections (News + Publications)
+ ******************************************************************************/
+
+.glass-section {
+  background: rgba(255, 255, 255, 0.62);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.07), 0 1px 4px rgba(0, 0, 0, 0.04);
+  padding: 0;
+  margin-bottom: 2.5rem;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1), 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+}
+
+html[data-theme="dark"] .glass-section {
+  background: rgba(30, 35, 46, 0.72);
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.glass-section-title {
+  margin: 0;
+  padding: 1.2rem 1.8rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      color: var(--global-theme-color) !important;
+    }
+  }
+}
+
+html[data-theme="dark"] .glass-section-title {
+  background: rgba(255, 255, 255, 0.04);
+  border-bottom-color: rgba(255, 255, 255, 0.07);
+}
+
+.glass-section-body {
+  padding: 1.5rem 1.8rem;
+}

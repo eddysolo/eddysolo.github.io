@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Amin Mirzaei
-permalink: /team/amin-mirzaei/
+title: Bar Ben-Zino
+permalink: /team/bar-ben-zino/
 description: Core Researcher
 ---
 
-# Amin Mirzaei
+# Bar Ben-Zino
 
 Researcher at the AI2MR Lab.

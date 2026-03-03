@@ -1,0 +1,48 @@
+<div class="node-diagram-wrapper">
+  <svg class="node-diagram" viewBox="0 0 500 320" xmlns="http://www.w3.org/2000/svg" aria-label="Research focus areas">
+    <!-- Connecting lines -->
+    <g class="nd-lines" stroke="#c8d8e8" stroke-width="1.5" stroke-dasharray="4 4">
+      <!-- Center to nodes -->
+      <line x1="250" y1="160" x2="250" y2="55"/>
+      <line x1="250" y1="160" x2="140" y2="255"/>
+      <line x1="250" y1="160" x2="360" y2="255"/>
+      <!-- Satellite lines -->
+      <line x1="250" y1="55"  x2="170" y2="28"/><line x1="250" y1="55"  x2="330" y2="28"/>
+      <line x1="250" y1="55"  x2="195" y2="80"/><line x1="250" y1="55"  x2="305" y2="80"/>
+      <line x1="140" y1="255" x2="70"  y2="230"/><line x1="140" y1="255" x2="80"  y2="285"/>
+      <line x1="140" y1="255" x2="160" y2="300"/><line x1="140" y1="255" x2="120" y2="200"/>
+      <line x1="360" y1="255" x2="430" y2="230"/><line x1="360" y1="255" x2="420" y2="285"/>
+      <line x1="360" y1="255" x2="340" y2="300"/><line x1="360" y1="255" x2="380" y2="200"/>
+    </g>
+
+    <!-- Satellite dots -->
+    <g class="nd-satellites" fill="var(--global-theme-color)" opacity="0.55">
+      <circle cx="170" cy="28"  r="5"/><circle cx="330" cy="28"  r="5"/>
+      <circle cx="195" cy="80"  r="4"/><circle cx="305" cy="80"  r="4"/>
+      <circle cx="70"  cy="230" r="5"/><circle cx="80"  cy="285" r="4"/>
+      <circle cx="160" cy="300" r="5"/><circle cx="120" cy="200" r="4"/>
+      <circle cx="430" cy="230" r="5"/><circle cx="420" cy="285" r="4"/>
+      <circle cx="340" cy="300" r="5"/><circle cx="380" cy="200" r="4"/>
+    </g>
+
+    <!-- Hub node - Imaging -->
+    <circle cx="250" cy="160" r="22" fill="var(--global-theme-color)" opacity="0.15" class="nd-pulse"/>
+    <circle cx="250" cy="160" r="13" fill="var(--global-theme-color)"/>
+    <text x="250" y="148" text-anchor="middle" class="nd-label" font-weight="700">Imaging</text>
+
+    <!-- Top node - Physics -->
+    <circle cx="250" cy="55" r="18" fill="#2ecc71" opacity="0.15" class="nd-pulse"/>
+    <circle cx="250" cy="55" r="11" fill="#2ecc71"/>
+    <text x="250" y="38" text-anchor="middle" class="nd-label" font-weight="700">Physics</text>
+
+    <!-- Bottom-left node - Clinical -->
+    <circle cx="140" cy="255" r="18" fill="#e67e22" opacity="0.15" class="nd-pulse"/>
+    <circle cx="140" cy="255" r="11" fill="#e67e22"/>
+    <text x="112" y="278" text-anchor="middle" class="nd-label" font-weight="700">Clinical</text>
+
+    <!-- Bottom-right node - Algorithmic -->
+    <circle cx="360" cy="255" r="18" fill="#9b59b6" opacity="0.15" class="nd-pulse"/>
+    <circle cx="360" cy="255" r="11" fill="#9b59b6"/>
+    <text x="388" y="278" text-anchor="middle" class="nd-label" font-weight="700">Algorithmic</text>
+  </svg>
+</div>

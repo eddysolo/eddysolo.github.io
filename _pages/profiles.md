@@ -5,6 +5,7 @@ title: Team
 description: members of the lab or group
 nav: true
 nav_order: 1
+hero_image: assets/img/mri_hero.jpg
 
 profiles:
   - name: Martin Becker

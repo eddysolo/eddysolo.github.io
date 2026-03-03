@@ -37,10 +37,14 @@ layout: default
 
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
-      <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
-      </h2>
-      {% include news.liquid limit=true %}
+      <div class="glass-section mt-5">
+        <h2 class="glass-section-title">
+          <a href="{{ '/news/' | relative_url }}" style="color: inherit">📣 News</a>
+        </h2>
+        <div class="glass-section-body">
+          {% include news.liquid limit=true %}
+        </div>
+      </div>
     {% endif %}
 
     <!-- Latest posts -->
@@ -53,10 +57,14 @@ layout: default
 
     <!-- Selected papers -->
     {% if page.selected_papers %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
-      </h2>
-      {% include selected_papers.liquid %}
+      <div class="glass-section mt-5">
+        <h2 class="glass-section-title">
+          <a href="{{ '/publications/' | relative_url }}" style="color: inherit">📄 Selected Publications</a>
+        </h2>
+        <div class="glass-section-body">
+          {% include selected_papers.liquid %}
+        </div>
+      </div>
     {% endif %}
 
     <!-- Social -->
