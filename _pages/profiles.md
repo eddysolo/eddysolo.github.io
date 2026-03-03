@@ -8,28 +8,28 @@ nav_order: 1
 hero_image: assets/img/mri_hero.jpg
 
 profiles:
-  - name: Martin Becker
+  - name: Eddy Solomon
     role: Head of AI2MR Lab
     image: prof_pic.jpg
-    url: /team/martin-becker/
-  - name: Amin Mirzaei
-    role: Researcher
-    image: prof_pic.jpg
-    url: /team/amin-mirzaei/
+    url: /team/eddysolo/
+  - name: Bar Ben-Zino
+    role: Core Researcher
+    image: bar_ben_zino.jpg
+    url: /team/bar-ben-zino/
   - name: Bjarne Hiller
     role: Researcher
-    image: prof_pic.jpg
+    image: anonymous.png
     url: /team/bjarne-hiller/
   - name: Felix Blanke
     role: Researcher
-    image: prof_pic.jpg
+    image: anonymous.png
     url: /team/felix-blanke/
   - name: Kutalmis Coskun
     role: Researcher
-    image: prof_pic.jpg
+    image: anonymous.png
     url: /team/kutalmis-coskun/
   - name: Tom Siegl
     role: Researcher
-    image: prof_pic.jpg
+    image: anonymous.png
     url: /team/tom-siegl/
 ---

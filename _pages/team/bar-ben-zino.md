@@ -2,7 +2,7 @@
 layout: page
 title: Bar Ben-Zino
 permalink: /team/bar-ben-zino/
-description: Core Researcher
+description: Researcher
 ---
 
 # Bar Ben-Zino
