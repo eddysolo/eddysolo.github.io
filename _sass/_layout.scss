@@ -74,20 +74,33 @@ body.sticky-bottom-footer {
   margin-left: -50vw;
   margin-right: -50vw;
   margin-top: -3rem;
-  height: 360px;
+  height: 380px;
   background-size: cover;
   background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
   overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: 1;
+    pointer-events: none;
+  }
 
   &::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.52));
+    background: linear-gradient(135deg, rgba(0, 150, 199, 0.65) 0%, rgba(17, 20, 36, 0.85) 100%);
+    z-index: 0;
   }
 }
 
@@ -161,11 +174,42 @@ body.sticky-bottom-footer {
 
 .fade-in-hidden {
   opacity: 0;
-  transform: translateY(22px);
-  transition: opacity 0.55s ease, transform 0.55s ease;
+  transform: translateY(30px) scale(0.98);
+  filter: blur(4px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), filter 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .fade-in-visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+/******************************************************************************
+ * Glass Box & Cards Elements
+ ******************************************************************************/
+
+.glass-box {
+  background: var(--global-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-theme="dark"] .glass-box {
+  background: rgba(30, 33, 45, 0.75);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.glass-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="dark"] .glass-box:hover {
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
 }
