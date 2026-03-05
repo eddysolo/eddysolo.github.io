@@ -1,3 +1,54 @@
-{% if page.hero_image %}
-<div class="hero-banner" style="background-image: url('{{ page.hero_image | relative_url }}');"></div>
-{% endif %}
+{% assign hero_images =
+	'assets/img/mri_hero_new.png,assets/img/publication_preview/solomon2025dynamicmriwithlocally.jpg,assets/img/publication_preview/li2025navigatormotionresolve.jpg,assets/img/publication_preview/keerthivasan2025freebreathinghybridte.jpg,assets/img/publication_preview/dai2025highacceleratedparalle.jpg'
+	| split: ','
+%}
+
+<section class="global-hero-carousel" aria-label="Featured MRI research images">
+	<div class="hero-slides" aria-live="polite">
+		{% for img in hero_images %}
+			<figure class="hero-slide {% if forloop.first %}is-active{% endif %}" data-hero-slide>
+				<img src="{{ img | relative_url }}" alt="MRI research visual {{ forloop.index }}" loading="eager">
+			</figure>
+		{% endfor %}
+	</div>
+
+	<button class="hero-arrow hero-arrow-prev" type="button" aria-label="Previous image" data-hero-prev>
+		<i class="fa-solid fa-chevron-left"></i>
+	</button>
+	<button class="hero-arrow hero-arrow-next" type="button" aria-label="Next image" data-hero-next>
+		<i class="fa-solid fa-chevron-right"></i>
+	</button>
+
+</section>
+
+<script>
+	(function () {
+		const carousel = document.querySelector('.global-hero-carousel');
+		if (!carousel) return;
+
+		const slides = Array.from(carousel.querySelectorAll('[data-hero-slide]'));
+		const prevBtn = carousel.querySelector('[data-hero-prev]');
+		const nextBtn = carousel.querySelector('[data-hero-next]');
+
+		if (!slides.length || !prevBtn || !nextBtn) return;
+
+		let index = slides.findIndex((s) => s.classList.contains('is-active'));
+		if (index < 0) index = 0;
+
+		const setSlide = (newIndex) => {
+			slides[index].classList.remove('is-active');
+			index = (newIndex + slides.length) % slides.length;
+			slides[index].classList.add('is-active');
+		};
+
+		prevBtn.addEventListener('click', () => setSlide(index - 1));
+		nextBtn.addEventListener('click', () => setSlide(index + 1));
+
+		let timer = setInterval(() => setSlide(index + 1), 5500);
+		carousel.addEventListener('mouseenter', () => clearInterval(timer));
+		carousel.addEventListener('mouseleave', () => {
+			clearInterval(timer);
+			timer = setInterval(() => setSlide(index + 1), 5500);
+		});
+	})();
+</script>

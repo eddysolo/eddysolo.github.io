@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="180" viewBox="0 0 320 180" role="img" aria-label="Publication preview placeholder">
+  <rect width="320" height="180" fill="#f1f3f5" />
+  <rect x="12" y="12" width="296" height="156" rx="8" ry="8" fill="#ffffff" stroke="#cfd4da" stroke-width="2" />
+  <text x="160" y="82" text-anchor="middle" fill="#495057" font-family="Arial, sans-serif" font-size="14">Add first figure image</text>
+  <text x="160" y="104" text-anchor="middle" fill="#6c757d" font-family="Arial, sans-serif" font-size="12">assets/img/publication_preview/</text>
+</svg>

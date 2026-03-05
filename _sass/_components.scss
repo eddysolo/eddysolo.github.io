@@ -326,3 +326,58 @@ html[data-theme="dark"] .glass-section-title {
 .glass-section-body {
   padding: 1.5rem 1.8rem;
 }
+
+.about-featured-papers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 0.9rem;
+}
+
+.about-featured-paper {
+  border: 1px solid var(--global-divider-color);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.55);
+  padding: 0.9rem 1rem;
+  min-width: 0;
+
+  h3 {
+    margin: 0 0 0.45rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+
+  .paper-title {
+    margin: 0 0 0.4rem;
+    font-size: 0.92rem;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .paper-meta {
+    margin: 0 0 0.45rem;
+    font-size: 0.82rem;
+    color: var(--global-text-color-light);
+  }
+
+  .paper-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin: 0;
+
+    a {
+      font-size: 0.8rem;
+      text-decoration: none;
+      border: 1px solid var(--global-divider-color);
+      border-radius: 999px;
+      padding: 0.15rem 0.5rem;
+      line-height: 1.2;
+    }
+  }
+}
+
+html[data-theme="dark"] .about-featured-paper {
+  background: rgba(255, 255, 255, 0.03);
+}

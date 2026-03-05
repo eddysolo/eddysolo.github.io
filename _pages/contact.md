@@ -4,7 +4,7 @@ title: Contact Us
 permalink: /contact/
 description: Get in touch with the AI2MR Lab.
 nav: true
-nav_order: 5
+nav_order: 999
 ---
 
 <div class="contact-container mt-4">

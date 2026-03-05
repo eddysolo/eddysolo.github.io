@@ -6,10 +6,15 @@
 
 .navbar {
   box-shadow: 0 1px 0 0 var(--global-divider-color);
-  border-bottom: none;
-  background-color: var(--global-nav-bg-color);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  background-color: rgba(255, 255, 255, 0.62);
   backdrop-filter: saturate(180%) blur(20px);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
+}
+
+html[data-theme="dark"] .navbar {
+  background-color: rgba(18, 24, 34, 0.62);
+  border-bottom-color: rgba(255, 255, 255, 0.08);
 }
 
 // Fix dropdown caret arrow – prevent it from being hidden by the

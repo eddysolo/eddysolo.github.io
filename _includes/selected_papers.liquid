@@ -1,3 +1,43 @@
-<div class="publications">
-  {% bibliography --group_by none --query @*[selected=true]* %}
-</div>
+{% assign featured = site.data.featured_publications %}
+
+{% if featured and featured.latest and featured.most_cited %}
+  <div class="about-featured-papers">
+    <article class="about-featured-paper">
+      <h3>Latest publication</h3>
+      <p class="paper-title">{{ featured.latest.title }}</p>
+      <p class="paper-meta">{{ featured.latest.year }}</p>
+      <p class="paper-links">
+        {% if featured.latest.html and featured.latest.html != '' %}
+          <a href="{{ featured.latest.html }}" target="_blank" rel="noopener noreferrer">View article</a>
+        {% endif %}
+        {% if featured.latest.doi and featured.latest.doi != '' %}
+          <a href="https://doi.org/{{ featured.latest.doi }}" target="_blank" rel="noopener noreferrer">DOI</a>
+        {% endif %}
+        {% if featured.latest.pdf and featured.latest.pdf != '' %}
+          <a href="{{ featured.latest.pdf }}" target="_blank" rel="noopener noreferrer">PDF</a>
+        {% endif %}
+      </p>
+    </article>
+
+    <article class="about-featured-paper">
+      <h3>Most cited publication</h3>
+      <p class="paper-title">{{ featured.most_cited.title }}</p>
+      <p class="paper-meta">{{ featured.most_cited.year }} • {{ featured.most_cited.citation_count }} citations</p>
+      <p class="paper-links">
+        {% if featured.most_cited.html and featured.most_cited.html != '' %}
+          <a href="{{ featured.most_cited.html }}" target="_blank" rel="noopener noreferrer">View article</a>
+        {% endif %}
+        {% if featured.most_cited.doi and featured.most_cited.doi != '' %}
+          <a href="https://doi.org/{{ featured.most_cited.doi }}" target="_blank" rel="noopener noreferrer">DOI</a>
+        {% endif %}
+        {% if featured.most_cited.pdf and featured.most_cited.pdf != '' %}
+          <a href="{{ featured.most_cited.pdf }}" target="_blank" rel="noopener noreferrer">PDF</a>
+        {% endif %}
+      </p>
+    </article>
+  </div>
+{% else %}
+  <div class="publications">
+    {% bibliography --group_by none --query @*[selected=true]* %}
+  </div>
+{% endif %}

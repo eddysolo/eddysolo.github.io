@@ -66,21 +66,19 @@ body.sticky-bottom-footer {
  * Hero Banner (#1)
  ******************************************************************************/
 
-.hero-banner {
+.global-hero-carousel {
   width: 100vw;
   position: relative;
   left: 50%;
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
-  margin-top: -3rem;
-  height: 380px;
-  background-size: cover;
-  background-position: center;
+  margin-top: -57px;
+  height: 440px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 3.5rem;
+  margin-bottom: 1.5rem;
   overflow: hidden;
 
   &::before {
@@ -104,6 +102,37 @@ body.sticky-bottom-footer {
   }
 }
 
+.hero-slides {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.45s ease;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    // Show a bit more of the upper portion of each image.
+    object-position: 50% 20%;
+  }
+}
+
+.hero-slide.is-active {
+  opacity: 1;
+}
+
+// First hero image: show a bit more of the full frame without changing banner height.
+.hero-slide:first-child img {
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
 .hero-overlay {
   position: relative;
   z-index: 2;
@@ -122,6 +151,53 @@ body.sticky-bottom-footer {
   font-weight: 700;
   color: #fff;
   letter-spacing: -0.03em;
+}
+
+.hero-subtitle {
+  margin: 0.35rem 0 0;
+  color: #e2f3ff;
+  font-size: 1rem;
+}
+
+.hero-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  background: rgba(11, 18, 32, 0.45);
+  color: #fff;
+  backdrop-filter: blur(6px);
+
+  &:hover {
+    background: rgba(11, 18, 32, 0.7);
+  }
+}
+
+.hero-arrow-prev {
+  left: 1rem;
+}
+
+.hero-arrow-next {
+  right: 1rem;
+}
+
+@media (max-width: 768px) {
+  .global-hero-carousel {
+    height: 300px;
+    margin-top: -57px;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.85rem;
+  }
 }
 
 /******************************************************************************
