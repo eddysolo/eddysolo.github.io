@@ -2,7 +2,7 @@
 layout: about
 title: About
 main_title: "AI2MR Lab - Advanced Imaging 2 Magnetic Resonance"
-permalink: /
+permalink: /about/
 selected_papers: true
 social: true
 hero_image: assets/img/mri_hero.jpg

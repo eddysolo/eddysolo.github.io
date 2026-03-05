@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+                            #!/usr/bin/env python3
 """Extract embedded images from DOCX files.
 
 Input folder: data/docx_summary_inbox

@@ -115,6 +115,7 @@ body.sticky-bottom-footer {
 }
 
 @media (max-width: 767.98px) {
+
   .layout-about .post .post-header,
   .layout-about .post article,
   .layout-about .glass-section {
@@ -170,6 +171,7 @@ a {
 }
 
 .post {
+
   .post-header,
   article {
     background: rgba(255, 255, 255, 0.78);
@@ -190,6 +192,7 @@ a {
 }
 
 html[data-theme="dark"] .post {
+
   .post-header,
   article {
     background: rgba(20, 24, 35, 0.78);
@@ -237,6 +240,7 @@ table {
 }
 
 html[data-theme="dark"] table {
+
   th,
   td {
     background: rgba(255, 255, 255, 0.03);
@@ -278,33 +282,16 @@ html[data-theme="dark"] table {
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
-  margin-top: -57px;
-  height: 440px;
+  margin-top: -130px;
+  /* Pulled up to cover the navbar margin/padding gap */
+  height: 520px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 3.5rem;
   overflow: hidden;
-
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image:
-      linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
-    background-size: 40px 40px;
-    z-index: 1;
-    pointer-events: none;
-  }
-
-  &::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, rgba(0, 150, 199, 0.65) 0%, rgba(17, 20, 36, 0.85) 100%);
-    z-index: 0;
-  }
+  z-index: 0;
+  /* Keep it behind the floating navbar */
 }
 
 .hero-slides {
