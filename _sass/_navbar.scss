@@ -5,11 +5,12 @@
 @use "variables" as v;
 
 .navbar {
-  box-shadow: 0 1px 0 0 var(--global-divider-color);
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
   border-bottom: 1px solid rgba(255, 255, 255, 0.35);
   background-color: rgba(255, 255, 255, 0.62);
   backdrop-filter: saturate(180%) blur(20px);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
+  font-family: "Avenir Next", "Inter", "Segoe UI", sans-serif;
 }
 
 html[data-theme="dark"] .navbar {
@@ -73,13 +74,24 @@ html[data-theme="dark"] .navbar {
 
   .navbar-brand {
     color: var(--global-text-color);
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    font-size: 1.02rem;
   }
 
   .navbar-nav .nav-item .nav-link {
     color: var(--global-text-color);
+    border-radius: 999px;
+    padding: 0.35rem 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    font-size: 0.95rem;
+    transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 
     &:hover {
       color: var(--global-hover-color);
+      background: rgba(255, 255, 255, 0.32);
+      box-shadow: inset 0 0 0 1px rgba(0, 150, 199, 0.28);
     }
   }
 
@@ -202,5 +214,12 @@ html[data-theme="dark"] .navbar {
 
   &:hover {
     color: var(--global-hover-color);
+  }
+}
+
+@media (max-width: 991.98px) {
+  .navbar.navbar-light .navbar-nav .nav-item .nav-link {
+    width: fit-content;
+    margin: 0.15rem 0;
   }
 }

@@ -45,10 +45,17 @@
   padding: 0;
 
   li {
-    border-bottom: 1px solid var(--global-divider-color);
+    border: 1px solid var(--global-divider-color);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 10px 22px rgba(15, 23, 42, 0.06), inset 0 0 0 1px rgba(255, 255, 255, 0.38);
     list-style: none;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding: 1.6rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 
     .post-meta {
       color: var(--global-text-color-light);
@@ -72,10 +79,24 @@
       }
     }
 
+    &:hover,
+    &:focus-within {
+      transform: translateY(-2px);
+      border-color: rgba(0, 150, 199, 0.58);
+      box-shadow:
+        0 16px 30px rgba(15, 23, 42, 0.11),
+        inset 0 0 0 1px rgba(0, 150, 199, 0.38),
+        0 0 0 2px rgba(0, 150, 199, 0.14);
+    }
+
     mjx-container[jax="CHTML"][display="true"] {
       display: unset;
     }
   }
+}
+
+html[data-theme="dark"] .post-list li {
+  background: rgba(255, 255, 255, 0.03);
 }
 
 .pagination {

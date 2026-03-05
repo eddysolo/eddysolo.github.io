@@ -1,6 +1,7 @@
 ---
 layout: about
 title: About
+main_title: "AI2MR Lab - Advanced Imaging 2 Magnetic Resonance"
 permalink: /
 selected_papers: true
 social: true
