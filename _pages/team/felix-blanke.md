@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: profile
 title: Felix Blanke
 permalink: /team/felix-blanke/
 description: Researcher

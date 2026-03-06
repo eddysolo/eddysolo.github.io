@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: profile
 title: Erwin Schrödinger
 permalink: /people/team/erwin-schrodinger/
 description: Research Engineer

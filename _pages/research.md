@@ -9,8 +9,8 @@ children:
     permalink: /publications/
   - title: Projects
     permalink: /projects/
-  - title: Showcases
-    permalink: /showcases/
+  - title: Featured Publications
+    permalink: /featured-publications/
 ---
 
 <!-- pages/research.md -->

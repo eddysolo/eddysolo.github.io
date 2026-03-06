@@ -4,60 +4,78 @@ title: Home
 main_title: "AI2MR Lab - Advanced Imaging 2 Magnetic Resonance"
 permalink: /
 hero_image: assets/img/mri_hero_new.png
+fluid: true
 ---
 
-<div class="container-fluid px-2 px-md-4" style="width: 100%; max-width: 100vw; overflow-x: hidden;">
-  <div class="post mx-auto" style="border: none; background: transparent; padding: 0; width: 100%; max-width: 1800px;">
+<div class="container-fluid px-0 mx-auto" style="max-width: 95%; width: calc(100% - 2rem); overflow-x: hidden;">
+  <div class="post mx-auto" style="border: none; background: transparent; padding: 0; width: 100%; max-width: 100%;">
     
-    <!-- Bento Box Grid (Row 1: Welcome & About) -->
-    <div class="row g-4 mb-4 align-items-stretch">
-      <!-- Welcome Box -->
-      <div class="col-lg-5">
-        <div class="glass-section h-100 d-flex flex-column justify-content-center" style="border-radius: 24px; padding: 3rem; text-align: left;">
-          <h1 style="font-weight: 800; font-size: 3rem; letter-spacing: -0.02em; margin-bottom: 1rem;">Welcome to<br>AI2MR Lab</h1>
-          <h3 style="font-weight: 600; font-size: 1.5rem; color: var(--global-theme-color); margin-bottom: 0;">Advanced Imaging 2<br>Magnetic Resonance</h3>
+    <!-- Row 1: Welcome Box -->
+    <div class="row g-4 mb-4">
+      <div class="col-12">
+        
+        <!-- Welcome Box -->
+        <div class="glass-section w-100 d-flex flex-column justify-content-center align-items-center text-center" style="border-radius: 24px; padding: 4rem 3rem;">
+          <h1 style="font-weight: 800; font-size: 3.5rem; letter-spacing: -0.02em; margin-bottom: 0.75rem;">Welcome to AI2MR Lab</h1>
+          <h3 style="font-weight: 600; font-size: 1.75rem; color: var(--global-theme-color); margin-bottom: 0;">Advanced Imaging 2 Magnetic Resonance</h3>
         </div>
       </div>
-      
-      <!-- About Box -->
-      <div class="col-lg-7">
-        <div class="glass-section h-100 d-flex flex-column justify-content-center" style="border-radius: 24px; padding: 3rem; text-align: left;">
-          <p style="font-size: 1.35rem; margin: 0; color: var(--global-text-color); line-height: 1.6;">
+    </div>
+
+    <!-- Row 2: About Box -->
+    <div class="row g-4 mb-4">
+      <div class="col-12">
+        <!-- About Box -->
+        <div class="glass-section w-100 d-flex flex-column justify-content-center align-items-center text-center" style="border-radius: 24px; padding: 3rem;">
+          <p style="font-size: 1.35rem; margin: 0 auto; color: var(--global-text-color); line-height: 1.8; max-width: 1200px;">
             We bridge the gap between abstract algorithmic innovations and urgent clinical reality. By synergizing deep learning, physics, and advanced engineering, we enhance the speed, clarity, and accessibility of Magnetic Resonance Imaging for high-stakes, real-world diagnostic challenges.
           </p>
         </div>
       </div>
     </div>
 
-    <!-- Bento Box Grid (Row 2: Mission & Images) -->
+    <!-- Row 3: Mission & Images -->
     <div class="row g-4 mb-4 align-items-stretch">
-      <!-- Core Mission -->
-      <div class="col-lg-4">
-        <div class="glass-box p-4 h-100 d-flex flex-column justify-content-center" style="border-radius: 24px;">
-          <h2 style="font-weight: 800; margin-bottom: 1.5rem;"><i class="fa-solid fa-microscope mr-2" style="color: var(--global-theme-color);"></i> Our Core Mission</h2>
-          <p style="font-size: 1.15rem; margin-bottom: 1.5rem;">
+      <!-- Core Mission (Wide) -->
+      <div class="col-lg-6 d-flex">
+        <div class="glass-box p-4 w-100 d-flex flex-column justify-content-center text-center align-items-center" style="border-radius: 24px;">
+          <h2 style="font-weight: 800; margin-bottom: 1.25rem;"><i class="fa-solid fa-microscope mr-2" style="color: var(--global-theme-color);"></i> Our Core Mission</h2>
+          <p style="font-size: 1.25rem; margin-bottom: 2rem; max-width: 600px; line-height: 1.6;">
             We aim to make MRI <strong>faster, more accurate, and more accessible</strong> to vulnerable populations like children and the elderly.
           </p>
-          <ul class="mb-0" style="font-size: 1.1rem; padding-left: 1.2rem;">
-            <li class="mb-2"><strong>Computational MRI:</strong> Revolutionary acquisition strategies and deep-learning image reconstruction.</li>
-            <li class="mb-2"><strong>Motion Correction:</strong> Free-breathing MRI techniques that eliminate motion artifacts.</li>
-            <li><strong>Smart Sensors:</strong> Integration of MR-compatible external sensors like ultra-wideband radar.</li>
-          </ul>
+          
+          <div class="d-flex flex-column gap-3 w-100" style="max-width: 600px;">
+            <a href="{{ '/computational-mri/' | relative_url }}" class="glass-box p-3 text-decoration-none text-center" style="border-radius: 16px; transition: transform 0.2s; color: var(--global-text-color); border: 1px solid rgba(0,150,199,0.3);">
+              <h4 style="font-weight: 700; font-size: 1.2rem; margin-bottom: 0.25rem; color: var(--global-theme-color);">Computational MRI</h4>
+              <p style="margin: 0; font-size: 1rem;">Revolutionary acquisition strategies and deep-learning image reconstruction.</p>
+            </a>
+            
+            <a href="{{ '/motion-correction/' | relative_url }}" class="glass-box p-3 text-decoration-none text-center" style="border-radius: 16px; transition: transform 0.2s; color: var(--global-text-color); border: 1px solid rgba(0,150,199,0.3);">
+              <h4 style="font-weight: 700; font-size: 1.2rem; margin-bottom: 0.25rem; color: var(--global-theme-color);">Motion Correction</h4>
+              <p style="margin: 0; font-size: 1rem;">Free-breathing MRI techniques that eliminate motion artifacts.</p>
+            </a>
+
+            <a href="{{ '/smart-sensors/' | relative_url }}" class="glass-box p-3 text-decoration-none text-center" style="border-radius: 16px; transition: transform 0.2s; color: var(--global-text-color); border: 1px solid rgba(0,150,199,0.3);">
+              <h4 style="font-weight: 700; font-size: 1.2rem; margin-bottom: 0.25rem; color: var(--global-theme-color);">Smart Sensors</h4>
+              <p style="margin: 0; font-size: 1rem;">Integration of MR-compatible external sensors like ultra-wideband radar.</p>
+            </a>
+          </div>
         </div>
       </div>
-      
-      <!-- Brain Image Bento Box -->
-      <div class="col-lg-4 col-md-6">
-        <div class="glass-box p-3 h-100 d-flex align-items-center justify-content-center" style="border-radius: 24px; background: rgba(255,255,255,0.4);">
-          <img src="{{ 'assets/img/brain image.png' | relative_url }}" alt="Brain Scan" style="border-radius: 16px; width: 100%; height: 100%; max-height: 400px; object-fit: contain;">
+
+      <!-- Vertical Image Stack -->
+      <div class="col-lg-6 d-flex flex-column gap-4">
+        
+        <!-- Brain Image Box -->
+        <div class="glass-box p-0 w-100 d-flex align-items-center justify-content-center" style="border-radius: 24px; background: rgba(255,255,255,0.4); overflow: hidden;">
+          <img src="{{ 'assets/img/brain-image.png' | relative_url }}" alt="Brain Scan" style="width: 100%; height: auto; display: block; object-fit: contain;">
         </div>
-      </div>
-      
-      <!-- Abdominal Image Bento Box -->
-      <div class="col-lg-4 col-md-6">
-        <div class="glass-box p-3 h-100 d-flex align-items-center justify-content-center" style="border-radius: 24px; background: rgba(255,255,255,0.4);">
-          <img src="{{ 'assets/img/mri abdominal.png' | relative_url }}" alt="Abdominal MRI" style="border-radius: 16px; width: 100%; height: 100%; max-height: 400px; object-fit: contain;">
+        
+        <!-- Abdominal Image Box -->
+        <div class="glass-box p-0 w-100 d-flex align-items-center justify-content-center" style="border-radius: 24px; background: rgba(255,255,255,0.4); overflow: hidden;">
+          <img src="{{ 'assets/img/mri-abdominal.png' | relative_url }}" alt="Abdominal MRI" style="width: 100%; height: auto; display: block; object-fit: contain;">
         </div>
+        
       </div>
     </div>
 
@@ -72,19 +90,19 @@ hero_image: assets/img/mri_hero_new.png
           
           <div class="d-flex flex-column gap-3">
             <div class="glass-box p-4" style="border-radius: 16px; border-left: 4px solid var(--global-theme-color);">
-              <div class="d-flex justify-content-between align-items-center mb-2">
-                <h4 style="margin: 0; font-weight: 700; font-size: 1.25rem;">Paper Accepted to MICCAI 2026</h4>
-                <span style="font-size: 0.9rem; font-weight: 700; color: var(--global-theme-color); white-space: nowrap; margin-left: 1rem;">Mar 3, 2026</span>
+              <div class="mb-2">
+                <span style="font-size: 0.95rem; font-weight: 700; color: var(--global-theme-color); display: block; margin-bottom: 0.5rem;">Mar 3, 2026</span>
+                <h3 style="margin: 0; font-weight: 800; font-size: 1.6rem; line-height: 1.3;">Paper Accepted to MICCAI 2026</h3>
               </div>
-              <p style="margin: 0; font-size: 1.05rem;">Our latest work on free-breathing MRI techniques has been accepted for presentation at MICCAI in Kyoto, Japan.</p>
+              <p style="margin: 0; font-size: 1.1rem; margin-top: 1rem;">Our latest work on free-breathing MRI techniques has been accepted for presentation at MICCAI in Kyoto, Japan.</p>
             </div>
             
             <div class="glass-box p-4 mt-3" style="border-radius: 16px; border-left: 4px solid var(--global-theme-color);">
-              <div class="d-flex justify-content-between align-items-center mb-2">
-                <h4 style="margin: 0; font-weight: 700; font-size: 1.25rem;">Pediatric MRI Grant Secured</h4>
-                <span style="font-size: 0.9rem; font-weight: 700; color: var(--global-theme-color); white-space: nowrap; margin-left: 1rem;">Feb 15, 2026</span>
+              <div class="mb-2">
+                <span style="font-size: 0.95rem; font-weight: 700; color: var(--global-theme-color); display: block; margin-bottom: 0.5rem;">Feb 15, 2026</span>
+                <h3 style="margin: 0; font-weight: 800; font-size: 1.6rem; line-height: 1.3;">Pediatric MRI Grant Secured</h3>
               </div>
-              <p style="margin: 0; font-size: 1.05rem;">We are thrilled to announce a new grant to accelerate our research on making MRI faster and more accessible for pediatric patients.</p>
+              <p style="margin: 0; font-size: 1.1rem; margin-top: 1rem;">We are thrilled to announce a new grant to accelerate our research on making MRI faster and more accessible for pediatric patients.</p>
             </div>
           </div>
         </div>
@@ -92,10 +110,9 @@ hero_image: assets/img/mri_hero_new.png
 
       <!-- Selected Publications Box -->
       <div class="col-lg-6">
-        <div class="glass-section h-100" style="padding: 2.5rem; border-radius: 24px;">
-          <h2 class="glass-section-title" style="margin-bottom: 2rem; font-weight: 800; display: flex; justify-content: space-between; align-items: center;">
+        <div class="glass-section h-100 text-center" style="padding: 2.5rem; border-radius: 24px;">
+          <h2 class="glass-section-title" style="margin-bottom: 2rem; font-weight: 800;">
             <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected Publications</a>
-            <a href="{{ '/publications/' | relative_url }}" class="btn btn-sm btn-outline-primary" style="font-size: 0.9rem; font-weight: 600; border-radius: 8px;">View All</a>
           </h2>
           
           <div class="d-flex flex-column gap-3">
@@ -105,8 +122,8 @@ hero_image: assets/img/mri_hero_new.png
                 <i class="fa-solid fa-file-pdf fa-2x" style="color: var(--global-theme-color);"></i>
               </div>
               <div>
-                <h5 style="margin: 0 0 0.5rem 0; font-weight: 700; font-size: 1.15rem; line-height: 1.3;">Navigator-free motion-resolved 3D MRI using deep generative models</h5>
-                <p style="margin: 0; font-size: 0.9rem; opacity: 0.8; font-family: monospace;">Nature Communications (2025)</p>
+                <h3 style="margin: 0 0 0.5rem 0; font-weight: 800; font-size: 1.5rem; line-height: 1.3;">Navigator-free motion-resolved 3D MRI using deep generative models</h3>
+                <p style="margin: 0; font-size: 1rem; opacity: 0.8; font-family: monospace;">Nature Communications (2025)</p>
               </div>
             </a>
 
@@ -116,8 +133,8 @@ hero_image: assets/img/mri_hero_new.png
                 <i class="fa-solid fa-file-pdf fa-2x" style="color: var(--global-theme-color);"></i>
               </div>
               <div>
-                <h5 style="margin: 0 0 0.5rem 0; font-weight: 700; font-size: 1.15rem; line-height: 1.3;">Highly-accelerated parallel MRI using deep learning prior</h5>
-                <p style="margin: 0; font-size: 0.9rem; opacity: 0.8; font-family: monospace;">Magnetic Resonance in Medicine (2025)</p>
+                <h3 style="margin: 0 0 0.5rem 0; font-weight: 800; font-size: 1.5rem; line-height: 1.3;">Highly-accelerated parallel MRI using deep learning prior</h3>
+                <p style="margin: 0; font-size: 1rem; opacity: 0.8; font-family: monospace;">Magnetic Resonance in Medicine (2025)</p>
               </div>
             </a>
           </div>
@@ -128,7 +145,7 @@ hero_image: assets/img/mri_hero_new.png
     <!-- Join Us (Call to Action) with Background Image -->
     <section class="mb-4 position-relative" style="border-radius: 24px; padding: 4rem 3rem; text-align: center; color: white; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.15);">
       <!-- Background Image -->
-      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; background-image: url('https://images.unsplash.com/photo-1576086213369-97a306d36557?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80'); background-size: cover; background-position: center; filter: brightness(0.9);"></div>
+      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; background-image: url('{{ "assets/img/ChatGPT_brain_scan_idea.png" | relative_url }}'); background-size: cover; background-position: center; filter: brightness(0.9);"></div>
       
       <!-- Gradient Overlay for Contrast -->
       <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; background: linear-gradient(135deg, rgba(8, 20, 48, 0.85) 0%, rgba(0, 93, 143, 0.75) 100%); mix-blend-mode: multiply;"></div>

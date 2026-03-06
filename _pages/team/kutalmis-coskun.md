@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: profile
 title: Kutalmis Coskun
 permalink: /team/kutalmis-coskun/
 description: Researcher

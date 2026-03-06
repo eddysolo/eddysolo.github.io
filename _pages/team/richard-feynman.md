@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: profile
 title: Richard Feynman
 permalink: /people/team/richard-feynman/
 description: PhD Student

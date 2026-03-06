@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: profile
 title: Bjarne Hiller
 permalink: /team/bjarne-hiller/
 description: Researcher

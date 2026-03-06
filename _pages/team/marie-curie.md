@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: profile
 title: Marie Curie
 permalink: /people/team/marie-curie/
 description: Research Scientist

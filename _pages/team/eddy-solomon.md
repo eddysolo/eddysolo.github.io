@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: profile
 title: Eddy Solomon
 permalink: /team/eddysolo/
 description: Head of AI2MR Lab

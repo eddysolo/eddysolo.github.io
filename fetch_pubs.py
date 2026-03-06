@@ -156,8 +156,9 @@ def write_bibtex(papers: List[Dict]) -> List[Dict]:
             if doi:
                 f.write(f"  doi={{{doi}}},\n")
             if html_url:
+                pass
                 # Semantic Scholar landing page link
-                f.write(f"  html={{{html_url}}},\n")
+                # f.write(f"  html={{{html_url}}},\n")
             if pdf_url:
                 # Open-access PDF when available
                 f.write(f"  pdf={{{pdf_url}}},\n")

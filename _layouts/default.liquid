@@ -22,7 +22,7 @@
 
     <!-- Content -->
     {% include hero.liquid %}
-    <div class="container mt-5" role="main">
+    <div class="{% if page.fluid %}container-fluid px-0 mx-auto{% else %}container mt-5{% endif %}" role="main">
       {% if page.toc and page.toc.sidebar %}
         {% if page.toc.sidebar == 'right' %}
           <div class="row">

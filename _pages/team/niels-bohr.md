@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: profile
 title: Niels Bohr
 permalink: /people/team/niels-bohr/
 description: Postdoctoral Researcher

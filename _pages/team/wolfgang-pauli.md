@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: profile
 title: Wolfgang Pauli
 permalink: /people/team/wolfgang-pauli/
 description: Master's Student

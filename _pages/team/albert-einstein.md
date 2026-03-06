@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: profile
 title: Albert Einstein
 permalink: /people/team/albert-einstein/
 description: Principal Investigator

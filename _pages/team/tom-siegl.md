@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: profile
 title: Tom Siegl
 permalink: /team/tom-siegl/
 description: Researcher
