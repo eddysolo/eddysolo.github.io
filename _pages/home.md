@@ -83,26 +83,26 @@ fluid: true
     <div class="row g-4 mb-4 align-items-stretch">
       <!-- Announcements Box -->
       <div class="col-lg-6">
-        <div class="glass-section h-100" style="padding: 2.5rem; border-radius: 24px;">
-          <h2 class="glass-section-title" style="margin-bottom: 2rem; font-weight: 800;">
-            <a href="{{ '/news/' | relative_url }}" style="color: inherit">📣 Latest Announcements</a>
+        <div class="glass-section h-100 text-center" style="padding: 2.5rem; border-radius: 24px;">
+          <h2 class="glass-section-title" style="margin-bottom: 2rem; font-weight: 800; font-size: 2.5rem;">
+            <a href="{{ '/news/' | relative_url }}" style="color: inherit; text-decoration: none;">📣 Latest Announcements</a>
           </h2>
           
-          <div class="d-flex flex-column gap-3">
-            <div class="glass-box p-4" style="border-radius: 16px; border-left: 4px solid var(--global-theme-color);">
+          <div class="d-flex flex-column gap-3 text-left">
+            <div class="glass-box p-4" style="border-radius: 16px; border-left: 6px solid var(--global-theme-color);">
               <div class="mb-2">
-                <span style="font-size: 0.95rem; font-weight: 700; color: var(--global-theme-color); display: block; margin-bottom: 0.5rem;">Mar 3, 2026</span>
-                <h3 style="margin: 0; font-weight: 800; font-size: 1.6rem; line-height: 1.3;">Paper Accepted to MICCAI 2026</h3>
+                <span style="font-size: 1.1rem; font-weight: 700; color: var(--global-theme-color); display: block; margin-bottom: 0.5rem;">Mar 3, 2026</span>
+                <h3 style="margin: 0; font-weight: 800; font-size: 1.8rem; line-height: 1.3;">Paper Accepted to MICCAI 2026</h3>
               </div>
-              <p style="margin: 0; font-size: 1.1rem; margin-top: 1rem;">Our latest work on free-breathing MRI techniques has been accepted for presentation at MICCAI in Kyoto, Japan.</p>
+              <p style="margin: 0; font-size: 1.25rem; margin-top: 1rem;">Our latest work on free-breathing MRI techniques has been accepted for presentation at MICCAI in Kyoto, Japan.</p>
             </div>
             
-            <div class="glass-box p-4 mt-3" style="border-radius: 16px; border-left: 4px solid var(--global-theme-color);">
+            <div class="glass-box p-4 mt-3" style="border-radius: 16px; border-left: 6px solid var(--global-theme-color);">
               <div class="mb-2">
-                <span style="font-size: 0.95rem; font-weight: 700; color: var(--global-theme-color); display: block; margin-bottom: 0.5rem;">Feb 15, 2026</span>
-                <h3 style="margin: 0; font-weight: 800; font-size: 1.6rem; line-height: 1.3;">Pediatric MRI Grant Secured</h3>
+                <span style="font-size: 1.1rem; font-weight: 700; color: var(--global-theme-color); display: block; margin-bottom: 0.5rem;">Feb 15, 2026</span>
+                <h3 style="margin: 0; font-weight: 800; font-size: 1.8rem; line-height: 1.3;">Pediatric MRI Grant Secured</h3>
               </div>
-              <p style="margin: 0; font-size: 1.1rem; margin-top: 1rem;">We are thrilled to announce a new grant to accelerate our research on making MRI faster and more accessible for pediatric patients.</p>
+              <p style="margin: 0; font-size: 1.25rem; margin-top: 1rem;">We are thrilled to announce a new grant to accelerate our research on making MRI faster and more accessible for pediatric patients.</p>
             </div>
           </div>
         </div>
@@ -111,30 +111,30 @@ fluid: true
       <!-- Selected Publications Box -->
       <div class="col-lg-6">
         <div class="glass-section h-100 text-center" style="padding: 2.5rem; border-radius: 24px;">
-          <h2 class="glass-section-title" style="margin-bottom: 2rem; font-weight: 800;">
-            <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected Publications</a>
+          <h2 class="glass-section-title" style="margin-bottom: 2rem; font-weight: 800; font-size: 2.5rem;">
+            <a href="{{ '/publications/' | relative_url }}" style="color: inherit; text-decoration: none;">Selected Publications</a>
           </h2>
           
           <div class="d-flex flex-column gap-3">
             <!-- Publication Card 1 -->
-            <a href="{{ '/publications/' | relative_url }}" class="glass-box p-4 text-decoration-none d-flex align-items-center" style="border-radius: 16px; color: var(--global-text-color); transition: all 0.3s ease;">
-              <div style="background: rgba(0, 150, 199, 0.1); width: 60px; height: 60px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 1.5rem; flex-shrink: 0;">
+            <a href="{{ '/publications/' | relative_url }}" class="glass-box p-4 text-decoration-none d-flex align-items-center text-left" style="border-radius: 16px; color: var(--global-text-color); transition: all 0.3s ease;">
+              <div style="background: rgba(0, 150, 199, 0.1); width: 70px; height: 70px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 1.5rem; flex-shrink: 0;">
                 <i class="fa-solid fa-file-pdf fa-2x" style="color: var(--global-theme-color);"></i>
               </div>
               <div>
-                <h3 style="margin: 0 0 0.5rem 0; font-weight: 800; font-size: 1.5rem; line-height: 1.3;">Navigator-free motion-resolved 3D MRI using deep generative models</h3>
-                <p style="margin: 0; font-size: 1rem; opacity: 0.8; font-family: monospace;">Nature Communications (2025)</p>
+                <h3 style="margin: 0 0 0.5rem 0; font-weight: 800; font-size: 1.6rem; line-height: 1.3;">Navigator-free motion-resolved 3D MRI using deep generative models</h3>
+                <p style="margin: 0; font-size: 1.1rem; opacity: 0.8; font-family: monospace;">Nature Communications (2025)</p>
               </div>
             </a>
 
             <!-- Publication Card 2 -->
-            <a href="{{ '/publications/' | relative_url }}" class="glass-box p-4 mt-3 text-decoration-none d-flex align-items-center" style="border-radius: 16px; color: var(--global-text-color); transition: all 0.3s ease;">
-              <div style="background: rgba(0, 150, 199, 0.1); width: 60px; height: 60px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 1.5rem; flex-shrink: 0;">
+            <a href="{{ '/publications/' | relative_url }}" class="glass-box p-4 mt-3 text-decoration-none d-flex align-items-center text-left" style="border-radius: 16px; color: var(--global-text-color); transition: all 0.3s ease;">
+              <div style="background: rgba(0, 150, 199, 0.1); width: 70px; height: 70px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 1.5rem; flex-shrink: 0;">
                 <i class="fa-solid fa-file-pdf fa-2x" style="color: var(--global-theme-color);"></i>
               </div>
               <div>
-                <h3 style="margin: 0 0 0.5rem 0; font-weight: 800; font-size: 1.5rem; line-height: 1.3;">Highly-accelerated parallel MRI using deep learning prior</h3>
-                <p style="margin: 0; font-size: 1rem; opacity: 0.8; font-family: monospace;">Magnetic Resonance in Medicine (2025)</p>
+                <h3 style="margin: 0 0 0.5rem 0; font-weight: 800; font-size: 1.6rem; line-height: 1.3;">Highly-accelerated parallel MRI using deep learning prior</h3>
+                <p style="margin: 0; font-size: 1.1rem; opacity: 0.8; font-family: monospace;">Magnetic Resonance in Medicine (2025)</p>
               </div>
             </a>
           </div>
