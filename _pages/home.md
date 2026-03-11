@@ -1,9 +1,9 @@
 ---
 layout: default
 title: Home
-main_title: "AI2MR Lab - Advanced Imaging 2 Magnetic Resonance"
+main_title: "Solomon's MRI Lab - Advanced Imaging 2 Magnetic Resonance"
 permalink: /
-hero_image: assets/img/mri_hero_new.png
+hero_image: assets/img/mri_hero.jpg
 fluid: true
 ---
 
@@ -16,7 +16,7 @@ fluid: true
         
         <!-- Welcome Box -->
         <div class="glass-section w-100 d-flex flex-column justify-content-center align-items-center text-center" style="border-radius: 24px; padding: 4rem 3rem;">
-          <h1 style="font-weight: 800; font-size: 3.5rem; letter-spacing: -0.02em; margin-bottom: 0.75rem;">Welcome to AI2MR Lab</h1>
+          <h1 style="font-weight: 800; font-size: 3.5rem; letter-spacing: -0.02em; margin-bottom: 0.75rem;">Welcome to Solomon's MRI Lab</h1>
           <h3 style="font-weight: 600; font-size: 1.75rem; color: var(--global-theme-color); margin-bottom: 0;">Advanced Imaging 2 Magnetic Resonance</h3>
         </div>
       </div>
@@ -71,10 +71,14 @@ fluid: true
           <img src="{{ 'assets/img/brain-image.png' | relative_url }}" alt="Brain Scan" style="width: 100%; height: auto; display: block; object-fit: contain;">
         </div>
         
-        <!-- Abdominal Image Box -->
-        <div class="glass-box p-0 w-100 d-flex align-items-center justify-content-center" style="border-radius: 24px; background: rgba(255,255,255,0.4); overflow: hidden;">
-          <img src="{{ 'assets/img/mri-abdominal.png' | relative_url }}" alt="Abdominal MRI" style="width: 100%; height: auto; display: block; object-fit: contain;">
-        </div>
+        <!-- Keep In Motion Box -->
+        <a href="{{ '/keep-in-motion/' | relative_url }}" class="glass-box p-0 w-100 position-relative text-decoration-none d-flex align-items-center justify-content-center" style="border-radius: 24px; background: rgba(0,0,0,0.85); overflow: hidden; height: 100%; min-height: 250px; transition: transform 0.3s ease;">
+          <img src="{{ 'assets/img/mri-abdominal.png' | relative_url }}" alt="Keep In Motion" style="position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0.4;">
+          <div class="position-relative text-center p-4 w-100 z-index-2">
+            <h3 style="color: white; font-weight: 800; font-size: 2.2rem; margin-bottom: 0.5rem; text-shadow: 0 2px 10px rgba(0,0,0,1);"><i class="fa-solid fa-person-running mr-2"></i> Keep In Motion</h3>
+            <p style="color: #f0f8ff; font-size: 1.2rem; margin: 0 auto; max-width: 85%; line-height: 1.4; text-shadow: 0 1px 8px rgba(0,0,0,1);">Conquering physiological motion artifacts via real-time intelligent monitoring and MR-compatible external sensors.</p>
+          </div>
+        </a>
         
       </div>
     </div>
@@ -153,7 +157,7 @@ fluid: true
       
       <!-- Content -->
       <div style="position: relative; z-index: 2;">
-        <h2 style="font-weight: 800; font-size: 2.5rem; color: white; margin-bottom: 1.5rem; text-shadow: 0 2px 10px rgba(0,0,0,0.5);">Looking for Opportunities?</h2>
+        <h2 style="font-weight: 800; font-size: 2.5rem; color: white; margin-bottom: 1.5rem; text-shadow: 0 2px 10px rgba(0,0,0,0.5);">Intreseted to join us?</h2>
         <p style="font-size: 1.25rem; max-width: 800px; margin: 0 auto 2.5rem; color: #f0f8ff; text-shadow: 0 1px 5px rgba(0,0,0,0.5);">
           We are always looking for motivated students and postdocs to join our team. If you are passionate about medical imaging and AI, we'd love to hear from you.
         </p>
@@ -166,28 +170,32 @@ fluid: true
       <h2 style="font-weight: 700; margin-bottom: 2rem; font-size: 2.2rem;">Our Collaborators</h2>
       
       <div class="row justify-content-center align-items-center">
+        <!-- Technion -->
         <div class="col-6 col-md-3 mb-3">
           <div class="glass-box p-4 h-100 d-flex flex-column justify-content-center" style="border-radius: 20px; background: rgba(255,255,255,0.05);">
-            <i class="fa-solid fa-hospital fa-3x mb-3" style="color: var(--global-theme-color);"></i>
-            <h5 style="margin: 0; font-weight: 600;">Medical Centers</h5>
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3a/Technion_logo.svg/1200px-Technion_logo.svg.png" alt="Technion Logo" style="max-height: 60px; object-fit: contain; margin-bottom: 1rem; width: 100%;">
+            <h5 style="margin: 0; font-weight: 600;">Technion Institute</h5>
           </div>
         </div>
+        <!-- Cornell -->
         <div class="col-6 col-md-3 mb-3">
           <div class="glass-box p-4 h-100 d-flex flex-column justify-content-center" style="border-radius: 20px; background: rgba(255,255,255,0.05);">
-            <i class="fa-solid fa-university fa-3x mb-3" style="color: var(--global-theme-color);"></i>
-            <h5 style="margin: 0; font-weight: 600;">Universities</h5>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Cornell_University_seal.svg/1200px-Cornell_University_seal.svg.png" alt="Cornell Logo" style="max-height: 60px; object-fit: contain; margin-bottom: 1rem; width: 100%;">
+            <h5 style="margin: 0; font-weight: 600;">Cornell University</h5>
           </div>
         </div>
+        <!-- NYU Radiology -->
         <div class="col-6 col-md-3 mb-3">
           <div class="glass-box p-4 h-100 d-flex flex-column justify-content-center" style="border-radius: 20px; background: rgba(255,255,255,0.05);">
-            <i class="fa-solid fa-industry fa-3x mb-3" style="color: var(--global-theme-color);"></i>
-            <h5 style="margin: 0; font-weight: 600;">Industry Partners</h5>
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/52/NYU_Langone_Health_logo.svg/1200px-NYU_Langone_Health_logo.svg.png" alt="NYU Radiology Logo" style="max-height: 60px; object-fit: contain; margin-bottom: 1rem; width: 100%;">
+            <h5 style="margin: 0; font-weight: 600;">NYU Radiology</h5>
           </div>
         </div>
+        <!-- More Collaborators Placeholder -->
         <div class="col-6 col-md-3 mb-3">
           <div class="glass-box p-4 h-100 d-flex flex-column justify-content-center" style="border-radius: 20px; background: rgba(255,255,255,0.05);">
-            <i class="fa-solid fa-microscope fa-3x mb-3" style="color: var(--global-theme-color);"></i>
-            <h5 style="margin: 0; font-weight: 600;">Research Institutes</h5>
+            <i class="fa-solid fa-plus fa-3x mb-3" style="color: var(--global-theme-color); opacity: 0.5;"></i>
+            <h5 style="margin: 0; font-weight: 600; opacity: 0.7;">More to come</h5>
           </div>
         </div>
       </div>

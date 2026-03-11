@@ -89,7 +89,7 @@ fluid: true
       <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary btn-lg d-flex align-items-center" style="font-weight: 700; border-radius: 12px; padding: 0.75rem 2rem; box-shadow: 0 10px 20px rgba(0,150,199,0.3);">
         <i class="fa-solid fa-envelope fa-lg mr-2"></i> Contact Us
       </a>
-      <a href="https://linkedin.com/company/ai2mr-lab" target="_blank" class="btn btn-outline-primary btn-lg d-flex align-items-center" style="font-weight: 700; border-radius: 12px; padding: 0.75rem 2rem; border-width: 2px;">
+      <a href="https://linkedin.com/company/solomons-mri-lab" target="_blank" class="btn btn-outline-primary btn-lg d-flex align-items-center" style="font-weight: 700; border-radius: 12px; padding: 0.75rem 2rem; border-width: 2px;">
         <i class="fa-brands fa-linkedin fa-lg mr-2"></i> Follow Updates
       </a>
     </div>

@@ -2,7 +2,7 @@
 layout: page
 title: Thesis
 permalink: /thesis/
-description: Thesis opportunities at the AI2MR Lab.
+description: Thesis opportunities at the Solomon's MRI Lab.
 nav: false
 nav_order: 11
 ---

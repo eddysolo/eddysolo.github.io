@@ -3,7 +3,12 @@
   <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
     <div class="container-fluid px-4">
       <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
-        {% if site.title == 'blank' %}
+        {% if site.navbar_brand %}
+          <div class="d-flex align-items-center gap-2">
+            <img src="{{ 'assets/img/logos/technion_logo_transparent.png' | relative_url }}" alt="Technion Logo" style="height: 36px; object-fit: contain; margin-right: 8px;">
+            <span class="font-weight-bold">Solomon's Lab</span>
+          </div>
+        {% elsif site.title == 'blank' %}
           {% if site.first_name %}
             <span class="font-weight-bold">
               {{- site.first_name -}}

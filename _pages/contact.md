@@ -1,115 +1,174 @@
 ---
-layout: page
+layout: default
 title: Contact Us
 permalink: /contact/
-description: Get in touch with the AI2MR Lab.
+description: Get in touch with the Solomon's MRI Lab.
 nav: true
 nav_order: 999
+fluid: true
 ---
 
-<div class="contact-container mt-4">
-  <div class="row">
-    <!-- Contact Info Section -->
-    <div class="col-md-5 mb-4 mb-md-0">
-      <div class="contact-info-card p-4 h-100 glass-box">
-        <h3 class="mb-4" style="color: var(--global-theme-color);">Reach Out</h3>
-        <p class="text-muted mb-4">
-          We are always looking for passionate scientists and engineers to join our team. If you are interested in working at the intersection of AI and MRI, don't hesitate to reach out!
-        </p>
+<style>
+  /* Page Level Background setup */
+  body {
+    background-image: url('{{ "assets/img/technionImage.jfif" | relative_url }}');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+  
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, rgba(8, 20, 48, 0.85) 0%, rgba(0, 93, 143, 0.75) 100%);
+    mix-blend-mode: multiply;
+    z-index: -1;
+  }
+  
+  body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+  }
 
-        <ul class="list-unstyled mb-0">
-          <li class="mb-3 d-flex align-items-center">
-            <i class="fa-solid fa-envelope fa-fw mr-3" style="color: var(--global-theme-color); font-size: 1.2rem;"></i>
-            <span><a href="mailto:{{ site.email }}">{{ site.email | default: "you@example.com" }}</a></span>
-          </li>
-          <li class="mb-3 d-flex align-items-center">
-            <i class="fa-solid fa-location-dot fa-fw mr-3" style="color: var(--global-theme-color); font-size: 1.2rem;"></i>
-            <span>AI2MR Research Lab<br>123 Medical Research Blvd<br>City, State 12345</span>
-          </li>
-        </ul>
+  /* Bento Box Actual Grid Structure */
+  .bento-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2vw;
+    padding: 2.5vw;
+    width: 100%;
+    min-height: calc(100vh - 80px); /* Fill screen minus header */
+    margin: 0 auto;
+    z-index: 2;
+    position: relative;
+  }
 
-        <div class="mt-4 pt-3 border-top">
-          <h5 class="mb-3" style="font-size: 1rem;">Connect with us</h5>
-          <div class="social-links contact-socials">
-            {% social_links %}
+  /* Desktop Grid */
+  @media (min-width: 992px) {
+    .bento-wrapper {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      align-items: stretch;
+    }
+    
+    .bento-card-main {
+      grid-column: 1 / 2;
+      grid-row: 1 / 3;
+    }
+    
+    .bento-card-logo {
+      grid-column: 2 / 4;
+      grid-row: 1 / 2;
+    }
+    
+    .bento-card-map {
+      grid-column: 2 / 4;
+      grid-row: 2 / 3;
+    }
+  }
+
+  .bento-card {
+    border-radius: 32px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease;
+  }
+  
+  .bento-card:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+    z-index: 3;
+  }
+
+  .glass-dark {
+    background: rgba(8, 20, 48, 0.65);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-light {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
+</style>
+
+<div class="container-fluid px-0 mx-auto" style="overflow-x: hidden;">
+  <div class="bento-wrapper">
+    
+    <!-- Block 1: Main Info -->
+    <div class="bento-card bento-card-main glass-dark p-4 p-md-5 d-flex flex-column justify-content-center text-left" style="height: 100%;">
+      <h2 class="mb-4" style="font-weight: 800; color: #ffffff; font-size: 3.5rem; letter-spacing: -0.02em;">Get in Touch</h2>
+      <p class="mb-5" style="font-size: 1.35rem; line-height: 1.6; color: rgba(255,255,255,0.85);">
+        We are always looking for passionate scientists and students to join our team! Whether you are seeking a PhD position, looking for collaboration, or have a general inquiry, our inbox is open.
+      </p>
+
+      <ul class="list-unstyled mb-0 mt-auto">
+        <!-- Email -->
+        <li class="mb-5 d-flex align-items-center">
+          <div style="background: rgba(144, 216, 255, 0.15); height: 80px; width: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1.5rem; flex-shrink: 0; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+            <i class="fa-solid fa-envelope" style="color: #90d8ff; font-size: 2rem;"></i>
           </div>
+          <div>
+            <h5 class="mb-1" style="font-weight: 700; color: rgba(255,255,255,0.6); text-transform: uppercase; font-size: 0.9rem; letter-spacing: 0.15em;">Email Us</h5>
+            <a href="mailto:{{ site.email | default: 'you@example.com' }}" style="font-size: 1.5rem; color: #ffffff; text-decoration: none; font-weight: 700;">{{ site.email | default: "you@example.com" }}</a>
+          </div>
+        </li>
+        <!-- Location -->
+        <li class="d-flex align-items-center">
+          <div style="background: rgba(144, 216, 255, 0.15); height: 80px; width: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1.5rem; flex-shrink: 0; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+            <i class="fa-solid fa-location-dot" style="color: #90d8ff; font-size: 2rem;"></i>
+          </div>
+          <div>
+            <h5 class="mb-1" style="font-weight: 700; color: rgba(255,255,255,0.6); text-transform: uppercase; font-size: 0.9rem; letter-spacing: 0.15em;">Visit Our Lab</h5>
+            <span style="font-size: 1.3rem; line-height: 1.5; display: inline-block; color: #ffffff; font-weight: 500;">
+              Faculty of Biomedical Engineering<br>
+              Technion - Israel Institute of Technology<br>
+              Haifa 3200003, Israel
+            </span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Block 2: Logo Link -->
+    <a href="https://bme.technion.ac.il/en/" target="_blank" class="bento-card bento-card-logo glass-light d-flex flex-row align-items-center justify-content-around text-decoration-none p-4 p-xl-5" style="height: 100%; min-height: 250px;">
+      <div style="flex: 1; display: flex; justify-content: center;">
+        <img src="https://bme.technion.ac.il/wp-content/uploads/2021/04/BME-Logo-Color.png" alt="Faculty of Biomedical Engineering, Technion" style="max-height: 150px; max-width: 90%; object-fit: contain; filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.1));">
+      </div>
+      <div style="flex: 1; display: flex; justify-content: center;">
+        <div style="background: #002b5b; color: white; padding: 1rem 2.5rem; border-radius: 50px; font-weight: 800; font-size: 1.25rem; display: inline-flex; align-items: center; gap: 0.75rem; box-shadow: 0 10px 25px rgba(0, 43, 91, 0.4); text-transform: uppercase; letter-spacing: 0.05em; transition: all 0.3s;">
+          Visit Website <i class="fa-solid fa-arrow-right"></i>
         </div>
       </div>
+    </a>
+
+    <!-- Block 3: Embedded Map -->
+    <div class="bento-card bento-card-map p-0 m-0 glass-dark d-flex" style="height: 100%; min-height: 350px;">
+      <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3353.483163901691!2d35.0195701!3d32.7793751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151dba1b65e9dc3d%3A0xc6adfb32cd51a941!2sFaculty%20of%20Biomedical%20Engineering%2C%20Technion!5e0!3m2!1sen!2sil!4v1714080000000!5m2!1sen!2sil" 
+          width="100%" 
+          height="100%" 
+          style="border:0; width: 100%; height: 100%; position: absolute; top:0; left:0; filter: contrast(1.05) opacity(0.95); mix-blend-mode: normal;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
     </div>
 
-    <!-- Contact Form Section -->
-    <div class="col-md-7">
-      <div class="contact-form-card p-4 glass-box">
-        <form action="https://formspree.io/f/placeholder" method="POST" id="contact-form">
-          <div class="form-row">
-            <div class="form-group col-md-6 mb-3">
-              <label for="firstName" class="form-label" style="font-weight: 500;">First Name</label>
-              <input type="text" class="form-control" id="firstName" name="firstName" placeholder="John" required style="border-radius: 8px; border: 1px solid var(--global-divider-color); background-color: var(--global-bg-color); color: var(--global-text-color);">
-            </div>
-            <div class="form-group col-md-6 mb-3">
-              <label for="lastName" class="form-label" style="font-weight: 500;">Last Name</label>
-              <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Doe" required style="border-radius: 8px; border: 1px solid var(--global-divider-color); background-color: var(--global-bg-color); color: var(--global-text-color);">
-            </div>
-          </div>
-          
-          <div class="form-group mb-3">
-            <label for="email" class="form-label" style="font-weight: 500;">Email Address</label>
-            <input type="email" class="form-control" id="email" name="_replyto" placeholder="john.doe@example.com" required style="border-radius: 8px; border: 1px solid var(--global-divider-color); background-color: var(--global-bg-color); color: var(--global-text-color);">
-          </div>
-          
-          <div class="form-group mb-3">
-            <label for="subject" class="form-label" style="font-weight: 500;">Subject</label>
-            <select class="form-control custom-select" id="subject" name="subject" required style="border-radius: 8px; border: 1px solid var(--global-divider-color); background-color: var(--global-bg-color); color: var(--global-text-color);">
-              <option value="" disabled selected>Select an option...</option>
-              <option value="Joining the Lab">Joining the Lab</option>
-              <option value="Collaboration">Collaboration Inquiry</option>
-              <option value="General Question">General Question</option>
-            </select>
-          </div>
-          
-          <div class="form-group mb-4">
-            <label for="message" class="form-label" style="font-weight: 500;">Message</label>
-            <textarea class="form-control" id="message" name="message" rows="5" placeholder="Tell us how we can help you..." required style="border-radius: 8px; border: 1px solid var(--global-divider-color); background-color: var(--global-bg-color); color: var(--global-text-color); resize: vertical;"></textarea>
-          </div>
-          
-          <button type="submit" class="btn btn-primary btn-block py-2 submit-btn" style="border-radius: 8px; transition: all 0.3s ease;">
-            <i class="fa-solid fa-paper-plane mr-2"></i> Send Message
-          </button>
-        </form>
-      </div>
-    </div>
   </div>
 </div>
-
-<style>
-.contact-form-card .form-control:focus {
-  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
-  border-color: var(--global-theme-color) !important;
-}
-
-[data-theme="dark"] .contact-form-card .form-control option {
-  background-color: var(--global-bg-color);
-  color: var(--global-text-color);
-}
-
-.submit-btn {
-  background-color: var(--global-theme-color);
-  border-color: var(--global-theme-color);
-}
-
-.submit-btn:hover {
-  filter: brightness(1.1);
-  transform: translateY(-1px);
-}
-
-.contact-socials a {
-  font-size: 1.5rem;
-  margin-right: 1rem;
-  color: var(--global-text-color);
-  transition: color 0.3s ease;
-}
-
-.contact-socials a:hover {
-  color: var(--global-theme-color);
-}
-</style>

@@ -1,7 +1,7 @@
 ---
 layout: about
 title: About
-main_title: "AI2MR Lab - Advanced Imaging 2 Magnetic Resonance"
+main_title: "Solomon's MRI Lab - Advanced Imaging 2 Magnetic Resonance"
 permalink: /about/
 selected_papers: true
 social: true

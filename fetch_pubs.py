@@ -9,7 +9,7 @@ from typing import Dict, List
 AUTHOR_QUERY = "Eddy Solomon"
 API_BASE = "https://api.semanticscholar.org/graph/v1"
 BIB_FILE = "_bibliography/papers.bib"
-FEATURED_FILE = "_data/featured_publications.yml"
+FEATURED_FILE = "_data/open_science.yml"
 PAGE_SIZE = 100
 
 
@@ -122,7 +122,7 @@ def write_bibtex(papers: List[Dict]) -> List[Dict]:
     with open(BIB_FILE, "w", encoding="utf-8") as f:
         for paper in papers:
             title = bib_safe(paper.get("title") or "Unknown Title")
-            year = paper.get("year") or "Unknown"
+            year = paper.get("year") or "0000"
 
             authors_list = paper.get("authors", [])
             author_names = [a.get("name", "") for a in authors_list if a.get("name")]
@@ -233,7 +233,7 @@ def main() -> None:
     entries = write_bibtex(papers)
     write_featured_publications(entries)
     print(f"Successfully generated {BIB_FILE} with {len(papers)} entries.")
-    print(f"Successfully generated {FEATURED_FILE} for About page highlights.")
+    print(f"Successfully generated {FEATURED_FILE} for Open Science highlights.")
 
 
 if __name__ == "__main__":

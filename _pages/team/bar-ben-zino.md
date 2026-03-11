@@ -7,4 +7,4 @@ description: Researcher
 
 # Bar Ben-Zino
 
-Researcher at the AI2MR Lab.
+Researcher at the Solomon's MRI Lab.

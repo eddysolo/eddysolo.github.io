@@ -9,8 +9,8 @@ children:
     permalink: /publications/
   - title: Projects
     permalink: /projects/
-  - title: Featured Publications
-    permalink: /featured-publications/
+  - title: Open Science
+    permalink: /open-science/
 ---
 
 <!-- pages/research.md -->
