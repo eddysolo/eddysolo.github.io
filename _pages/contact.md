@@ -11,7 +11,7 @@ fluid: true
 <style>
   /* Page Level Background setup */
   body {
-    background-image: url('{{ "assets/img/technionImage.jfif" | relative_url }}');
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/1/1a/Technion_-_Ullmann_Building.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -57,23 +57,22 @@ fluid: true
   /* Desktop Grid */
   @media (min-width: 992px) {
     .bento-wrapper {
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(2, 1fr);
-      align-items: stretch;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto auto;
     }
     
     .bento-card-main {
-      grid-column: 1 / 2;
+      grid-column: 1 / 4;
       grid-row: 1 / 3;
     }
     
     .bento-card-logo {
-      grid-column: 2 / 4;
+      grid-column: 4 / 5;
       grid-row: 1 / 2;
     }
     
     .bento-card-map {
-      grid-column: 2 / 4;
+      grid-column: 4 / 5;
       grid-row: 2 / 3;
     }
   }

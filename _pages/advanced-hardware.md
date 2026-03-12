@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Smart Sensors
-permalink: /smart-sensors/
+permalink: /advanced-hardware/
 fluid: true
 ---
 

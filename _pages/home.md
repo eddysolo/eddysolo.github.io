@@ -1,11 +1,23 @@
 ---
 layout: default
 title: Home
-main_title: "Solomon's MRI Lab - Advanced Imaging 2 Magnetic Resonance"
+main_title: "Solomon's MRI Lab - Advanced Imaging to Magnetic Resonance"
 permalink: /
 hero_image: assets/img/mri_hero.jpg
-fluid: true
 ---
+
+<style>
+@keyframes scanline {
+  0% { top: -100px; }
+  100% { top: 100%; }
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.8); box-shadow: 0 0 0 0 rgba(0, 150, 199, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 20px rgba(0, 150, 199, 0); }
+  100% { transform: scale(0.8); box-shadow: 0 0 0 0 rgba(0, 150, 199, 0); }
+}
+</style>
 
 <div class="container-fluid px-0 mx-auto" style="max-width: 95%; width: calc(100% - 2rem); overflow-x: hidden;">
   <div class="post mx-auto" style="border: none; background: transparent; padding: 0; width: 100%; max-width: 100%;">
@@ -17,7 +29,7 @@ fluid: true
         <!-- Welcome Box -->
         <div class="glass-section w-100 d-flex flex-column justify-content-center align-items-center text-center" style="border-radius: 24px; padding: 4rem 3rem;">
           <h1 style="font-weight: 800; font-size: 3.5rem; letter-spacing: -0.02em; margin-bottom: 0.75rem;">Welcome to Solomon's MRI Lab</h1>
-          <h3 style="font-weight: 600; font-size: 1.75rem; color: var(--global-theme-color); margin-bottom: 0;">Advanced Imaging 2 Magnetic Resonance</h3>
+          <h3 style="font-weight: 600; font-size: 1.75rem; color: var(--global-theme-color); margin-bottom: 0;">Advanced Imaging to Magnetic Resonance</h3>
         </div>
       </div>
     </div>
@@ -55,28 +67,29 @@ fluid: true
               <p style="margin: 0; font-size: 1rem;">Free-breathing MRI techniques that eliminate motion artifacts.</p>
             </a>
 
-            <a href="{{ '/smart-sensors/' | relative_url }}" class="glass-box p-3 text-decoration-none text-center" style="border-radius: 16px; transition: transform 0.2s; color: var(--global-text-color); border: 1px solid rgba(0,150,199,0.3);">
-              <h4 style="font-weight: 700; font-size: 1.2rem; margin-bottom: 0.25rem; color: var(--global-theme-color);">Smart Sensors</h4>
+            <a href="{{ '/advanced-hardware/' | relative_url }}" class="glass-box p-3 text-decoration-none text-center" style="border-radius: 16px; transition: transform 0.2s; color: var(--global-text-color); border: 1px solid rgba(0,150,199,0.3);">
+              <h4 style="font-weight: 700; font-size: 1.2rem; margin-bottom: 0.25rem; color: var(--global-theme-color);">Advanced Hardware</h4>
               <p style="margin: 0; font-size: 1rem;">Integration of MR-compatible external sensors like ultra-wideband radar.</p>
             </a>
           </div>
         </div>
       </div>
 
-      <!-- Vertical Image Stack -->
+      <!-- Vertical Image Stack replaced with CSS Keep-In-Motion MRI Effect Box -->
       <div class="col-lg-6 d-flex flex-column gap-4">
         
-        <!-- Brain Image Box -->
-        <div class="glass-box p-0 w-100 d-flex align-items-center justify-content-center" style="border-radius: 24px; background: rgba(255,255,255,0.4); overflow: hidden;">
-          <img src="{{ 'assets/img/brain-image.png' | relative_url }}" alt="Brain Scan" style="width: 100%; height: auto; display: block; object-fit: contain;">
-        </div>
-        
-        <!-- Keep In Motion Box -->
-        <a href="{{ '/keep-in-motion/' | relative_url }}" class="glass-box p-0 w-100 position-relative text-decoration-none d-flex align-items-center justify-content-center" style="border-radius: 24px; background: rgba(0,0,0,0.85); overflow: hidden; height: 100%; min-height: 250px; transition: transform 0.3s ease;">
-          <img src="{{ 'assets/img/mri-abdominal.png' | relative_url }}" alt="Keep In Motion" style="position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0.4;">
+        <!-- Keep In Motion Box with pure text & MRI scan effect background -->
+        <a href="{{ '/keep-in-motion/' | relative_url }}" class="glass-box p-0 w-100 position-relative text-decoration-none d-flex align-items-center justify-content-center" style="border-radius: 24px; background: #070f1a; overflow: hidden; height: 100%; min-height: 400px; transition: transform 0.3s ease; box-shadow: inset 0 0 40px rgba(0,0,0,1);">
+          
+          <!-- MRI Radial Signal CSS Grid Effect -->
+          <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: radial-gradient(rgba(0,150,199,0.2) 2px, transparent 2px), radial-gradient(rgba(0,150,199,0.2) 2px, transparent 2px); background-size: 30px 30px; background-position: 0 0, 15px 15px; opacity: 0.7;"></div>
+          
+          <!-- Animated MRI Scanline Effect -->
+          <div style="position: absolute; left: 0; width: 100%; height: 120px; background: linear-gradient(to bottom, transparent, rgba(0,255,255,0.15) 50%, rgba(0,150,199,0.4) 100%, transparent); animation: scanline 3s linear infinite; filter: blur(3px); z-index: 1;"></div>
+          
           <div class="position-relative text-center p-4 w-100 z-index-2">
-            <h3 style="color: white; font-weight: 800; font-size: 2.2rem; margin-bottom: 0.5rem; text-shadow: 0 2px 10px rgba(0,0,0,1);"><i class="fa-solid fa-person-running mr-2"></i> Keep In Motion</h3>
-            <p style="color: #f0f8ff; font-size: 1.2rem; margin: 0 auto; max-width: 85%; line-height: 1.4; text-shadow: 0 1px 8px rgba(0,0,0,1);">Conquering physiological motion artifacts via real-time intelligent monitoring and MR-compatible external sensors.</p>
+            <h3 style="color: white; font-weight: 800; font-size: 3.2rem; margin-bottom: 1.5rem; text-shadow: 0 4px 15px rgba(0, 150, 199, 0.9);"><i class="fa-solid fa-person-running mr-3" style="animation: pulse-ring 2s infinite; border-radius: 50%;"></i> Keep In Motion</h3>
+            <p style="color: #e6f7ff; font-size: 1.35rem; margin: 0 auto; max-width: 85%; line-height: 1.6; font-weight: 500; text-shadow: 0 2px 5px rgba(0,0,0,1);">Conquering physiological motion artifacts via real-time intelligent monitoring and MR-compatible external sensors.</p>
           </div>
         </a>
         
@@ -147,9 +160,9 @@ fluid: true
     </div>
 
     <!-- Join Us (Call to Action) with Background Image -->
-    <section class="mb-4 position-relative" style="border-radius: 24px; padding: 4rem 3rem; text-align: center; color: white; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.15);">
-      <!-- Background Image -->
-      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; background-image: url('{{ "assets/img/ChatGPT_brain_scan_idea.png" | relative_url }}'); background-size: cover; background-position: center; filter: brightness(0.9);"></div>
+    <section class="mb-4 position-relative" style="border-radius: 24px; padding: 4rem 3rem; text-align: center; color: white; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.15); background: linear-gradient(135deg, rgba(8, 20, 48, 1) 0%, rgba(0, 93, 143, 1) 100%);">
+      <!-- Animated MRI Scanline grid for texture without loaded images -->
+      <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: repeating-linear-gradient(0deg, transparent, transparent 19px, rgba(255,255,255,0.05) 20px), repeating-linear-gradient(90deg, transparent, transparent 19px, rgba(255,255,255,0.05) 20px); background-size: 20px 20px;"></div>
       
       <!-- Gradient Overlay for Contrast -->
       <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; background: linear-gradient(135deg, rgba(8, 20, 48, 0.85) 0%, rgba(0, 93, 143, 0.75) 100%); mix-blend-mode: multiply;"></div>
