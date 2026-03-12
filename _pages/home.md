@@ -4,6 +4,7 @@ title: Home
 main_title: "Solomon's MRI Lab - Advanced Imaging to Magnetic Resonance"
 permalink: /
 hero_image: assets/img/mri_hero.jpg
+fluid: true
 ---
 
 <style>
@@ -19,7 +20,7 @@ hero_image: assets/img/mri_hero.jpg
 }
 </style>
 
-<div class="container-fluid px-0 mx-auto" style="max-width: 95%; width: calc(100% - 2rem); overflow-x: hidden;">
+<div class="container-fluid px-0 mx-auto" style="max-width: 90%; width: 90%; overflow-x: hidden;">
   <div class="post mx-auto" style="border: none; background: transparent; padding: 0; width: 100%; max-width: 100%;">
     
     <!-- Row 1: Welcome Box -->
@@ -160,8 +161,8 @@ hero_image: assets/img/mri_hero.jpg
     </div>
 
     <!-- Join Us (Call to Action) with Background Image -->
-    <section class="mb-4 position-relative" style="border-radius: 24px; padding: 4rem 3rem; text-align: center; color: white; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.15); background: linear-gradient(135deg, rgba(8, 20, 48, 1) 0%, rgba(0, 93, 143, 1) 100%);">
-      <!-- Animated MRI Scanline grid for texture without loaded images -->
+    <section class="mb-4 position-relative" style="border-radius: 24px; padding: 4rem 3rem; text-align: center; color: white; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.15); background-image: url('{{ "assets/img/ChatGPT_brain_scan_idea.png" | relative_url }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+      <!-- Animated MRI Scanline grid overlay -->
       <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: repeating-linear-gradient(0deg, transparent, transparent 19px, rgba(255,255,255,0.05) 20px), repeating-linear-gradient(90deg, transparent, transparent 19px, rgba(255,255,255,0.05) 20px); background-size: 20px 20px;"></div>
       
       <!-- Gradient Overlay for Contrast -->
@@ -186,8 +187,8 @@ hero_image: assets/img/mri_hero.jpg
         <!-- Technion -->
         <div class="col-6 col-md-3 mb-3">
           <div class="glass-box p-4 h-100 d-flex flex-column justify-content-center" style="border-radius: 20px; background: rgba(255,255,255,0.05);">
-            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3a/Technion_logo.svg/1200px-Technion_logo.svg.png" alt="Technion Logo" style="max-height: 60px; object-fit: contain; margin-bottom: 1rem; width: 100%;">
-            <h5 style="margin: 0; font-weight: 600;">Technion Institute</h5>
+            <img src="{{ 'assets/img/logos/technion_logo_transparent.png' | relative_url }}" alt="Technion Logo" style="max-height: 72px; object-fit: contain; margin-bottom: 1rem; width: 100%;">
+            <h5 style="margin: 0; font-weight: 600;">Technion</h5>
           </div>
         </div>
         <!-- Cornell -->
@@ -200,7 +201,7 @@ hero_image: assets/img/mri_hero.jpg
         <!-- NYU Radiology -->
         <div class="col-6 col-md-3 mb-3">
           <div class="glass-box p-4 h-100 d-flex flex-column justify-content-center" style="border-radius: 20px; background: rgba(255,255,255,0.05);">
-            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/52/NYU_Langone_Health_logo.svg/1200px-NYU_Langone_Health_logo.svg.png" alt="NYU Radiology Logo" style="max-height: 60px; object-fit: contain; margin-bottom: 1rem; width: 100%;">
+            <img src="{{ 'assets/img/logos/nyu_radiology.png' | relative_url }}" alt="NYU Radiology Logo" style="max-height: 60px; object-fit: contain; margin-bottom: 1rem; width: 100%;">
             <h5 style="margin: 0; font-weight: 600;">NYU Radiology</h5>
           </div>
         </div>

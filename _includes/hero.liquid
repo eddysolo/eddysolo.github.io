@@ -1,9 +1,22 @@
 {% unless page.permalink == '/contact/' %}
 <section class="global-hero-carousel" aria-label="Featured MRI research image">
 	{% assign hero_image_path = page.hero_image | default: 'assets/img/mri_hero.jpg' %}
+	{% if hero_image_path == 'assets/img/mri_hero.jpg' %}
+		{% assign hero_image_hires_path = 'assets/img/mri_hero_hires.jpg' %}
+	{% else %}
+		{% assign hero_image_hires_path = hero_image_path %}
+	{% endif %}
 	<div class="hero-slides">
 		<figure class="hero-slide is-active">
-			<img src="{{ hero_image_path | relative_url }}" alt="MRI research visual" loading="eager">
+			<img
+				src="{{ hero_image_hires_path | relative_url }}"
+				srcset="{{ hero_image_path | relative_url }} 640w, {{ hero_image_hires_path | relative_url }} 2560w"
+				sizes="100vw"
+				alt="MRI research visual"
+				loading="eager"
+				fetchpriority="high"
+				decoding="async"
+			>
 		</figure>
 	</div>
 

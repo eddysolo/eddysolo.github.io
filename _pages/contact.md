@@ -11,7 +11,7 @@ fluid: true
 <style>
   /* Page Level Background setup */
   body {
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/1/1a/Technion_-_Ullmann_Building.jpg');
+    background-image: url('{{ "assets/img/technion_contact_bg_google.jpg" | relative_url }}');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -57,7 +57,7 @@ fluid: true
   /* Desktop Grid */
   @media (min-width: 992px) {
     .bento-wrapper {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(5, 1fr);
       grid-template-rows: auto auto;
     }
     
@@ -67,12 +67,12 @@ fluid: true
     }
     
     .bento-card-logo {
-      grid-column: 4 / 5;
+      grid-column: 4 / 6;
       grid-row: 1 / 2;
     }
     
     .bento-card-map {
-      grid-column: 4 / 5;
+      grid-column: 4 / 6;
       grid-row: 2 / 3;
     }
   }
@@ -124,7 +124,7 @@ fluid: true
           </div>
           <div>
             <h5 class="mb-1" style="font-weight: 700; color: rgba(255,255,255,0.6); text-transform: uppercase; font-size: 0.9rem; letter-spacing: 0.15em;">Email Us</h5>
-            <a href="mailto:{{ site.email | default: 'you@example.com' }}" style="font-size: 1.5rem; color: #ffffff; text-decoration: none; font-weight: 700;">{{ site.email | default: "you@example.com" }}</a>
+            <a href="mailto:{{ site.email | default: 'eddy.solomon@bm.technion.ac.il' }}" style="font-size: 1.5rem; color: #ffffff; text-decoration: none; font-weight: 700;">{{ site.email | default: "eddy.solomon@bm.technion.ac.il" }}</a>
           </div>
         </li>
         <!-- Location -->
@@ -145,21 +145,17 @@ fluid: true
     </div>
 
     <!-- Block 2: Logo Link -->
-    <a href="https://bme.technion.ac.il/en/" target="_blank" class="bento-card bento-card-logo glass-light d-flex flex-row align-items-center justify-content-around text-decoration-none p-4 p-xl-5" style="height: 100%; min-height: 250px;">
-      <div style="flex: 1; display: flex; justify-content: center;">
-        <img src="https://bme.technion.ac.il/wp-content/uploads/2021/04/BME-Logo-Color.png" alt="Faculty of Biomedical Engineering, Technion" style="max-height: 150px; max-width: 90%; object-fit: contain; filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.1));">
-      </div>
-      <div style="flex: 1; display: flex; justify-content: center;">
-        <div style="background: #002b5b; color: white; padding: 1rem 2.5rem; border-radius: 50px; font-weight: 800; font-size: 1.25rem; display: inline-flex; align-items: center; gap: 0.75rem; box-shadow: 0 10px 25px rgba(0, 43, 91, 0.4); text-transform: uppercase; letter-spacing: 0.05em; transition: all 0.3s;">
-          Visit Website <i class="fa-solid fa-arrow-right"></i>
-        </div>
+    <a href="https://bme.technion.ac.il/en/" target="_blank" class="bento-card bento-card-logo glass-light d-flex flex-column align-items-center justify-content-center text-decoration-none p-4 p-xl-5" style="height: 100%; min-height: 340px; gap: 0.8rem; padding-top: 1rem; padding-bottom: 0.75rem;">
+      <img src="{{ 'assets/img/logos/bme_logo_transparent_hires.png' | relative_url }}" alt="BME Logo" style="width: 120%; max-width: 120%; height: auto; object-fit: contain; image-rendering: auto; transform: translateY(-8px); filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.1));">
+      <div style="background: #002b5b; color: white; padding: 0.7rem 1.5rem; border-radius: 50px; font-weight: 800; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 0.6rem; box-shadow: 0 10px 25px rgba(0, 43, 91, 0.4); text-transform: uppercase; letter-spacing: 0.03em; transition: all 0.3s; margin-top: 0.2rem;">
+        Go to website <i class="fa-solid fa-arrow-right"></i>
       </div>
     </a>
 
     <!-- Block 3: Embedded Map -->
     <div class="bento-card bento-card-map p-0 m-0 glass-dark d-flex" style="height: 100%; min-height: 350px;">
       <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3353.483163901691!2d35.0195701!3d32.7793751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151dba1b65e9dc3d%3A0xc6adfb32cd51a941!2sFaculty%20of%20Biomedical%20Engineering%2C%20Technion!5e0!3m2!1sen!2sil!4v1714080000000!5m2!1sen!2sil" 
+          src="https://www.google.com/maps?q=Technion+Faculty+of+Biomedical+Engineering&ll=32.7752021,35.026504&z=17&output=embed" 
           width="100%" 
           height="100%" 
           style="border:0; width: 100%; height: 100%; position: absolute; top:0; left:0; filter: contrast(1.05) opacity(0.95); mix-blend-mode: normal;" 
