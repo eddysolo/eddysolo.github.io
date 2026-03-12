@@ -52,11 +52,11 @@ hero_image: assets/img/mri_hero.jpg
       <div class="col-lg-6 d-flex">
         <div class="glass-box p-4 w-100 d-flex flex-column justify-content-center text-center align-items-center" style="border-radius: 24px;">
           <h2 style="font-weight: 800; margin-bottom: 1.25rem;"><i class="fa-solid fa-microscope mr-2" style="color: var(--global-theme-color);"></i> Our Core Mission</h2>
-          <p style="font-size: 1.25rem; margin-bottom: 2rem; max-width: 600px; line-height: 1.6;">
+          <p style="font-size: 1.25rem; margin-bottom: 2rem; max-width: 900px; line-height: 1.6;">
             We aim to make MRI <strong>faster, more accurate, and more accessible</strong> to vulnerable populations like children and the elderly.
           </p>
           
-          <div class="d-flex flex-column gap-3 w-100" style="max-width: 600px;">
+          <div class="d-flex flex-column gap-3 w-100" style="max-width: 100%;">
             <a href="{{ '/computational-mri/' | relative_url }}" class="glass-box p-3 text-decoration-none text-center" style="border-radius: 16px; transition: transform 0.2s; color: var(--global-text-color); border: 1px solid rgba(0,150,199,0.3);">
               <h4 style="font-weight: 700; font-size: 1.2rem; margin-bottom: 0.25rem; color: var(--global-theme-color);">Computational MRI</h4>
               <p style="margin: 0; font-size: 1rem;">Revolutionary acquisition strategies and deep-learning image reconstruction.</p>
