@@ -25,7 +25,7 @@ fluid: true
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(135deg, rgba(8, 20, 48, 0.85) 0%, rgba(0, 93, 143, 0.75) 100%);
+    background: linear-gradient(135deg, rgba(8, 20, 48, 0.68) 0%, rgba(0, 93, 143, 0.56) 100%);
     mix-blend-mode: multiply;
     z-index: -1;
   }
@@ -37,7 +37,7 @@ fluid: true
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(129, 127, 127, 0.2);
     z-index: -1;
   }
 
@@ -145,15 +145,15 @@ fluid: true
     </div>
 
     <!-- Block 2: Logo Link -->
-    <a href="https://bme.technion.ac.il/en/" target="_blank" class="bento-card bento-card-logo glass-light d-flex flex-column align-items-center justify-content-center text-decoration-none p-4 p-xl-5" style="height: 100%; min-height: 340px; gap: 0.8rem; padding-top: 1rem; padding-bottom: 0.75rem;">
-      <img src="{{ 'assets/img/logos/bme_logo_transparent_hires.png' | relative_url }}" alt="BME Logo" style="width: 120%; max-width: 120%; height: auto; object-fit: contain; image-rendering: auto; transform: translateY(-8px); filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.1));">
-      <div style="background: #002b5b; color: white; padding: 0.7rem 1.5rem; border-radius: 50px; font-weight: 800; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 0.6rem; box-shadow: 0 10px 25px rgba(0, 43, 91, 0.4); text-transform: uppercase; letter-spacing: 0.03em; transition: all 0.3s; margin-top: 0.2rem;">
+    <a href="https://bme.technion.ac.il/en/" target="_blank" class="bento-card bento-card-logo glass-dark d-flex flex-column align-items-center justify-content-center text-decoration-none p-4 p-xl-5" style="height: 100%; min-height: 210px; gap: 0.7rem; padding-top: 0.85rem; padding-bottom: 0.6rem;">
+      <img src="{{ 'assets/img/logos/bme_logo_official_en.png' | relative_url }}" alt="BME Logo" style="width: 100%; max-width: 560px; height: auto; object-fit: contain; image-rendering: auto; transform: translateY(-4px); filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.12));">
+      <div style="background: rgba(144, 216, 255, 0.2); color: #dff3ff; padding: 0.7rem 1.5rem; border: 1px solid rgba(144, 216, 255, 0.4); border-radius: 50px; font-weight: 800; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 0.6rem; box-shadow: 0 10px 25px rgba(0, 43, 91, 0.4); text-transform: uppercase; letter-spacing: 0.03em; transition: all 0.3s; margin-top: 0.2rem;">
         Go to website <i class="fa-solid fa-arrow-right"></i>
       </div>
     </a>
 
     <!-- Block 3: Embedded Map -->
-    <div class="bento-card bento-card-map p-0 m-0 glass-dark d-flex" style="height: 100%; min-height: 350px;">
+    <div class="bento-card bento-card-map p-0 m-0 glass-dark d-flex" style="height: 100%; min-height: 470px;">
       <iframe 
           src="https://www.google.com/maps?q=Technion+Faculty+of+Biomedical+Engineering&ll=32.7752021,35.026504&z=17&output=embed" 
           width="100%" 

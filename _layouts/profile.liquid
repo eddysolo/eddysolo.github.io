@@ -2,37 +2,236 @@
 layout: default
 ---
 
-<div class="profile-container position-relative" style="min-height: 100vh; overflow: hidden; padding-bottom: 5rem;">
-  <!-- Background Image spanning the entire page -->
-  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -2; background-image: url('{{ "assets/img/ChatGPT_brain_scan_idea.png" | relative_url }}'); background-size: cover; background-position: center; filter: blur(8px) brightness(0.3);"></div>
-  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: linear-gradient(180deg, rgba(8, 20, 48, 0.8) 0%, rgba(0, 93, 143, 0.6) 100%); mix-blend-mode: multiply;"></div>
+<style>
+  .member-profile-wrap {
+    width: 90%;
+    max-width: none;
+    margin: 0 auto;
+    padding: 2rem 0.35rem 4rem;
+  }
 
-  <div class="container-fluid px-0 mx-auto mt-5" style="max-width: 95%; width: calc(100% - 2rem); z-index: 1;">
-    
-    <!-- Profile Card -->
-    <div class="glass-section w-100 d-flex flex-column align-items-center mb-5 text-center" style="border-radius: 24px; padding: 4rem 3rem; background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(20px);">
-      {% capture profile_img %}{% if page.image %}{{ page.image }}{% else %}assets/img/prof_pic.jpg{% endif %}{% endcapture %}
-      
-      <div style="width: 200px; height: 200px; border-radius: 50%; overflow: hidden; border: 4px solid var(--global-theme-color); margin-bottom: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
-        <img src="{{ profile_img | relative_url }}" alt="{{ page.title }}" style="width: 100%; height: 100%; object-fit: cover;">
+  .member-profile-shell {
+    border-radius: 26px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    box-shadow: 0 24px 55px rgba(10, 28, 51, 0.2);
+    overflow: hidden;
+  }
+
+  .member-profile-top {
+    padding: 2.25rem;
+    background: linear-gradient(140deg, rgba(236, 246, 255, 0.95) 0%, rgba(211, 236, 252, 0.85) 100%);
+  }
+
+  .member-photo {
+    width: min(260px, 44vw);
+    aspect-ratio: 4 / 5;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 4px solid #ffffff;
+    box-shadow: 0 12px 30px rgba(8, 20, 48, 0.2);
+    flex-shrink: 0;
+    background: rgba(230, 240, 250, 0.9);
+  }
+
+  .member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 12%;
+  }
+
+  .member-meta-label {
+    font-size: 0.76rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 700;
+    color: rgba(7, 34, 74, 0.6);
+    margin-bottom: 0.35rem;
+  }
+
+  .member-meta-value {
+    font-size: 1.06rem;
+    line-height: 1.5;
+    color: #12263f;
+    font-weight: 600;
+  }
+
+  .member-chip {
+    display: inline-flex;
+    margin: 0 0.35rem 0.5rem 0;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    border: 1px solid rgba(0, 93, 143, 0.25);
+    background: rgba(0, 150, 199, 0.08);
+    color: #0a3d62;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+
+  .member-links a {
+    color: #0a3d62;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .member-links a:hover {
+    text-decoration: underline;
+  }
+
+  .member-bio {
+    padding: 2rem 2.25rem 1rem;
+  }
+
+  .member-social-footer {
+    padding: 0 2.25rem 2.25rem;
+  }
+
+  .member-social-card {
+    border-radius: 18px;
+    background: linear-gradient(150deg, rgba(9, 37, 79, 0.95) 0%, rgba(0, 93, 143, 0.85) 100%);
+    color: #ffffff;
+    padding: 1.25rem 1.4rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .member-social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+  }
+
+  .member-social-links a {
+    text-decoration: none;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 999px;
+    padding: 0.45rem 0.9rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  @media (max-width: 767.98px) {
+    .member-profile-top,
+    .member-bio,
+    .member-social-footer {
+      padding: 1.25rem;
+    }
+
+    .member-photo {
+      width: min(190px, 52vw);
+    }
+  }
+</style>
+
+{% assign raw_profile_img = page.image | default: 'assets/img/eddy_solomon.jpg' %}
+{% if raw_profile_img contains '/' %}
+  {% assign profile_img = raw_profile_img %}
+{% else %}
+  {% assign profile_img = raw_profile_img | prepend: 'assets/img/' %}
+{% endif %}
+
+{% if page.github_url %}
+  {% assign github_url = page.github_url %}
+{% elsif page.github_username %}
+  {% assign github_url = 'https://github.com/' | append: page.github_username %}
+{% endif %}
+
+{% if page.linkedin_url %}
+  {% assign linkedin_url = page.linkedin_url %}
+{% elsif page.linkedin_username %}
+  {% assign linkedin_url = 'https://www.linkedin.com/in/' | append: page.linkedin_username %}
+{% endif %}
+
+<div class="member-profile-wrap">
+  <section class="member-profile-shell">
+    <div class="member-profile-top">
+      <div class="row align-items-center">
+        <div class="col-md-auto text-center mb-4 mb-md-0">
+          <div class="member-photo mx-auto">
+            <img src="{{ profile_img | relative_url }}" alt="{{ page.title }} photo">
+          </div>
+        </div>
+
+        <div class="col-md">
+          <h1 style="font-size: clamp(1.7rem, 2.4vw, 2.7rem); font-weight: 800; margin-bottom: 0.4rem; color: #09264d;">{{ page.title }}</h1>
+          <p style="font-size: 1.1rem; margin-bottom: 1.3rem; color: #0a4d73; font-weight: 700;">{{ page.description }}</p>
+
+          <div class="row">
+            <div class="col-lg-6 mb-3 mb-lg-0">
+              <div class="member-meta-label">Role in Lab</div>
+              <div class="member-meta-value">{{ page.role_in_lab | default: page.description }}</div>
+            </div>
+            <div class="col-lg-6">
+              <div class="member-meta-label">Research Field</div>
+              {% if page.research_fields %}
+                <div>
+                  {% for field in page.research_fields %}
+                    <span class="member-chip">{{ field }}</span>
+                  {% endfor %}
+                </div>
+              {% else %}
+                <div class="member-meta-value">MRI, medical imaging, and computational methods</div>
+              {% endif %}
+            </div>
+          </div>
+
+          <div class="row mt-3">
+            <div class="col-lg-6 mb-3 mb-lg-0">
+              <div class="member-meta-label">Contact Email</div>
+              {% if page.email %}
+                <div class="member-links"><a href="mailto:{{ page.email }}">{{ page.email }}</a></div>
+              {% else %}
+                <div class="member-links"><a href="mailto:{{ site.email }}">{{ site.email }}</a></div>
+              {% endif %}
+            </div>
+            <div class="col-lg-6">
+              <div class="member-meta-label">Useful Links</div>
+              <div class="member-links">
+                {% if page.links %}
+                  {% for link in page.links %}
+                    <div><a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a></div>
+                  {% endfor %}
+                {% else %}
+                  <div><a href="{{ '/publications/' | relative_url }}">Lab publications</a></div>
+                  <div><a href="{{ '/projects/' | relative_url }}">Lab projects</a></div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      
-      <h1 style="font-weight: 800; font-size: 3.5rem; letter-spacing: -0.02em; margin-bottom: 0.5rem; color: var(--global-text-color);">{{ page.title }}</h1>
-      <h3 style="font-weight: 600; font-size: 1.5rem; color: var(--global-theme-color); margin-bottom: 2rem;">{{ page.description }}</h3>
-      
-      <div class="profile-content text-left" style="font-size: 1.25rem; line-height: 1.8; color: var(--global-text-color); max-width: 800px; width: 100%;">
+    </div>
+
+    <div class="member-bio">
+      <h2 style="font-size: 1.25rem; font-weight: 800; color: #0b2f59; margin-bottom: 0.9rem;">Short Bio</h2>
+      <div style="font-size: 1.05rem; line-height: 1.75; color: #142f4d;">
         {{ content }}
       </div>
     </div>
 
-    <!-- Join Us Box -->
-    <div class="glass-box text-center p-5" style="border-radius: 24px; background: rgba(0, 150, 199, 0.15); border: 1px solid rgba(255,255,255,0.2);">
-      <h2 style="font-weight: 800; font-size: 2.5rem; color: white; margin-bottom: 1rem; text-shadow: 0 2px 10px rgba(0,0,0,0.5);">Want to Work with {{ page.title | split: ' ' | first }}?</h2>
-      <p style="font-size: 1.25rem; color: #f0f8ff; margin-bottom: 2.5rem; text-shadow: 0 1px 5px rgba(0,0,0,0.5);">
-        Solomon's MRI Lab is always looking for brilliant post-docs and students. Join our team and push the boundaries of medical imaging.
-      </p>
-      <a href="{{ '/contact/' | relative_url }}" class="btn btn-light btn-lg text-uppercase" style="font-weight: 700; padding: 1rem 3rem; border-radius: 12px; color: #111424; box-shadow: 0 10px 25px rgba(255,255,255,0.2);">Join Us</a>
+    <div class="member-social-footer">
+      <div class="member-social-card">
+        <div style="font-weight: 800; letter-spacing: 0.02em;">Connect</div>
+        <div class="member-social-links">
+          {% if github_url %}
+            <a href="{{ github_url }}" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+          {% endif %}
+          {% if linkedin_url %}
+            <a href="{{ linkedin_url }}" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+          {% endif %}
+          {% if github_url == nil and linkedin_url == nil %}
+            <a href="{{ '/contact/' | relative_url }}"><i class="fa-solid fa-envelope"></i> Contact</a>
+          {% endif %}
+        </div>
+      </div>
     </div>
-    
-  </div>
+  </section>
 </div>

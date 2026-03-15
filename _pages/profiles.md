@@ -10,8 +10,8 @@ hero_image: assets/img/mri_hero.jpg
 profiles:
   - name: Eddy Solomon
     role: Head of Solomon's MRI Lab
-    image: prof_pic.jpg
-    url: /team/eddysolo/
+    image: eddy_solomon.jpg
+    url: /team/eddy-solomon/
   - name: Bar Ben-Zino
     role: Core Researcher
     image: bar_ben_zino.jpg

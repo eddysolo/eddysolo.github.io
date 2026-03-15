@@ -1,4 +1,4 @@
-{% unless page.permalink == '/contact/' %}
+{% unless page.permalink == '/contact/' or page.no_hero %}
 <section class="global-hero-carousel" aria-label="Featured MRI research image">
 	{% assign hero_image_path = page.hero_image | default: 'assets/img/mri_hero.jpg' %}
 	{% if hero_image_path == 'assets/img/mri_hero.jpg' %}
@@ -20,16 +20,16 @@
 		</figure>
 	</div>
 
-	{% unless page.url == '/' or page.permalink == '/' %}
+	{% unless page.url == '/' or page.permalink == '/' or page.layout == 'profile' %}
 		<div class="hero-overlay" aria-label="Page title overlay">
 			<h1 class="hero-title">{{ page.title }}</h1>
 			{% if page.permalink == '/publications/' or page.url == '/publications/' %}
 			<div class="d-flex flex-column align-items-center gap-3 mt-4">
-				<a class="glass-box px-4 py-3 text-decoration-none d-flex align-items-center justify-content-center w-100" href="https://scholar.google.com/citations?user=tAOr0VwAAAAJ&hl=en" target="_blank" style="max-width: 450px; border-radius: 12px; color: white; background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.4); backdrop-filter: blur(12px); font-weight: 700; letter-spacing: 0.05em; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
-					<i class="fa-brands fa-google mr-2" style="font-size: 1.2rem; margin-right:0.5rem;"></i> FOR A FULL LIST, FIND US ON GOOGLE SCHOLAR
+				<a class="glass-box px-4 py-3 text-decoration-none d-flex align-items-center justify-content-center w-100" href="https://scholar.google.com/citations?user=tAOr0VwAAAAJ&hl=en" target="_blank" style="border-radius: 12px; color: white; background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.4); backdrop-filter: blur(12px); font-weight: 600; font-size: 0.86rem; letter-spacing: 0.03em; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+					<i class="fa-brands fa-google mr-2" style="font-size: 1rem; margin-right:0.45rem;"></i> FOR A FULL LIST, FIND US ON GOOGLE SCHOLAR
 				</a>
-				<a class="glass-box px-4 py-3 text-decoration-none d-flex align-items-center justify-content-center w-100" href="#" target="_blank" style="max-width: 450px; border-radius: 12px; color: white; background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.4); backdrop-filter: blur(12px); font-weight: 700; letter-spacing: 0.05em; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
-					<i class="fa-solid fa-book-medical mr-2" style="font-size: 1.2rem; margin-right:0.5rem;"></i> FOR A FULL LIST, FIND US ON PUBMED
+				<a class="glass-box px-4 py-3 text-decoration-none d-flex align-items-center justify-content-center w-100" href="https://pubmed.ncbi.nlm.nih.gov/?term=Eddy+Solomon" target="_blank" rel="noopener" style="border-radius: 12px; color: white; background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.4); backdrop-filter: blur(12px); font-weight: 600; font-size: 0.86rem; letter-spacing: 0.03em; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+					<i class="fa-solid fa-book-medical mr-2" style="font-size: 1rem; margin-right:0.45rem;"></i> FOR A FULL LIST, FIND US ON PUBMED
 				</a>
 			</div>
 			{% endif %}

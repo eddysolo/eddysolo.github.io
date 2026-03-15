@@ -8,7 +8,7 @@ nav_order: 4
 fluid: true
 ---
 
-<div class="container-fluid px-0 mx-auto" style="max-width: 95%; width: calc(100% - 2rem);">
+<div class="container-fluid px-0 mx-auto" style="max-width: 90%; width: 90%;">
   <div class="glass-section w-100 d-flex flex-column justify-content-center align-items-center text-center mb-5" style="border-radius: 24px; padding: 4rem 3rem;">
     <h1 style="font-weight: 800; font-size: 3rem; margin-bottom: 0.75rem;">Codes & Repositories</h1>
     <h3 style="font-weight: 600; font-size: 1.5rem; color: var(--global-theme-color); margin-bottom: 0;">Open-source software developed at Solomon's MRI Lab</h3>

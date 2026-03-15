@@ -85,6 +85,23 @@ body.sticky-bottom-footer {
   max-width: v.$max-content-width;
 }
 
+/* Match Home page content width on custom wide layouts. */
+.layout-page .container[role="main"],
+.layout-profile .container[role="main"] {
+  max-width: 90% !important;
+  width: 90%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media (max-width: 767.98px) {
+  .layout-page .container[role="main"],
+  .layout-profile .container[role="main"] {
+    max-width: 96% !important;
+    width: 96%;
+  }
+}
+
 .layout-about .container[role="main"] {
   max-width: v.$max-content-width;
 }

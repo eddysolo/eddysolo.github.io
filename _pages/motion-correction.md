@@ -3,14 +3,10 @@ layout: default
 title: Motion Correction
 permalink: /motion-correction/
 fluid: true
+no_hero: true
 ---
 
-<div class="container-fluid px-0 mx-auto" style="max-width: 95%; width: calc(100% - 2rem);">
-  <div class="glass-section w-100 d-flex flex-column justify-content-center align-items-center text-center mb-4" style="border-radius: 24px; padding: 4rem 3rem;">
-    <h1 style="font-weight: 800; font-size: 3rem; margin-bottom: 0.75rem;">Motion Correction</h1>
-    <h3 style="font-weight: 600; font-size: 1.5rem; color: var(--global-theme-color); margin-bottom: 0;">Free-breathing MRI techniques that eliminate motion artifacts</h3>
-  </div>
-
+<div class="container-fluid px-0 mx-auto" style="max-width: 90%; width: 90%;">
   <div class="row g-4 mb-4 align-items-stretch">
     <!-- Main Concept -->
     <div class="col-lg-8">
