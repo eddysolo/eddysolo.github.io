@@ -215,5 +215,23 @@ fluid: true
       </div>
     </section>
 
+    <section style="padding: 2rem 1rem 0; text-align: center;">
+      <div class="d-flex justify-content-center align-items-center flex-wrap" style="gap: 0.9rem;">
+        <a href="https://www.linkedin.com/in/eddy-solomon-93159119b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style="color: #000; font-size: 3.45rem; line-height: 1;">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/eddysolo" target="_blank" rel="noopener noreferrer" aria-label="GitHub" style="color: #000; font-size: 3.45rem; line-height: 1;">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://outlook.office.com/mail/deeplink/compose?to=eddy.solomon@bm.technion.ac.il" target="_blank" rel="noopener noreferrer" aria-label="Outlook" style="color: #000; font-size: 3.45rem; line-height: 1;">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+        <a href="https://scholar.google.com/citations?user=tAOr0VwAAAAJ&hl=iw&oi=ao" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" style="color: #000; font-size: 3.45rem; line-height: 1;">
+          <i class="ai ai-google-scholar"></i>
+        </a>
+      </div>
+      <p style="margin-top: 0.8rem; margin-bottom: 0; font-size: 1rem; color: #000;">you can reach out us best by email.</p>
+    </section>
+
   </div>
 </div>

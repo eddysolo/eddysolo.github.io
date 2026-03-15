@@ -23,6 +23,12 @@ fluid: true
         <p style="font-size: 1.15rem; color: var(--global-theme-color); font-weight: 700;">Contribution: Open-source MRI dataset support for reconstruction and machine learning research.</p>
         <p style="font-size: 1.1rem; flex-grow: 1;">We contributed Breast DCE MRI data to the NYU FastMRI ecosystem to support robust reconstruction benchmarks and reproducible algorithm development.</p>
         <span class="btn btn-outline-primary mt-2">Visit Resource</span>
+        <img
+          src="{{ '/assets/img/publication_preview/breast%20scan%20example.png' | relative_url }}"
+          alt="fastMRI breast dataset preview"
+          class="mt-3 w-100"
+          style="border-radius: 16px; object-fit: cover;"
+        >
       </a>
     </div>
 

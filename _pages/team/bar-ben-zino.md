@@ -2,6 +2,7 @@
 layout: profile
 title: Bar Ben-Zino
 permalink: /team/bar-ben-zino/
+person_key: bar-ben-zino
 description: Researcher
 image: bar_ben_zino.jpg
 role_in_lab: Core Researcher, Solomon's MRI Lab

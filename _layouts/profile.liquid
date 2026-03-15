@@ -138,16 +138,47 @@ layout: default
   {% assign profile_img = raw_profile_img | prepend: 'assets/img/' %}
 {% endif %}
 
+{% assign person_key = page.person_key %}
+{% if person_key == nil and page.permalink %}
+  {% assign permalink_parts = page.permalink | split: '/' %}
+  {% assign key_index = permalink_parts.size | minus: 2 %}
+  {% assign person_key = permalink_parts[key_index] %}
+{% endif %}
+{% assign person_links = site.data.people_links[person_key] %}
+
 {% if page.github_url %}
   {% assign github_url = page.github_url %}
 {% elsif page.github_username %}
   {% assign github_url = 'https://github.com/' | append: page.github_username %}
+{% endif %}
+{% if person_links and person_links.github %}
+  {% assign github_url = person_links.github %}
 {% endif %}
 
 {% if page.linkedin_url %}
   {% assign linkedin_url = page.linkedin_url %}
 {% elsif page.linkedin_username %}
   {% assign linkedin_url = 'https://www.linkedin.com/in/' | append: page.linkedin_username %}
+{% endif %}
+{% if person_links and person_links.linkedin %}
+  {% assign linkedin_url = person_links.linkedin %}
+{% endif %}
+
+{% assign email_address = page.email | default: site.email %}
+{% if person_links and person_links.outlook %}
+  {% assign email_address = person_links.outlook %}
+{% endif %}
+{% assign scholar_url = nil %}
+{% if page.links %}
+  {% for link in page.links %}
+    {% assign link_label = link.label | downcase %}
+    {% if link_label contains 'scholar' %}
+      {% assign scholar_url = link.url %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+{% if person_links and person_links.scholar %}
+  {% assign scholar_url = person_links.scholar %}
 {% endif %}
 
 <div class="member-profile-wrap">
@@ -186,11 +217,7 @@ layout: default
           <div class="row mt-3">
             <div class="col-lg-6 mb-3 mb-lg-0">
               <div class="member-meta-label">Contact Email</div>
-              {% if page.email %}
-                <div class="member-links"><a href="mailto:{{ page.email }}">{{ page.email }}</a></div>
-              {% else %}
-                <div class="member-links"><a href="mailto:{{ site.email }}">{{ site.email }}</a></div>
-              {% endif %}
+              <div class="member-links"><a href="mailto:{{ email_address }}">{{ email_address }}</a></div>
             </div>
             <div class="col-lg-6">
               <div class="member-meta-label">Useful Links</div>
@@ -219,7 +246,7 @@ layout: default
 
     <div class="member-social-footer">
       <div class="member-social-card">
-        <div style="font-weight: 800; letter-spacing: 0.02em;">Connect</div>
+        <div style="font-weight: 800; letter-spacing: 0.02em; color: #ffffff;">Reach Us</div>
         <div class="member-social-links">
           {% if github_url %}
             <a href="{{ github_url }}" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
@@ -227,8 +254,8 @@ layout: default
           {% if linkedin_url %}
             <a href="{{ linkedin_url }}" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
           {% endif %}
-          {% if github_url == nil and linkedin_url == nil %}
-            <a href="{{ '/contact/' | relative_url }}"><i class="fa-solid fa-envelope"></i> Contact</a>
+          {% if scholar_url %}
+            <a href="{{ scholar_url }}" target="_blank" rel="noopener"><i class="ai ai-google-scholar"></i> Google Scholar</a>
           {% endif %}
         </div>
       </div>

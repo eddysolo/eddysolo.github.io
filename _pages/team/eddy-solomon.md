@@ -2,6 +2,7 @@
 layout: profile
 title: Eddy Solomon
 permalink: /team/eddy-solomon/
+person_key: eddy-solomon
 description: Head of Solomon's MRI Lab
 image: eddy_solomon.jpg
 role_in_lab: Principal Investigator, Solomon's MRI Lab
