@@ -5,10 +5,11 @@
 // Checklist
 
 ul.task-list {
-  list-style-type: none; /* Remove bullets from all levels */
+  list-style-type: none;
+  /* Remove bullets from all levels */
 }
 
-ul.task-list > li ul {
+ul.task-list>li ul {
   /* Nested lists within .task-list */
   padding-inline-start: 1.5rem;
 }
@@ -37,7 +38,26 @@ ul.task-list input[type="checkbox"] {
 // Card
 
 .card {
-  background-color: var(--global-card-bg-color);
+  background: linear-gradient(155deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.72));
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08), inset 0 0 0 1px rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+
+  &:hover,
+  &:focus-within {
+    transform: translateY(-5px) scale(1.01);
+    border-color: rgba(0, 150, 199, 0.65);
+    box-shadow:
+      0 22px 44px rgba(15, 23, 42, 0.14),
+      0 8px 18px rgba(15, 23, 42, 0.08),
+      inset 0 0 0 1px rgba(0, 150, 199, 0.4),
+      0 0 0 2px rgba(0, 150, 199, 0.16);
+  }
 
   .card-img {
     width: 100%;
@@ -46,10 +66,12 @@ ul.task-list input[type="checkbox"] {
 
   .card-title {
     color: var(--global-text-color);
+    font-weight: 600;
+    letter-spacing: -0.02em;
   }
 
   .card-body {
-    padding: 1.25rem 1.25rem 1.25rem 1.25rem;
+    padding: 1.5rem;
   }
 }
 
@@ -229,7 +251,7 @@ ul.task-list input[type="checkbox"] {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.wechat-modal > img {
+.wechat-modal>img {
   display: block;
   position: relative;
   top: 50%;
@@ -240,7 +262,7 @@ ul.task-list input[type="checkbox"] {
 }
 
 @media only screen and (max-width: 400px) {
-  .wechat-modal > img {
+  .wechat-modal>img {
     width: 100%;
   }
 }
@@ -258,4 +280,216 @@ ul.task-list input[type="checkbox"] {
 
 .d2h-diff-table {
   position: relative;
+}
+
+/*******************************************************************************
+ * Glass-box Sections (News + Publications)
+ ******************************************************************************/
+
+.glass-section {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 16px 38px rgba(15, 23, 42, 0.1), 0 2px 6px rgba(15, 23, 42, 0.05);
+  padding: 0;
+  margin-bottom: 2.5rem;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+
+  &:hover {
+    border-color: rgba(0, 150, 199, 0.5);
+    box-shadow: 0 24px 52px rgba(15, 23, 42, 0.14), 0 6px 12px rgba(15, 23, 42, 0.08);
+  }
+}
+
+html[data-theme="dark"] .glass-section {
+  background: rgba(30, 35, 46, 0.72);
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.glass-section-title {
+  margin: 0;
+  padding: 1.2rem 1.8rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      color: var(--global-theme-color) !important;
+    }
+  }
+}
+
+html[data-theme="dark"] .glass-section-title {
+  background: rgba(255, 255, 255, 0.04);
+  border-bottom-color: rgba(255, 255, 255, 0.07);
+}
+
+.glass-section-body {
+  padding: 1.5rem 1.8rem;
+}
+
+.about-featured-papers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 1rem;
+}
+
+.about-featured-paper {
+  border: 1px solid rgba(255, 255, 255, 0.92);
+  border-radius: 16px;
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6));
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.07), inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+  padding: 1rem 1.05rem;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+
+  &:hover,
+  &:focus-within {
+    transform: translateY(-2px);
+    border-color: rgba(0, 150, 199, 0.58);
+    box-shadow:
+      0 18px 34px rgba(15, 23, 42, 0.12),
+      inset 0 0 0 1px rgba(0, 150, 199, 0.34),
+      0 0 0 2px rgba(0, 150, 199, 0.14);
+  }
+
+  h3 {
+    margin: 0 0 0.45rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+
+  .paper-title {
+    margin: 0 0 0.4rem;
+    font-size: 0.92rem;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .paper-meta {
+    margin: 0 0 0.45rem;
+    font-size: 0.82rem;
+    color: var(--global-text-color-light);
+  }
+
+  .paper-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: auto 0 0;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 2rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: var(--global-text-color);
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      background: rgba(255, 255, 255, 0.55);
+      border-radius: 999px;
+      padding: 0.28rem 0.65rem;
+      line-height: 1.2;
+
+      &:hover {
+        color: var(--global-theme-color);
+        border-color: rgba(0, 150, 199, 0.58);
+        background: rgba(255, 255, 255, 0.75);
+      }
+
+      &:focus-visible {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(0, 150, 199, 0.22);
+      }
+    }
+  }
+}
+
+html[data-theme="dark"] .about-featured-paper {
+  background: linear-gradient(150deg, rgba(30, 35, 46, 0.82), rgba(21, 26, 36, 0.7));
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+html[data-theme="dark"] .about-featured-paper .paper-links a {
+  border-color: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+html[data-theme="dark"] .about-featured-paper .paper-links a:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.layout-about .social {
+  .contact-icons {
+    font-size: 3rem;
+
+    a {
+      img {
+        width: 2.45rem;
+        height: 2.45rem;
+      }
+
+      svg {
+        width: 2.55rem;
+        height: 2.7rem;
+
+        image {
+          width: 2.55rem;
+          height: 2.55rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .about-featured-papers {
+    grid-template-columns: 1fr;
+  }
+
+  .about-featured-paper {
+    padding: 0.95rem;
+  }
+
+  .layout-about .social .contact-icons {
+    font-size: 2.45rem;
+
+    a {
+      img {
+        width: 2rem;
+        height: 2rem;
+      }
+
+      svg {
+        width: 2.1rem;
+        height: 2.25rem;
+
+        image {
+          width: 2.1rem;
+          height: 2.1rem;
+        }
+      }
+    }
+  }
+}
+
+html[data-theme="dark"] .card {
+  background: linear-gradient(155deg, rgba(24, 29, 42, 0.9), rgba(20, 24, 35, 0.72));
+  border-color: rgba(255, 255, 255, 0.08);
 }

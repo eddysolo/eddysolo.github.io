@@ -5,16 +5,45 @@
 @use "variables" as v;
 
 .navbar {
-  box-shadow: none;
-  border-bottom: 1px solid var(--global-divider-color);
-  background-color: var(--global-bg-color);
-  opacity: 0.95;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background-color: rgba(255, 255, 255, 0.62);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  font-family: "Avenir Next", "Inter", "Segoe UI", sans-serif;
+
+  border-radius: 99px;
+  margin: 1.5rem auto;
+  max-width: 95%;
+  width: calc(100% - 2rem);
+  left: 0;
+  right: 0;
+}
+
+html[data-theme="dark"] .navbar {
+  background-color: rgba(18, 24, 34, 0.62);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+// Fix dropdown caret arrow – prevent it from being hidden by the
+// underline animation pseudo-element defined in _typography.scss
+.navbar .nav-link.dropdown-toggle::after {
+  display: inline-block;
+  position: static;
+  width: auto;
+  height: auto;
+  background-color: transparent;
 }
 
 .navbar .dropdown-menu,
 .btn-group.dropdown .dropdown-menu {
-  background-color: var(--global-bg-color);
-  border: 1px solid var(--global-divider-color);
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 16px;
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+  padding: 0.5rem;
 
   a:not(.active) {
     color: var(--global-text-color);
@@ -57,17 +86,29 @@
 
   .navbar-brand {
     color: var(--global-text-color);
+    letter-spacing: -0.01em;
+    font-weight: 800;
+    font-size: 1.35rem;
+    /* Increased size */
   }
 
   .navbar-nav .nav-item .nav-link {
     color: var(--global-text-color);
+    border-radius: 999px;
+    padding: 0.35rem 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    font-size: 0.95rem;
+    transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 
     &:hover {
       color: var(--global-hover-color);
+      background: rgba(255, 255, 255, 0.32);
+      box-shadow: inset 0 0 0 1px rgba(0, 150, 199, 0.28);
     }
   }
 
-  .navbar-nav .nav-item.active > .nav-link {
+  .navbar-nav .nav-item.active>.nav-link {
     background-color: inherit;
     font-weight: bolder;
     color: var(--global-theme-color);
@@ -186,5 +227,12 @@
 
   &:hover {
     color: var(--global-hover-color);
+  }
+}
+
+@media (max-width: 991.98px) {
+  .navbar.navbar-light .navbar-nav .nav-item .nav-link {
+    width: fit-content;
+    margin: 0.15rem 0;
   }
 }

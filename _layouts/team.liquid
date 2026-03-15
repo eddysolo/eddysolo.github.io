@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<div class="team-grid">
+  <h1 class="team-title">{{ page.title }}</h1>
+  
+  {% if page.team_members %}
+    <div class="team-members-grid">
+      {% for member in page.team_members %}
+        <a href="{{ member.url | relative_url }}" class="team-member-card">
+          <div class="team-member-image">
+            {% if member.image %}
+              <img src="{{ member.image | relative_url }}" alt="{{ member.name }}">
+            {% else %}
+              <img src="/assets/img/prof_pic.jpg" alt="{{ member.name }}">
+            {% endif %}
+          </div>
+          <div class="team-member-info">
+            <h3 class="team-member-name">{{ member.name }}</h3>
+            <p class="team-member-position">{{ member.position }}</p>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>

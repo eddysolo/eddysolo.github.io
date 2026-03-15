@@ -3,13 +3,16 @@
  ******************************************************************************/
 
 footer.fixed-bottom {
-  background-color: var(--global-footer-bg-color);
-  font-size: 0.75rem;
+  background: rgba(255, 255, 255, 0.62);
+  border-top: 1px solid rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  font-size: 0.8rem;
 
   .container {
     color: var(--global-footer-text-color);
-    padding-top: 9px;
-    padding-bottom: 8px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     text-align: center;
   }
 
@@ -21,6 +24,11 @@ footer.fixed-bottom {
       text-decoration: none;
     }
   }
+}
+
+html[data-theme="dark"] footer.fixed-bottom {
+  background: rgba(17, 22, 32, 0.66);
+  border-top-color: rgba(255, 255, 255, 0.09);
 }
 
 footer.sticky-bottom {

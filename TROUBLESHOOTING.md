@@ -111,10 +111,18 @@ This guide covers common issues and their solutions. For more information, see [
 
 **Solution:**
 
-1. Delete `Gemfile.lock`: `rm Gemfile.lock`
-2. Update Bundler: `bundle update`
-3. Install gems: `bundle install`
-4. Try serving again: `bundle exec jekyll serve`
+1. Prefer Docker first (recommended for this project):
+   ```bash
+   docker compose down
+   docker compose pull
+   docker compose up --build
+   ```
+2. If you are using local Ruby, verify your Bundler/Ruby setup and then reinstall gems:
+   ```bash
+   bundle install
+   bundle exec jekyll build
+   ```
+3. If it still fails, check the exact gem error in the build output and align your local Ruby/Bundler versions with the project docs.
 
 ---
 
@@ -218,11 +226,11 @@ bundle exec jekyll serve --port 5000
   ---
   ```
 - [ ] Post date is NOT in the future (Jekyll doesn't publish future-dated posts by default)
-- [ ] Blog posts are enabled in `_config.yml`: `blog_page: true`
+- [ ] Blog page exists at `_pages/blog.md` with valid frontmatter
 
 **To fix:**
 
-1. Check the filename format (uppercase, dashes, no spaces)
+1. Check the filename format (`YYYY-MM-DD-title.md`, lowercase words separated by hyphens)
 2. Verify the date is today or in the past
 3. Rebuild: `bundle exec jekyll build` and check for error messages
 
@@ -237,7 +245,7 @@ bundle exec jekyll serve --port 5000
 - [ ] File is at `_bibliography/papers.bib`
 - [ ] BibTeX syntax is correct (check for missing commas, unmatched braces)
 - [ ] Entry has a unique citation key: `@article{einstein1905, ...}`
-- [ ] Publication page is enabled: Check `publications_page: true` in `_config.yml`
+- [ ] Publications page exists at `_pages/publications.md`
 
 **To debug BibTeX errors:**
 
@@ -257,7 +265,7 @@ docker compose run --rm web jekyll build 2>&1 | grep -i bibtex
 
 **Common causes:**
 
-- Wrong path in Markdown (use relative paths)
+- Wrong path in Markdown
 - Image file doesn't exist at the specified location
 - Case sensitivity (Linux/Mac are case-sensitive)
 
@@ -266,7 +274,7 @@ docker compose run --rm web jekyll build 2>&1 | grep -i bibtex
 1. **Correct path format:**
 
    ```markdown
-   ![Alt text](assets/img/image-name.jpg)
+   ![Alt text](/assets/img/image-name.jpg)
    ```
 
 2. **Check the file exists:**
@@ -385,12 +393,18 @@ nav:
 
 **Solution:**
 
-1. Related posts requires more gems. If you disabled it in `_config.yml`, that's fine:
+1. If the error includes `Zero vectors can not be normalized` or `sqrt: Numerical argument is out of domain`, one or more posts likely have too little meaningful text.
+2. Add more content to very short posts (or announcements using `layout: post`) and avoid posts that contain only stop words.
+3. Disable related posts on specific pages when needed:
+   ```yaml
+   related_posts: false
+   ```
+4. If you want the feature off globally, disable it in `_config.yml`:
    ```yaml
    related_blog_posts:
      enabled: false
    ```
-2. If you want to enable it, ensure `Gemfile` has all dependencies installed:
+5. Rebuild after changes:
    ```bash
    bundle install
    bundle exec jekyll build
