@@ -14,8 +14,6 @@ email: bar.ben-zino@bm.technion.ac.il
 links:
   - label: Lab Projects
     url: /projects/
-  - label: Open Science
-    url: /open-science/
 github_url: https://github.com/
 linkedin_url: https://www.linkedin.com/
 ---

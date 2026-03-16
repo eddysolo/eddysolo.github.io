@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Home
-main_title: "Solomon's MRI Lab - Advanced Imaging to Magnetic Resonance"
+main_title: "Solomon MRI Lab - Advanced Imaging to Magnetic Resonance"
 permalink: /
 hero_image: assets/img/mri_hero.jpg
 fluid: true
@@ -29,7 +29,7 @@ fluid: true
         
         <!-- Welcome Box -->
         <div class="glass-section w-100 d-flex flex-column justify-content-center align-items-center text-center" style="border-radius: 24px; padding: 4rem 3rem;">
-          <h1 style="font-weight: 800; font-size: 3.5rem; letter-spacing: -0.02em; margin-bottom: 0.75rem;">Welcome to Solomon's MRI Lab</h1>
+          <h1 style="font-weight: 800; font-size: 3.5rem; letter-spacing: -0.02em; margin-bottom: 0.75rem;">Welcome to Solomon MRI Lab</h1>
           <h3 style="font-weight: 600; font-size: 1.75rem; color: var(--global-theme-color); margin-bottom: 0;">Advanced Imaging to Magnetic Resonance</h3>
         </div>
       </div>
@@ -47,9 +47,8 @@ fluid: true
       </div>
     </div>
 
-    <!-- Row 3: Mission & Images -->
+    <!-- Row 3: Core Mission + News -->
     <div class="row g-4 mb-4 align-items-stretch">
-      <!-- Core Mission (Wide) -->
       <div class="col-lg-6 d-flex">
         <div class="glass-box p-4 w-100 d-flex flex-column justify-content-center text-center align-items-center" style="border-radius: 24px;">
           <h2 style="font-weight: 800; margin-bottom: 1.25rem;"><i class="fa-solid fa-microscope mr-2" style="color: var(--global-theme-color);"></i> Our Core Mission</h2>
@@ -76,29 +75,6 @@ fluid: true
         </div>
       </div>
 
-      <!-- Vertical Image Stack replaced with CSS Keep-In-Motion MRI Effect Box -->
-      <div class="col-lg-6 d-flex flex-column gap-4">
-        
-        <!-- Keep In Motion Box with pure text & MRI scan effect background -->
-        <a href="{{ '/keep-in-motion/' | relative_url }}" class="glass-box p-0 w-100 position-relative text-decoration-none d-flex align-items-center justify-content-center" style="border-radius: 24px; background: #070f1a; overflow: hidden; height: 100%; min-height: 400px; transition: transform 0.3s ease; box-shadow: inset 0 0 40px rgba(0,0,0,1);">
-          
-          <!-- MRI Radial Signal CSS Grid Effect -->
-          <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: radial-gradient(rgba(0,150,199,0.2) 2px, transparent 2px), radial-gradient(rgba(0,150,199,0.2) 2px, transparent 2px); background-size: 30px 30px; background-position: 0 0, 15px 15px; opacity: 0.7;"></div>
-          
-          <!-- Animated MRI Scanline Effect -->
-          <div style="position: absolute; left: 0; width: 100%; height: 120px; background: linear-gradient(to bottom, transparent, rgba(0,255,255,0.15) 50%, rgba(0,150,199,0.4) 100%, transparent); animation: scanline 3s linear infinite; filter: blur(3px); z-index: 1;"></div>
-          
-          <div class="position-relative text-center p-4 w-100 z-index-2">
-            <h3 style="color: white; font-weight: 800; font-size: 3.2rem; margin-bottom: 1.5rem; text-shadow: 0 4px 15px rgba(0, 150, 199, 0.9);"><i class="fa-solid fa-person-running mr-3" style="animation: pulse-ring 2s infinite; border-radius: 50%;"></i> Keep In Motion</h3>
-            <p style="color: #e6f7ff; font-size: 1.35rem; margin: 0 auto; max-width: 85%; line-height: 1.6; font-weight: 500; text-shadow: 0 2px 5px rgba(0,0,0,1);">Conquering physiological motion artifacts via real-time intelligent monitoring and MR-compatible external sensors.</p>
-          </div>
-        </a>
-        
-      </div>
-    </div>
-
-    <!-- Bento Box Grid (Row 3: News & Selected Pubs) -->
-    <div class="row g-4 mb-4 align-items-stretch">
       <!-- Announcements Box -->
       <div class="col-lg-6">
         <div class="glass-section h-100 text-center" style="padding: 2.5rem; border-radius: 24px;">
@@ -122,39 +98,6 @@ fluid: true
               </div>
               <p style="margin: 0; font-size: 1.25rem; margin-top: 1rem;">We are thrilled to announce a new grant to accelerate our research on making MRI faster and more accessible for pediatric patients.</p>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Selected Publications Box -->
-      <div class="col-lg-6">
-        <div class="glass-section h-100 text-center" style="padding: 2.5rem; border-radius: 24px;">
-          <h2 class="glass-section-title" style="margin-bottom: 2rem; font-weight: 800; font-size: 2.5rem;">
-            <a href="{{ '/publications/' | relative_url }}" style="color: inherit; text-decoration: none;">Selected Publications</a>
-          </h2>
-          
-          <div class="d-flex flex-column gap-3">
-            <!-- Publication Card 1 -->
-            <a href="{{ '/publications/' | relative_url }}" class="glass-box p-4 text-decoration-none d-flex align-items-center text-left" style="border-radius: 16px; color: var(--global-text-color); transition: all 0.3s ease;">
-              <div style="background: rgba(0, 150, 199, 0.1); width: 70px; height: 70px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 1.5rem; flex-shrink: 0;">
-                <i class="fa-solid fa-file-pdf fa-2x" style="color: var(--global-theme-color);"></i>
-              </div>
-              <div>
-                <h3 style="margin: 0 0 0.5rem 0; font-weight: 800; font-size: 1.6rem; line-height: 1.3;">Navigator-free motion-resolved 3D MRI using deep generative models</h3>
-                <p style="margin: 0; font-size: 1.1rem; opacity: 0.8; font-family: monospace;">Nature Communications (2025)</p>
-              </div>
-            </a>
-
-            <!-- Publication Card 2 -->
-            <a href="{{ '/publications/' | relative_url }}" class="glass-box p-4 mt-3 text-decoration-none d-flex align-items-center text-left" style="border-radius: 16px; color: var(--global-text-color); transition: all 0.3s ease;">
-              <div style="background: rgba(0, 150, 199, 0.1); width: 70px; height: 70px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 1.5rem; flex-shrink: 0;">
-                <i class="fa-solid fa-file-pdf fa-2x" style="color: var(--global-theme-color);"></i>
-              </div>
-              <div>
-                <h3 style="margin: 0 0 0.5rem 0; font-weight: 800; font-size: 1.6rem; line-height: 1.3;">Highly-accelerated parallel MRI using deep learning prior</h3>
-                <p style="margin: 0; font-size: 1.1rem; opacity: 0.8; font-family: monospace;">Magnetic Resonance in Medicine (2025)</p>
-              </div>
-            </a>
           </div>
         </div>
       </div>

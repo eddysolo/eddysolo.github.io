@@ -12,8 +12,6 @@ research_fields:
   - Breast DCE-MRI
 email: eddy.solomon@bm.technion.ac.il
 links:
-  - label: Google Scholar
-    url: https://scholar.google.com/citations?user=tAOr0VwAAAAJ&hl=en
   - label: Lab Publications
     url: /publications/
 github_username: eddysolo

@@ -46,7 +46,7 @@ fluid: true
     display: grid;
     grid-template-columns: 1fr;
     gap: 2vw;
-    padding: 2.5vw;
+    padding: 1.8vw;
     width: 100%;
     min-height: calc(100vh - 80px); /* Fill screen minus header */
     margin: 0 auto;
@@ -78,7 +78,7 @@ fluid: true
   }
 
   .bento-card {
-    border-radius: 32px;
+    border-radius: 24px;
     box-shadow: 0 15px 35px rgba(0,0,0,0.3);
     overflow: hidden;
     position: relative;
@@ -110,32 +110,33 @@ fluid: true
   <div class="bento-wrapper">
     
     <!-- Block 1: Main Info -->
-    <div class="bento-card bento-card-main glass-dark p-4 p-md-5 d-flex flex-column justify-content-center text-left" style="height: 100%;">
-      <h2 class="mb-4" style="font-weight: 800; color: #ffffff; font-size: 3.5rem; letter-spacing: -0.02em;">Get in Touch</h2>
-      <p class="mb-5" style="font-size: 1.35rem; line-height: 1.6; color: rgba(255,255,255,0.85);">
-        We are always looking for passionate scientists and students to join our team! Whether you are seeking a PhD position, looking for collaboration, or have a general inquiry, our inbox is open.
+    <div class="bento-card bento-card-main glass-dark p-3 p-md-4 d-flex flex-column justify-content-center text-left" style="height: 100%;">
+      <h2 class="mb-3" style="font-weight: 800; color: #ffffff; font-size: 3rem; letter-spacing: -0.02em;">Let's Connect</h2>
+      <p class="mb-4" style="font-size: 1.2rem; line-height: 1.6; color: rgba(255,255,255,0.85);">
+        Interested in collaborating with our lab, joining as a student, or discussing a research idea? We welcome messages from motivated researchers, clinicians, and trainees, and we are happy to connect.
       </p>
 
       <ul class="list-unstyled mb-0 mt-auto">
         <!-- Email -->
-        <li class="mb-5 d-flex align-items-center">
-          <div style="background: rgba(144, 216, 255, 0.15); height: 80px; width: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1.5rem; flex-shrink: 0; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+        <li class="mb-4 d-flex align-items-center">
+          <div style="background: rgba(144, 216, 255, 0.15); height: 68px; width: 68px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1.2rem; flex-shrink: 0; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
             <i class="fa-solid fa-envelope" style="color: #90d8ff; font-size: 2rem;"></i>
           </div>
           <div>
             <h5 class="mb-1" style="font-weight: 700; color: rgba(255,255,255,0.6); text-transform: uppercase; font-size: 0.9rem; letter-spacing: 0.15em;">Email Us</h5>
-            <a href="mailto:{{ site.email | default: 'eddy.solomon@bm.technion.ac.il' }}" style="font-size: 1.5rem; color: #ffffff; text-decoration: none; font-weight: 700;">{{ site.email | default: "eddy.solomon@bm.technion.ac.il" }}</a>
+            <a href="mailto:eddy.solomon@technion.ac.il" style="font-size: 1.3rem; color: #ffffff; text-decoration: none; font-weight: 700;">eddy.solomon@technion.ac.il</a>
           </div>
         </li>
         <!-- Location -->
         <li class="d-flex align-items-center">
-          <div style="background: rgba(144, 216, 255, 0.15); height: 80px; width: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1.5rem; flex-shrink: 0; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+          <div style="background: rgba(144, 216, 255, 0.15); height: 68px; width: 68px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1.2rem; flex-shrink: 0; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
             <i class="fa-solid fa-location-dot" style="color: #90d8ff; font-size: 2rem;"></i>
           </div>
           <div>
             <h5 class="mb-1" style="font-weight: 700; color: rgba(255,255,255,0.6); text-transform: uppercase; font-size: 0.9rem; letter-spacing: 0.15em;">Visit Our Lab</h5>
-            <span style="font-size: 1.3rem; line-height: 1.5; display: inline-block; color: #ffffff; font-weight: 500;">
+            <span style="font-size: 1.15rem; line-height: 1.5; display: inline-block; color: #ffffff; font-weight: 500;">
               Faculty of Biomedical Engineering<br>
+              Room 328<br>
               Technion - Israel Institute of Technology<br>
               Haifa 3200003, Israel
             </span>
@@ -145,7 +146,7 @@ fluid: true
     </div>
 
     <!-- Block 2: Logo Link -->
-    <a href="https://bme.technion.ac.il/en/" target="_blank" class="bento-card bento-card-logo glass-dark d-flex flex-column align-items-center justify-content-center text-decoration-none p-4 p-xl-5" style="height: 100%; min-height: 210px; gap: 0.7rem; padding-top: 0.85rem; padding-bottom: 0.6rem;">
+    <a href="https://bme.technion.ac.il/en/" target="_blank" class="bento-card bento-card-logo glass-dark d-flex flex-column align-items-center justify-content-center text-decoration-none p-3 p-xl-4" style="height: 100%; min-height: 180px; gap: 0.6rem; padding-top: 0.75rem; padding-bottom: 0.55rem;">
       <img src="{{ 'assets/img/logos/bme_logo_official_en.png' | relative_url }}" alt="BME Logo" style="width: 100%; max-width: 560px; height: auto; object-fit: contain; image-rendering: auto; transform: translateY(-4px); filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.12));">
       <div style="background: rgba(144, 216, 255, 0.2); color: #dff3ff; padding: 0.7rem 1.5rem; border: 1px solid rgba(144, 216, 255, 0.4); border-radius: 50px; font-weight: 800; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 0.6rem; box-shadow: 0 10px 25px rgba(0, 43, 91, 0.4); text-transform: uppercase; letter-spacing: 0.03em; transition: all 0.3s; margin-top: 0.2rem;">
         Go to website <i class="fa-solid fa-arrow-right"></i>
@@ -153,7 +154,7 @@ fluid: true
     </a>
 
     <!-- Block 3: Embedded Map -->
-    <div class="bento-card bento-card-map p-0 m-0 glass-dark d-flex" style="height: 100%; min-height: 470px;">
+    <div class="bento-card bento-card-map p-0 m-0 glass-dark d-flex" style="height: 100%; min-height: 380px;">
       <iframe 
           src="https://www.google.com/maps?q=Technion+Faculty+of+Biomedical+Engineering&ll=32.7752021,35.026504&z=17&output=embed" 
           width="100%" 
@@ -176,7 +177,7 @@ fluid: true
     <a href="https://github.com/eddysolo" target="_blank" rel="noopener noreferrer" aria-label="GitHub" style="color: #fff; font-size: 3.45rem; line-height: 1;">
       <i class="fa-brands fa-github"></i>
     </a>
-    <a href="https://outlook.office.com/mail/deeplink/compose?to=eddy.solomon@bm.technion.ac.il" target="_blank" rel="noopener noreferrer" aria-label="Outlook" style="color: #fff; font-size: 3.45rem; line-height: 1;">
+    <a href="https://outlook.office.com/mail/deeplink/compose?to=eddy.solomon@technion.ac.il" target="_blank" rel="noopener noreferrer" aria-label="Outlook" style="color: #fff; font-size: 3.45rem; line-height: 1;">
       <i class="fa-solid fa-envelope"></i>
     </a>
     <a href="https://scholar.google.com/citations?user=tAOr0VwAAAAJ&hl=iw&oi=ao" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" style="color: #fff; font-size: 3.45rem; line-height: 1;">

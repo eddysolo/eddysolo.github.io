@@ -22,9 +22,8 @@ fluid: true
             <a href="{{ '/fastmri-dataset/' | relative_url }}" class="text-decoration-none" style="color: inherit;">FastMRI & Breast DCE MRI Dataset</a>
           </h3>
         </div>
-        <p style="font-size: 1.15rem; color: var(--global-theme-color); font-weight: 700;">Contribution: Open-source MRI dataset support for reconstruction and machine learning research.</p>
+        <p style="font-size: 1.15rem; color: var(--global-theme-color); font-weight: 700;">Open-source MRI dataset support for reconstruction and machine learning research.</p>
         <p style="font-size: 1.1rem; flex-grow: 1;">We contributed Breast DCE MRI data to the NYU FastMRI ecosystem to support robust reconstruction benchmarks and reproducible algorithm development.</p>
-        <a href="https://fastmri.med.nyu.edu/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary mt-2 align-self-start">Visit Resource</a>
         <img
           src="{{ '/assets/img/publication_preview/breast%20scan%20example.png' | relative_url }}"
           alt="fastMRI breast dataset preview"
@@ -40,7 +39,7 @@ fluid: true
           <i class="fa-solid fa-flask fa-2x mr-3" style="color: var(--global-text-color);"></i>
           <h3 style="font-weight: 800; margin: 0;">Future Open Science Slot</h3>
         </div>
-        <p style="font-size: 1.15rem; color: var(--global-theme-color); font-weight: 700;">Contribution: To be announced.</p>
+        <p style="font-size: 1.15rem; color: var(--global-theme-color); font-weight: 700;">To be announced.</p>
         <p style="font-size: 1.1rem; flex-grow: 1;">Reserve this box for your next dataset release, benchmark suite, or public challenge contribution.</p>
         <span class="btn btn-outline-primary disabled mt-2" aria-disabled="true">Coming Soon</span>
       </div>

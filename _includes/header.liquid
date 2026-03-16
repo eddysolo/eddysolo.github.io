@@ -5,8 +5,8 @@
       <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
         {% if site.navbar_brand %}
           <div class="d-flex align-items-center gap-2">
-            <img src="{{ 'assets/img/logos/technion_logo_transparent.png' | relative_url }}" alt="Technion Logo" style="height: 44px; object-fit: contain; margin-right: 10px;">
-            <span class="font-weight-bold">Solomon's Lab</span>
+            <img src="{{ 'assets/img/logos/technion_logo_transparent.png' | relative_url }}" alt="Technion Logo" style="height: 72px; object-fit: contain; margin-right: 10px;">
+            <span style="font-size: 1.125rem; font-weight: 700; line-height: 1;">Solomon MRI Lab</span>
           </div>
         {% elsif site.title == 'blank' %}
           {% if site.first_name %}
@@ -143,12 +143,4 @@
       </div>
     </div>
   </nav>
-  {% if site.enable_progressbar %}
-    <!-- Scrolling Progress Bar -->
-    <progress id="progress" value="0">
-      <div class="progress-container">
-        <span class="progress-bar"></span>
-      </div>
-    </progress>
-  {% endif %}
 </header>

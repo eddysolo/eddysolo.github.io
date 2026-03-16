@@ -8,10 +8,8 @@ dropdown: true
 children:
   - title: Teaching
     permalink: /teaching/
-  - title: Jobs
+  - title: Open Positions
     permalink: /jobs/
-  - title: Thesis
-    permalink: /thesis/
 ---
 
 ## For Students

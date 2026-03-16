@@ -79,49 +79,40 @@ layout: default
     text-decoration: underline;
   }
 
+  .member-link-grid {
+    display: grid;
+    gap: 0.55rem;
+  }
+
+  .member-link-card {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 93, 143, 0.25);
+    background: rgba(0, 150, 199, 0.08);
+    color: #0a3d62;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.92rem;
+    padding: 0.5rem 0.75rem;
+    transition: all 0.2s ease;
+  }
+
+  .member-link-card:hover {
+    text-decoration: none;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(10, 61, 98, 0.15);
+  }
+
   .member-bio {
     padding: 2rem 2.25rem 1rem;
   }
 
-  .member-social-footer {
-    padding: 0 2.25rem 2.25rem;
-  }
-
-  .member-social-card {
-    border-radius: 18px;
-    background: linear-gradient(150deg, rgba(9, 37, 79, 0.95) 0%, rgba(0, 93, 143, 0.85) 100%);
-    color: #ffffff;
-    padding: 1.25rem 1.4rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .member-social-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.65rem;
-  }
-
-  .member-social-links a {
-    text-decoration: none;
-    color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.35);
-    border-radius: 999px;
-    padding: 0.45rem 0.9rem;
-    font-weight: 700;
-    font-size: 0.9rem;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-  }
-
   @media (max-width: 767.98px) {
     .member-profile-top,
-    .member-bio,
-    .member-social-footer {
+    .member-bio {
       padding: 1.25rem;
     }
 
@@ -221,14 +212,15 @@ layout: default
             </div>
             <div class="col-lg-6">
               <div class="member-meta-label">Useful Links</div>
-              <div class="member-links">
-                {% if page.links %}
-                  {% for link in page.links %}
-                    <div><a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a></div>
-                  {% endfor %}
-                {% else %}
-                  <div><a href="{{ '/publications/' | relative_url }}">Lab publications</a></div>
-                  <div><a href="{{ '/projects/' | relative_url }}">Lab projects</a></div>
+              <div class="member-link-grid">
+                {% if github_url %}
+                  <a href="{{ github_url }}" target="_blank" rel="noopener" class="member-link-card">GitHub</a>
+                {% endif %}
+                {% if linkedin_url %}
+                  <a href="{{ linkedin_url }}" target="_blank" rel="noopener" class="member-link-card">LinkedIn</a>
+                {% endif %}
+                {% if person_key == 'eddy-solomon' and scholar_url %}
+                  <a href="{{ scholar_url }}" target="_blank" rel="noopener" class="member-link-card">Google Scholar</a>
                 {% endif %}
               </div>
             </div>
@@ -241,23 +233,6 @@ layout: default
       <h2 style="font-size: 1.25rem; font-weight: 800; color: #0b2f59; margin-bottom: 0.9rem;">Short Bio</h2>
       <div style="font-size: 1.05rem; line-height: 1.75; color: #142f4d;">
         {{ content }}
-      </div>
-    </div>
-
-    <div class="member-social-footer">
-      <div class="member-social-card">
-        <div style="font-weight: 800; letter-spacing: 0.02em; color: #ffffff;">Reach Us</div>
-        <div class="member-social-links">
-          {% if github_url %}
-            <a href="{{ github_url }}" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
-          {% endif %}
-          {% if linkedin_url %}
-            <a href="{{ linkedin_url }}" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-          {% endif %}
-          {% if scholar_url %}
-            <a href="{{ scholar_url }}" target="_blank" rel="noopener"><i class="ai ai-google-scholar"></i> Google Scholar</a>
-          {% endif %}
-        </div>
       </div>
     </div>
   </section>
