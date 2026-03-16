@@ -15,21 +15,23 @@ fluid: true
 
   <div class="row g-4">
     <div class="col-lg-6">
-      <a href="https://fastmri.med.nyu.edu/" target="_blank" class="glass-box p-4 h-100 d-flex flex-column text-decoration-none" style="border-radius: 24px; color: inherit;">
+      <div class="glass-box p-4 h-100 d-flex flex-column" style="border-radius: 24px; color: inherit;">
         <div class="d-flex align-items-center mb-3">
           <i class="fa-solid fa-database fa-2x mr-3" style="color: var(--global-text-color);"></i>
-          <h3 style="font-weight: 800; margin: 0;">FastMRI & Breast DCE MRI Dataset</h3>
+          <h3 style="font-weight: 800; margin: 0;">
+            <a href="{{ '/fastmri-dataset/' | relative_url }}" class="text-decoration-none" style="color: inherit;">FastMRI & Breast DCE MRI Dataset</a>
+          </h3>
         </div>
         <p style="font-size: 1.15rem; color: var(--global-theme-color); font-weight: 700;">Contribution: Open-source MRI dataset support for reconstruction and machine learning research.</p>
         <p style="font-size: 1.1rem; flex-grow: 1;">We contributed Breast DCE MRI data to the NYU FastMRI ecosystem to support robust reconstruction benchmarks and reproducible algorithm development.</p>
-        <span class="btn btn-outline-primary mt-2">Visit Resource</span>
+        <a href="https://fastmri.med.nyu.edu/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary mt-2 align-self-start">Visit Resource</a>
         <img
           src="{{ '/assets/img/publication_preview/breast%20scan%20example.png' | relative_url }}"
           alt="fastMRI breast dataset preview"
           class="mt-3 w-100"
           style="border-radius: 16px; object-fit: cover;"
         >
-      </a>
+      </div>
     </div>
 
     <div class="col-lg-6">
