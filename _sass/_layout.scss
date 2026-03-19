@@ -305,7 +305,7 @@ html[data-theme="dark"] table {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 3.5rem;
+  margin-bottom: 0.8rem;
   overflow: hidden;
   z-index: 0;
   /* Keep it behind the floating navbar */
@@ -336,6 +336,23 @@ html[data-theme="dark"] table {
 
 .hero-slide.is-active {
   opacity: 1;
+}
+
+.hero-corner-logo {
+  position: absolute;
+  left: 1.25rem;
+  bottom: 1rem;
+  z-index: 2;
+  width: clamp(130px, 17vw, 300px);
+  pointer-events: none;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: 1;
+    filter: contrast(1.24) brightness(1.08) drop-shadow(0 8px 20px rgba(0, 0, 0, 0.52)) drop-shadow(0 0 12px rgba(255, 255, 255, 0.24));
+  }
 }
 
 .hero-overlay {
@@ -390,6 +407,12 @@ html[data-theme="dark"] table {
   .global-hero-carousel {
     height: 300px;
     margin-top: -57px;
+  }
+
+  .hero-corner-logo {
+    left: 0.8rem;
+    bottom: 0.75rem;
+    width: min(45vw, 190px);
   }
 
   .hero-title {

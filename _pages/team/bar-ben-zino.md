@@ -13,7 +13,7 @@ research_fields:
 email: bar.ben-zino@bm.technion.ac.il
 links:
   - label: Lab Projects
-    url: /projects/
+    url: /research/
 github_url: https://github.com/
 linkedin_url: https://www.linkedin.com/
 ---

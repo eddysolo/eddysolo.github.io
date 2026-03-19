@@ -55,7 +55,7 @@ fluid: true
   </div>
 
   <div class="text-center mb-5">
-    <a href="{{ '/projects/' | relative_url }}" class="btn btn-outline-primary" style="font-weight: 700; border-radius: 12px; padding: 0.7rem 1.6rem; border-width: 2px;">
+    <a href="{{ '/research/' | relative_url }}" class="btn btn-outline-primary" style="font-weight: 700; border-radius: 12px; padding: 0.7rem 1.6rem; border-width: 2px;">
       <i class="fa-solid fa-arrow-left mr-2"></i>
       Back to Projects
     </a>

@@ -4,6 +4,7 @@ title: Open Science
 permalink: /open-science/
 description: A showcase of our best work and open science contributions.
 nav: false
+nav_order: 5
 fluid: true
 ---
 

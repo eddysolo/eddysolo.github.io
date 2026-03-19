@@ -1,10 +1,10 @@
 ---
 layout: page
 permalink: /publications/
-title: publications
+title: Publications
 description: 'For a full list, visit <a href="https://scholar.google.com/citations?user=tAOr0VwAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a> or <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Eddy+Solomon" target="_blank" rel="noopener noreferrer">PubMed</a>.'
-nav: false
-nav_order: 2
+nav: true
+nav_order: 4
 ---
 
 <!-- _pages/publications.md -->

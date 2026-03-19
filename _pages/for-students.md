@@ -2,7 +2,7 @@
 layout: page
 title: For Students
 permalink: /for-students/
-nav: true
+nav: false
 nav_order: 5
 dropdown: true
 children:
