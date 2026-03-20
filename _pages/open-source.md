@@ -71,7 +71,7 @@ fluid: true
   </div>
 
   <div class="glass-section w-100 d-flex flex-column justify-content-center align-items-center text-center mt-5 mb-4" style="border-radius: 24px; padding: 3rem 2.5rem;">
-    <h2 style="font-weight: 800; font-size: 2.4rem; margin-bottom: 0.65rem;">Open Source</h2>
+    <h2 style="font-weight: 800; font-size: 2.4rem; margin-bottom: 0.65rem;">Popular Science</h2>
     <h3 style="font-weight: 600; font-size: 1.3rem; color: var(--global-theme-color); margin-bottom: 0;">Our open source contributions and resources</h3>
   </div>
 

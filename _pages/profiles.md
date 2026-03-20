@@ -2,18 +2,26 @@
 layout: profiles
 permalink: /people/
 title: Our Team
-description: Meet the researchers and core members of Solomon's MRI Lab.
+description: Meet the research team of the Solomon MRI lab.
 nav: true
 nav_order: 1
 hero_image: assets/img/mri_hero.jpg
 
 profiles:
-  - name: Eddy Solomon
-    role: Head of Solomon's MRI Lab
+  - name: Eddy Solomon, PhD
+    role: Principal Investigator
     image: eddy_solomon.jpg
     url: /team/eddy-solomon/
-  - name: Bar Ben-Zino
-    role: Core Researcher
+  - name: Bar Ben Zino
+    role: M.Sc. Student
     image: bar_ben_zino.jpg
     url: /team/bar-ben-zino/
+  - name: Shaked Gov
+    role: M.Sc. Student
+    image: shaked_gov.jpg
+    url: /team/shaked-gov/
+  - name: Ori Shahar
+    role: M.Sc. Student
+    image: anonymous-profile.svg
+    url: /team/ori-shahar/
 ---

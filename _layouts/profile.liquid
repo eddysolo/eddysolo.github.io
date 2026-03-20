@@ -25,7 +25,7 @@ layout: default
 
   .member-photo {
     width: min(260px, 44vw);
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 1 / 1;
     border-radius: 20px;
     overflow: hidden;
     border: 4px solid #ffffff;
@@ -34,11 +34,18 @@ layout: default
     background: rgba(230, 240, 250, 0.9);
   }
 
-  .member-photo img {
+  .member-photo figure,
+  .member-photo picture,
+  .member-photo .member-photo-img {
+    margin: 0;
     width: 100%;
     height: 100%;
+  }
+
+  .member-photo .member-photo-img {
     object-fit: cover;
-    object-position: center 12%;
+    object-position: center;
+    display: block;
   }
 
   .member-meta-label {
@@ -178,7 +185,8 @@ layout: default
       <div class="row align-items-center">
         <div class="col-md-auto text-center mb-4 mb-md-0">
           <div class="member-photo mx-auto">
-            <img src="{{ profile_img | relative_url }}" alt="{{ page.title }} photo">
+            {% capture member_sizes %}(min-width: 992px) 260px, (min-width: 768px) 44vw, 52vw{% endcapture %}
+            {% include figure.liquid loading="eager" path=profile_img class="member-photo-img" sizes=member_sizes alt=page.title %}
           </div>
         </div>
 

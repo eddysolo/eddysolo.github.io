@@ -163,44 +163,44 @@ fluid: true
     </a>
 
     <!-- Collaborations Block -->
-    <section class="glass-section" style="padding: 3rem 2.5rem; border-radius: 24px; text-align: center;">
+    <section class="glass-section collaborators-section" style="padding: 3rem 2.5rem; border-radius: 24px; text-align: center;">
       <h2 style="font-weight: 700; margin-bottom: 2rem; font-size: 2.2rem;">Our Collaborators</h2>
       
-      <div class="row g-3 justify-content-center align-items-stretch">
+      <div class="row gx-3 gy-4 justify-content-center align-items-stretch" style="row-gap: 0.6rem;">
         <!-- Weill Cornell Medicine -->
         <div class="col-6 col-md-4 d-flex">
-          <div class="glass-box p-4 w-100 h-100 d-flex flex-column justify-content-center" style="border-radius: 20px; background: rgba(255,255,255,0.05);">
-            <img src="{{ 'assets/img/logos/Weill_Cornell_Medicine.png' | relative_url }}" alt="Weill Cornell Medicine Logo" style="max-height: 60px; object-fit: contain; margin-bottom: 0; width: 100%;">
+          <div class="glass-box collaborators-logo-card p-4 w-100 h-100 d-flex flex-column justify-content-center" style="border-radius: 20px; background: rgba(255,255,255,0.05);">
+            <img class="collaborators-logo-image" src="{{ 'assets/img/logos/Weill_Cornell_Medicine.png' | relative_url }}" alt="Weill Cornell Medicine Logo" style="max-height: 102px; object-fit: contain; margin-bottom: 0; width: 100%;">
           </div>
         </div>
         <!-- NYU Radiology -->
         <div class="col-6 col-md-4 d-flex">
-          <div class="glass-box p-4 w-100 h-100 d-flex flex-column justify-content-center" style="border-radius: 20px; background: rgba(255,255,255,0.05);">
-            <img src="{{ 'assets/img/logos/nyu_radiology.png' | relative_url }}" alt="NYU Radiology Logo" style="max-height: 60px; object-fit: contain; margin-bottom: 0; width: 100%;">
+          <div class="glass-box collaborators-logo-card p-4 w-100 h-100 d-flex flex-column justify-content-center" style="border-radius: 20px; background: rgba(255,255,255,0.05);">
+            <img class="collaborators-logo-image" src="{{ 'assets/img/logos/nyu_radiology.png' | relative_url }}" alt="NYU Radiology Logo" style="max-height: 102px; object-fit: contain; margin-bottom: 0; width: 100%;">
           </div>
         </div>
         <!-- University of Chicago -->
         <div class="col-6 col-md-4 d-flex">
-          <div class="glass-box p-4 w-100 h-100 d-flex flex-column justify-content-center" style="border-radius: 20px; background: rgba(255,255,255,0.05);">
-            <img src="{{ 'assets/img/logos/Chicago_University.png' | relative_url }}" alt="University of Chicago Logo" style="max-height: 60px; object-fit: contain; margin-bottom: 0; width: 100%;">
+          <div class="glass-box collaborators-logo-card p-4 w-100 h-100 d-flex flex-column justify-content-center" style="border-radius: 20px; background: rgba(255,255,255,0.05);">
+            <img class="collaborators-logo-image" src="{{ 'assets/img/logos/Chicago_University.png' | relative_url }}" alt="University of Chicago Logo" style="max-height: 102px; object-fit: contain; margin-bottom: 0; width: 100%;">
           </div>
         </div>
         <!-- Memorial Sloan Kettering -->
         <div class="col-6 col-md-4 d-flex">
-          <div class="glass-box p-4 w-100 h-100 d-flex flex-column justify-content-center" style="border-radius: 20px; background: rgba(255,255,255,0.05);">
-            <img src="{{ 'assets/img/logos/Memorial_Sloan.png' | relative_url }}" alt="Memorial Sloan Kettering Logo" style="max-height: 60px; object-fit: contain; margin-bottom: 0; width: 100%;">
+          <div class="glass-box collaborators-logo-card p-4 w-100 h-100 d-flex flex-column justify-content-center" style="border-radius: 20px; background: rgba(255,255,255,0.05);">
+            <img class="collaborators-logo-image" src="{{ 'assets/img/logos/Memorial_Sloan.png' | relative_url }}" alt="Memorial Sloan Kettering Logo" style="max-height: 88px; object-fit: contain; margin-bottom: 0; width: 100%;">
           </div>
         </div>
         <!-- NIST -->
         <div class="col-6 col-md-4 d-flex">
-          <div class="glass-box p-4 w-100 h-100 d-flex flex-column justify-content-center" style="border-radius: 20px; background: rgba(255,255,255,0.05);">
-            <img src="{{ 'assets/img/logos/NIST.png' | relative_url }}" alt="NIST Logo" style="max-height: 60px; object-fit: contain; margin-bottom: 0; width: 100%;">
+          <div class="glass-box collaborators-logo-card p-4 w-100 h-100 d-flex flex-column justify-content-center" style="border-radius: 20px; background: rgba(255,255,255,0.05);">
+            <img class="collaborators-logo-image" src="{{ 'assets/img/logos/NIST.png' | relative_url }}" alt="NIST Logo" style="max-height: 102px; object-fit: contain; margin-bottom: 0; width: 100%;">
           </div>
         </div>
         <!-- NeuroSpin -->
         <div class="col-6 col-md-4 d-flex">
-          <div class="glass-box p-4 w-100 h-100 d-flex flex-column justify-content-center" style="border-radius: 20px; background: rgba(255,255,255,0.05);">
-            <img src="{{ 'assets/img/logos/NeuroSpin.png' | relative_url }}" alt="NeuroSpin Logo" style="max-height: 60px; object-fit: contain; margin-bottom: 0; width: 100%;">
+          <div class="glass-box collaborators-logo-card p-4 w-100 h-100 d-flex flex-column justify-content-center" style="border-radius: 20px; background: rgba(255,255,255,0.05);">
+            <img class="collaborators-logo-image" src="{{ 'assets/img/logos/NeuroSpin.png' | relative_url }}" alt="NeuroSpin Logo" style="max-height: 88px; object-fit: contain; margin-bottom: 0; width: 100%;">
           </div>
         </div>
       </div>
