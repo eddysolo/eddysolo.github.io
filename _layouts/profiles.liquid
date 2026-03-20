@@ -1,6 +1,15 @@
 ---
 layout: page
 ---
+<style>
+  .profile-card .card-img-top {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+</style>
 <div class="post">
   <article>
     {% if page.profiles %}
@@ -11,11 +20,11 @@ layout: page
               <div class="card h-100 border-0 text-center profile-card">
                 {% if profile.image %}
                   {% assign profile_image_path = profile.image | prepend: 'assets/img/' %}
-                  {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px) 30vw, 95vw"{% endcapture %}
+                  {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px) 30vw, 95vw{% endcapture %}
                   {% include figure.liquid loading="eager" path=profile_image_path class="card-img-top" sizes=sizes alt=profile.name %}
                 {% endif %}
                 <div class="card-body pb-4 pt-3">
-                  <h4 class="card-title fw-bold mb-1 text-dark">{{ profile.name }}</h4>
+                  <h4 class="card-title fw-bold mb-1 text-dark" style="font-size: calc(1.5rem - 2px);">{{ profile.name }}</h4>
                   <p class="card-text text-muted mb-0" style="font-size: 0.92rem;">{{ profile.role }}</p>
                 </div>
               </div>

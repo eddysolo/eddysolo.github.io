@@ -85,8 +85,25 @@ body.sticky-bottom-footer {
   max-width: v.$max-content-width;
 }
 
+/* Match Home page content width on custom wide layouts. */
+.layout-page .container[role="main"],
+.layout-profile .container[role="main"] {
+  max-width: 90% !important;
+  width: 90%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media (max-width: 767.98px) {
+  .layout-page .container[role="main"],
+  .layout-profile .container[role="main"] {
+    max-width: 96% !important;
+    width: 96%;
+  }
+}
+
 .layout-about .container[role="main"] {
-  max-width: 1080px;
+  max-width: v.$max-content-width;
 }
 
 .layout-about .post .post-header,
@@ -110,7 +127,7 @@ body.sticky-bottom-footer {
 
 @media (max-width: 991.98px) {
   .layout-about .container[role="main"] {
-    max-width: 960px;
+    max-width: 95vw;
   }
 }
 
@@ -288,7 +305,7 @@ html[data-theme="dark"] table {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 3.5rem;
+  margin-bottom: 0.8rem;
   overflow: hidden;
   z-index: 0;
   /* Keep it behind the floating navbar */
@@ -310,8 +327,10 @@ html[data-theme="dark"] table {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    // Show a bit more of the upper portion of each image.
-    object-position: 50% 20%;
+    object-position: 50% 50%;
+    filter: contrast(1.08) saturate(1.08) brightness(0.96);
+    transform: scale(1.04);
+    image-rendering: auto;
   }
 }
 
@@ -319,30 +338,37 @@ html[data-theme="dark"] table {
   opacity: 1;
 }
 
-// First hero image: show a bit more of the full frame without changing banner height.
-.hero-slide:first-child img {
-  object-fit: cover;
-  object-position: 50% 50%;
+.hero-corner-logo {
+  position: absolute;
+  left: 1.25rem;
+  bottom: 1rem;
+  z-index: 2;
+  width: clamp(130px, 17vw, 300px);
+  pointer-events: none;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: 1;
+    filter: contrast(1.24) brightness(1.08) drop-shadow(0 8px 20px rgba(0, 0, 0, 0.52)) drop-shadow(0 0 12px rgba(255, 255, 255, 0.24));
+  }
 }
 
 .hero-overlay {
   position: relative;
   z-index: 2;
   text-align: center;
-  background: rgba(255, 255, 255, 0.18);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  padding: 0.9rem 2.5rem;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 0 1rem;
 }
 
 .hero-title {
   margin: 0;
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: #fff;
-  letter-spacing: -0.03em;
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.6);
 }
 
 .hero-subtitle {
@@ -381,6 +407,12 @@ html[data-theme="dark"] table {
   .global-hero-carousel {
     height: 300px;
     margin-top: -57px;
+  }
+
+  .hero-corner-logo {
+    left: 0.8rem;
+    bottom: 0.75rem;
+    width: min(45vw, 190px);
   }
 
   .hero-title {

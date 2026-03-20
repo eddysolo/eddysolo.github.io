@@ -2,16 +2,14 @@
 layout: page
 title: For Students
 permalink: /for-students/
-nav: true
+nav: false
 nav_order: 5
 dropdown: true
 children:
   - title: Teaching
     permalink: /teaching/
-  - title: Jobs
+  - title: Open Positions
     permalink: /jobs/
-  - title: Thesis
-    permalink: /thesis/
 ---
 
 ## For Students

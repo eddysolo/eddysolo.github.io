@@ -3,14 +3,10 @@ layout: default
 title: Motion Correction
 permalink: /motion-correction/
 fluid: true
+no_hero: true
 ---
 
-<div class="container-fluid px-0 mx-auto" style="max-width: 95%; width: calc(100% - 2rem);">
-  <div class="glass-section w-100 d-flex flex-column justify-content-center align-items-center text-center mb-4" style="border-radius: 24px; padding: 4rem 3rem;">
-    <h1 style="font-weight: 800; font-size: 3rem; margin-bottom: 0.75rem;">Motion Correction</h1>
-    <h3 style="font-weight: 600; font-size: 1.5rem; color: var(--global-theme-color); margin-bottom: 0;">Free-breathing MRI techniques that eliminate motion artifacts</h3>
-  </div>
-
+<div class="container-fluid px-0 mx-auto" style="max-width: 90%; width: 90%;">
   <div class="row g-4 mb-4 align-items-stretch">
     <!-- Main Concept -->
     <div class="col-lg-8">
@@ -89,7 +85,7 @@ fluid: true
       <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary btn-lg d-flex align-items-center" style="font-weight: 700; border-radius: 12px; padding: 0.75rem 2rem; box-shadow: 0 10px 20px rgba(0,150,199,0.3);">
         <i class="fa-solid fa-envelope fa-lg mr-2"></i> Contact Us
       </a>
-      <a href="https://linkedin.com/company/ai2mr-lab" target="_blank" class="btn btn-outline-primary btn-lg d-flex align-items-center" style="font-weight: 700; border-radius: 12px; padding: 0.75rem 2rem; border-width: 2px;">
+      <a href="https://linkedin.com/company/solomons-mri-lab" target="_blank" class="btn btn-outline-primary btn-lg d-flex align-items-center" style="font-weight: 700; border-radius: 12px; padding: 0.75rem 2rem; border-width: 2px;">
         <i class="fa-brands fa-linkedin fa-lg mr-2"></i> Follow Updates
       </a>
     </div>

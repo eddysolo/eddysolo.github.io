@@ -1,115 +1,188 @@
 ---
-layout: page
+layout: default
 title: Contact Us
 permalink: /contact/
-description: Get in touch with the AI2MR Lab.
+description: Get in touch with the Solomon's MRI Lab.
 nav: true
 nav_order: 999
+fluid: true
 ---
 
-<div class="contact-container mt-4">
-  <div class="row">
-    <!-- Contact Info Section -->
-    <div class="col-md-5 mb-4 mb-md-0">
-      <div class="contact-info-card p-4 h-100 glass-box">
-        <h3 class="mb-4" style="color: var(--global-theme-color);">Reach Out</h3>
-        <p class="text-muted mb-4">
-          We are always looking for passionate scientists and engineers to join our team. If you are interested in working at the intersection of AI and MRI, don't hesitate to reach out!
-        </p>
+<style>
+  /* Page Level Background setup */
+  body {
+    background-image: url('{{ "assets/img/technion_contact_bg_google.jpg" | relative_url }}');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+  
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, rgba(8, 20, 48, 0.68) 0%, rgba(0, 93, 143, 0.56) 100%);
+    mix-blend-mode: multiply;
+    z-index: -1;
+  }
+  
+  body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(129, 127, 127, 0.2);
+    z-index: -1;
+  }
 
-        <ul class="list-unstyled mb-0">
-          <li class="mb-3 d-flex align-items-center">
-            <i class="fa-solid fa-envelope fa-fw mr-3" style="color: var(--global-theme-color); font-size: 1.2rem;"></i>
-            <span><a href="mailto:{{ site.email }}">{{ site.email | default: "you@example.com" }}</a></span>
-          </li>
-          <li class="mb-3 d-flex align-items-center">
-            <i class="fa-solid fa-location-dot fa-fw mr-3" style="color: var(--global-theme-color); font-size: 1.2rem;"></i>
-            <span>AI2MR Research Lab<br>123 Medical Research Blvd<br>City, State 12345</span>
-          </li>
-        </ul>
+  /* Bento Box Actual Grid Structure */
+  .bento-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2vw;
+    padding: 1.8vw;
+    width: 100%;
+    min-height: calc(100vh - 80px); /* Fill screen minus header */
+    margin: 0 auto;
+    z-index: 2;
+    position: relative;
+  }
 
-        <div class="mt-4 pt-3 border-top">
-          <h5 class="mb-3" style="font-size: 1rem;">Connect with us</h5>
-          <div class="social-links contact-socials">
-            {% social_links %}
+  /* Desktop Grid */
+  @media (min-width: 992px) {
+    .bento-wrapper {
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: auto auto;
+    }
+    
+    .bento-card-main {
+      grid-column: 1 / 4;
+      grid-row: 1 / 3;
+    }
+    
+    .bento-card-logo {
+      grid-column: 4 / 6;
+      grid-row: 1 / 2;
+    }
+    
+    .bento-card-map {
+      grid-column: 4 / 6;
+      grid-row: 2 / 3;
+    }
+  }
+
+  .bento-card {
+    border-radius: 24px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease;
+  }
+  
+  .bento-card:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+    z-index: 3;
+  }
+
+  .glass-dark {
+    background: rgba(8, 20, 48, 0.65);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-light {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
+</style>
+
+<div class="container-fluid px-0 mx-auto" style="overflow-x: hidden;">
+  <div class="bento-wrapper">
+    
+    <!-- Block 1: Main Info -->
+    <div class="bento-card bento-card-main glass-dark p-3 p-md-4 d-flex flex-column justify-content-center text-left" style="height: 100%;">
+      <h2 class="mb-3" style="font-weight: 800; color: #ffffff; font-size: 3rem; letter-spacing: -0.02em;">Let's Connect</h2>
+      <p class="mb-4" style="font-size: 1.2rem; line-height: 1.6; color: rgba(255,255,255,0.85);">
+        Interested in collaborating with our lab, joining as a student, or discussing a research idea? We welcome messages from motivated researchers, clinicians, and trainees, and we are happy to connect.
+      </p>
+
+      <ul class="list-unstyled mb-0 mt-auto">
+        <!-- Email -->
+        <li class="mb-4 d-flex align-items-center">
+          <div style="background: rgba(144, 216, 255, 0.15); height: 68px; width: 68px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1.2rem; flex-shrink: 0; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+            <i class="fa-solid fa-envelope" style="color: #90d8ff; font-size: 2rem;"></i>
           </div>
-        </div>
-      </div>
+          <div>
+            <h5 class="mb-1" style="font-weight: 700; color: rgba(255,255,255,0.6); text-transform: uppercase; font-size: 0.9rem; letter-spacing: 0.15em;">Email Us</h5>
+            <a href="mailto:eddy.solomon@technion.ac.il" style="font-size: 1.3rem; color: #ffffff; text-decoration: none; font-weight: 700;">eddy.solomon@technion.ac.il</a>
+          </div>
+        </li>
+        <!-- Location -->
+        <li class="d-flex align-items-center">
+          <div style="background: rgba(144, 216, 255, 0.15); height: 68px; width: 68px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1.2rem; flex-shrink: 0; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+            <i class="fa-solid fa-location-dot" style="color: #90d8ff; font-size: 2rem;"></i>
+          </div>
+          <div>
+            <h5 class="mb-1" style="font-weight: 700; color: rgba(255,255,255,0.6); text-transform: uppercase; font-size: 0.9rem; letter-spacing: 0.15em;">Visit Our Lab</h5>
+            <span style="font-size: 1.15rem; line-height: 1.5; display: inline-block; color: #ffffff; font-weight: 500;">
+              Faculty of Biomedical Engineering<br>
+              Room 328<br>
+              Technion - Israel Institute of Technology<br>
+              Haifa 3200003, Israel
+            </span>
+          </div>
+        </li>
+      </ul>
     </div>
 
-    <!-- Contact Form Section -->
-    <div class="col-md-7">
-      <div class="contact-form-card p-4 glass-box">
-        <form action="https://formspree.io/f/placeholder" method="POST" id="contact-form">
-          <div class="form-row">
-            <div class="form-group col-md-6 mb-3">
-              <label for="firstName" class="form-label" style="font-weight: 500;">First Name</label>
-              <input type="text" class="form-control" id="firstName" name="firstName" placeholder="John" required style="border-radius: 8px; border: 1px solid var(--global-divider-color); background-color: var(--global-bg-color); color: var(--global-text-color);">
-            </div>
-            <div class="form-group col-md-6 mb-3">
-              <label for="lastName" class="form-label" style="font-weight: 500;">Last Name</label>
-              <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Doe" required style="border-radius: 8px; border: 1px solid var(--global-divider-color); background-color: var(--global-bg-color); color: var(--global-text-color);">
-            </div>
-          </div>
-          
-          <div class="form-group mb-3">
-            <label for="email" class="form-label" style="font-weight: 500;">Email Address</label>
-            <input type="email" class="form-control" id="email" name="_replyto" placeholder="john.doe@example.com" required style="border-radius: 8px; border: 1px solid var(--global-divider-color); background-color: var(--global-bg-color); color: var(--global-text-color);">
-          </div>
-          
-          <div class="form-group mb-3">
-            <label for="subject" class="form-label" style="font-weight: 500;">Subject</label>
-            <select class="form-control custom-select" id="subject" name="subject" required style="border-radius: 8px; border: 1px solid var(--global-divider-color); background-color: var(--global-bg-color); color: var(--global-text-color);">
-              <option value="" disabled selected>Select an option...</option>
-              <option value="Joining the Lab">Joining the Lab</option>
-              <option value="Collaboration">Collaboration Inquiry</option>
-              <option value="General Question">General Question</option>
-            </select>
-          </div>
-          
-          <div class="form-group mb-4">
-            <label for="message" class="form-label" style="font-weight: 500;">Message</label>
-            <textarea class="form-control" id="message" name="message" rows="5" placeholder="Tell us how we can help you..." required style="border-radius: 8px; border: 1px solid var(--global-divider-color); background-color: var(--global-bg-color); color: var(--global-text-color); resize: vertical;"></textarea>
-          </div>
-          
-          <button type="submit" class="btn btn-primary btn-block py-2 submit-btn" style="border-radius: 8px; transition: all 0.3s ease;">
-            <i class="fa-solid fa-paper-plane mr-2"></i> Send Message
-          </button>
-        </form>
+    <!-- Block 2: Logo Link -->
+    <a href="https://bme.technion.ac.il/en/" target="_blank" class="bento-card bento-card-logo glass-dark d-flex flex-column align-items-center justify-content-center text-decoration-none p-3 p-xl-4" style="height: 100%; min-height: 180px; gap: 0.6rem; padding-top: 0.75rem; padding-bottom: 0.55rem;">
+      <img src="{{ 'assets/img/logos/bme_logo_official_en.png' | relative_url }}" alt="BME Logo" style="width: 100%; max-width: 560px; height: auto; object-fit: contain; image-rendering: auto; transform: translateY(-4px); filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.12));">
+      <div style="background: rgba(144, 216, 255, 0.2); color: #dff3ff; padding: 0.7rem 1.5rem; border: 1px solid rgba(144, 216, 255, 0.4); border-radius: 50px; font-weight: 800; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 0.6rem; box-shadow: 0 10px 25px rgba(0, 43, 91, 0.4); text-transform: uppercase; letter-spacing: 0.03em; transition: all 0.3s; margin-top: 0.2rem;">
+        Go to website <i class="fa-solid fa-arrow-right"></i>
       </div>
+    </a>
+
+    <!-- Block 3: Embedded Map -->
+    <div class="bento-card bento-card-map p-0 m-0 glass-dark d-flex" style="height: 100%; min-height: 380px;">
+      <iframe 
+          src="https://www.google.com/maps?q=Technion+Faculty+of+Biomedical+Engineering&ll=32.7752021,35.026504&z=17&output=embed" 
+          width="100%" 
+          height="100%" 
+          style="border:0; width: 100%; height: 100%; position: absolute; top:0; left:0; filter: contrast(1.05) opacity(0.95); mix-blend-mode: normal;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
     </div>
+
   </div>
 </div>
 
-<style>
-.contact-form-card .form-control:focus {
-  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
-  border-color: var(--global-theme-color) !important;
-}
-
-[data-theme="dark"] .contact-form-card .form-control option {
-  background-color: var(--global-bg-color);
-  color: var(--global-text-color);
-}
-
-.submit-btn {
-  background-color: var(--global-theme-color);
-  border-color: var(--global-theme-color);
-}
-
-.submit-btn:hover {
-  filter: brightness(1.1);
-  transform: translateY(-1px);
-}
-
-.contact-socials a {
-  font-size: 1.5rem;
-  margin-right: 1rem;
-  color: var(--global-text-color);
-  transition: color 0.3s ease;
-}
-
-.contact-socials a:hover {
-  color: var(--global-theme-color);
-}
-</style>
+<section style="padding: 1rem 1rem 2.5rem; text-align: center;">
+  <div class="d-flex justify-content-center align-items-center flex-wrap" style="gap: 0.9rem;">
+    <a href="https://www.linkedin.com/in/eddy-solomon-93159119b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style="color: #fff; font-size: 3.45rem; line-height: 1;">
+      <i class="fa-brands fa-linkedin"></i>
+    </a>
+    <a href="https://github.com/eddysolo" target="_blank" rel="noopener noreferrer" aria-label="GitHub" style="color: #fff; font-size: 3.45rem; line-height: 1;">
+      <i class="fa-brands fa-github"></i>
+    </a>
+    <a href="https://outlook.office.com/mail/deeplink/compose?to=eddy.solomon@technion.ac.il" target="_blank" rel="noopener noreferrer" aria-label="Outlook" style="color: #fff; font-size: 3.45rem; line-height: 1;">
+      <i class="fa-solid fa-envelope"></i>
+    </a>
+    <a href="https://scholar.google.com/citations?user=tAOr0VwAAAAJ&hl=iw&oi=ao" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" style="color: #fff; font-size: 3.45rem; line-height: 1;">
+      <i class="ai ai-google-scholar"></i>
+    </a>
+  </div>
+  <p style="margin-top: 0.8rem; margin-bottom: 0; font-size: 1rem; color: #fff;">you can reach out us best by email.</p>
+</section>
