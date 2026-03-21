@@ -22,7 +22,7 @@ fluid: true
 .home-fixed-gap {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 0.2rem;
 }
 
 .home-fixed-gap > * {
@@ -70,8 +70,8 @@ fluid: true
     <div class="row g-0">
       <div class="col-12">
         <!-- About Box -->
-        <div class="glass-section w-100 d-flex flex-column justify-content-center align-items-center text-center" style="border-radius: 24px; padding: 3rem;">
-          <p style="font-size: 1.35rem; margin: 0 auto; color: var(--global-text-color); line-height: 1.8; max-width: 1200px;">
+        <div class="glass-section w-100 d-flex flex-column justify-content-center align-items-center text-center" style="border-radius: 24px; padding: 2.1rem 3rem;">
+          <p style="font-size: 1.35rem; margin: 0 auto; color: var(--global-text-color); line-height: 1.72; max-width: 1200px;">
             Our team combines expertise in physics, engineering, and deep learning to advance medical imaging, with a particular focus on Magnetic Resonance Imaging (MRI). We develop novel MRI technologies that translate cutting-edge algorithms into meaningful clinical impact, improving both the speed and quality of imaging. By making MRI faster, more reliable, and more accessible, we aim to enhance patient care across a wide range of applications, including brain, breast, and abdominal imaging.
           </p>
         </div>

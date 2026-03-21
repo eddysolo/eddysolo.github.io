@@ -11,8 +11,8 @@ horizontal: false
 
 <div class="projects">
   <div class="glass-section w-100 d-flex flex-column justify-content-center align-items-center text-center mb-4" style="border-radius: 24px; padding: 3.2rem 2.6rem;">
-    <h1 style="font-weight: 800; font-size: 3rem; margin-bottom: 0.65rem;">Our Research Areas</h1>
-    <h3 style="font-weight: 600; font-size: 1.35rem; color: var(--global-theme-color); margin-bottom: 0;">From acquisition physics to AI reconstruction and deployable clinical workflows</h3>
+    <h1 style="font-weight: 800; font-size: 3rem; margin-bottom: 0.65rem;">Our Research</h1>
+    <h3 style="font-weight: 600; font-size: 1.35rem; color: var(--global-theme-color); margin-bottom: 0;"></h3>
   </div>
 
   <div class="row g-4 mb-5">
