@@ -116,7 +116,7 @@ fluid: true
         Interested in collaborating with our lab, joining as a student, or discussing a research idea? We welcome messages from motivated researchers, clinicians, and trainees, and we are happy to connect.
       </p>
 
-      <ul class="list-unstyled mb-0 mt-auto">
+      <ul class="list-unstyled mb-0 mt-3">
         <!-- Email -->
         <li class="mb-4 d-flex align-items-center">
           <div style="background: rgba(144, 216, 255, 0.15); height: 68px; width: 68px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1.2rem; flex-shrink: 0; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">

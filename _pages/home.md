@@ -99,6 +99,11 @@ fluid: true
               <h4 style="font-weight: 700; font-size: 1.2rem; margin-bottom: 0.25rem; color: var(--global-theme-color);">Advanced Hardware</h4>
               <p style="margin: 0; font-size: 1rem;">Integration of MR-compatible external sensors, including ultra-wideband radar, for enhanced imaging.</p>
             </a>
+
+            <a href="{{ '/non-cartesian-imaging/' | relative_url }}" class="glass-box p-3 text-decoration-none text-center" style="border-radius: 16px; transition: transform 0.2s; color: var(--global-text-color); border: 1px solid rgba(0,150,199,0.3);">
+              <h4 style="font-weight: 700; font-size: 1.2rem; margin-bottom: 0.25rem; color: var(--global-theme-color);">Non-Cartesian Imaging</h4>
+              <p style="margin: 0; font-size: 1rem;">Radial and spiral k-space trajectories for faster and more motion-robust MRI reconstruction.</p>
+            </a>
           </div>
         </div>
       </div>

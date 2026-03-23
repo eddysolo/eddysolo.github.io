@@ -16,7 +16,7 @@ horizontal: false
   </div>
 
   <div class="row g-4 mb-5">
-    <div class="col-lg-4">
+    <div class="col-md-6">
       <a href="{{ '/computational-mri/' | relative_url }}" class="text-decoration-none" style="color: inherit;">
         <div class="glass-box p-4 h-100 d-flex flex-column text-center" style="border-radius: 24px; border: 1px solid rgba(0, 150, 199, 0.28);">
           <div class="mb-3" style="font-size: 2rem; color: var(--global-theme-color);">
@@ -28,7 +28,7 @@ horizontal: false
       </a>
     </div>
 
-    <div class="col-lg-4">
+    <div class="col-md-6">
       <a href="{{ '/motion-correction/' | relative_url }}" class="text-decoration-none" style="color: inherit;">
         <div class="glass-box p-4 h-100 d-flex flex-column text-center" style="border-radius: 24px; border: 1px solid rgba(0, 150, 199, 0.28);">
           <div class="mb-3" style="font-size: 2rem; color: var(--global-theme-color);">
@@ -40,7 +40,7 @@ horizontal: false
       </a>
     </div>
 
-    <div class="col-lg-4">
+    <div class="col-md-6">
       <a href="{{ '/advanced-hardware/' | relative_url }}" class="text-decoration-none" style="color: inherit;">
         <div class="glass-box p-4 h-100 d-flex flex-column text-center" style="border-radius: 24px; border: 1px solid rgba(0, 150, 199, 0.28);">
           <div class="mb-3" style="font-size: 2rem; color: var(--global-theme-color);">
@@ -48,6 +48,18 @@ horizontal: false
           </div>
           <h2 style="font-weight: 800; font-size: 1.65rem; margin-bottom: 0.55rem; color: var(--global-theme-color);">Advanced Hardware</h2>
           <p style="font-size: 1.05rem; line-height: 1.6; margin: 0;">MR-compatible sensing, external tracking, and instrumentation that extend what is measurable in real scans.</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-md-6">
+      <a href="{{ '/non-cartesian-imaging/' | relative_url }}" class="text-decoration-none" style="color: inherit;">
+        <div class="glass-box p-4 h-100 d-flex flex-column text-center" style="border-radius: 24px; border: 1px solid rgba(0, 150, 199, 0.28);">
+          <div class="mb-3" style="font-size: 2rem; color: var(--global-theme-color);">
+            <i class="fa-solid fa-circle-nodes"></i>
+          </div>
+          <h2 style="font-weight: 800; font-size: 1.65rem; margin-bottom: 0.55rem; color: var(--global-theme-color);">Non-Cartesian Imaging</h2>
+          <p style="font-size: 1.05rem; line-height: 1.6; margin: 0;">Radial, spiral, and stack-of-stars acquisitions with model-based reconstruction for efficient, motion-robust MRI.</p>
         </div>
       </a>
     </div>

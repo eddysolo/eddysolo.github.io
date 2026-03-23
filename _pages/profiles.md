@@ -18,7 +18,7 @@ profiles:
     image: bar_ben_zino.jpg
     url: /team/bar-ben-zino/
   - name: Shaked Gov
-    role: MSc Candidate
+    role: MSc Student
     image: shaked_gov.jpg
     url: /team/shaked-gov/
   - name: Ori Shahar

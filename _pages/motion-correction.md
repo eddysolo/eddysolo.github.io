@@ -75,19 +75,4 @@ no_hero: true
     </div>
   </div>
 
-  <!-- Contact Us / LinkedIn CTA block -->
-  <div class="glass-section mb-5 text-center p-5" style="border-radius: 24px; background: rgba(0, 150, 199, 0.05); border: 1px solid rgba(0, 150, 199, 0.2);">
-    <h2 style="font-weight: 800; font-size: 2.2rem; margin-bottom: 1rem;">Interested in Motion Correction?</h2>
-    <p style="font-size: 1.25rem; max-width: 800px; margin: 0 auto 2rem; color: var(--global-text-color);">
-      We are actively looking for collaborators and students enthusiastic about solving uncooperative physiological motion challenges in diagnostic imaging.
-    </p>
-    <div class="d-flex justify-content-center gap-4 flex-wrap">
-      <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary btn-lg d-flex align-items-center" style="font-weight: 700; border-radius: 12px; padding: 0.75rem 2rem; box-shadow: 0 10px 20px rgba(0,150,199,0.3);">
-        <i class="fa-solid fa-envelope fa-lg mr-2"></i> Contact Us
-      </a>
-      <a href="https://linkedin.com/company/solomons-mri-lab" target="_blank" class="btn btn-outline-primary btn-lg d-flex align-items-center" style="font-weight: 700; border-radius: 12px; padding: 0.75rem 2rem; border-width: 2px;">
-        <i class="fa-brands fa-linkedin fa-lg mr-2"></i> Follow Updates
-      </a>
-    </div>
-  </div>
 </div>

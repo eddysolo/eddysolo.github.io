@@ -111,7 +111,7 @@ _styles: |
 
 <div class="glass-section pub-page-hero d-flex flex-column justify-content-center align-items-center text-center">
   <h1>Publications</h1>
-  <p>Browse journal articles and conference abstracts from Solomon MRI Lab. For complete indexed records, use the external sources below.</p>
+  <p> For complete indexed records, use the external sources below.</p>
   <div>
     <a class="pub-hero-link" href="https://scholar.google.com/citations?user=tAOr0VwAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
     <a class="pub-hero-link" href="https://pubmed.ncbi.nlm.nih.gov/?term=eddy+solomon&sort=date&utm_source=Pubmed" target="_blank" rel="noopener noreferrer">PubMed</a>
@@ -228,6 +228,31 @@ document.addEventListener("DOMContentLoaded", function() {
       return;
     }
     seen.add(dedupeKey);
+  });
+
+  // In Peer Reviewed Conference Abstracts tab, hide verbose unknown venue stamp
+  // and remove PDF badges from entry cards.
+  peerPane.querySelectorAll(".periodical").forEach(function(node) {
+    const text = (node.textContent || "").replace(/\s+/g, " ").trim();
+    if (text.includes("ISMRM Annual Meeting") && text.includes("0000")) {
+      const cleaned = text
+        .replace(/ISMRM\s+Annual\s+Meeting\s*,?\s*0000/gi, "")
+        .replace(/^\s*[.,;:-]\s*/, "")
+        .trim();
+
+      if (cleaned) {
+        node.textContent = cleaned;
+      } else {
+        node.remove();
+      }
+    }
+  });
+
+  peerPane.querySelectorAll(".links a").forEach(function(link) {
+    const label = (link.textContent || "").trim().toLowerCase();
+    if (label === "pdf") {
+      link.remove();
+    }
   });
 
 });
