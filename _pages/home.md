@@ -3,7 +3,7 @@ layout: default
 title: Home
 main_title: "Solomon MRI Lab - Advanced Imaging to Magnetic Resonance"
 permalink: /
-hero_image: assets/img/mri_hero.jpg
+hero_image: assets/img/mri_hero_new.png
 fluid: true
 ---
 
@@ -49,6 +49,54 @@ fluid: true
   padding-left: 0.35rem !important;
   padding-right: 0.35rem !important;
 }
+
+.home-news-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.home-news-card {
+  border-radius: 14px;
+  border-left: 4px solid var(--global-theme-color);
+  padding: 0.75rem 0.85rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 0 0 auto;
+  min-height: 0;
+}
+
+.home-news-date {
+  font-size: 0.87rem;
+  font-weight: 700;
+  color: var(--global-theme-color);
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.home-news-title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.03rem;
+  line-height: 1.28;
+}
+
+.home-news-text {
+  margin: 0.2rem 0 0;
+  font-size: 0.92rem;
+  line-height: 1.33;
+}
+
+@media (max-width: 991.98px) {
+  .home-news-stack {
+    gap: 0.5rem;
+  }
+
+  .home-news-card {
+    flex: initial;
+  }
+}
 </style>
 
 <div class="container-fluid px-0 mx-auto" style="max-width: 90%; width: 90%; overflow-x: hidden;">
@@ -87,22 +135,22 @@ fluid: true
           <div class="d-flex flex-column gap-1 w-100" style="max-width: 100%;">
             <a href="{{ '/computational-mri/' | relative_url }}" class="glass-box p-3 text-decoration-none text-center" style="border-radius: 16px; transition: transform 0.2s; color: var(--global-text-color); border: 1px solid rgba(0,150,199,0.3);">
               <h4 style="font-weight: 700; font-size: 1.2rem; margin-bottom: 0.25rem; color: var(--global-theme-color);">Computational MRI</h4>
-              <p style="margin: 0; font-size: 1rem;">Novel acquisition strategies and deep learning reconstruction for faster, higher-quality MRI.</p>
+              <p style="margin: 0; font-size: 1rem;">Novel sampling and reconstruction methods: from accelerated k-space acquisition to diagnostic-quality image.</p>
             </a>
             
-            <a href="{{ '/motion-correction/' | relative_url }}" class="glass-box p-3 text-decoration-none text-center" style="border-radius: 16px; transition: transform 0.2s; color: var(--global-text-color); border: 1px solid rgba(0,150,199,0.3);">
-              <h4 style="font-weight: 700; font-size: 1.2rem; margin-bottom: 0.25rem; color: var(--global-theme-color);">Motion Correction</h4>
-              <p style="margin: 0; font-size: 1rem;">Free-breathing MRI methods that reduce motion artifacts and improve robustness in clinical scans.</p>
+            <a href="{{ '/motion-robust-mri/' | relative_url }}" class="glass-box p-3 text-decoration-none text-center" style="border-radius: 16px; transition: transform 0.2s; color: var(--global-text-color); border: 1px solid rgba(0,150,199,0.3);">
+              <h4 style="font-weight: 700; font-size: 1.2rem; margin-bottom: 0.25rem; color: var(--global-theme-color);">Motion-Robust MRI</h4>
+              <p style="margin: 0; font-size: 1rem;">Motion-robust MRI for free breathing, reliable imaging.</p>
             </a>
 
-            <a href="{{ '/advanced-hardware/' | relative_url }}" class="glass-box p-3 text-decoration-none text-center" style="border-radius: 16px; transition: transform 0.2s; color: var(--global-text-color); border: 1px solid rgba(0,150,199,0.3);">
-              <h4 style="font-weight: 700; font-size: 1.2rem; margin-bottom: 0.25rem; color: var(--global-theme-color);">Advanced Hardware</h4>
-              <p style="margin: 0; font-size: 1rem;">Integration of MR-compatible external sensors, including ultra-wideband radar, for enhanced imaging.</p>
+            <a href="{{ '/advanced-mri-hardware/' | relative_url }}" class="glass-box p-3 text-decoration-none text-center" style="border-radius: 16px; transition: transform 0.2s; color: var(--global-text-color); border: 1px solid rgba(0,150,199,0.3);">
+              <h4 style="font-weight: 700; font-size: 1.2rem; margin-bottom: 0.25rem; color: var(--global-theme-color);">Advanced MRI Hardware</h4>
+              <p style="margin: 0; font-size: 1rem;">MR-compatible sensing and external tracking beyond conventional MRI.</p>
             </a>
 
-            <a href="{{ '/non-cartesian-imaging/' | relative_url }}" class="glass-box p-3 text-decoration-none text-center" style="border-radius: 16px; transition: transform 0.2s; color: var(--global-text-color); border: 1px solid rgba(0,150,199,0.3);">
-              <h4 style="font-weight: 700; font-size: 1.2rem; margin-bottom: 0.25rem; color: var(--global-theme-color);">Non-Cartesian Imaging</h4>
-              <p style="margin: 0; font-size: 1rem;">Radial and spiral k-space trajectories for faster and more motion-robust MRI reconstruction.</p>
+            <a href="{{ '/quantitative-diffusion-mri/' | relative_url }}" class="glass-box p-3 text-decoration-none text-center" style="border-radius: 16px; transition: transform 0.2s; color: var(--global-text-color); border: 1px solid rgba(0,150,199,0.3);">
+              <h4 style="font-weight: 700; font-size: 1.2rem; margin-bottom: 0.25rem; color: var(--global-theme-color);">Quantitative Diffusion MRI</h4>
+              <p style="margin: 0; font-size: 1rem;">Advanced diffusion MRI for probing tissue microstructure and cellular dynamics.</p>
             </a>
           </div>
         </div>
@@ -118,30 +166,24 @@ fluid: true
             </a>
           </h2>
           
-          <div class="d-flex flex-column gap-1 text-left">
-            <div class="glass-box p-3" style="border-radius: 16px; border-left: 4px solid var(--global-theme-color);">
-              <div class="mb-1">
-                <span style="font-size: 0.95rem; font-weight: 700; color: var(--global-theme-color); display: block; margin-bottom: 0.35rem;">Mar 3, 2026</span>
-                <h3 style="margin: 0; font-weight: 700; font-size: 1.2rem; line-height: 1.35;">Paper Accepted to MICCAI 2026</h3>
+          <div class="home-news-stack text-left">
+            {% assign latest_news = site.news | reverse %}
+            {% for item in latest_news limit: 3 %}
+              <div class="glass-box home-news-card">
+                <div class="mb-1">
+                  <span class="home-news-date">{{ item.date | date: '%b %-d, %Y' }}</span>
+                  {% if item.inline %}
+                    {% assign inline_text = item.content | strip_html %}
+                    {% assign inline_title = inline_text | split: ':' | first %}
+                    <h3 class="home-news-title">{{ inline_title }}</h3>
+                    <p class="home-news-text">{{ inline_text | replace_first: inline_title, '' | replace_first: ':', '' | strip | emojify }}</p>
+                  {% else %}
+                    <h3 class="home-news-title">{{ item.title }}</h3>
+                    <p class="home-news-text">{{ item.excerpt | strip_html | truncate: 240 }}</p>
+                  {% endif %}
+                </div>
               </div>
-              <p style="margin: 0; font-size: 1rem; margin-top: 0.35rem; line-height: 1.45;">Our latest work on free-breathing MRI techniques has been accepted for presentation at MICCAI in Kyoto, Japan.</p>
-            </div>
-            
-            <div class="glass-box p-3" style="border-radius: 16px; border-left: 4px solid var(--global-theme-color);">
-              <div class="mb-1">
-                <span style="font-size: 0.95rem; font-weight: 700; color: var(--global-theme-color); display: block; margin-bottom: 0.35rem;">Feb 15, 2026</span>
-                <h3 style="margin: 0; font-weight: 700; font-size: 1.2rem; line-height: 1.35;">Pediatric MRI Grant Secured</h3>
-              </div>
-              <p style="margin: 0; font-size: 1rem; margin-top: 0.35rem; line-height: 1.45;">We are thrilled to announce a new grant to accelerate our research on making MRI faster and more accessible for pediatric patients.</p>
-            </div>
-
-            <div class="glass-box p-3" style="border-radius: 16px; border-left: 4px solid var(--global-theme-color);">
-              <div class="mb-1">
-                <span style="font-size: 0.95rem; font-weight: 700; color: var(--global-theme-color); display: block; margin-bottom: 0.35rem;">Jan 28, 2026</span>
-                <h3 style="margin: 0; font-weight: 700; font-size: 1.2rem; line-height: 1.35;">New MRI Workshop Announced</h3>
-              </div>
-              <p style="margin: 0; font-size: 1rem; margin-top: 0.35rem; line-height: 1.45;">Our lab will host a hands-on workshop focused on rapid MRI acquisition and reconstruction methods for graduate students and researchers.</p>
-            </div>
+            {% endfor %}
           </div>
         </div>
       </div>

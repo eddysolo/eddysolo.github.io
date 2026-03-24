@@ -39,14 +39,6 @@ fluid: true
     box-shadow: 0 10px 24px rgba(0, 150, 199, 0.28);
   }
 
-  .open-source-tab-hero {
-    border-radius: 20px;
-    padding: 1.5rem 1.4rem;
-    margin-bottom: 1.1rem;
-    border: 1px solid rgba(0, 150, 199, 0.2);
-    background: linear-gradient(130deg, rgba(255, 255, 255, 0.08), rgba(0, 150, 199, 0.06));
-  }
-
   .open-source-repo-card .repo-title-row {
     display: flex;
     align-items: flex-start;
@@ -79,8 +71,65 @@ fluid: true
     min-width: 0;
   }
 
+  .open-source-popular-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .open-source-popular-card {
+    border-radius: 24px;
+    color: inherit;
+    text-decoration: none;
+    border: 1px solid rgba(0, 150, 199, 0.16);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  }
+
+  .open-source-popular-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(0, 150, 199, 0.35);
+    box-shadow: 0 14px 28px rgba(0, 150, 199, 0.14);
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .open-source-popular-card .popular-title {
+    font-weight: 800;
+    margin: 0;
+    font-size: 1.14rem;
+    line-height: 1.35;
+  }
+
+  .open-source-popular-card .popular-meta {
+    margin: 0.4rem 0 0;
+    font-size: 0.92rem;
+    line-height: 1.45;
+    color: var(--global-theme-color);
+    font-weight: 700;
+  }
+
+  .open-source-popular-card .popular-summary {
+    margin: 0.7rem 0 0;
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  .open-source-popular-card .popular-link {
+    margin-top: auto;
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--global-theme-color);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
   @media (max-width: 767px) {
     .open-source-code-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .open-source-popular-grid {
       grid-template-columns: 1fr;
     }
   }
@@ -111,11 +160,6 @@ fluid: true
 
   <div class="tab-content" id="open-source-content">
     <div class="tab-pane fade show active" id="source-code-pane" role="tabpanel" aria-labelledby="source-code-tab">
-      <div class="glass-section open-source-tab-hero d-flex flex-column justify-content-center align-items-center text-center">
-        <h2 style="font-weight: 800; font-size: 2rem; margin-bottom: 0.4rem;">Code &amp; Repositories</h2>
-        <p style="font-size: 1.08rem; margin: 0; max-width: 980px; line-height: 1.65;">Open-source tools and reproducible codebases from our lab, spanning MRI reconstruction pipelines, acceleration frameworks, and motion simulation platforms.</p>
-      </div>
-
       <div class="open-source-code-grid">
         <div class="glass-box p-4 h-100 d-flex flex-column open-source-repo-card" style="border-radius: 24px;">
           <div class="repo-title-row">
@@ -147,46 +191,52 @@ fluid: true
     </div>
 
     <div class="tab-pane fade" id="source-popular-pane" role="tabpanel" aria-labelledby="source-popular-tab">
-      <div class="glass-section open-source-tab-hero d-flex flex-column justify-content-center align-items-center text-center">
-        <h2 style="font-weight: 800; font-size: 2rem; margin-bottom: 0.4rem;">Popular Science</h2>
-        <p style="font-size: 1.08rem; margin: 0; max-width: 980px; line-height: 1.65;">Resources and outreach content that translate MRI research into accessible explanations for broader audiences.</p>
-      </div>
-
-      <div class="row g-4">
-        <div class="col-lg-6">
-          <div class="glass-box p-4 h-100 d-flex flex-column" style="border-radius: 24px; color: inherit;">
-            <div class="d-flex align-items-center mb-3">
-              <i class="fa-solid fa-database fa-2x mr-3" style="color: var(--global-text-color);"></i>
-              <h3 style="font-weight: 800; margin: 0;">
-                <a href="{{ '/fastmri-dataset/' | relative_url }}" class="text-decoration-none" style="color: inherit;">FastMRI &amp; Breast DCE MRI Dataset</a>
-              </h3>
-            </div>
-            <p style="font-size: 1.15rem; color: var(--global-theme-color); font-weight: 700;">Open-source MRI dataset support for reconstruction and machine learning research.</p>
-            <p style="font-size: 1.1rem; flex-grow: 1;">We contributed Breast DCE MRI data to the NYU FastMRI ecosystem to support robust reconstruction benchmarks and reproducible algorithm development.</p>
-            <img src="{{ '/assets/img/publication_preview/breast%20scan%20example.png' | relative_url }}" alt="fastMRI breast dataset preview" class="mt-3 w-100" style="border-radius: 16px; object-fit: cover;">
+      <div class="open-source-popular-grid">
+        <a href="https://cai2r.net/fastmri-dataset-adds-breast-imaging-data-to-encourage-new-directions-in-ai-research-on-mri/" target="_blank" rel="noopener noreferrer" class="glass-box p-4 h-100 d-flex flex-column open-source-popular-card">
+          <div class="mb-2">
+            <h3 class="popular-title">FastMRI Dataset Adds Breast Imaging Data to Encourage New Directions in AI Research on MRI</h3>
           </div>
-        </div>
-        <div class="col-lg-6"></div>
+          <p class="popular-meta">Feb 14, 2025 · Center for Biomedical Imaging and Bioengineering, New York University</p>
+          <p class="popular-summary">Open-source MRI dataset support for reconstruction and machine learning research, including breast DCE MRI data that broadens the fastMRI benchmark ecosystem.</p>
+          <span class="popular-link">Read article <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
+
+        <a href="https://cai2r.net/how-the-small-pilot-tone-is-taking-on-mris-big-challenge/" target="_blank" rel="noopener noreferrer" class="glass-box p-4 h-100 d-flex flex-column open-source-popular-card">
+          <div class="mb-2">
+            <h3 class="popular-title">How a Small Pilot Tone Is Taking On One of MRI's Big Challenges</h3>
+          </div>
+          <p class="popular-meta">Dec 7, 2022 · Center for Biomedical Imaging and Bioengineering, New York University</p>
+          <p class="popular-summary">Feature story on pilot-tone motion sensing and how compact RF tracking can improve free-breathing MRI reliability.</p>
+          <span class="popular-link">Read article <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
+
+        <a href="https://www.weizmann.ca/the-x-spendables-addressing-the-most-challenging-tissues-in-magnetic-resonance/" target="_blank" rel="noopener noreferrer" class="glass-box p-4 h-100 d-flex flex-column open-source-popular-card">
+          <div class="mb-2">
+            <h3 class="popular-title">Addressing the Most Challenging Tissues in Magnetic Resonance</h3>
+          </div>
+          <p class="popular-meta">Feb 21, 2018 · Weizmann Wonder Wander, Science News and Culture</p>
+          <p class="popular-summary">Popular science coverage of MRI challenges in difficult tissue environments and the broader translational impact of MR innovation.</p>
+          <span class="popular-link">Read article <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
+
+        <a href="https://wis-wander.weizmann.ac.il/life-sciences/untangling-maze/" target="_blank" rel="noopener noreferrer" class="glass-box p-4 h-100 d-flex flex-column open-source-popular-card">
+          <div class="mb-2">
+            <h3 class="popular-title">Untangling the Maze</h3>
+          </div>
+          <p class="popular-meta">Sep 29, 2014 · Weizmann Wonder Wander, Science News and Culture</p>
+          <p class="popular-summary">Science outreach article focused on complex biological imaging questions and how advanced MR approaches help reveal hidden structure.</p>
+          <span class="popular-link">Read article <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
       </div>
     </div>
 
     <div class="tab-pane fade" id="source-patents-pane" role="tabpanel" aria-labelledby="source-patents-tab">
-      <div class="glass-section open-source-tab-hero d-flex flex-column justify-content-center align-items-center text-center">
-        <h2 style="font-weight: 800; font-size: 2rem; margin-bottom: 0.4rem;">Patents</h2>
-        <p style="font-size: 1.08rem; margin: 0; max-width: 980px; line-height: 1.65;">A curated area for translational intellectual property and inventions evolving from open-source and methodological work.</p>
-      </div>
-
       <div class="row g-4">
         <div class="col-lg-6">
           <div class="glass-box p-4 h-100 d-flex flex-column" style="border-radius: 24px;">
             <div class="d-flex align-items-center mb-3">
               <i class="fa-solid fa-file-contract fa-2x mr-3" style="color: var(--global-text-color);"></i>
               <h3 style="font-size: 1.08rem; color: var(--global-theme-color); font-weight: 800; margin: 0;">Method apparatus and system for determining a data signature of 3D image</h3>
-            </div>
-            <div class="d-flex flex-wrap mb-3" style="gap: 0.45rem;">
-              <span class="badge badge-pill" style="background: rgba(0, 150, 199, 0.1); color: var(--global-text-color); font-weight: 700; padding: 0.45rem 0.75rem;">US20150366463A1</span>
-              <span class="badge badge-pill" style="background: rgba(0, 150, 199, 0.15); color: var(--global-theme-color); font-weight: 700; padding: 0.45rem 0.75rem;">Publication: Dec 24, 2015</span>
-              <span class="badge badge-pill" style="background: rgba(226, 80, 80, 0.14); color: #b33a3a; font-weight: 700; padding: 0.45rem 0.75rem;">Status: Expired</span>
             </div>
             <p style="font-size: 1rem; margin-bottom: 0.55rem;"><strong>Inventors:</strong> Eyal Naimi, Eddy Solomon, Israel Boaz Arnon</p>
             <p style="font-size: 1.02rem; line-height: 1.64; flex-grow: 1;"><strong>Abstract:</strong> A method for determining a thermal signature from thermal data of a body section by segmenting thermal values into groups and calculating contour-defining central locations for each segment. The resulting signature supports comparison against references for identifying thermally distinguishable regions.</p>
@@ -199,11 +249,6 @@ fluid: true
             <div class="d-flex align-items-center mb-3">
               <i class="fa-solid fa-file-contract fa-2x mr-3" style="color: var(--global-text-color);"></i>
               <h3 style="font-size: 1.08rem; color: var(--global-theme-color); font-weight: 800; margin: 0;">Method apparatus and system for determining a thermal signature</h3>
-            </div>
-            <div class="d-flex flex-wrap mb-3" style="gap: 0.45rem;">
-              <span class="badge badge-pill" style="background: rgba(0, 150, 199, 0.1); color: var(--global-text-color); font-weight: 700; padding: 0.45rem 0.75rem;">US9144397B2</span>
-              <span class="badge badge-pill" style="background: rgba(0, 150, 199, 0.15); color: var(--global-theme-color); font-weight: 700; padding: 0.45rem 0.75rem;">Grant Date: Sep 29, 2015</span>
-              <span class="badge badge-pill" style="background: rgba(46, 164, 79, 0.16); color: #1f6f37; font-weight: 700; padding: 0.45rem 0.75rem;">Status: Active</span>
             </div>
             <p style="font-size: 1rem; margin-bottom: 0.55rem;"><strong>Inventors:</strong> Eyal Naimi, Eddy Solomon, Israel Boaz Arnon</p>
             <p style="font-size: 1.02rem; line-height: 1.64; flex-grow: 1;"><strong>Abstract:</strong> A method for extracting a thermal signature from body-surface thermal data by segmenting image values and computing representative contour points. The signature enables analysis, detection, and longitudinal monitoring of thermally distinguished regions in clinical imaging contexts.</p>

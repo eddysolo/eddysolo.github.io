@@ -7,44 +7,17 @@ nav: true
 nav_order: 4
 hide_page_header: true
 _styles: |
-  .pub-page-hero {
-    border-radius: 24px;
-    padding: 2.8rem 2.2rem;
-    margin-bottom: 1rem;
-    border: 1px solid rgba(0, 150, 199, 0.22);
-    background: linear-gradient(130deg, rgba(255, 255, 255, 0.1), rgba(0, 150, 199, 0.06));
+  .pub-page-note {
+    margin: 0 0 1rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: left;
   }
 
-  .pub-page-hero h1 {
-    margin: 0;
-    font-size: clamp(2rem, 3vw, 3rem);
-    font-weight: 850;
-    letter-spacing: -0.02em;
-  }
-
-  .pub-page-hero p {
-    margin: 0.7rem 0 0;
-    font-size: 1.08rem;
-    line-height: 1.68;
-  }
-
-  .pub-hero-link {
-    display: inline-block;
-    margin: 0.6rem 0.55rem 0 0;
-    padding: 0.5rem 0.95rem;
-    border-radius: 999px;
+  .pub-page-note a {
     font-weight: 800;
-    text-decoration: none;
-    border: 1px solid rgba(0, 150, 199, 0.5);
-    color: var(--global-theme-color);
-    background: rgba(0, 150, 199, 0.11);
-    transition: all 0.2s ease;
-  }
-
-  .pub-hero-link:hover {
-    color: #fff;
-    background: var(--global-theme-color);
-    border-color: var(--global-theme-color);
+    text-decoration: underline;
+    text-underline-offset: 0.14rem;
   }
 
   .pub-tabs-wrap {
@@ -109,14 +82,7 @@ _styles: |
 
 <!-- _pages/publications.md -->
 
-<div class="glass-section pub-page-hero d-flex flex-column justify-content-center align-items-center text-center">
-  <h1>Publications</h1>
-  <p> For complete indexed records, use the external sources below.</p>
-  <div>
-    <a class="pub-hero-link" href="https://scholar.google.com/citations?user=tAOr0VwAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-    <a class="pub-hero-link" href="https://pubmed.ncbi.nlm.nih.gov/?term=eddy+solomon&sort=date&utm_source=Pubmed" target="_blank" rel="noopener noreferrer">PubMed</a>
-  </div>
-</div>
+<p class="pub-page-note">For a full list, you can visit <a href="https://scholar.google.com/citations?user=tAOr0VwAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a> or <a href="https://pubmed.ncbi.nlm.nih.gov/?term=eddy+solomon&sort=date&utm_source=Pubmed" target="_blank" rel="noopener noreferrer">PubMed</a>.</p>
 
 <!-- Bibsearch Feature -->
 {% include bib_search.liquid %}
