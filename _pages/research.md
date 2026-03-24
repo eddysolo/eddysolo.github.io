@@ -29,37 +29,37 @@ horizontal: false
     </div>
 
     <div class="col-md-6">
-      <a href="{{ '/motion-correction/' | relative_url }}" class="text-decoration-none" style="color: inherit;">
+      <a href="{{ '/motion-robust-mri/' | relative_url }}" class="text-decoration-none" style="color: inherit;">
         <div class="glass-box p-4 h-100 d-flex flex-column text-center" style="border-radius: 24px; border: 1px solid rgba(0, 150, 199, 0.28);">
           <div class="mb-3" style="font-size: 2rem; color: var(--global-theme-color);">
             <i class="fa-solid fa-wave-square"></i>
           </div>
-          <h2 style="font-weight: 800; font-size: 1.65rem; margin-bottom: 0.55rem; color: var(--global-theme-color);">Motion Correction</h2>
-          <p style="font-size: 1.05rem; line-height: 1.6; margin: 0;">Free-breathing and motion-robust MRI pipelines designed to improve stability across pediatric and abdominal imaging.</p>
+          <h2 style="font-weight: 800; font-size: 1.65rem; margin-bottom: 0.55rem; color: var(--global-theme-color);">Motion-Robust MRI</h2>
+          <p style="font-size: 1.05rem; line-height: 1.6; margin: 0;">Free-breathing, prospective and retrospective correction pipelines designed for reliable brain and abdominal MRI.</p>
         </div>
       </a>
     </div>
 
     <div class="col-md-6">
-      <a href="{{ '/advanced-hardware/' | relative_url }}" class="text-decoration-none" style="color: inherit;">
+      <a href="{{ '/advanced-mri-hardware/' | relative_url }}" class="text-decoration-none" style="color: inherit;">
         <div class="glass-box p-4 h-100 d-flex flex-column text-center" style="border-radius: 24px; border: 1px solid rgba(0, 150, 199, 0.28);">
           <div class="mb-3" style="font-size: 2rem; color: var(--global-theme-color);">
             <i class="fa-solid fa-satellite-dish"></i>
           </div>
-          <h2 style="font-weight: 800; font-size: 1.65rem; margin-bottom: 0.55rem; color: var(--global-theme-color);">Advanced Hardware</h2>
-          <p style="font-size: 1.05rem; line-height: 1.6; margin: 0;">MR-compatible sensing, external tracking, and instrumentation that extend what is measurable in real scans.</p>
+          <h2 style="font-weight: 800; font-size: 1.65rem; margin-bottom: 0.55rem; color: var(--global-theme-color);">Advanced MRI Hardware</h2>
+          <p style="font-size: 1.05rem; line-height: 1.6; margin: 0;">MR-compatible sensing and external tracking frameworks for free-motion, free-breathing MRI.</p>
         </div>
       </a>
     </div>
 
     <div class="col-md-6">
-      <a href="{{ '/non-cartesian-imaging/' | relative_url }}" class="text-decoration-none" style="color: inherit;">
+      <a href="{{ '/quantitative-diffusion-mri/' | relative_url }}" class="text-decoration-none" style="color: inherit;">
         <div class="glass-box p-4 h-100 d-flex flex-column text-center" style="border-radius: 24px; border: 1px solid rgba(0, 150, 199, 0.28);">
           <div class="mb-3" style="font-size: 2rem; color: var(--global-theme-color);">
             <i class="fa-solid fa-circle-nodes"></i>
           </div>
-          <h2 style="font-weight: 800; font-size: 1.65rem; margin-bottom: 0.55rem; color: var(--global-theme-color);">Non-Cartesian Imaging</h2>
-          <p style="font-size: 1.05rem; line-height: 1.6; margin: 0;">Radial, spiral, and stack-of-stars acquisitions with model-based reconstruction for efficient, motion-robust MRI.</p>
+          <h2 style="font-weight: 800; font-size: 1.65rem; margin-bottom: 0.55rem; color: var(--global-theme-color);">Quantitative Diffusion MRI</h2>
+          <p style="font-size: 1.05rem; line-height: 1.6; margin: 0;">Advanced diffusion MRI for probing tissue microstructure and cellular dynamics.</p>
         </div>
       </a>
     </div>

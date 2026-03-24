@@ -5,8 +5,8 @@ title: Our Team
 description: Meet the research team of the Solomon MRI lab.
 nav: true
 nav_order: 1
-hero_image: assets/img/mri_hero.jpg
-enable_profile_links: false
+hero_image: assets/img/mri_hero_new.png
+enable_profile_links: true
 
 profiles:
   - name: Eddy Solomon, PhD
@@ -21,16 +21,22 @@ profiles:
     role: MSc Student
     image: shaked_gov.jpg
     url: /team/shaked-gov/
+  - name: Yuxin Luo
+    role: MSc Student
+    image: Yuxin_Luo.jpg
+    url: /team/yuxin-luo/
   - name: Ori Shahar
     role: MSc Candidate
     image: anonymous-profile.svg
     url: /team/ori-shahar/
 
 alumni_profiles:
-  - name: Anonymous
+  - name: Chao Li
     role: Alumni
     image: anonymous-profile.svg
-  - name: Anonymous
+    url: /team/chao-li/
+  - name: Jingwei Zhang
     role: Alumni
     image: anonymous-profile.svg
+    url: /team/jingwei-zhang/
 ---
