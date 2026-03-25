@@ -28,36 +28,38 @@ no_hero: true
     display: inline-flex;
     align-items: center;
     gap: 0.55rem;
-    padding: 0.4rem 0.8rem;
+    padding: 0.45rem 0.9rem;
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.16);
-    font-size: 1.02rem;
-    letter-spacing: 0;
+    background: rgba(255, 255, 255, 0.18);
+    font-size: 1.05rem;
+    letter-spacing: 0.02em;
     text-transform: none;
-    font-weight: 700;
+    font-weight: 800;
+    color: #ffffff;
     margin-bottom: 1rem;
   }
 
   .cmri-title {
-    font-size: clamp(1.45rem, 2.7vw, 2.15rem);
-    line-height: 1.28;
-    margin: 0 0 1rem 0;
+    font-size: clamp(1.65rem, 3vw, 2.45rem);
+    line-height: 1.22;
+    letter-spacing: -0.025em;
+    margin: 0 0 1.2rem 0;
     font-weight: 800;
-    color: #f8fbff;
+    color: #ffffff;
   }
 
   .cmri-body {
     margin: 0;
-    color: rgba(244, 248, 252, 0.95);
-    line-height: 1.72;
-    font-size: 1.02rem;
-    max-width: 68ch;
+    color: rgba(244, 248, 252, 0.96);
+    line-height: 1.8;
+    font-size: 1.15rem;
+    font-weight: 400;
+    max-width: 72ch;
   }
 
   .cmri-media-frame {
-    aspect-ratio: 16 / 9;
+    height: 100%;
     min-height: 320px;
-    max-height: 440px;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.18);
@@ -65,19 +67,17 @@ no_hero: true
     display: flex;
     flex-direction: column;
     backdrop-filter: blur(2px);
-    overflow: hidden;
   }
 
   .cmri-media-frame img {
     width: 100%;
     height: 100%;
     min-height: 0;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
     border-radius: 14px;
     background: transparent;
     flex: 1 1 auto;
-    max-height: 100%;
   }
 
   .cmri-caption {
@@ -112,22 +112,24 @@ no_hero: true
     height: 100%;
     border-radius: 18px;
     border: 1px solid rgba(255, 255, 255, 0.16);
-    background: linear-gradient(150deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.08));
+    background: linear-gradient(150deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.08)) !important;
     padding: 1rem;
-    color: #f8fbff;
-    text-decoration: none;
+    color: #f8fbff !important;
+    text-decoration: none !important;
+    background-image: linear-gradient(150deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.08)) !important;
     display: grid;
     grid-template-columns: auto 1fr;
     column-gap: 0.9rem;
     align-items: flex-start;
-    transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease;
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
   }
 
   .cmri-paper:hover {
     transform: translateY(-4px);
-    border-color: rgba(152, 240, 255, 0.5);
-    background: linear-gradient(150deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0.1));
-    text-decoration: none;
+    background: linear-gradient(150deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0.1)) !important;
+    text-decoration: none !important;
+    background-image: linear-gradient(150deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0.1)) !important;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.14);
   }
 
   .cmri-paper-icon {
@@ -142,18 +144,21 @@ no_hero: true
   }
 
   .cmri-paper h5 {
-    margin: 0 0 0.4rem 0;
-    font-size: 1rem;
-    line-height: 1.35;
-    font-weight: 700;
-    color: #f9fcff;
+    margin: 0 0 0.45rem 0;
+    font-size: 1.08rem;
+    line-height: 1.45;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    color: #ffffff;
   }
 
   .cmri-paper p {
     margin: 0;
-    font-size: 0.9rem;
-    color: rgba(244, 248, 252, 0.86);
-    font-family: monospace;
+    font-size: 0.95rem;
+    color: rgba(244, 248, 252, 0.88);
+    font-family: inherit;
+    font-style: italic;
+    opacity: 0.95;
   }
 
   @media (max-width: 991.98px) {
@@ -175,7 +180,7 @@ no_hero: true
   <section class="cmri-hero">
     <div class="row g-3 align-items-stretch">
       <div class="col-lg-7">
-        <span class="cmri-kicker"><i class="fa-solid fa-shield-heart"></i> Motion-Robust MRI</span>
+        <span class="cmri-kicker"><i class="fa-solid fa-heart-pulse"></i> Motion-Robust MRI</span>
         <h2 class="cmri-title">Motion-robust MRI for free breathing, reliable imaging</h2>
         <p class="cmri-body">
           One of the greatest challenges in medical imaging is patient motion. Breathing, heartbeat, and voluntary motion can degrade image quality and limit diagnostic reliability. We develop motion-robust MRI methods that leverage the inherent robustness of non-Cartesian acquisition strategies to motion which enables prospective and retrospective correction. By integrating advanced image reconstruction and physics-informed deep learning, our approaches, such as MP-RAVE, enable high-resolution structural brain imaging in minutes while correcting for head motion. By reducing scan time and eliminating the need for sedation/anesthesia, our methods improve the reliability and accessibility of brain and abdominal MRI.
@@ -196,7 +201,7 @@ no_hero: true
 
   <section class="cmri-hero cmri-references">
     <h3>Relevant Articles</h3>
-    <div class="row g-3">
+    <div class="row g-3" style="row-gap: 1.5rem;">
       <div class="col-lg-4 col-md-6">
         <a href="https://pubmed.ncbi.nlm.nih.gov/36763847/" target="_blank" rel="noopener" class="cmri-paper">
           <div class="cmri-paper-icon">

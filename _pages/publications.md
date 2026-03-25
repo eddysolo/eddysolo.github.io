@@ -108,7 +108,6 @@ _styles: |
     
     <div class="tab-pane fade" id="peer-pane" role="tabpanel" aria-labelledby="peer-tab">
       {% bibliography --query @inproceedings{*} --group_by year --sort_by year --order descending %}
-      {% bibliography --query @incollection{*} --group_by year --sort_by year --order descending %}
     </div>
   </div>
 </div>
@@ -148,14 +147,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
-  // Remove Unknown Year heading in Conference Abstracts while keeping entries/cards/links.
-  const yearHeadings = Array.from(peerPane.querySelectorAll("h2, h2.year"));
-  yearHeadings.forEach(function(heading) {
-    const yearText = heading.textContent.trim();
-    if (yearText === "Unknown Year" || yearText === "0000") {
-      heading.remove();
-    }
-  });
+
 
   // Remove duplicate bibliography cards by DOI first, and by normalized title as fallback.
   const seen = new Set();
