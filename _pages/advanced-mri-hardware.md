@@ -7,237 +7,268 @@ no_hero: true
 ---
 
 <style>
-  .hw-shell {
-    width: min(1240px, 92vw);
+  .cmri-shell {
+    width: min(1220px, 92vw);
     margin: 0 auto;
   }
 
-  .hw-grid {
-    display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    gap: 1rem;
-    align-items: stretch;
+  .cmri-hero {
+    border-radius: 28px;
+    padding: clamp(1.3rem, 2vw, 2rem);
+    background:
+      radial-gradient(circle at 15% 15%, rgba(0, 153, 170, 0.2), transparent 40%),
+      radial-gradient(circle at 90% 10%, rgba(255, 171, 47, 0.2), transparent 35%),
+      linear-gradient(145deg, rgba(17, 29, 48, 0.9), rgba(11, 47, 69, 0.9));
+    box-shadow: 0 28px 58px rgba(8, 16, 28, 0.32);
+    color: #f4f8fc;
+    overflow: hidden;
   }
 
-  .hw-panel {
-    border-radius: 22px;
-    border: 1px solid rgba(17, 28, 38, 0.12);
-    background: linear-gradient(165deg, rgba(247, 249, 252, 0.98), rgba(232, 237, 245, 0.98));
-    box-shadow: 0 18px 44px rgba(17, 28, 38, 0.12);
-  }
-
-  .hw-copy {
-    padding: clamp(1.1rem, 1.9vw, 2rem);
-    display: flex;
-    flex-direction: column;
-  }
-
-  .hw-chip {
+  .cmri-kicker {
     display: inline-flex;
     align-items: center;
-    gap: 0.45rem;
-    font-size: 0.74rem;
-    text-transform: uppercase;
-    letter-spacing: 0.09em;
-    font-weight: 700;
-    color: #3a4f64;
-    margin-bottom: 0.75rem;
-  }
-
-  .hw-chip::before {
-    content: "";
-    width: 30px;
-    height: 2px;
+    gap: 0.55rem;
+    padding: 0.4rem 0.8rem;
     border-radius: 999px;
-    background: linear-gradient(90deg, #154360, #4c7aa1);
+    background: rgba(255, 255, 255, 0.16);
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
   }
 
-  .hw-title {
-    margin: 0 0 0.95rem 0;
-    font-size: clamp(1.4rem, 2.5vw, 2.1rem);
-    line-height: 1.3;
-    color: #182a3a;
+  .cmri-title {
+    font-size: clamp(1.45rem, 2.7vw, 2.15rem);
+    line-height: 1.28;
+    margin: 0 0 1rem 0;
     font-weight: 800;
+    color: #f8fbff;
   }
 
-  .hw-text {
+  .cmri-body {
     margin: 0;
-    color: #2e4a60;
+    color: rgba(244, 248, 252, 0.95);
     line-height: 1.72;
-    font-size: 1rem;
+    font-size: 1.02rem;
     max-width: 68ch;
   }
 
-  .hw-badges {
-    margin-top: 1rem;
+  .cmri-media-frame {
+    height: 100%;
+    min-height: 380px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 0.75rem;
     display: flex;
-    gap: 0.55rem;
-    flex-wrap: wrap;
+    flex-direction: column;
+    backdrop-filter: blur(2px);
   }
 
-  .hw-badge {
-    border-radius: 999px;
-    padding: 0.35rem 0.8rem;
-    font-size: 0.78rem;
-    color: #163a52;
-    background: rgba(21, 67, 96, 0.12);
-    border: 1px solid rgba(21, 67, 96, 0.16);
-  }
-
-  .hw-visual {
-    padding: 0.65rem;
-    display: grid;
-    grid-template-rows: 1fr 1fr auto;
-    gap: 0.5rem;
-    background:
-      radial-gradient(circle at 92% 10%, rgba(110, 145, 180, 0.18), transparent 42%),
-      linear-gradient(165deg, rgba(224, 233, 243, 0.98), rgba(206, 220, 236, 0.98));
-  }
-
-  .hw-image {
-    border-radius: 14px;
-    background: rgba(255, 255, 255, 0.88);
-    border: 1px solid rgba(17, 28, 38, 0.1);
-    padding: 0.45rem;
-    min-height: 190px;
-    display: flex;
-  }
-
-  .hw-image img {
+  .cmri-media-frame img {
     width: 100%;
     height: 100%;
+    min-height: 0;
     object-fit: contain;
-    border-radius: 10px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.92);
+    flex: 1 1 auto;
   }
 
-  .hw-caption {
-    margin: 0;
-    padding: 0.15rem 0.45rem 0.3rem;
-    color: #2f4d63;
-    font-size: 0.88rem;
-    line-height: 1.45;
+  .cmri-media-grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 0.85rem;
+    flex: 1 1 auto;
+    align-content: start;
+    aspect-ratio: 16 / 9;
+    min-height: 320px;
+    max-height: 440px;
   }
 
-  .hw-caption a {
-    color: #194f78;
-    text-decoration: underline;
-    text-underline-offset: 0.14rem;
+  .cmri-media-grid .cmri-media-tile {
+    border-radius: 16px;
+    background: rgba(8, 22, 38, 0.52);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    padding: 0.5rem;
+    display: grid;
+    grid-template-rows: auto auto;
+    min-height: 176px;
+    flex-direction: column;
   }
 
-  .hw-ref-wrap {
-    margin-top: 1rem;
-    border-radius: 22px;
-    border: 1px solid rgba(17, 28, 38, 0.1);
-    background: linear-gradient(180deg, rgba(247, 249, 252, 0.98), rgba(236, 242, 249, 0.98));
-    padding: clamp(0.95rem, 1.7vw, 1.5rem);
-  }
-
-  .hw-ref-wrap h3 {
-    margin: 0 0 0.95rem;
-    font-size: 1.45rem;
-    font-weight: 800;
-    color: #1d3347;
+  .cmri-media-grid .cmri-media-figure {
+    border-radius: 12px;
+    background: rgba(8, 22, 38, 0.28);
+    padding: 0;
     display: flex;
     align-items: center;
-    gap: 0.55rem;
+    justify-content: center;
+    min-height: 126px;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    max-height: 210px;
   }
 
-  .hw-ref {
+  .cmri-media-grid .cmri-media-tile img {
+    width: 100%;
     height: 100%;
-    display: flex;
-    gap: 0.75rem;
-    align-items: flex-start;
-    border-radius: 14px;
-    border: 1px solid rgba(17, 28, 38, 0.1);
-    background: rgba(255, 255, 255, 0.92);
-    padding: 0.85rem;
-    color: #203b50;
-    text-decoration: none;
-    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-  }
-
-  .hw-ref:hover {
-    transform: translateY(-3px);
-    border-color: rgba(21, 67, 96, 0.34);
-    box-shadow: 0 8px 20px rgba(17, 28, 38, 0.1);
-    text-decoration: none;
-  }
-
-  .hw-ref-icon {
-    width: 40px;
-    height: 40px;
+    max-height: 100%;
     border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  .cmri-media-grid .cmri-media-tile img.cmri-native-res {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0;
+    object-fit: cover;
+    object-position: center;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+
+  .cmri-media-tile .cmri-caption {
+    margin: 0.48rem 0 0;
+    font-size: 0.84rem;
+    line-height: 1.45;
+    color: rgba(232, 244, 255, 0.95);
+  }
+
+  .cmri-caption {
+    margin-top: 0.75rem;
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: rgba(244, 248, 252, 0.92);
+  }
+
+  .cmri-caption a {
+    color: #98f0ff;
+    text-decoration: underline;
+    text-underline-offset: 0.16rem;
+  }
+
+  .cmri-references {
+    margin-top: 1.15rem;
+  }
+
+  .cmri-references h3 {
+    margin: 0 0 1.35rem 0;
+    font-size: 1.65rem;
+    font-weight: 800;
+    color: #f8fbff;
+  }
+
+  .cmri-paper {
+    height: 100%;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    background: linear-gradient(150deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.08));
+    padding: 1rem;
+    color: #f8fbff;
+    text-decoration: none;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 0.9rem;
+    align-items: flex-start;
+    transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease;
+  }
+
+  .cmri-paper:hover {
+    transform: translateY(-4px);
+    border-color: rgba(152, 240, 255, 0.5);
+    background: linear-gradient(150deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0.1));
+    text-decoration: none;
+  }
+
+  .cmri-paper-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
     display: grid;
     place-items: center;
-    background: rgba(21, 67, 96, 0.12);
-    color: #1a4866;
+    background: rgba(152, 240, 255, 0.2);
+    color: #d4f8ff;
     flex-shrink: 0;
   }
 
-  .hw-ref h5 {
-    margin: 0 0 0.3rem;
-    font-size: 0.98rem;
-    line-height: 1.33;
+  .cmri-paper h5 {
+    margin: 0 0 0.4rem 0;
+    font-size: 1rem;
+    line-height: 1.35;
     font-weight: 700;
-    color: #1f3b50;
+    color: #f9fcff;
   }
 
-  .hw-ref p {
+  .cmri-paper p {
     margin: 0;
-    font-size: 0.88rem;
-    color: #456178;
+    font-size: 0.9rem;
+    color: rgba(244, 248, 252, 0.86);
     font-family: monospace;
   }
 
   @media (max-width: 991.98px) {
-    .hw-grid {
-      grid-template-columns: 1fr;
+    .cmri-hero {
+      padding: 1.1rem;
     }
 
-    .hw-image {
-      min-height: 170px;
+    .cmri-media-grid .cmri-media-tile {
+      min-height: 168px;
+    }
+
+    .cmri-references {
+      margin-top: 1.25rem;
     }
   }
 </style>
 
-<div class="hw-shell">
-  <section class="hw-grid">
-    <article class="hw-panel hw-copy">
-      <span class="hw-chip">Advanced MRI Hardware</span>
-      <h2 class="hw-title">MR-compatible sensing and external tracking beyond conventional MRI.</h2>
-      <p class="hw-text">
+<div class="cmri-shell">
+  <section class="cmri-hero">
+    <div class="row g-3 align-items-stretch">
+      <div class="col-lg-7">
+        <span class="cmri-kicker"><i class="fa-solid fa-satellite-dish"></i> Advanced MRI Hardware</span>
+        <h2 class="cmri-title">MR-compatible sensing and external tracking beyond conventional MRI.</h2>
+        <p class="cmri-body">
           We develop MRI hardware that enables fast, motion-robust imaging without requiring patient immobilization. Our approach integrates real-time, MR-safe, contactless smart sensors based on radiofrequency (RF) signals (e.g., pilot tone) to continuously capture cardiac, respiratory, and bulk motion. Coupled with accelerated acquisition, these frameworks provide real-time feedback, enabling free-motion and free-breathing MRI with improved image quality and reduced scan times.
-      </p>
+        </p>
+      </div>
 
-      <div class="hw-badges">
-        <span class="hw-badge">MR-safe sensors</span>
-        <span class="hw-badge">Pilot-tone tracking</span>
-        <span class="hw-badge">Free-motion workflow</span>
+      <div class="col-lg-5">
+        <div class="cmri-media-grid">
+          <div class="cmri-media-tile">
+            <div class="cmri-media-figure">
+              <img src="{{ '/assets/img/publication_preview/Free‐breathing radial imaging using a pilot‐tone radiofrequency transmitter for detection of respiratory motion.png' | relative_url }}" alt="Pilot-tone respiratory motion sensing figure from free-breathing radial MRI study">
+            </div>
+            <p class="cmri-caption">
+              Figure 1.
+              <a href="https://pubmed.ncbi.nlm.nih.gov/33306216/" target="_blank" rel="noopener">Free-breathing radial imaging using a pilot-tone radiofrequency transmitter for detection of respiratory motion</a>.
+            </p>
+          </div>
+          <div class="cmri-media-tile">
+            <div class="cmri-media-figure">
+              <img class="cmri-native-res" src="{{ '/assets/img/pilot-tone-image.png' | relative_url }}" alt="Contactless hand and pilot-tone sensing setup">
+            </div>
+            <p class="cmri-caption">
+              Figure 2. Contactless sensing of internal motion using frequency-dependent Doppler radar (hand and pilot-tone demonstration setup).
+            </p>
+          </div>
+        </div>
       </div>
-    </article>
-
-    <article class="hw-panel hw-visual">
-      <div class="hw-image">
-        <img src="{{ '/assets/img/publication_preview/Free‐breathing radial imaging using a pilot‐tone radiofrequency transmitter for detection of respiratory motion.png' | relative_url }}" alt="Pilot-tone respiratory motion sensing figure from free-breathing radial MRI study">
-      </div>
-      <div class="hw-image">
-        <img src="{{ '/assets/img/pilot-tone-image.png' | relative_url }}" alt="Pilot-tone hardware setup">
-      </div>
-      <p class="hw-caption">
-        From
-        <a href="https://pubmed.ncbi.nlm.nih.gov/33306216/" target="_blank" rel="noopener">Free-breathing radial imaging using a pilot-tone radiofrequency transmitter for detection of respiratory motion</a>
-        and lab pilot-tone hardware imagery.
-      </p>
-    </article>
+    </div>
   </section>
 
-  <section class="hw-ref-wrap">
-    <h3><i class="fa-solid fa-book-open"></i> References</h3>
+  <section class="cmri-hero cmri-references">
+    <h3>Relevant Articles</h3>
     <div class="row g-3">
-      <div class="col-lg-6">
-        <a href="https://pubmed.ncbi.nlm.nih.gov/33306216/" target="_blank" rel="noopener" class="hw-ref">
-          <div class="hw-ref-icon">
-            <i class="fa-solid fa-wave-square"></i>
+      <div class="col-lg-4 col-md-6">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/33306216/" target="_blank" rel="noopener" class="cmri-paper">
+          <div class="cmri-paper-icon">
+            <i class="fa-solid fa-book"></i>
           </div>
           <div>
             <h5>Free-breathing radial imaging using a pilot-tone radiofrequency transmitter for detection of respiratory motion</h5>
@@ -246,10 +277,10 @@ no_hero: true
         </a>
       </div>
 
-      <div class="col-lg-6">
-        <a href="https://pubmed.ncbi.nlm.nih.gov/41352869/" target="_blank" rel="noopener" class="hw-ref">
-          <div class="hw-ref-icon">
-            <i class="fa-solid fa-screwdriver-wrench"></i>
+      <div class="col-lg-4 col-md-6">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/41352869/" target="_blank" rel="noopener" class="cmri-paper">
+          <div class="cmri-paper-icon">
+            <i class="fa-solid fa-book"></i>
           </div>
           <div>
             <h5>Experience of how to build an MRI machine from scratch</h5>
@@ -258,22 +289,10 @@ no_hero: true
         </a>
       </div>
 
-      <div class="col-lg-6">
-        <div class="hw-ref">
-          <div class="hw-ref-icon">
-            <i class="fa-solid fa-tower-broadcast"></i>
-          </div>
-          <div>
-            <h5>Contactless sensing of internal motion using frequency-dependent Doppler radar</h5>
-            <p>Featured as attached lab material</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-6">
-        <a href="https://archive.ismrm.org/2021/1388.html" target="_blank" rel="noopener" class="hw-ref">
-          <div class="hw-ref-icon">
-            <i class="fa-solid fa-gauge-high"></i>
+      <div class="col-lg-4 col-md-6">
+        <a href="https://archive.ismrm.org/2021/1388.html" target="_blank" rel="noopener" class="cmri-paper">
+          <div class="cmri-paper-icon">
+            <i class="fa-solid fa-book"></i>
           </div>
           <div>
             <h5>Detecting Respiratory Motion Using Accelerometer Sensors: Preliminary Insight</h5>

@@ -7,102 +7,232 @@ no_hero: true
 ---
 
 <style>
-  .research-media-box {
-    border-radius: 24px;
-    background: rgba(0, 0, 0, 0.05);
-    min-height: 440px;
+  .cmri-shell {
+    width: min(1220px, 92vw);
+    margin: 0 auto;
+  }
+
+  .cmri-hero {
+    border-radius: 28px;
+    padding: clamp(1.3rem, 2vw, 2rem);
+    background:
+      radial-gradient(circle at 15% 15%, rgba(0, 153, 170, 0.2), transparent 40%),
+      radial-gradient(circle at 90% 10%, rgba(255, 171, 47, 0.2), transparent 35%),
+      linear-gradient(145deg, rgba(17, 29, 48, 0.9), rgba(11, 47, 69, 0.9));
+    box-shadow: 0 28px 58px rgba(8, 16, 28, 0.32);
+    color: #f4f8fc;
     overflow: hidden;
   }
 
-  .research-media-image {
-    width: 100%;
-    height: auto;
-    min-height: 0;
-    max-height: 460px;
-    object-fit: contain;
-    background: rgba(255, 255, 255, 0.72);
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  .cmri-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.16);
+    font-size: 1.02rem;
+    letter-spacing: 0;
+    text-transform: none;
+    font-weight: 700;
+    margin-bottom: 1rem;
   }
 
-  @media (min-width: 992px) {
-    .research-media-box {
-      min-height: 540px;
-    }
+  .cmri-title {
+    font-size: clamp(1.45rem, 2.7vw, 2.15rem);
+    line-height: 1.28;
+    margin: 0 0 1rem 0;
+    font-weight: 800;
+    color: #f8fbff;
+  }
+
+  .cmri-body {
+    margin: 0;
+    color: rgba(244, 248, 252, 0.95);
+    line-height: 1.72;
+    font-size: 1.02rem;
+    max-width: 68ch;
+  }
+
+  .cmri-media-frame {
+    aspect-ratio: 16 / 9;
+    min-height: 320px;
+    max-height: 440px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(2px);
+    overflow: hidden;
+  }
+
+  .cmri-media-frame img {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 14px;
+    background: transparent;
+    flex: 1 1 auto;
+    max-height: 100%;
+  }
+
+  .cmri-caption {
+    margin-top: 0.75rem;
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: rgba(244, 248, 252, 0.92);
+  }
+
+  .cmri-caption a {
+    color: #98f0ff;
+    text-decoration: underline;
+    text-underline-offset: 0.16rem;
+  }
+
+  .cmri-references {
+    margin-top: 1.15rem;
+  }
+
+  .cmri-references h3 {
+    margin: 0 0 1.35rem 0;
+    font-size: 1.65rem;
+    font-weight: 800;
+    color: #f8fbff;
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+  }
+
+  .cmri-paper {
+    height: 100%;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    background: linear-gradient(150deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.08));
+    padding: 1rem;
+    color: #f8fbff;
+    text-decoration: none;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 0.9rem;
+    align-items: flex-start;
+    transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease;
+  }
+
+  .cmri-paper:hover {
+    transform: translateY(-4px);
+    border-color: rgba(152, 240, 255, 0.5);
+    background: linear-gradient(150deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0.1));
+    text-decoration: none;
+  }
+
+  .cmri-paper-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    background: rgba(152, 240, 255, 0.2);
+    color: #d4f8ff;
+    flex-shrink: 0;
+  }
+
+  .cmri-paper h5 {
+    margin: 0 0 0.4rem 0;
+    font-size: 1rem;
+    line-height: 1.35;
+    font-weight: 700;
+    color: #f9fcff;
+  }
+
+  .cmri-paper p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: rgba(244, 248, 252, 0.86);
+    font-family: monospace;
   }
 
   @media (max-width: 991.98px) {
-    .research-media-box {
-      min-height: 360px;
+    .cmri-hero {
+      padding: 1.1rem;
     }
 
-    .research-media-image {
-      max-height: 300px;
+    .cmri-media-frame {
+      min-height: 320px;
+    }
+
+    .cmri-references {
+      margin-top: 1.25rem;
     }
   }
 </style>
 
-<div class="container-fluid px-0 mx-auto" style="max-width: 90%; width: 90%;">
-  <div class="row g-4 mb-4 align-items-stretch">
-    <div class="col-lg-7">
-      <div class="glass-box p-4 p-md-5 h-100 d-flex flex-column justify-content-center" style="border-radius: 24px; font-size: 1.08rem; line-height: 1.75;">
-        <h2 style="font-weight: 800; line-height: 1.35; margin-bottom: 1.15rem; color: var(--global-theme-color); display: flex; align-items: center;"><i class="fa-solid fa-dna fa-lg mr-3" style="color: var(--global-theme-color);"></i> Advanced diffusion MRI for probing tissue microstructure and cellular dynamics</h2>
-        <p>
+<div class="cmri-shell">
+  <section class="cmri-hero">
+    <div class="row g-3 align-items-stretch">
+      <div class="col-lg-7">
+        <span class="cmri-kicker"><i class="fa-solid fa-dna"></i> Quantitative Diffusion MRI</span>
+        <h2 class="cmri-title">Advanced diffusion MRI for probing tissue microstructure and cellular dynamics</h2>
+        <p class="cmri-body">
           We develop advanced diffusion MRI methods to noninvasively probe tissue microstructure, cellular organization, and water exchange dynamics. By combining new acquisition strategies (e.g., SPEN Imaging) with biophysical modeling, including time-dependent diffusivity and diffusion kurtosis, our approach moves beyond conventional Gaussian diffusion to capture tissue heterogeneity and membrane permeability. These techniques offer high-resolution, quantitative biomarkers for characterizing cancer biology, improving lesion detection, and assessing treatment response.
         </p>
       </div>
-    </div>
 
-    <div class="col-lg-5">
-      <div class="glass-box p-2 p-md-3 h-100 d-flex flex-column research-media-box">
-        <img src="{{ '/assets/img/publication_preview/Diffusion‐weighted breast MRI of malignancies with submillimeter resolution and immunity to artifacts by spatiotemporal encoding at 3T.png' | relative_url }}" alt="Diffusion-weighted breast MRI with SPEN encoding at submillimeter resolution" class="research-media-image">
-        <p class="mb-0 mt-3" style="font-size: 0.93rem; line-height: 1.6;">
+      <div class="col-lg-5">
+        <div class="cmri-media-frame">
+          <img src="{{ '/assets/img/publication_preview/Diffusion‐weighted breast MRI of malignancies with submillimeter resolution and immunity to artifacts by spatiotemporal encoding at 3T.png' | relative_url }}" alt="Diffusion-weighted breast MRI with SPEN encoding at submillimeter resolution">
+          <p class="cmri-caption">
           From Fig. 2 of
           <a href="https://pubmed.ncbi.nlm.nih.gov/32077516/" target="_blank" rel="noopener">Diffusion-weighted breast MRI of malignancies with submillimeter resolution and immunity to artifacts by spatiotemporal encoding at 3T</a>.
-        </p>
+          </p>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="glass-section mb-4" style="border-radius: 24px; padding: 3rem;">
-    <h3 style="font-weight: 800; font-size: 2rem; margin-bottom: 2rem; display: flex; align-items: center;"><i class="fa-solid fa-book-open fa-md mr-3" style="color: var(--global-theme-color);"></i> References</h3>
-    <div class="row g-4 justify-content-center">
+  <section class="cmri-hero cmri-references">
+    <h3>Relevant Articles</h3>
+    <div class="row g-3">
       <div class="col-lg-4 col-md-6">
-        <a href="https://pubmed.ncbi.nlm.nih.gov/29269941/" target="_blank" rel="noopener" class="glass-box p-4 text-decoration-none d-flex flex-column align-items-center text-center h-100" style="border-radius: 16px; color: var(--global-text-color); transition: transform 0.3s ease;">
-          <div style="background: rgba(0, 150, 199, 0.1); width: 80px; height: 80px; border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; flex-shrink: 0;">
-            <i class="fa-solid fa-brain fa-2x" style="color: var(--global-theme-color);"></i>
+        <a href="https://pubmed.ncbi.nlm.nih.gov/29269941/" target="_blank" rel="noopener" class="cmri-paper">
+          <div class="cmri-paper-icon">
+            <i class="fa-solid fa-book"></i>
           </div>
           <div>
-            <h5 style="margin: 0 0 0.5rem 0; font-weight: 800; font-size: 1.25rem;">Diffusion MRI measurements in challenging head and brain regions via cross-term spatiotemporally encoding</h5>
-            <p style="margin: 0; font-size: 1rem; opacity: 0.8; font-family: monospace;">Scientific Reports, 2017</p>
+            <h5>Diffusion MRI measurements in challenging head and brain regions via cross-term spatiotemporally encoding</h5>
+            <p>Scientific Reports, 2017</p>
           </div>
         </a>
       </div>
 
       <div class="col-lg-4 col-md-6">
-        <a href="https://pubmed.ncbi.nlm.nih.gov/32077516/" target="_blank" rel="noopener" class="glass-box p-4 text-decoration-none d-flex flex-column align-items-center text-center h-100" style="border-radius: 16px; color: var(--global-text-color); transition: transform 0.3s ease;">
-          <div style="background: rgba(0, 150, 199, 0.1); width: 80px; height: 80px; border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; flex-shrink: 0;">
-            <i class="fa-solid fa-ruler-combined fa-2x" style="color: var(--global-theme-color);"></i>
+        <a href="https://pubmed.ncbi.nlm.nih.gov/32077516/" target="_blank" rel="noopener" class="cmri-paper">
+          <div class="cmri-paper-icon">
+            <i class="fa-solid fa-book"></i>
           </div>
           <div>
-            <h5 style="margin: 0 0 0.5rem 0; font-weight: 800; font-size: 1.25rem;">Diffusion-weighted breast MRI of malignancies with submillimeter resolution and immunity to artifacts by spatiotemporal encoding at 3T</h5>
-            <p style="margin: 0; font-size: 1rem; opacity: 0.8; font-family: monospace;">Magnetic Resonance in Medicine, 2020</p>
+            <h5>Diffusion-weighted breast MRI of malignancies with submillimeter resolution and immunity to artifacts by spatiotemporal encoding at 3T</h5>
+            <p>Magnetic Resonance in Medicine, 2020</p>
           </div>
         </a>
       </div>
 
       <div class="col-lg-4 col-md-6">
-        <a href="https://pubmed.ncbi.nlm.nih.gov/36219464/" target="_blank" rel="noopener" class="glass-box p-4 text-decoration-none d-flex flex-column align-items-center text-center h-100" style="border-radius: 16px; color: var(--global-text-color); transition: transform 0.3s ease;">
-          <div style="background: rgba(0, 150, 199, 0.1); width: 80px; height: 80px; border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; flex-shrink: 0;">
-            <i class="fa-solid fa-chart-line fa-2x" style="color: var(--global-theme-color);"></i>
+        <a href="https://pubmed.ncbi.nlm.nih.gov/36219464/" target="_blank" rel="noopener" class="cmri-paper">
+          <div class="cmri-paper-icon">
+            <i class="fa-solid fa-book"></i>
           </div>
           <div>
-            <h5 style="margin: 0 0 0.5rem 0; font-weight: 800; font-size: 1.25rem;">Time-dependent diffusivity and kurtosis in phantoms and patients with head and neck cancer</h5>
-            <p style="margin: 0; font-size: 1rem; opacity: 0.8; font-family: monospace;">Magnetic Resonance in Medicine, 2023</p>
+            <h5>Time-dependent diffusivity and kurtosis in phantoms and patients with head and neck cancer</h5>
+            <p>Magnetic Resonance in Medicine, 2023</p>
           </div>
         </a>
       </div>
     </div>
-  </div>
+  </section>
 
 </div>

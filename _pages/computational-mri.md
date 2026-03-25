@@ -31,9 +31,10 @@ no_hero: true
     padding: 0.4rem 0.8rem;
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.16);
-    font-size: 0.78rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+    font-size: 1.02rem;
+    letter-spacing: 0;
+    text-transform: none;
+    font-weight: 700;
     margin-bottom: 1rem;
   }
 
@@ -54,8 +55,9 @@ no_hero: true
   }
 
   .cmri-media-frame {
-    height: 100%;
-    min-height: 380px;
+    aspect-ratio: 16 / 9;
+    min-height: 320px;
+    max-height: 440px;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.18);
@@ -63,16 +65,19 @@ no_hero: true
     display: flex;
     flex-direction: column;
     backdrop-filter: blur(2px);
+    overflow: hidden;
   }
 
   .cmri-media-frame img {
     width: 100%;
     height: 100%;
     min-height: 0;
-    object-fit: contain;
+    object-fit: cover;
+    object-position: center;
     border-radius: 14px;
-    background: rgba(255, 255, 255, 0.92);
+    background: transparent;
     flex: 1 1 auto;
+    max-height: 100%;
   }
 
   .cmri-caption {
@@ -170,7 +175,7 @@ no_hero: true
   <section class="cmri-hero">
     <div class="row g-3 align-items-stretch">
       <div class="col-lg-7">
-        <span class="cmri-kicker"><i class="fa-solid fa-microchip"></i> Computational MRI</span>
+        <span class="cmri-kicker"><i class="fa-solid fa-brain"></i> Computational MRI</span>
         <h2 class="cmri-title">Novel sampling and reconstruction methods: from accelerated k-space acquisition to diagnostic-quality image.</h2>
         <p class="cmri-body">
           We develop advanced sampling and reconstruction methods for ultrafast dynamic MRI, overcoming traditional trade-offs between spatial resolution, temporal resolution, and scan time. Our methods, such as ELITE, combine locally low-rank subspace modeling, compressed sensing, and deep learning to suppress undersampling artifacts while preserving temporal fidelity. These techniques enable high temporal-resolution imaging that improves lesion characterization, reduce noise, and support reliable quantitative kinetic analysis in applications such as dynamic contrast-enhanced (DCE) breast and abdominal MRI.
@@ -190,12 +195,12 @@ no_hero: true
   </section>
 
   <section class="cmri-hero cmri-references">
-    <h3><i class="fa-solid fa-book-open"></i> References</h3>
+    <h3>Relevant Articles</h3>
     <div class="row g-3">
       <div class="col-lg-4 col-md-6">
         <a href="https://pubmed.ncbi.nlm.nih.gov/40060040/" target="_blank" rel="noopener" class="cmri-paper">
           <div class="cmri-paper-icon">
-            <i class="fa-solid fa-file-waveform"></i>
+            <i class="fa-solid fa-book"></i>
           </div>
           <div>
             <h5>Dynamic MRI with Locally Low-Rank Subspace Constraint: Towards 1-Second Temporal Resolution Aided by Deep Learning</h5>
@@ -207,7 +212,7 @@ no_hero: true
       <div class="col-lg-4 col-md-6">
         <a href="https://pubmed.ncbi.nlm.nih.gov/39772976/" target="_blank" rel="noopener" class="cmri-paper">
           <div class="cmri-paper-icon">
-            <i class="fa-solid fa-database"></i>
+            <i class="fa-solid fa-book"></i>
           </div>
           <div>
             <h5>FastMRI Breast: A Publicly Available Radial k-Space Dataset of Breast Dynamic Contrast-enhanced MRI</h5>
@@ -219,7 +224,7 @@ no_hero: true
       <div class="col-lg-4 col-md-6">
         <a href="https://pubmed.ncbi.nlm.nih.gov/37655444/" target="_blank" rel="noopener" class="cmri-paper">
           <div class="cmri-paper-icon">
-            <i class="fa-solid fa-layer-group"></i>
+            <i class="fa-solid fa-book"></i>
           </div>
           <div>
             <h5>mcLARO: Multi-contrast learned acquisition and reconstruction optimization for simultaneous quantitative multi-parametric mapping</h5>

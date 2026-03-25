@@ -100,6 +100,22 @@ fluid: true
     line-height: 1.35;
   }
 
+  .open-source-popular-card .popular-thumb {
+    width: min(210px, 100%);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 150, 199, 0.2);
+    margin-bottom: 0.75rem;
+    background: rgba(255, 255, 255, 0.72);
+  }
+
+  .open-source-popular-card .popular-thumb img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    display: block;
+    object-fit: cover;
+  }
+
   .open-source-popular-card .popular-meta {
     margin: 0.4rem 0 0;
     font-size: 0.92rem;
@@ -193,6 +209,9 @@ fluid: true
     <div class="tab-pane fade" id="source-popular-pane" role="tabpanel" aria-labelledby="source-popular-tab">
       <div class="open-source-popular-grid">
         <a href="https://cai2r.net/fastmri-dataset-adds-breast-imaging-data-to-encourage-new-directions-in-ai-research-on-mri/" target="_blank" rel="noopener noreferrer" class="glass-box p-4 h-100 d-flex flex-column open-source-popular-card">
+          <div class="popular-thumb">
+            <img src="{{ '/assets/img/publication_preview/breast scan example.png' | relative_url }}" alt="fastMRI breast dataset preview image">
+          </div>
           <div class="mb-2">
             <h3 class="popular-title">FastMRI Dataset Adds Breast Imaging Data to Encourage New Directions in AI Research on MRI</h3>
           </div>
@@ -202,6 +221,9 @@ fluid: true
         </a>
 
         <a href="https://cai2r.net/how-the-small-pilot-tone-is-taking-on-mris-big-challenge/" target="_blank" rel="noopener noreferrer" class="glass-box p-4 h-100 d-flex flex-column open-source-popular-card">
+          <div class="popular-thumb">
+            <img src="{{ '/assets/img/pilot-tone-image.png' | relative_url }}" alt="pilot-tone setup image">
+          </div>
           <div class="mb-2">
             <h3 class="popular-title">How a Small Pilot Tone Is Taking On One of MRI's Big Challenges</h3>
           </div>

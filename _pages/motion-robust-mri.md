@@ -7,265 +7,200 @@ no_hero: true
 ---
 
 <style>
-  .mr-shell {
-    width: min(1240px, 92vw);
+  .cmri-shell {
+    width: min(1220px, 92vw);
     margin: 0 auto;
   }
 
-  .mr-hero {
-    border-radius: 26px;
-    overflow: hidden;
+  .cmri-hero {
+    border-radius: 28px;
+    padding: clamp(1.3rem, 2vw, 2rem);
     background:
-      linear-gradient(145deg, rgba(245, 250, 255, 0.96), rgba(234, 246, 255, 0.96)),
-      linear-gradient(90deg, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0));
-    border: 1px solid rgba(0, 94, 124, 0.12);
-    box-shadow: 0 22px 50px rgba(8, 42, 61, 0.16);
+      radial-gradient(circle at 15% 15%, rgba(0, 153, 170, 0.2), transparent 40%),
+      radial-gradient(circle at 90% 10%, rgba(255, 171, 47, 0.2), transparent 35%),
+      linear-gradient(145deg, rgba(17, 29, 48, 0.9), rgba(11, 47, 69, 0.9));
+    box-shadow: 0 28px 58px rgba(8, 16, 28, 0.32);
+    color: #f4f8fc;
+    overflow: hidden;
   }
 
-  .mr-hero .row {
-    margin: 0;
-  }
-
-  .mr-copy {
-    padding: clamp(1.3rem, 2vw, 2.1rem);
-    border-left: 6px solid rgba(0, 158, 185, 0.7);
-  }
-
-  .mr-kicker {
+  .cmri-kicker {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.55rem;
+    padding: 0.4rem 0.8rem;
     border-radius: 999px;
-    padding: 0.36rem 0.85rem;
-    font-size: 0.76rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    background: rgba(0, 158, 185, 0.12);
-    color: #025f74;
-    margin-bottom: 0.95rem;
+    background: rgba(255, 255, 255, 0.16);
+    font-size: 1.02rem;
+    letter-spacing: 0;
+    text-transform: none;
     font-weight: 700;
+    margin-bottom: 1rem;
   }
 
-  .mr-title {
-    font-size: clamp(1.4rem, 2.6vw, 2.1rem);
-    line-height: 1.3;
+  .cmri-title {
+    font-size: clamp(1.45rem, 2.7vw, 2.15rem);
+    line-height: 1.28;
     margin: 0 0 1rem 0;
     font-weight: 800;
-    color: #07364f;
+    color: #f8fbff;
   }
 
-  .mr-text {
+  .cmri-body {
     margin: 0;
-    font-size: 1rem;
-    line-height: 1.74;
-    color: rgba(7, 54, 79, 0.92);
-    max-width: 70ch;
+    color: rgba(244, 248, 252, 0.95);
+    line-height: 1.72;
+    font-size: 1.02rem;
+    max-width: 68ch;
   }
 
-  .mr-media {
-    padding: clamp(1rem, 1.8vw, 1.6rem);
+  .cmri-media-frame {
+    aspect-ratio: 16 / 9;
+    min-height: 320px;
+    max-height: 440px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 0.75rem;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(180deg, rgba(0, 158, 185, 0.08), rgba(0, 158, 185, 0.03));
+    backdrop-filter: blur(2px);
+    overflow: hidden;
   }
 
-  .mr-figure {
-    border-radius: 16px;
-    border: 1px solid rgba(0, 94, 124, 0.14);
-    padding: 0.65rem;
-    background: rgba(255, 255, 255, 0.88);
-    box-shadow: 0 12px 26px rgba(3, 39, 57, 0.14);
-  }
-
-  .mr-figure img {
+  .cmri-media-frame img {
     width: 100%;
     height: 100%;
-    min-height: 280px;
-    max-height: 430px;
-    object-fit: contain;
-    border-radius: 10px;
-    background: #fff;
+    min-height: 0;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 14px;
+    background: transparent;
+    flex: 1 1 auto;
+    max-height: 100%;
   }
 
-  .mr-caption {
-    margin: 0.75rem 0 0 0;
+  .cmri-caption {
+    margin-top: 0.75rem;
+    margin-bottom: 0;
     font-size: 0.9rem;
     line-height: 1.5;
-    color: #124056;
+    color: rgba(244, 248, 252, 0.92);
   }
 
-  .mr-caption a {
-    color: #006b86;
+  .cmri-caption a {
+    color: #98f0ff;
     text-decoration: underline;
-    text-underline-offset: 0.15rem;
+    text-underline-offset: 0.16rem;
   }
 
-  .mr-stats {
-    margin-top: 0.9rem;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 0.55rem;
+  .cmri-references {
+    margin-top: 1.15rem;
   }
 
-  .mr-stat {
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.78);
-    border: 1px solid rgba(0, 94, 124, 0.12);
-    padding: 0.65rem 0.6rem;
-    text-align: center;
-  }
-
-  .mr-stat b {
-    display: block;
-    font-size: 0.95rem;
-    line-height: 1.25;
-    color: #064158;
-  }
-
-  .mr-stat span {
-    display: block;
-    margin-top: 0.22rem;
-    font-size: 0.75rem;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: #1f6882;
-  }
-
-  .mr-ref-wrap {
-    margin-top: 1rem;
-    padding: clamp(1rem, 1.8vw, 1.8rem);
-    border-radius: 24px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(242, 250, 255, 0.92));
-    border: 1px solid rgba(0, 94, 124, 0.12);
-  }
-
-  .mr-ref-wrap h3 {
-    margin: 0 0 1rem 0;
-    font-size: 1.5rem;
+  .cmri-references h3 {
+    margin: 0 0 1.35rem 0;
+    font-size: 1.65rem;
     font-weight: 800;
-    color: #06374e;
+    color: #f8fbff;
     display: flex;
     align-items: center;
-    gap: 0.55rem;
+    gap: 0.65rem;
   }
 
-  .mr-ref {
-    display: flex;
-    gap: 0.9rem;
-    border-radius: 14px;
-    border: 1px solid rgba(0, 94, 124, 0.12);
-    background: rgba(255, 255, 255, 0.9);
-    padding: 0.95rem;
-    text-decoration: none;
-    color: #07364f;
+  .cmri-paper {
     height: 100%;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    background: linear-gradient(150deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.08));
+    padding: 1rem;
+    color: #f8fbff;
+    text-decoration: none;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 0.9rem;
+    align-items: flex-start;
+    transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease;
   }
 
-  .mr-ref:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 24px rgba(6, 55, 78, 0.12);
-    border-color: rgba(0, 158, 185, 0.4);
+  .cmri-paper:hover {
+    transform: translateY(-4px);
+    border-color: rgba(152, 240, 255, 0.5);
+    background: linear-gradient(150deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0.1));
     text-decoration: none;
   }
 
-  .mr-ref-icon {
-    width: 42px;
-    height: 42px;
+  .cmri-paper-icon {
+    width: 46px;
+    height: 46px;
     border-radius: 12px;
-    flex-shrink: 0;
     display: grid;
     place-items: center;
-    background: rgba(0, 158, 185, 0.14);
-    color: #005f76;
+    background: rgba(152, 240, 255, 0.2);
+    color: #d4f8ff;
+    flex-shrink: 0;
   }
 
-  .mr-ref h5 {
-    margin: 0 0 0.35rem 0;
+  .cmri-paper h5 {
+    margin: 0 0 0.4rem 0;
     font-size: 1rem;
-    line-height: 1.34;
+    line-height: 1.35;
     font-weight: 700;
-    color: #07364f;
+    color: #f9fcff;
   }
 
-  .mr-ref p {
+  .cmri-paper p {
     margin: 0;
     font-size: 0.9rem;
-    color: #2d6074;
+    color: rgba(244, 248, 252, 0.86);
     font-family: monospace;
   }
 
   @media (max-width: 991.98px) {
-    .mr-copy {
-      border-left: 0;
-      border-top: 5px solid rgba(0, 158, 185, 0.7);
+    .cmri-hero {
+      padding: 1.1rem;
     }
 
-    .mr-figure img {
-      max-height: 320px;
+    .cmri-media-frame {
+      min-height: 320px;
     }
 
-    .mr-stats {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-  }
-
-  @media (max-width: 575.98px) {
-    .mr-stats {
-      grid-template-columns: 1fr;
+    .cmri-references {
+      margin-top: 1.25rem;
     }
   }
 </style>
 
-<div class="mr-shell">
-  <section class="mr-hero">
-    <div class="row g-0 align-items-stretch">
+<div class="cmri-shell">
+  <section class="cmri-hero">
+    <div class="row g-3 align-items-stretch">
       <div class="col-lg-7">
-        <div class="mr-copy">
-          <span class="mr-kicker"><i class="fa-solid fa-wave-square"></i> Motion-Robust MRI</span>
-          <h2 class="mr-title">Motion-robust MRI for free breathing, reliable imaging</h2>
-          <p class="mr-text">
+        <span class="cmri-kicker"><i class="fa-solid fa-shield-heart"></i> Motion-Robust MRI</span>
+        <h2 class="cmri-title">Motion-robust MRI for free breathing, reliable imaging</h2>
+        <p class="cmri-body">
           One of the greatest challenges in medical imaging is patient motion. Breathing, heartbeat, and voluntary motion can degrade image quality and limit diagnostic reliability. We develop motion-robust MRI methods that leverage the inherent robustness of non-Cartesian acquisition strategies to motion which enables prospective and retrospective correction. By integrating advanced image reconstruction and physics-informed deep learning, our approaches, such as MP-RAVE, enable high-resolution structural brain imaging in minutes while correcting for head motion. By reducing scan time and eliminating the need for sedation/anesthesia, our methods improve the reliability and accessibility of brain and abdominal MRI.
-          </p>
-        </div>
+        </p>
       </div>
 
       <div class="col-lg-5">
-        <div class="mr-media">
-          <div class="mr-figure">
-            <img src="{{ '/assets/img/publication_preview/MP-RAVE IR-Prepared T1-Weighted Radial Stack-of-Stars 3D GRE imaging with retrospective motion correction.png' | relative_url }}" alt="Figure 5 from MP-RAVE motion-robust MRI study">
-          </div>
-          <p class="mr-caption">
+        <div class="cmri-media-frame">
+          <img src="{{ '/assets/img/publication_preview/MP-RAVE IR-Prepared T1-Weighted Radial Stack-of-Stars 3D GRE imaging with retrospective motion correction.png' | relative_url }}" alt="Figure 5 from MP-RAVE motion-robust MRI study">
+          <p class="cmri-caption">
             From
             <a href="https://pubmed.ncbi.nlm.nih.gov/36763847/" target="_blank" rel="noopener">MP-RAVE: IR-Prepared T1-Weighted Radial Stack-of-Stars 3D GRE imaging with retrospective motion correction</a>.
           </p>
-
-          <div class="mr-stats">
-            <div class="mr-stat">
-              <b>Free Breathing</b>
-              <span>Acquisition</span>
-            </div>
-            <div class="mr-stat">
-              <b>Retrospective</b>
-              <span>Motion Correction</span>
-            </div>
-            <div class="mr-stat">
-              <b>No Sedation</b>
-              <span>Improved Access</span>
-            </div>
-          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="mr-ref-wrap">
-    <h3><i class="fa-solid fa-book-open"></i> References</h3>
+  <section class="cmri-hero cmri-references">
+    <h3>Relevant Articles</h3>
     <div class="row g-3">
       <div class="col-lg-4 col-md-6">
-        <a href="https://pubmed.ncbi.nlm.nih.gov/36763847/" target="_blank" rel="noopener" class="mr-ref">
-          <div class="mr-ref-icon">
-            <i class="fa-solid fa-brain"></i>
+        <a href="https://pubmed.ncbi.nlm.nih.gov/36763847/" target="_blank" rel="noopener" class="cmri-paper">
+          <div class="cmri-paper-icon">
+            <i class="fa-solid fa-book"></i>
           </div>
           <div>
             <h5>MP-RAVE: IR-Prepared T1-Weighted Radial Stack-of-Stars 3D GRE imaging with retrospective motion correction</h5>
@@ -275,9 +210,9 @@ no_hero: true
       </div>
 
       <div class="col-lg-4 col-md-6">
-        <a href="https://pubmed.ncbi.nlm.nih.gov/33306216/" target="_blank" rel="noopener" class="mr-ref">
-          <div class="mr-ref-icon">
-            <i class="fa-solid fa-wind"></i>
+        <a href="https://pubmed.ncbi.nlm.nih.gov/33306216/" target="_blank" rel="noopener" class="cmri-paper">
+          <div class="cmri-paper-icon">
+            <i class="fa-solid fa-book"></i>
           </div>
           <div>
             <h5>Free-breathing radial imaging using a pilot-tone radiofrequency transmitter for detection of respiratory motion</h5>
@@ -287,9 +222,9 @@ no_hero: true
       </div>
 
       <div class="col-lg-4 col-md-6">
-        <a href="https://pubmed.ncbi.nlm.nih.gov/40511639/" target="_blank" rel="noopener" class="mr-ref">
-          <div class="mr-ref-icon">
-            <i class="fa-solid fa-wave-square"></i>
+        <a href="https://pubmed.ncbi.nlm.nih.gov/40511639/" target="_blank" rel="noopener" class="cmri-paper">
+          <div class="cmri-paper-icon">
+            <i class="fa-solid fa-book"></i>
           </div>
           <div>
             <h5>Free-Breathing Hybrid Technique for Simultaneous Morphological and Quantitative Abdominal Imaging at 0.55 T</h5>
