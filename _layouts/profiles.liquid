@@ -8,6 +8,11 @@ layout: page
     object-fit: cover;
     object-position: center;
     display: block;
+    transition: filter 0.3s ease;
+  }
+
+  .profile-card:hover .card-img-top {
+    filter: grayscale(100%);
   }
 </style>
 <div class="post">
@@ -31,7 +36,7 @@ layout: page
                 {% include figure.liquid loading="eager" path=profile_image_path class="card-img-top" sizes=sizes alt=profile.name %}
               {% endif %}
               <div class="card-body pb-4 pt-3">
-                <h4 class="card-title fw-bold mb-1 text-dark" style="font-size: calc(1.5rem - 2px);">{{ profile.name }}</h4>
+                <h4 class="card-title fw-bold mb-1" style="font-size: calc(1.5rem - 2px); color: var(--global-text-color);">{{ profile.name }}</h4>
                 <p class="card-text text-muted mb-0" style="font-size: 0.92rem;">{{ profile.role }}</p>
               </div>
             </div>
@@ -44,30 +49,54 @@ layout: page
     {% endif %}
 
     {% if page.alumni_profiles %}
-      <h2 class="text-center text-muted mt-5 mb-4" style="font-weight: 700; letter-spacing: 0.03em;">Alumni</h2>
-      <div class="row row-cols-1 row-cols-md-3 g-4 profile-grid">
+      <h2 class="text-center mt-5 mb-4" style="font-weight: 800; letter-spacing: 0.03em; color: var(--global-text-color);">Alumni</h2>
+      
+      <style>
+        .alumni-list-item {
+          background: linear-gradient(135deg, rgba(0, 150, 199, 0.04) 0%, rgba(0, 150, 199, 0.01) 100%);
+          border: 1px solid rgba(0, 150, 199, 0.15);
+          border-radius: 16px;
+          transition: all 0.25s ease;
+          padding: 1.15rem 1.6rem;
+          margin-bottom: 0.85rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          backdrop-filter: blur(10px);
+        }
+        .alumni-list-item:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 12px 24px rgba(0, 150, 199, 0.12);
+          border-color: rgba(0, 150, 199, 0.35);
+          background: linear-gradient(135deg, rgba(0, 150, 199, 0.06) 0%, rgba(0, 150, 199, 0.02) 100%);
+        }
+        @media (max-width: 576px) {
+          .alumni-list-item {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.35rem;
+            padding: 1rem 1.25rem;
+          }
+        }
+      </style>
+
+      <ul class="list-unstyled mx-auto mb-5" style="max-width: 650px;">
         {% for profile in page.alumni_profiles %}
-          <div class="col profile-grid-item">
+          <li>
             {% if profile_links_enabled and profile.url %}
-              <a href="{{ profile.url | relative_url }}" class="text-decoration-none">
-            {% endif %}
-            <div class="card h-100 border-0 text-center profile-card">
-              {% if profile.image %}
-                {% assign profile_image_path = profile.image | prepend: 'assets/img/' %}
-                {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px) 30vw, 95vw{% endcapture %}
-                {% include figure.liquid loading="eager" path=profile_image_path class="card-img-top" sizes=sizes alt=profile.name %}
-              {% endif %}
-              <div class="card-body pb-4 pt-3">
-                <h4 class="card-title fw-bold mb-1 text-dark" style="font-size: calc(1.5rem - 2px);">{{ profile.name }}</h4>
-                <p class="card-text text-muted mb-0" style="font-size: 0.92rem;">{{ profile.role }}</p>
-              </div>
-            </div>
-            {% if profile_links_enabled and profile.url %}
+              <a href="{{ profile.url | relative_url }}" class="text-decoration-none alumni-list-item">
+                <span class="fw-bold" style="color: var(--global-theme-color); font-size: 1.15rem;">{{ profile.name }}</span>
+                <span class="text-muted" style="font-weight: 500;">{{ profile.role }}</span>
               </a>
+            {% else %}
+              <div class="alumni-list-item">
+                <span class="fw-bold" style="color: var(--global-text-color); font-size: 1.15rem;">{{ profile.name }}</span>
+                <span class="text-muted" style="font-weight: 500;">{{ profile.role }}</span>
+              </div>
             {% endif %}
-          </div>
+          </li>
         {% endfor %}
-      </div>
+      </ul>
     {% endif %}
   </article>
 </div>

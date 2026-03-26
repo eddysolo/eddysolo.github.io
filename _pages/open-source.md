@@ -72,9 +72,9 @@ fluid: true
   }
 
   .open-source-popular-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
   }
 
   .open-source-popular-card {
@@ -208,46 +208,60 @@ fluid: true
 
     <div class="tab-pane fade" id="source-popular-pane" role="tabpanel" aria-labelledby="source-popular-tab">
       <div class="open-source-popular-grid">
-        <a href="https://cai2r.net/fastmri-dataset-adds-breast-imaging-data-to-encourage-new-directions-in-ai-research-on-mri/" target="_blank" rel="noopener noreferrer" class="glass-box p-4 h-100 d-flex flex-column open-source-popular-card">
-          <div class="popular-thumb">
+        <a href="https://cai2r.net/fastmri-dataset-adds-breast-imaging-data-to-encourage-new-directions-in-ai-research-on-mri/" target="_blank" rel="noopener noreferrer" class="glass-box p-4 h-100 d-flex flex-column flex-md-row align-items-md-center open-source-popular-card" style="gap: 1.6rem;">
+          <div class="popular-thumb flex-shrink-0 m-0" style="width: min(260px, 100%);">
             <img src="{{ '/assets/img/publication_preview/breast scan example.png' | relative_url }}" alt="fastMRI breast dataset preview image">
           </div>
-          <div class="mb-2">
-            <h3 class="popular-title">FastMRI Dataset Adds Breast Imaging Data to Encourage New Directions in AI Research on MRI</h3>
+          <div class="d-flex flex-column h-100 flex-grow-1 justify-content-center">
+            <div class="mb-2">
+              <h3 class="popular-title">FastMRI Dataset Adds Breast Imaging Data to Encourage New Directions in AI Research on MRI</h3>
+            </div>
+            <p class="popular-meta">Feb 14, 2025 · Center for Biomedical Imaging and Bioengineering, New York University</p>
+            <p class="popular-summary">Open-source MRI dataset support for reconstruction and machine learning research, including breast DCE MRI data that broadens the fastMRI benchmark ecosystem.</p>
+            <span class="popular-link mt-auto pt-2">Read article <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
           </div>
-          <p class="popular-meta">Feb 14, 2025 · Center for Biomedical Imaging and Bioengineering, New York University</p>
-          <p class="popular-summary">Open-source MRI dataset support for reconstruction and machine learning research, including breast DCE MRI data that broadens the fastMRI benchmark ecosystem.</p>
-          <span class="popular-link">Read article <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
         </a>
 
-        <a href="https://cai2r.net/how-the-small-pilot-tone-is-taking-on-mris-big-challenge/" target="_blank" rel="noopener noreferrer" class="glass-box p-4 h-100 d-flex flex-column open-source-popular-card">
-          <div class="popular-thumb">
+        <a href="https://cai2r.net/how-the-small-pilot-tone-is-taking-on-mris-big-challenge/" target="_blank" rel="noopener noreferrer" class="glass-box p-4 h-100 d-flex flex-column flex-md-row align-items-md-center open-source-popular-card" style="gap: 1.6rem;">
+          <div class="popular-thumb flex-shrink-0 m-0" style="width: min(260px, 100%);">
             <img src="{{ '/assets/img/pilot-tone-image.png' | relative_url }}" alt="pilot-tone setup image">
           </div>
-          <div class="mb-2">
-            <h3 class="popular-title">How a Small Pilot Tone Is Taking On One of MRI's Big Challenges</h3>
+          <div class="d-flex flex-column h-100 flex-grow-1 justify-content-center">
+            <div class="mb-2">
+              <h3 class="popular-title">How a Small Pilot Tone Is Taking On One of MRI's Big Challenges</h3>
+            </div>
+            <p class="popular-meta">Dec 7, 2022 · Center for Biomedical Imaging and Bioengineering, New York University</p>
+            <p class="popular-summary">Feature story on pilot-tone motion sensing and how compact RF tracking can improve free-breathing MRI reliability.</p>
+            <span class="popular-link mt-auto pt-2">Read article <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
           </div>
-          <p class="popular-meta">Dec 7, 2022 · Center for Biomedical Imaging and Bioengineering, New York University</p>
-          <p class="popular-summary">Feature story on pilot-tone motion sensing and how compact RF tracking can improve free-breathing MRI reliability.</p>
-          <span class="popular-link">Read article <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
         </a>
 
-        <a href="https://www.weizmann.ca/the-x-spendables-addressing-the-most-challenging-tissues-in-magnetic-resonance/" target="_blank" rel="noopener noreferrer" class="glass-box p-4 h-100 d-flex flex-column open-source-popular-card">
-          <div class="mb-2">
-            <h3 class="popular-title">Addressing the Most Challenging Tissues in Magnetic Resonance</h3>
+        <a href="https://www.weizmann.ca/the-x-spendables-addressing-the-most-challenging-tissues-in-magnetic-resonance/" target="_blank" rel="noopener noreferrer" class="glass-box p-4 h-100 d-flex flex-column flex-md-row align-items-md-center open-source-popular-card" style="gap: 1.6rem;">
+          <div class="popular-thumb flex-shrink-0 m-0" style="width: min(260px, 100%);">
+            <img src="{{ '/assets/img/Addressing the .... in magnetic resonance.png' | relative_url }}" alt="Addressing the most challenging tissues in magnetic resonance image">
           </div>
-          <p class="popular-meta">Feb 21, 2018 · Weizmann Wonder Wander, Science News and Culture</p>
-          <p class="popular-summary">Popular science coverage of MRI challenges in difficult tissue environments and the broader translational impact of MR innovation.</p>
-          <span class="popular-link">Read article <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          <div class="d-flex flex-column h-100 flex-grow-1 justify-content-center">
+            <div class="mb-2">
+              <h3 class="popular-title">Addressing the Most Challenging Tissues in Magnetic Resonance</h3>
+            </div>
+            <p class="popular-meta">Feb 21, 2018 · Weizmann Wonder Wander, Science News and Culture</p>
+            <p class="popular-summary">Popular science coverage of MRI challenges in difficult tissue environments and the broader translational impact of MR innovation.</p>
+            <span class="popular-link mt-auto pt-2">Read article <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
         </a>
 
-        <a href="https://wis-wander.weizmann.ac.il/life-sciences/untangling-maze/" target="_blank" rel="noopener noreferrer" class="glass-box p-4 h-100 d-flex flex-column open-source-popular-card">
-          <div class="mb-2">
-            <h3 class="popular-title">Untangling the Maze</h3>
+        <a href="https://wis-wander.weizmann.ac.il/life-sciences/untangling-maze/" target="_blank" rel="noopener noreferrer" class="glass-box p-4 h-100 d-flex flex-column flex-md-row align-items-md-center open-source-popular-card" style="gap: 1.6rem;">
+          <div class="popular-thumb flex-shrink-0 m-0" style="width: min(260px, 100%);">
+            <img src="{{ '/assets/img/Major mouse placental compartments revealed bydiffusion-weighted MRI.png' | relative_url }}" alt="Untangling the maze image">
           </div>
-          <p class="popular-meta">Sep 29, 2014 · Weizmann Wonder Wander, Science News and Culture</p>
-          <p class="popular-summary">Science outreach article focused on complex biological imaging questions and how advanced MR approaches help reveal hidden structure.</p>
-          <span class="popular-link">Read article <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          <div class="d-flex flex-column h-100 flex-grow-1 justify-content-center">
+            <div class="mb-2">
+              <h3 class="popular-title">Untangling the Maze</h3>
+            </div>
+            <p class="popular-meta">Sep 29, 2014 · Weizmann Wonder Wander, Science News and Culture</p>
+            <p class="popular-summary">Science outreach article focused on complex biological imaging questions and how advanced MR approaches help reveal hidden structure.</p>
+            <span class="popular-link mt-auto pt-2">Read article <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
         </a>
       </div>
     </div>

@@ -6,7 +6,7 @@ description: Meet the research team of the Solomon MRI lab.
 nav: true
 nav_order: 1
 hero_image: assets/img/mri_hero_new.png
-enable_profile_links: true
+enable_profile_links: false
 
 profiles:
   - name: Eddy Solomon, PhD

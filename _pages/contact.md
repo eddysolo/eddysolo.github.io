@@ -10,12 +10,13 @@ fluid: true
 
 <style>
   /* Page Level Background setup */
-  body {
-    background-image: url('{{ "assets/img/technion_contact_bg_google.jpg" | relative_url }}');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+  html body, html[data-theme="dark"] body {
+    background-image: url('{{ "assets/img/technion_contact_bg_google.jpg" | relative_url }}') !important;
+    background-color: transparent !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+    background-repeat: no-repeat !important;
   }
   
   body::before {
@@ -110,7 +111,7 @@ fluid: true
   <div class="bento-wrapper">
     
     <!-- Block 1: Main Info -->
-    <div class="bento-card bento-card-main glass-dark p-3 p-md-4 d-flex flex-column justify-content-center text-left" style="height: 100%;">
+    <div class="bento-card bento-card-main glass-dark p-3 p-md-4 d-flex flex-column justify-content-start text-left" style="height: 100%;">
       <h2 class="mb-3" style="font-weight: 800; color: #ffffff; font-size: 3rem; letter-spacing: -0.02em;">Let's Connect</h2>
       <p class="mb-4" style="font-size: 1.2rem; line-height: 1.6; color: rgba(255,255,255,0.85);">
         Interested in collaborating with our lab, joining as a student, or discussing a research idea? We welcome messages from motivated researchers, clinicians, and trainees, and we are happy to connect.
@@ -146,12 +147,15 @@ fluid: true
     </div>
 
     <!-- Block 2: Logo Link -->
-    <a href="https://bme.technion.ac.il/en/" target="_blank" class="bento-card bento-card-logo glass-dark d-flex flex-column align-items-center justify-content-center text-decoration-none p-3 p-xl-4" style="height: 100%; min-height: 180px; gap: 0.6rem; padding-top: 0.75rem; padding-bottom: 0.55rem;">
-      <img src="{{ 'assets/img/logos/bme_logo_official_en.png' | relative_url }}" alt="BME Logo" style="width: 100%; max-width: 560px; height: auto; object-fit: contain; image-rendering: auto; transform: translateY(-4px); filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.12));">
-      <div style="background: rgba(144, 216, 255, 0.2); color: #dff3ff; padding: 0.7rem 1.5rem; border: 1px solid rgba(144, 216, 255, 0.4); border-radius: 50px; font-weight: 800; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 0.6rem; box-shadow: 0 10px 25px rgba(0, 43, 91, 0.4); text-transform: uppercase; letter-spacing: 0.03em; transition: all 0.3s; margin-top: 0.2rem;">
-        Go to website <i class="fa-solid fa-arrow-right"></i>
-      </div>
-    </a>
+    <div class="bento-card bento-card-logo glass-dark d-flex flex-column p-0 overflow-hidden" style="height: 100%; min-height: 220px;">
+      <a href="https://www.technion.ac.il/en/home-2/" target="_blank" class="h-50 w-100 d-flex flex-column align-items-center justify-content-center text-decoration-none" style="padding: 1.25rem; transition: background 0.3s; border-bottom: 1px solid rgba(255,255,255,0.15);" onmouseover="this.style.background='rgba(255,255,255,0.06)'" onmouseleave="this.style.background='transparent'">
+        <img src="{{ 'assets/img/logos/Technion_Logo_transparent.png' | relative_url }}" alt="Technion Logo" style="width: 100%; max-width: 280px; max-height: 90%; object-fit: contain; filter: drop-shadow(0px 8px 12px rgba(0,0,0,0.2));">
+      </a>
+      
+      <a href="https://bme.technion.ac.il/en/" target="_blank" class="h-50 w-100 d-flex flex-column align-items-center justify-content-center text-decoration-none" style="padding: 0.5rem; transition: background 0.3s;" onmouseover="this.style.background='rgba(255,255,255,0.06)'" onmouseleave="this.style.background='transparent'">
+        <img src="{{ 'assets/img/logos/bme_logo_transparent_hires.png' | relative_url }}" alt="BME Logo" style="width: 100%; max-width: 380px; max-height: 100%; object-fit: contain; filter: drop-shadow(0px 8px 12px rgba(0,0,0,0.2)); transform: scale(1.08);">
+      </a>
+    </div>
 
     <!-- Block 3: Embedded Map -->
     <div class="bento-card bento-card-map p-0 m-0 glass-dark d-flex" style="height: 100%; min-height: 380px;">
