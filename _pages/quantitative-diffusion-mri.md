@@ -180,7 +180,7 @@ no_hero: true
   <section class="cmri-hero">
     <div class="row g-3 align-items-stretch">
       <div class="col-lg-7">
-        <span class="cmri-kicker"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:0.35rem; font-size:1.15em; transform:translateY(-1px);"><path d="M2 15c6.667-6 13.333 0 20-6"/><path d="M9 22c1.798-1.998 2.518-3.995 2.808-5.993"/><path d="M15 2c-1.798 1.998-2.518 3.995-2.808 5.993"/><path d="m17 6-2.5-2.5"/><path d="m14 8-1-1"/><path d="m7 18 2.5 2.5"/><path d="m3.5 14.5.5.5"/><path d="m20 9 .5.5"/><path d="m6.5 12.5 1 1"/><path d="m16.5 10.5 1 1"/><path d="m10 16 1.5 1.5"/></svg> Quantitative Diffusion MRI</span>
+        <span class="cmri-kicker"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-right:0.35rem; font-size:1.15em; transform:translateY(-1px);"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M12 10.5h-2.5l-1-1"/><path d="M12 14h-2"/><path d="M12 6h1.5l1.5-1.5h2"/><circle cx="18" cy="4.5" r="1"/><path d="M12 9h5"/><circle cx="18" cy="9" r="1"/><path d="M12 12h3"/><circle cx="16" cy="12" r="1"/><path d="M12 15h4.5"/><circle cx="17.5" cy="15" r="1"/><path d="M12 18h1.5l1.5 1.5h1"/><circle cx="17" cy="19.5" r="1"/></svg> Quantitative Diffusion MRI</span>
         <h2 class="cmri-title">Advanced diffusion MRI for probing tissue microstructure and cellular dynamics</h2>
         <p class="cmri-body">
           We develop advanced diffusion MRI methods to noninvasively probe tissue microstructure, cellular organization, and water exchange dynamics. By combining new acquisition strategies (e.g., SPEN Imaging) with biophysical modeling, including time-dependent diffusivity and diffusion kurtosis, our approach moves beyond conventional Gaussian diffusion to capture tissue heterogeneity and membrane permeability. These techniques offer high-resolution, quantitative biomarkers for characterizing cancer biology, improving lesion detection, and assessing treatment response.
@@ -191,7 +191,7 @@ no_hero: true
         <div class="cmri-media-frame">
           <img src="{{ '/assets/img/publication_preview/Diffusion‐weighted breast MRI of malignancies with submillimeter resolution and immunity to artifacts by spatiotemporal encoding at 3T.png' | relative_url }}" alt="Diffusion-weighted breast MRI with SPEN encoding at submillimeter resolution">
           <p class="cmri-caption">
-          From Fig. 2 of
+          Figure. 2 from
           <a href="https://pubmed.ncbi.nlm.nih.gov/32077516/" target="_blank" rel="noopener">Diffusion-weighted breast MRI of malignancies with submillimeter resolution and immunity to artifacts by spatiotemporal encoding at 3T</a>.
           </p>
         </div>

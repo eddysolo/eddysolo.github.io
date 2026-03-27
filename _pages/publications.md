@@ -92,7 +92,7 @@ _styles: |
   <div class="pub-tabs-wrap">
     <ul class="nav nav-pills justify-content-center" id="pub-tabs" role="tablist">
       <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="journal-tab" data-toggle="pill" data-bs-toggle="pill" data-target="#journal-pane" data-bs-target="#journal-pane" type="button" role="tab" aria-controls="journal-pane" aria-selected="true">Journal articles</button>
+        <button class="nav-link active" id="journal-tab" data-toggle="pill" data-bs-toggle="pill" data-target="#journal-pane" data-bs-target="#journal-pane" type="button" role="tab" aria-controls="journal-pane" aria-selected="true">Journal Articles</button>
       </li>
       <li class="nav-item" role="presentation">
         <button class="nav-link" id="peer-tab" data-toggle="pill" data-bs-toggle="pill" data-target="#peer-pane" data-bs-target="#peer-pane" type="button" role="tab" aria-controls="peer-pane" aria-selected="false">Peer Reviewed Conference Abstracts</button>

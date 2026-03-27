@@ -230,7 +230,7 @@ ninja.data = [
         {%- when "scholar_userid" -%}
           {%- assign social_id = "social-scholar" -%}
           {%- assign social_title = "Google Scholar" -%}
-          {%- capture social_url %}"https://scholar.google.com/citations?user={{ social[1] }}"{% endcapture -%}
+          {%- capture social_url %}"https://scholar.google.com/citations?user={{ social[1] }}&hl=en"{% endcapture -%}
         {%- when "scopus_id" -%}
           {%- assign social_id = "social-scopus" -%}
           {%- assign social_title = "Scopus" -%}

@@ -234,8 +234,8 @@ no_hero: true
   <section class="cmri-hero">
     <div class="row g-3 align-items-stretch">
       <div class="col-lg-7">
-        <span class="cmri-kicker"><i class="fa-solid fa-tower-broadcast"></i> Advanced MRI Hardware</span>
-        <h2 class="cmri-title">MR-compatible sensing and external tracking beyond conventional MRI.</h2>
+        <span class="cmri-kicker"><i class="fa-solid fa-satellite-dish"></i> Advanced MRI Hardware</span>
+        <h2 class="cmri-title">MR-compatible sensing and external tracking beyond conventional MRI</h2>
         <p class="cmri-body">
           We develop MRI hardware that enables fast, motion-robust imaging without requiring patient immobilization. Our approach integrates real-time, MR-safe, contactless smart sensors based on radiofrequency (RF) signals (e.g., pilot tone) to continuously capture cardiac, respiratory, and bulk motion. Coupled with accelerated acquisition, these frameworks provide real-time feedback, enabling free-motion and free-breathing MRI with improved image quality and reduced scan times.
         </p>
@@ -245,19 +245,18 @@ no_hero: true
         <div class="cmri-media-grid">
           <div class="cmri-media-tile">
             <div class="cmri-media-figure">
-              <img src="{{ '/assets/img/publication_preview/Free‐breathing radial imaging using a pilot‐tone radiofrequency transmitter for detection of respiratory motion.png' | relative_url }}" alt="Pilot-tone respiratory motion sensing figure from free-breathing radial MRI study">
+              <img class="cmri-native-res" src="{{ '/assets/img/pilot-tone-image.png' | relative_url }}" alt="Contactless hand and pilot-tone sensing setup">
             </div>
             <p class="cmri-caption">
-              Figure 1.
-              <a href="https://pubmed.ncbi.nlm.nih.gov/33306216/" target="_blank" rel="noopener">Free-breathing radial imaging using a pilot-tone radiofrequency transmitter for detection of respiratory motion</a>.
+              Pilot Tone setup 
             </p>
           </div>
           <div class="cmri-media-tile">
             <div class="cmri-media-figure">
-              <img class="cmri-native-res" src="{{ '/assets/img/pilot-tone-image.png' | relative_url }}" alt="Contactless hand and pilot-tone sensing setup">
+              <img class="cmri-native-res" src="{{ '/assets/img/Abstract - Motion detection using doppler radar image.png' | relative_url }}" alt="Abstract image for motion detection using Doppler radar">
             </div>
             <p class="cmri-caption">
-              Pilot tone setup
+              Contactless sensing of internal motion using frequency-dependent Doppler radar
             </p>
           </div>
         </div>
@@ -305,13 +304,13 @@ no_hero: true
       </div>
 
       <div class="col-md-6">
-        <a href="#" target="_blank" rel="noopener" class="cmri-paper">
+        <a href="{{ '/assets/pdf/Abstract - Motion detection using doppler radar.pdf' | relative_url }}" target="_blank" rel="noopener" class="cmri-paper">
           <div class="cmri-paper-icon">
             <i class="fa-solid fa-book"></i>
           </div>
           <div>
             <h5>Contactless sensing of internal motion using frequency-dependent Doppler radar</h5>
-            <p>Coming Soon</p>
+            <p>Abstract</p>
           </div>
         </a>
       </div>

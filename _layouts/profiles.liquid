@@ -14,6 +14,33 @@ layout: page
   .profile-card:hover .card-img-top {
     filter: grayscale(100%);
   }
+
+  .alumni-simple-list {
+    max-width: 560px;
+    margin: 0 auto 3rem;
+    padding: 0;
+    list-style: none;
+  }
+
+  .alumni-simple-item {
+    padding: 0.65rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    color: var(--global-text-color);
+  }
+
+  .alumni-simple-item:last-child {
+    border-bottom: 0;
+  }
+
+  .alumni-simple-link {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .alumni-simple-link:hover {
+    color: var(--global-theme-color);
+    text-decoration: none;
+  }
 </style>
 <div class="post">
   <article>
@@ -49,50 +76,16 @@ layout: page
     {% endif %}
 
     {% if page.alumni_profiles %}
-      <h2 class="text-center mt-5 mb-4" style="font-weight: 800; letter-spacing: 0.03em; color: var(--global-text-color);">Alumni</h2>
-      
-      <style>
-        .alumni-list-item {
-          background: linear-gradient(135deg, rgba(0, 150, 199, 0.04) 0%, rgba(0, 150, 199, 0.01) 100%);
-          border: 1px solid rgba(0, 150, 199, 0.15);
-          border-radius: 16px;
-          transition: all 0.25s ease;
-          padding: 1.15rem 1.6rem;
-          margin-bottom: 0.85rem;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          backdrop-filter: blur(10px);
-        }
-        .alumni-list-item:hover {
-          transform: translateY(-3px);
-          box-shadow: 0 12px 24px rgba(0, 150, 199, 0.12);
-          border-color: rgba(0, 150, 199, 0.35);
-          background: linear-gradient(135deg, rgba(0, 150, 199, 0.06) 0%, rgba(0, 150, 199, 0.02) 100%);
-        }
-        @media (max-width: 576px) {
-          .alumni-list-item {
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 0.35rem;
-            padding: 1rem 1.25rem;
-          }
-        }
-      </style>
-
-      <ul class="list-unstyled mx-auto mb-5" style="max-width: 650px;">
+      <h2 class="text-center mt-5 mb-3" style="font-weight: 800; letter-spacing: 0.03em; color: var(--global-text-color);">Alumni</h2>
+      <ul class="alumni-simple-list">
         {% for profile in page.alumni_profiles %}
-          <li>
+          <li class="alumni-simple-item">
             {% if profile_links_enabled and profile.url %}
-              <a href="{{ profile.url | relative_url }}" class="text-decoration-none alumni-list-item">
-                <span class="fw-bold" style="color: var(--global-theme-color); font-size: 1.15rem;">{{ profile.name }}</span>
-                <span class="text-muted" style="font-weight: 500;">{{ profile.role }}</span>
+              <a href="{{ profile.url | relative_url }}" class="alumni-simple-link">
+                <strong>{{ profile.name }}</strong>{% if profile.role %} <span class="text-muted">- {{ profile.role }}</span>{% endif %}
               </a>
             {% else %}
-              <div class="alumni-list-item">
-                <span class="fw-bold" style="color: var(--global-text-color); font-size: 1.15rem;">{{ profile.name }}</span>
-                <span class="text-muted" style="font-weight: 500;">{{ profile.role }}</span>
-              </div>
+              <strong>{{ profile.name }}</strong>{% if profile.role %} <span class="text-muted">- {{ profile.role }}</span>{% endif %}
             {% endif %}
           </li>
         {% endfor %}

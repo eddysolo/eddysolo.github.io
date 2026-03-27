@@ -5,7 +5,7 @@ permalink: /team/eddy-solomon/
 person_key: eddy-solomon
 description: Head of Solomon's MRI Lab
 image: eddy_solomon.jpg
-role_in_lab: Principal Investigator, Solomon's MRI Lab
+role_in_lab: "Principal Investigator<br>Assistant Professor, Faculty of Biomedical Engineering, Technion<br>Adjunct Assistant Professor of Radiology, Weill Cornell Medicine, Cornell University"
 research_fields:
   - Quantitative MRI
   - AI for Medical Imaging

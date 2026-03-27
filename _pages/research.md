@@ -86,7 +86,7 @@ horizontal: false
       <a href="{{ '/computational-mri/' | relative_url }}" class="research-card-link">
         <div class="glass-box research-card">
           <div class="research-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M12 10.5h-2.5l-1-1"/><path d="M12 14h-2"/><path d="M12 6h1.5l1.5-1.5h2"/><circle cx="18" cy="4.5" r="1"/><path d="M12 9h5"/><circle cx="18" cy="9" r="1"/><path d="M12 12h3"/><circle cx="16" cy="12" r="1"/><path d="M12 15h4.5"/><circle cx="17.5" cy="15" r="1"/><path d="M12 18h1.5l1.5 1.5h1"/><circle cx="17" cy="19.5" r="1"/></svg>
+            <i class="fa-solid fa-microchip"></i>
           </div>
           <h2>Computational MRI</h2>
           <p>Novel sampling and reconstruction strategies that turn accelerated k-space acquisitions into diagnostic-quality MRI.</p>
@@ -98,7 +98,7 @@ horizontal: false
       <a href="{{ '/motion-robust-mri/' | relative_url }}" class="research-card-link">
         <div class="glass-box research-card">
           <div class="research-icon">
-            <i class="fa-solid fa-heart-pulse"></i>
+            <i class="fa-solid fa-wave-square"></i>
           </div>
           <h2>Motion-Robust MRI</h2>
           <p>Free-breathing acquisition and correction pipelines designed for reliable brain and abdominal MRI.</p>
@@ -110,7 +110,7 @@ horizontal: false
       <a href="{{ '/advanced-mri-hardware/' | relative_url }}" class="research-card-link">
         <div class="glass-box research-card">
           <div class="research-icon">
-            <i class="fa-solid fa-tower-broadcast"></i>
+            <i class="fa-solid fa-satellite-dish"></i>
           </div>
           <h2>Advanced MRI Hardware</h2>
           <p>MR-compatible sensing and external tracking frameworks enabling robust free-motion and free-breathing MRI.</p>
@@ -122,7 +122,7 @@ horizontal: false
       <a href="{{ '/quantitative-diffusion-mri/' | relative_url }}" class="research-card-link">
         <div class="glass-box research-card">
           <div class="research-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 15c6.667-6 13.333 0 20-6"/><path d="M9 22c1.798-1.998 2.518-3.995 2.808-5.993"/><path d="M15 2c-1.798 1.998-2.518 3.995-2.808 5.993"/><path d="m17 6-2.5-2.5"/><path d="m14 8-1-1"/><path d="m7 18 2.5 2.5"/><path d="m3.5 14.5.5.5"/><path d="m20 9 .5.5"/><path d="m6.5 12.5 1 1"/><path d="m16.5 10.5 1 1"/><path d="m10 16 1.5 1.5"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M12 10.5h-2.5l-1-1"/><path d="M12 14h-2"/><path d="M12 6h1.5l1.5-1.5h2"/><circle cx="18" cy="4.5" r="1"/><path d="M12 9h5"/><circle cx="18" cy="9" r="1"/><path d="M12 12h3"/><circle cx="16" cy="12" r="1"/><path d="M12 15h4.5"/><circle cx="17.5" cy="15" r="1"/><path d="M12 18h1.5l1.5 1.5h1"/><circle cx="17" cy="19.5" r="1"/></svg>
           </div>
           <h2>Quantitative Diffusion MRI</h2>
           <p>Advanced diffusion MRI for probing tissue microstructure, heterogeneity, and cellular dynamics.</p>

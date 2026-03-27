@@ -114,7 +114,7 @@ fluid: true
     <div class="bento-card bento-card-main glass-dark p-3 p-md-4 d-flex flex-column justify-content-start text-left" style="height: 100%;">
       <h2 class="mb-3" style="font-weight: 800; color: #ffffff; font-size: 3rem; letter-spacing: -0.02em;">Let's Connect</h2>
       <p class="mb-4" style="font-size: 1.2rem; line-height: 1.6; color: rgba(255,255,255,0.85);">
-        Interested in collaborating with our lab, joining as a student, or discussing a research idea? We welcome messages from motivated researchers, clinicians, and trainees, and we are happy to connect.
+        We are always seeking ambitious, motivated, and passionate undergraduates, graduate students,and postdoctoral scholars to join our lab. We also welcome messages from researchers and clinicians interested in initiating collaborations.
       </p>
 
       <ul class="list-unstyled mb-0 mt-3">
@@ -137,9 +137,10 @@ fluid: true
             <h5 class="mb-1" style="font-weight: 700; color: rgba(255,255,255,0.6); text-transform: uppercase; font-size: 0.9rem; letter-spacing: 0.15em;">Visit Our Lab</h5>
             <span style="font-size: 1.15rem; line-height: 1.5; display: inline-block; color: #ffffff; font-weight: 500;">
               Faculty of Biomedical Engineering<br>
-              Room 328<br>
+              Julius Silver Building<br>
+              Room 328, Floor 3<br>
               Technion - Israel Institute of Technology<br>
-              Haifa 3200003, Israel
+              Haifa 3200001, Israel
             </span>
           </div>
         </li>
@@ -184,9 +185,9 @@ fluid: true
     <a href="https://outlook.office.com/mail/deeplink/compose?to=eddy.solomon@technion.ac.il" target="_blank" rel="noopener noreferrer" aria-label="Outlook" style="color: #fff; font-size: 3.45rem; line-height: 1;">
       <i class="fa-solid fa-envelope"></i>
     </a>
-    <a href="https://scholar.google.com/citations?user=tAOr0VwAAAAJ&hl=iw&oi=ao" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" style="color: #fff; font-size: 3.45rem; line-height: 1;">
+    <a href="https://scholar.google.com/citations?user=tAOr0VwAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" style="color: #fff; font-size: 3.45rem; line-height: 1;">
       <i class="ai ai-google-scholar"></i>
     </a>
   </div>
-  <p style="margin-top: 0.8rem; margin-bottom: 0; font-size: 1rem; color: #fff;">you can reach out us best by email.</p>
+  <p style="margin-top: 0.8rem; margin-bottom: 0; font-size: 1rem; color: #fff;"></p>
 </section>

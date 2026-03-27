@@ -180,7 +180,7 @@ no_hero: true
   <section class="cmri-hero">
     <div class="row g-3 align-items-stretch">
       <div class="col-lg-7">
-        <span class="cmri-kicker"><i class="fa-solid fa-heart-pulse"></i> Motion-Robust MRI</span>
+        <span class="cmri-kicker"><i class="fa-solid fa-wave-square"></i> Motion-Robust MRI</span>
         <h2 class="cmri-title">Motion-robust MRI for free breathing, reliable imaging</h2>
         <p class="cmri-body">
           One of the greatest challenges in medical imaging is patient motion. Breathing, heartbeat, and voluntary motion can degrade image quality and limit diagnostic reliability. We develop motion-robust MRI methods that leverage the inherent robustness of non-Cartesian acquisition strategies to motion which enables prospective and retrospective correction. By integrating advanced image reconstruction and physics-informed deep learning, our approaches, such as MP-RAVE, enable high-resolution structural brain imaging in minutes while correcting for head motion. By reducing scan time and eliminating the need for sedation/anesthesia, our methods improve the reliability and accessibility of brain and abdominal MRI.

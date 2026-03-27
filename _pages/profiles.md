@@ -32,11 +32,11 @@ profiles:
 
 alumni_profiles:
   - name: Chao Li
-    role: Alumni
+    role: 
     image: anonymous-profile.svg
     url: /team/chao-li/
   - name: Jingwei Zhang
-    role: Alumni
+    role: 
     image: anonymous-profile.svg
     url: /team/jingwei-zhang/
 ---
