@@ -12,7 +12,7 @@ The site is focused on:
 
 The website is a lab-facing communication platform that combines:
 - A strong visual homepage and hero-driven layout
-- Dedicated pages for research areas (Computational MRI, Motion Correction, Smart Sensors)
+- Dedicated pages for research areas (Computational MRI, Motion-Robust MRI, Advanced MRI Hardware)
 - Publications powered by BibTeX (`_bibliography/papers.bib`)
 - Team and profile pages under `_pages/team/`
 

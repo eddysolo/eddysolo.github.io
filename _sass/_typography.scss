@@ -3,6 +3,50 @@
  ******************************************************************************/
 
 @use "variables" as v;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-brand,
+.nav-link,
+.dropdown-item,
+button.btn,
+.btn,
+.card-title {
+  font-family: "Inter", "Segoe UI", sans-serif !important;
+}
+
+body,
+p,
+em,
+div,
+li,
+span,
+strong,
+a,
+small,
+label,
+input,
+textarea,
+select,
+option,
+button,
+table,
+td,
+th,
+blockquote,
+figcaption,
+.card-text,
+.post-description,
+.news,
+.news p,
+.publications,
+.publications p {
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif !important;
+}
+
 
 h1,
 h2,
@@ -48,28 +92,9 @@ table.table a {
   position: relative;
   transition: color 0.3s ease;
 
-  &::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 1px;
-    bottom: -2px;
-    left: 0;
-    background-color: var(--global-theme-color);
-    transition: width 0.3s ease;
-  }
-
   &:hover {
     color: var(--global-theme-color);
     text-decoration: none;
-
-    &::after {
-      width: 100%;
-    }
-  }
-
-  &:hover:after :not(.nav-item.dropdown) {
-    width: 100%;
   }
 }
 

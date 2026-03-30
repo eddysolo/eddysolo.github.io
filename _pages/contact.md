@@ -10,12 +10,13 @@ fluid: true
 
 <style>
   /* Page Level Background setup */
-  body {
-    background-image: url('{{ "assets/img/technion_contact_bg_google.jpg" | relative_url }}');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+  html body, html[data-theme="dark"] body {
+    background-image: url('{{ "assets/img/technion_contact_bg_google.jpg" | relative_url }}') !important;
+    background-color: transparent !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+    background-repeat: no-repeat !important;
   }
   
   body::before {
@@ -110,13 +111,13 @@ fluid: true
   <div class="bento-wrapper">
     
     <!-- Block 1: Main Info -->
-    <div class="bento-card bento-card-main glass-dark p-3 p-md-4 d-flex flex-column justify-content-center text-left" style="height: 100%;">
+    <div class="bento-card bento-card-main glass-dark p-3 p-md-4 d-flex flex-column justify-content-start text-left" style="height: 100%;">
       <h2 class="mb-3" style="font-weight: 800; color: #ffffff; font-size: 3rem; letter-spacing: -0.02em;">Let's Connect</h2>
       <p class="mb-4" style="font-size: 1.2rem; line-height: 1.6; color: rgba(255,255,255,0.85);">
-        Interested in collaborating with our lab, joining as a student, or discussing a research idea? We welcome messages from motivated researchers, clinicians, and trainees, and we are happy to connect.
+        We are always seeking ambitious, motivated, and passionate undergraduates, graduate students,and postdoctoral scholars to join our lab. We also welcome messages from researchers and clinicians interested in initiating collaborations.
       </p>
 
-      <ul class="list-unstyled mb-0 mt-auto">
+      <ul class="list-unstyled mb-0 mt-3">
         <!-- Email -->
         <li class="mb-4 d-flex align-items-center">
           <div style="background: rgba(144, 216, 255, 0.15); height: 68px; width: 68px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1.2rem; flex-shrink: 0; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
@@ -136,9 +137,10 @@ fluid: true
             <h5 class="mb-1" style="font-weight: 700; color: rgba(255,255,255,0.6); text-transform: uppercase; font-size: 0.9rem; letter-spacing: 0.15em;">Visit Our Lab</h5>
             <span style="font-size: 1.15rem; line-height: 1.5; display: inline-block; color: #ffffff; font-weight: 500;">
               Faculty of Biomedical Engineering<br>
-              Room 328<br>
+              Julius Silver Building<br>
+              Room 328, Floor 3<br>
               Technion - Israel Institute of Technology<br>
-              Haifa 3200003, Israel
+              Haifa 3200001, Israel
             </span>
           </div>
         </li>
@@ -146,12 +148,15 @@ fluid: true
     </div>
 
     <!-- Block 2: Logo Link -->
-    <a href="https://bme.technion.ac.il/en/" target="_blank" class="bento-card bento-card-logo glass-dark d-flex flex-column align-items-center justify-content-center text-decoration-none p-3 p-xl-4" style="height: 100%; min-height: 180px; gap: 0.6rem; padding-top: 0.75rem; padding-bottom: 0.55rem;">
-      <img src="{{ 'assets/img/logos/bme_logo_official_en.png' | relative_url }}" alt="BME Logo" style="width: 100%; max-width: 560px; height: auto; object-fit: contain; image-rendering: auto; transform: translateY(-4px); filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.12));">
-      <div style="background: rgba(144, 216, 255, 0.2); color: #dff3ff; padding: 0.7rem 1.5rem; border: 1px solid rgba(144, 216, 255, 0.4); border-radius: 50px; font-weight: 800; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 0.6rem; box-shadow: 0 10px 25px rgba(0, 43, 91, 0.4); text-transform: uppercase; letter-spacing: 0.03em; transition: all 0.3s; margin-top: 0.2rem;">
-        Go to website <i class="fa-solid fa-arrow-right"></i>
-      </div>
-    </a>
+    <div class="bento-card bento-card-logo glass-dark d-flex flex-column p-0 overflow-hidden" style="height: 100%; min-height: 220px;">
+      <a href="https://www.technion.ac.il/en/home-2/" target="_blank" class="h-50 w-100 d-flex flex-column align-items-center justify-content-center text-decoration-none" style="padding: 1.25rem; transition: background 0.3s; border-bottom: 1px solid rgba(255,255,255,0.15);" onmouseover="this.style.background='rgba(255,255,255,0.06)'" onmouseleave="this.style.background='transparent'">
+        <img src="{{ 'assets/img/logos/Technion_Logo_transparent.png' | relative_url }}" alt="Technion Logo" style="width: 100%; max-width: 280px; max-height: 90%; object-fit: contain; filter: drop-shadow(0px 8px 12px rgba(0,0,0,0.2));">
+      </a>
+      
+      <a href="https://bme.technion.ac.il/en/" target="_blank" class="h-50 w-100 d-flex flex-column align-items-center justify-content-center text-decoration-none" style="padding: 0.5rem; transition: background 0.3s;" onmouseover="this.style.background='rgba(255,255,255,0.06)'" onmouseleave="this.style.background='transparent'">
+        <img src="{{ 'assets/img/logos/bme_logo_transparent_hires.png' | relative_url }}" alt="BME Logo" style="width: 100%; max-width: 380px; max-height: 100%; object-fit: contain; filter: drop-shadow(0px 8px 12px rgba(0,0,0,0.2)); transform: scale(1.08);">
+      </a>
+    </div>
 
     <!-- Block 3: Embedded Map -->
     <div class="bento-card bento-card-map p-0 m-0 glass-dark d-flex" style="height: 100%; min-height: 380px;">
@@ -180,9 +185,9 @@ fluid: true
     <a href="https://outlook.office.com/mail/deeplink/compose?to=eddy.solomon@technion.ac.il" target="_blank" rel="noopener noreferrer" aria-label="Outlook" style="color: #fff; font-size: 3.45rem; line-height: 1;">
       <i class="fa-solid fa-envelope"></i>
     </a>
-    <a href="https://scholar.google.com/citations?user=tAOr0VwAAAAJ&hl=iw&oi=ao" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" style="color: #fff; font-size: 3.45rem; line-height: 1;">
+    <a href="https://scholar.google.com/citations?user=tAOr0VwAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" style="color: #fff; font-size: 3.45rem; line-height: 1;">
       <i class="ai ai-google-scholar"></i>
     </a>
   </div>
-  <p style="margin-top: 0.8rem; margin-bottom: 0; font-size: 1rem; color: #fff;">you can reach out us best by email.</p>
+  <p style="margin-top: 0.8rem; margin-bottom: 0; font-size: 1rem; color: #fff;"></p>
 </section>

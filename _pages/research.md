@@ -9,45 +9,123 @@ display_categories: [work, fun]
 horizontal: false
 ---
 
+<style>
+  .research-grid {
+    row-gap: 1.35rem;
+    margin-bottom: 2.4rem;
+  }
+
+  .research-card-link {
+    text-decoration: none !important;
+    background-image: none !important;
+    color: inherit;
+    display: block;
+    height: 100%;
+  }
+  .research-card-link:hover {
+    text-decoration: none !important;
+    background-image: none !important;
+  }
+
+  .research-card {
+    border-radius: 24px;
+    border: 1px solid rgba(0, 150, 199, 0.24);
+    padding: 1.4rem 1.3rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .research-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 28px rgba(0, 150, 199, 0.12);
+  }
+
+  .research-icon {
+    font-size: 2.05rem;
+    color: var(--global-theme-color);
+    margin-bottom: 0.25rem;
+  }
+
+  .research-card h2 {
+    font-weight: 800;
+    font-size: 1.62rem;
+    margin: 0;
+    color: var(--global-theme-color);
+    line-height: 1.25;
+  }
+
+  .research-card p {
+    font-size: 1.01rem;
+    line-height: 1.58;
+    margin: 0;
+  }
+
+  @media (max-width: 767.98px) {
+    .research-grid {
+      row-gap: 1rem;
+    }
+
+    .research-card {
+      padding: 1.15rem 1rem;
+    }
+  }
+</style>
+
 <div class="projects">
   <div class="glass-section w-100 d-flex flex-column justify-content-center align-items-center text-center mb-4" style="border-radius: 24px; padding: 3.2rem 2.6rem;">
-    <h1 style="font-weight: 800; font-size: 3rem; margin-bottom: 0.65rem;">Our Research Areas</h1>
-    <h3 style="font-weight: 600; font-size: 1.35rem; color: var(--global-theme-color); margin-bottom: 0;">From acquisition physics to AI reconstruction and deployable clinical workflows</h3>
+    <h1 style="font-weight: 800; font-size: 3rem; margin-bottom: 0.65rem;">Our Research</h1>
+    <h3 style="font-weight: 600; font-size: 1.35rem; color: var(--global-theme-color); margin-bottom: 0;"></h3>
   </div>
 
-  <div class="row g-4 mb-5">
-    <div class="col-lg-4">
-      <a href="{{ '/computational-mri/' | relative_url }}" class="text-decoration-none" style="color: inherit;">
-        <div class="glass-box p-4 h-100 d-flex flex-column text-center" style="border-radius: 24px; border: 1px solid rgba(0, 150, 199, 0.28);">
-          <div class="mb-3" style="font-size: 2rem; color: var(--global-theme-color);">
+  <div class="row g-4 research-grid">
+    <div class="col-md-6">
+      <a href="{{ '/computational-mri/' | relative_url }}" class="research-card-link">
+        <div class="glass-box research-card">
+          <div class="research-icon">
             <i class="fa-solid fa-microchip"></i>
           </div>
-          <h2 style="font-weight: 800; font-size: 1.65rem; margin-bottom: 0.55rem; color: var(--global-theme-color);">Computational MRI</h2>
-          <p style="font-size: 1.05rem; line-height: 1.6; margin: 0;">Novel sampling and reconstruction methods that transform accelerated k-space acquisitions into diagnostic-quality images.</p>
+          <h2>Computational MRI</h2>
+          <p>Novel sampling and reconstruction strategies that turn accelerated k-space acquisitions into diagnostic-quality MRI.</p>
         </div>
       </a>
     </div>
 
-    <div class="col-lg-4">
-      <a href="{{ '/motion-correction/' | relative_url }}" class="text-decoration-none" style="color: inherit;">
-        <div class="glass-box p-4 h-100 d-flex flex-column text-center" style="border-radius: 24px; border: 1px solid rgba(0, 150, 199, 0.28);">
-          <div class="mb-3" style="font-size: 2rem; color: var(--global-theme-color);">
+    <div class="col-md-6">
+      <a href="{{ '/motion-robust-mri/' | relative_url }}" class="research-card-link">
+        <div class="glass-box research-card">
+          <div class="research-icon">
             <i class="fa-solid fa-wave-square"></i>
           </div>
-          <h2 style="font-weight: 800; font-size: 1.65rem; margin-bottom: 0.55rem; color: var(--global-theme-color);">Motion Correction</h2>
-          <p style="font-size: 1.05rem; line-height: 1.6; margin: 0;">Free-breathing and motion-robust MRI pipelines designed to improve stability across pediatric and abdominal imaging.</p>
+          <h2>Motion-Robust MRI</h2>
+          <p>Free-breathing acquisition and correction pipelines designed for reliable brain and abdominal MRI.</p>
         </div>
       </a>
     </div>
 
-    <div class="col-lg-4">
-      <a href="{{ '/advanced-hardware/' | relative_url }}" class="text-decoration-none" style="color: inherit;">
-        <div class="glass-box p-4 h-100 d-flex flex-column text-center" style="border-radius: 24px; border: 1px solid rgba(0, 150, 199, 0.28);">
-          <div class="mb-3" style="font-size: 2rem; color: var(--global-theme-color);">
+    <div class="col-md-6">
+      <a href="{{ '/advanced-mri-hardware/' | relative_url }}" class="research-card-link">
+        <div class="glass-box research-card">
+          <div class="research-icon">
             <i class="fa-solid fa-satellite-dish"></i>
           </div>
-          <h2 style="font-weight: 800; font-size: 1.65rem; margin-bottom: 0.55rem; color: var(--global-theme-color);">Advanced Hardware</h2>
-          <p style="font-size: 1.05rem; line-height: 1.6; margin: 0;">MR-compatible sensing, external tracking, and instrumentation that extend what is measurable in real scans.</p>
+          <h2>Advanced MRI Hardware</h2>
+          <p>MR-compatible sensing and external tracking frameworks enabling robust free-motion and free-breathing MRI.</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-md-6">
+      <a href="{{ '/quantitative-diffusion-mri/' | relative_url }}" class="research-card-link">
+        <div class="glass-box research-card">
+          <div class="research-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M12 10.5h-2.5l-1-1"/><path d="M12 14h-2"/><path d="M12 6h1.5l1.5-1.5h2"/><circle cx="18" cy="4.5" r="1"/><path d="M12 9h5"/><circle cx="18" cy="9" r="1"/><path d="M12 12h3"/><circle cx="16" cy="12" r="1"/><path d="M12 15h4.5"/><circle cx="17.5" cy="15" r="1"/><path d="M12 18h1.5l1.5 1.5h1"/><circle cx="17" cy="19.5" r="1"/></svg>
+          </div>
+          <h2>Quantitative Diffusion MRI</h2>
+          <p>Advanced diffusion MRI for probing tissue microstructure, heterogeneity, and cellular dynamics.</p>
         </div>
       </a>
     </div>

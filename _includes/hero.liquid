@@ -1,11 +1,7 @@
 {% unless page.permalink == '/contact/' or page.no_hero %}
 <section class="global-hero-carousel" aria-label="Featured MRI research image">
-	{% assign hero_image_path = page.hero_image | default: 'assets/img/mri_hero.jpg' %}
-	{% if hero_image_path == 'assets/img/mri_hero.jpg' %}
-		{% assign hero_image_hires_path = 'assets/img/mri_hero_hires.jpg' %}
-	{% else %}
-		{% assign hero_image_hires_path = hero_image_path %}
-	{% endif %}
+	{% assign hero_image_path = page.hero_image | default: 'assets/img/mri_hero_new.png' %}
+	{% assign hero_image_hires_path = hero_image_path %}
 	<div class="hero-slides">
 		<figure class="hero-slide is-active">
 			<img
@@ -20,7 +16,7 @@
 		</figure>
 	</div>
 	<div class="hero-corner-logo" aria-hidden="true">
-		<img src="{{ 'assets/img/logos/Technion_Logo_transparent.png' | relative_url }}" alt="">
+		<img src="{{ 'assets/img/logos/Technion_Logo_TechOnly.png' | relative_url }}" alt="">
 	</div>
 
 </section>
