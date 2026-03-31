@@ -12,26 +12,68 @@ on:
 
 jobs:
   check:
-    # available images: https://github.com/actions/runner-images#available-images
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
+
       - name: Setup Node.js ⚙️
         uses: actions/setup-node@v4
+
       - name: Install Prettier 💾
         run: npm install --save-dev --save-exact prettier @shopify/prettier-plugin-liquid
+
+      - name: Collect files for this event 📂
+        id: files
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+            BASE_SHA="${{ github.event.pull_request.base.sha }}"
+            HEAD_SHA="${{ github.event.pull_request.head.sha }}"
+          else
+            BASE_SHA="${{ github.event.before }}"
+            HEAD_SHA="${{ github.sha }}"
+          fi
+
+          if [[ -z "$BASE_SHA" || "$BASE_SHA" == "0000000000000000000000000000000000000000" ]]; then
+            git ls-files -z > changed-files.txt
+          else
+            git diff --name-only --diff-filter=ACMRT -z "$BASE_SHA" "$HEAD_SHA" > changed-files.txt
+          fi
+
+          if [[ -s changed-files.txt ]]; then
+            echo "has_files=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_files=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Prettier Check 🔎
         id: prettier
-        run: npx prettier . --check
-      - name: Create diff 📝
-        # https://docs.github.com/en/actions/learn-github-actions/expressions#failure
-        if: ${{ failure() }}
+        shell: bash
         run: |
-          npx prettier . --write
+          set -euo pipefail
+          if [[ "${{ steps.files.outputs.has_files }}" != "true" ]]; then
+            echo "No changed files to check."
+            exit 0
+          fi
+          xargs -0 npx prettier --check --ignore-unknown < changed-files.txt
+
+      - name: Create diff 📝
+        if: ${{ failure() }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ "${{ steps.files.outputs.has_files }}" != "true" ]]; then
+            echo "No changed files to format."
+            exit 0
+          fi
+          xargs -0 npx prettier --write --ignore-unknown < changed-files.txt
           git diff -- . ':(exclude)package-lock.json' ':(exclude)package.json' > diff.txt
           npm install -g diff2html-cli
           diff2html -i file -s side -F diff.html -- diff.txt
+
       - name: Upload html diff ⬆️
         id: artifact-upload
         if: ${{ failure() && steps.prettier.conclusion == 'failure' }}
@@ -40,6 +82,7 @@ jobs:
           name: HTML Diff
           path: diff.html
           retention-days: 7
+
       - name: Dispatch information to repository 🗣️
         if: ${{ failure() && steps.prettier.conclusion == 'failure' && github.event_name == 'pull_request' }}
         uses: peter-evans/repository-dispatch@v2
