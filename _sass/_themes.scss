@@ -20,11 +20,21 @@
   --global-distill-app-color: #{v.$grey-color};
   --global-divider-color: rgba(0, 0, 0, 0.1);
   --global-card-bg-color: #{v.$white-color};
+  --global-glass-surface: rgba(255, 255, 255, 0.82);
+  --global-glass-surface-strong: rgba(255, 255, 255, 0.92);
+  --global-glass-border: rgba(255, 255, 255, 0.72);
+  --global-glass-shadow: 0 16px 38px rgba(15, 23, 42, 0.1), 0 2px 6px rgba(15, 23, 42, 0.05);
+  --global-glass-shadow-hover: 0 24px 52px rgba(15, 23, 42, 0.14), 0 6px 12px rgba(15, 23, 42, 0.08);
+  --global-glass-box-surface: rgba(255, 255, 255, 0.96);
+  --global-glass-box-border: rgba(15, 23, 42, 0.08);
+  --global-glass-box-shadow: 0 8px 32px rgba(15, 23, 42, 0.08);
   --global-highlight-color: #{v.$red-color-dark};
-  --global-back-to-top-bg-color: rgba(#{color.channel(v.$black-color, "red", v.$space: rgb)},
+  --global-back-to-top-bg-color: rgba(
+    #{color.channel(v.$black-color, "red", v.$space: rgb)},
     #{color.channel(v.$black-color, "green", v.$space: rgb)},
     #{color.channel(v.$black-color, "blue", v.$space: rgb)},
-    0.4);
+    0.4
+  );
   --global-back-to-top-text-color: #{v.$white-color};
   --global-newsletter-bg-color: #{v.$white-color};
   --global-newsletter-text-color: #{v.$black-color};
@@ -89,10 +99,20 @@ html[data-theme="dark"] {
   --global-distill-app-color: #{v.$grey-color-light};
   --global-divider-color: #424246;
   --global-card-bg-color: #121212;
-  --global-back-to-top-bg-color: rgba(#{color.channel(v.$white-color, "red", v.$space: rgb)},
+  --global-glass-surface: rgba(18, 24, 34, 0.82);
+  --global-glass-surface-strong: rgba(22, 29, 40, 0.9);
+  --global-glass-border: rgba(255, 255, 255, 0.12);
+  --global-glass-shadow: 0 16px 38px rgba(0, 0, 0, 0.34), 0 2px 6px rgba(0, 0, 0, 0.18);
+  --global-glass-shadow-hover: 0 24px 52px rgba(0, 0, 0, 0.42), 0 6px 12px rgba(0, 0, 0, 0.24);
+  --global-glass-box-surface: rgba(24, 31, 43, 0.92);
+  --global-glass-box-border: rgba(255, 255, 255, 0.12);
+  --global-glass-box-shadow: 0 8px 32px rgba(0, 0, 0, 0.26);
+  --global-back-to-top-bg-color: rgba(
+    #{color.channel(v.$white-color, "red", v.$space: rgb)},
     #{color.channel(v.$white-color, "green", v.$space: rgb)},
     #{color.channel(v.$white-color, "blue", v.$space: rgb)},
-    0.5);
+    0.5
+  );
   --global-back-to-top-text-color: #{v.$black-color};
   --global-newsletter-bg-color: #{v.$grey-color-light};
   --global-newsletter-text-color: #{v.$grey-color-dark};

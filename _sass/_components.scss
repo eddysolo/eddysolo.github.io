@@ -9,7 +9,7 @@ ul.task-list {
   /* Remove bullets from all levels */
 }
 
-ul.task-list>li ul {
+ul.task-list > li ul {
   /* Nested lists within .task-list */
   padding-inline-start: 1.5rem;
 }
@@ -39,14 +39,19 @@ ul.task-list input[type="checkbox"] {
 
 .card {
   background: linear-gradient(155deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.72));
-  border: 1px solid rgba(255, 255, 255, 0.95);
+  border: 1px solid var(--global-glass-border);
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08), inset 0 0 0 1px rgba(255, 255, 255, 0.45);
+  box-shadow:
+    0 10px 30px rgba(15, 23, 42, 0.08),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.45);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+  transition:
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.3s ease;
 
   &:hover,
   &:focus-within {
@@ -251,7 +256,7 @@ ul.task-list input[type="checkbox"] {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.wechat-modal>img {
+.wechat-modal > img {
   display: block;
   position: relative;
   top: 50%;
@@ -262,7 +267,7 @@ ul.task-list input[type="checkbox"] {
 }
 
 @media only screen and (max-width: 400px) {
-  .wechat-modal>img {
+  .wechat-modal > img {
     width: 100%;
   }
 }
@@ -287,27 +292,23 @@ ul.task-list input[type="checkbox"] {
  ******************************************************************************/
 
 .glass-section {
-  background: rgba(255, 255, 255, 0.72);
+  background: var(--global-glass-surface);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(255, 255, 255, 0.95);
+  border: 1px solid var(--global-glass-border);
   border-radius: 20px;
-  box-shadow: 0 16px 38px rgba(15, 23, 42, 0.1), 0 2px 6px rgba(15, 23, 42, 0.05);
+  box-shadow: var(--global-glass-shadow);
   padding: 0;
   margin-bottom: 2.5rem;
   overflow: hidden;
-  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  transition:
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
 
   &:hover {
     border-color: rgba(0, 150, 199, 0.5);
-    box-shadow: 0 24px 52px rgba(15, 23, 42, 0.14), 0 6px 12px rgba(15, 23, 42, 0.08);
+    box-shadow: var(--global-glass-shadow-hover);
   }
-}
-
-html[data-theme="dark"] .glass-section {
-  background: rgba(30, 35, 46, 0.72);
-  border-color: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 .glass-section-title {
@@ -317,7 +318,7 @@ html[data-theme="dark"] .glass-section {
   font-weight: 700;
   letter-spacing: -0.025em;
   border-bottom: 1px solid rgba(0, 0, 0, 0.07);
-  background: rgba(255, 255, 255, 0.5);
+  background: color-mix(in srgb, var(--global-glass-surface-strong) 82%, transparent);
   backdrop-filter: blur(8px);
 
   a {
@@ -327,11 +328,6 @@ html[data-theme="dark"] .glass-section {
       color: var(--global-theme-color) !important;
     }
   }
-}
-
-html[data-theme="dark"] .glass-section-title {
-  background: rgba(255, 255, 255, 0.04);
-  border-bottom-color: rgba(255, 255, 255, 0.07);
 }
 
 .glass-section-body {
@@ -348,12 +344,17 @@ html[data-theme="dark"] .glass-section-title {
   border: 1px solid rgba(255, 255, 255, 0.92);
   border-radius: 16px;
   background: linear-gradient(150deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6));
-  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.07), inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+  box-shadow:
+    0 12px 24px rgba(15, 23, 42, 0.07),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.4);
   padding: 1rem 1.05rem;
   min-width: 0;
   display: flex;
   flex-direction: column;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
 
   &:hover,
   &:focus-within {
@@ -494,7 +495,13 @@ html[data-theme="dark"] .card {
 }
 
 .collaborators-section .collaborators-logo-card {
-  transition: background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  background: #ffffff !important;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.1);
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .collaborators-section .collaborators-logo-image {
@@ -502,9 +509,9 @@ html[data-theme="dark"] .card {
 }
 
 html[data-theme="dark"] .collaborators-section .collaborators-logo-card {
-  background: rgba(255, 255, 255, 0.9) !important;
-  border: 1px solid rgba(255, 255, 255, 0.88);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
+  background: #ffffff !important;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.14);
 }
 
 html[data-theme="dark"] .collaborators-section .collaborators-logo-image {
