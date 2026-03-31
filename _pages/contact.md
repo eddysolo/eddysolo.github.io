@@ -152,7 +152,7 @@ fluid: true
     <!-- Block 2: Logo Link -->
     <div class="bento-card bento-card-logo glass-dark d-flex flex-column p-0 overflow-hidden" style="height: 100%; min-height: 220px;">
       <a href="https://www.technion.ac.il/en/home-2/" target="_blank" class="h-50 w-100 d-flex flex-column align-items-center justify-content-center text-decoration-none" style="padding: 1.25rem; transition: background 0.3s; border-bottom: 1px solid rgba(255,255,255,0.15);" onmouseover="this.style.background='rgba(255,255,255,0.06)'" onmouseleave="this.style.background='transparent'">
-        <img src="{{ 'assets/img/logos/Technion_Logo_transparent.png' | relative_url }}" alt="Technion Logo" style="width: 100%; max-width: 280px; max-height: 90%; object-fit: contain; filter: drop-shadow(0px 8px 12px rgba(0,0,0,0.2));">
+        <img src="{{ 'assets/img/logos/technion_logo_transparent.png' | relative_url }}" alt="Technion Logo" style="width: 100%; max-width: 280px; max-height: 90%; object-fit: contain; filter: drop-shadow(0px 8px 12px rgba(0,0,0,0.2));">
       </a>
 
       <a href="https://bme.technion.ac.il/en/" target="_blank" class="h-50 w-100 d-flex flex-column align-items-center justify-content-center text-decoration-none" style="padding: 0.5rem; transition: background 0.3s;" onmouseover="this.style.background='rgba(255,255,255,0.06)'" onmouseleave="this.style.background='transparent'">
