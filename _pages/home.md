@@ -131,7 +131,7 @@ fluid: true
       <div class="col-lg-6 d-flex">
         <div class="glass-section h-100 w-100 d-flex flex-column text-center align-items-center" style="padding: 1.25rem; border-radius: 24px;">
           <h2 style="font-weight: 800; font-size: 1.85rem; line-height: 1.2; margin: 0 0 0.65rem 0; min-height: 3rem; display: flex; align-items: center; justify-content: center; gap: 0.45rem;"><i class="fa-solid fa-microscope" style="color: var(--global-theme-color);"></i><span>Our Research</span></h2>
-          
+
           <div class="d-flex flex-column gap-1 w-100" style="max-width: 100%;">
             <a href="{{ '/computational-mri/' | relative_url }}" class="glass-box p-3 text-decoration-none text-center" style="border-radius: 16px; transition: transform 0.2s; color: var(--global-text-color); border: 1px solid rgba(0,150,199,0.3);">
               <h4 style="font-weight: 700; font-size: 1.2rem; margin-bottom: 0.25rem; color: var(--global-theme-color); display: flex; align-items: center; justify-content: center; gap: 0.4rem;">
@@ -140,7 +140,7 @@ fluid: true
               </h4>
               <p style="margin: 0; font-size: 1rem;">Novel sampling and reconstruction methods: from accelerated k-space acquisition to diagnostic-quality image.</p>
             </a>
-            
+
             <a href="{{ '/motion-robust-mri/' | relative_url }}" class="glass-box p-3 text-decoration-none text-center" style="border-radius: 16px; transition: transform 0.2s; color: var(--global-text-color); border: 1px solid rgba(0,150,199,0.3);">
               <h4 style="font-weight: 700; font-size: 1.2rem; margin-bottom: 0.25rem; color: var(--global-theme-color); display: flex; align-items: center; justify-content: center; gap: 0.4rem;"><i class="fa-solid fa-wave-square"></i> Motion-Robust MRI</h4>
               <p style="margin: 0; font-size: 1rem;">Motion-robust MRI for free breathing, reliable imaging.</p>
@@ -171,7 +171,7 @@ fluid: true
               <span>Latest News</span>
             </a>
           </h2>
-          
+
           <div class="home-news-stack text-left">
             {% assign latest_news = site.news | reverse %}
             {% for item in latest_news limit: 3 %}
@@ -200,11 +200,11 @@ fluid: true
       <section class="position-relative" style="border-radius: 24px; padding: 4rem 3rem; text-align: center; color: white; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.15); background-image: url('{{ "assets/img/ChatGPT_brain_scan_idea.png" | relative_url }}'); background-size: cover; background-position: center; background-repeat: no-repeat; cursor: pointer;">
         <!-- Animated MRI Scanline grid overlay -->
         <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: repeating-linear-gradient(0deg, transparent, transparent 19px, rgba(255,255,255,0.05) 20px), repeating-linear-gradient(90deg, transparent, transparent 19px, rgba(255,255,255,0.05) 20px); background-size: 20px 20px;"></div>
-        
+
         <!-- Gradient Overlay for Contrast -->
         <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; background: linear-gradient(135deg, rgba(8, 20, 48, 0.85) 0%, rgba(0, 93, 143, 0.75) 100%); mix-blend-mode: multiply;"></div>
         <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; background: rgba(0,0,0,0.2);"></div>
-        
+
         <!-- Content -->
         <div style="position: relative; z-index: 2;">
           <h2 style="font-weight: 800; font-size: 2.5rem; color: white; margin-bottom: 1.5rem; text-shadow: 0 2px 10px rgba(0,0,0,0.5);">Intreseted to join us?</h2>
@@ -218,41 +218,41 @@ fluid: true
     <!-- Collaborations Block -->
     <section class="glass-section collaborators-section" style="padding: 3rem 2.5rem; border-radius: 24px; text-align: center;">
       <h2 style="font-weight: 700; margin-bottom: 2rem; font-size: 2.2rem;">Our Collaborators</h2>
-      
+
       <div class="row gx-3 gy-4 justify-content-center align-items-stretch" style="row-gap: 0.6rem;">
         <!-- Weill Cornell Medicine -->
         <div class="col-6 col-md-4 d-flex">
-          <div class="glass-box collaborators-logo-card p-4 w-100 h-100 d-flex flex-column justify-content-center" style="border-radius: 20px; background: rgba(255,255,255,0.05);">
+          <div class="glass-box collaborators-logo-card p-4 w-100 h-100 d-flex flex-column justify-content-center" style="border-radius: 20px;">
             <img class="collaborators-logo-image" src="{{ 'assets/img/logos/Weill_Cornell_Medicine.png' | relative_url }}" alt="Weill Cornell Medicine Logo" style="max-height: 102px; object-fit: contain; margin-bottom: 0; width: 100%;">
           </div>
         </div>
         <!-- NYU Radiology -->
         <div class="col-6 col-md-4 d-flex">
-          <div class="glass-box collaborators-logo-card p-4 w-100 h-100 d-flex flex-column justify-content-center" style="border-radius: 20px; background: rgba(255,255,255,0.05);">
+          <div class="glass-box collaborators-logo-card p-4 w-100 h-100 d-flex flex-column justify-content-center" style="border-radius: 20px;">
             <img class="collaborators-logo-image" src="{{ 'assets/img/logos/nyu_radiology.png' | relative_url }}" alt="NYU Radiology Logo" style="max-height: 102px; object-fit: contain; margin-bottom: 0; width: 100%;">
           </div>
         </div>
         <!-- University of Chicago -->
         <div class="col-6 col-md-4 d-flex">
-          <div class="glass-box collaborators-logo-card p-4 w-100 h-100 d-flex flex-column justify-content-center" style="border-radius: 20px; background: rgba(255,255,255,0.05);">
+          <div class="glass-box collaborators-logo-card p-4 w-100 h-100 d-flex flex-column justify-content-center" style="border-radius: 20px;">
             <img class="collaborators-logo-image" src="{{ 'assets/img/logos/Chicago_University.png' | relative_url }}" alt="University of Chicago Logo" style="max-height: 102px; object-fit: contain; margin-bottom: 0; width: 100%;">
           </div>
         </div>
         <!-- Memorial Sloan Kettering -->
         <div class="col-6 col-md-4 d-flex">
-          <div class="glass-box collaborators-logo-card p-4 w-100 h-100 d-flex flex-column justify-content-center" style="border-radius: 20px; background: rgba(255,255,255,0.05);">
+          <div class="glass-box collaborators-logo-card p-4 w-100 h-100 d-flex flex-column justify-content-center" style="border-radius: 20px;">
             <img class="collaborators-logo-image" src="{{ 'assets/img/logos/Memorial_Sloan.png' | relative_url }}" alt="Memorial Sloan Kettering Logo" style="max-height: 88px; object-fit: contain; margin-bottom: 0; width: 100%;">
           </div>
         </div>
         <!-- NIST -->
         <div class="col-6 col-md-4 d-flex">
-          <div class="glass-box collaborators-logo-card p-4 w-100 h-100 d-flex flex-column justify-content-center" style="border-radius: 20px; background: rgba(255,255,255,0.05);">
+          <div class="glass-box collaborators-logo-card p-4 w-100 h-100 d-flex flex-column justify-content-center" style="border-radius: 20px;">
             <img class="collaborators-logo-image" src="{{ 'assets/img/logos/NIST.png' | relative_url }}" alt="NIST Logo" style="max-height: 102px; object-fit: contain; margin-bottom: 0; width: 100%;">
           </div>
         </div>
         <!-- NeuroSpin -->
         <div class="col-6 col-md-4 d-flex">
-          <div class="glass-box collaborators-logo-card p-4 w-100 h-100 d-flex flex-column justify-content-center" style="border-radius: 20px; background: rgba(255,255,255,0.05);">
+          <div class="glass-box collaborators-logo-card p-4 w-100 h-100 d-flex flex-column justify-content-center" style="border-radius: 20px;">
             <img class="collaborators-logo-image" src="{{ 'assets/img/logos/NeuroSpin.png' | relative_url }}" alt="NeuroSpin Logo" style="max-height: 88px; object-fit: contain; margin-bottom: 0; width: 100%;">
           </div>
         </div>
