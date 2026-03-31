@@ -8,6 +8,8 @@ nav_order: 999
 fluid: true
 ---
 
+<!-- markdownlint-disable MD033 MD013 -->
+
 <style>
   /* Page Level Background setup */
   html body, html[data-theme="dark"] body {
@@ -152,7 +154,7 @@ fluid: true
       <a href="https://www.technion.ac.il/en/home-2/" target="_blank" class="h-50 w-100 d-flex flex-column align-items-center justify-content-center text-decoration-none" style="padding: 1.25rem; transition: background 0.3s; border-bottom: 1px solid rgba(255,255,255,0.15);" onmouseover="this.style.background='rgba(255,255,255,0.06)'" onmouseleave="this.style.background='transparent'">
         <img src="{{ 'assets/img/logos/Technion_Logo_transparent.png' | relative_url }}" alt="Technion Logo" style="width: 100%; max-width: 280px; max-height: 90%; object-fit: contain; filter: drop-shadow(0px 8px 12px rgba(0,0,0,0.2));">
       </a>
-      
+
       <a href="https://bme.technion.ac.il/en/" target="_blank" class="h-50 w-100 d-flex flex-column align-items-center justify-content-center text-decoration-none" style="padding: 0.5rem; transition: background 0.3s;" onmouseover="this.style.background='rgba(255,255,255,0.06)'" onmouseleave="this.style.background='transparent'">
         <img src="{{ 'assets/img/logos/bme_logo_transparent_hires.png' | relative_url }}" alt="BME Logo" style="width: 100%; max-width: 380px; max-height: 100%; object-fit: contain; filter: drop-shadow(0px 8px 12px rgba(0,0,0,0.2)); transform: scale(1.08);">
       </a>
@@ -160,13 +162,13 @@ fluid: true
 
     <!-- Block 3: Embedded Map -->
     <div class="bento-card bento-card-map p-0 m-0 glass-dark d-flex" style="height: 100%; min-height: 380px;">
-      <iframe 
-          src="https://www.google.com/maps?q=Technion+Faculty+of+Biomedical+Engineering&ll=32.7752021,35.026504&z=17&output=embed" 
-          width="100%" 
-          height="100%" 
-          style="border:0; width: 100%; height: 100%; position: absolute; top:0; left:0; filter: contrast(1.05) opacity(0.95); mix-blend-mode: normal;" 
-          allowfullscreen="" 
-          loading="lazy" 
+      <iframe
+          src="https://www.google.com/maps?q=Technion+Faculty+of+Biomedical+Engineering&ll=32.7752021,35.026504&z=17&output=embed"
+          width="100%"
+          height="100%"
+          style="border:0; width: 100%; height: 100%; position: absolute; top:0; left:0; filter: contrast(1.05) opacity(0.95); mix-blend-mode: normal;"
+          allowfullscreen=""
+          loading="lazy"
           referrerpolicy="no-referrer-when-downgrade">
       </iframe>
     </div>
@@ -191,3 +193,5 @@ fluid: true
   </div>
   <p style="margin-top: 0.8rem; margin-bottom: 0; font-size: 1rem; color: #fff;"></p>
 </section>
+
+<!-- markdownlint-enable MD033 MD013 -->
