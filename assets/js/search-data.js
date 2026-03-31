@@ -407,12 +407,7 @@ ninja.data = [{
             window.location.href = "/blog/2015/formatting-and-links/";
           
         },
-      },{id: "books-the-godfather",
-          title: 'The Godfather',
-          description: "",
-          section: "Books",handler: () => {
-              window.location.href = "/books/the_godfather/";
-            },},{id: "news-magnetic-resonance-seminar-at-weizmann-institute-it-was-great-pleasure-to-visit-the-weizmann-institute-of-science-for-an-exciting-magnetic-resonance-seminar-where-i-presented-our-latest-work-on-dynamic-breast-mri-with-flexible-temporal-resolution-enabled-by-deep-learning",
+      },{id: "news-magnetic-resonance-seminar-at-weizmann-institute-it-was-great-pleasure-to-visit-the-weizmann-institute-of-science-for-an-exciting-magnetic-resonance-seminar-where-i-presented-our-latest-work-on-dynamic-breast-mri-with-flexible-temporal-resolution-enabled-by-deep-learning",
           title: 'Magnetic Resonance Seminar at Weizmann Institute: It was great pleasure to visit the...',
           description: "",
           section: "News",},{id: "news-paper-submitted-to-miccai-2026-our-latest-work-titled-brisknet-breast-rapid-imaging-via-self-supervised-kinetics-led-by-our-collaborators-rachel-gordon-and-anna-woodard-from-the-university-of-chicago-department-of-computer-science-introduces-a-new-approach-to-accelerating-breast-mri-through-self-supervised-learning-of-dynamic-imaging-kinetics",
@@ -461,16 +456,6 @@ ninja.data = [{
           description: "another project with an image 🎉",
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
-            },},{id: "teachings-data-science-fundamentals",
-          title: 'Data Science Fundamentals',
-          description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
-          section: "Teachings",handler: () => {
-              window.location.href = "/teachings/data-science-fundamentals/";
-            },},{id: "teachings-introduction-to-machine-learning",
-          title: 'Introduction to Machine Learning',
-          description: "This course provides an introduction to machine learning concepts, algorithms, and applications. Students will learn about supervised and unsupervised learning, model evaluation, and practical implementations.",
-          section: "Teachings",handler: () => {
-              window.location.href = "/teachings/introduction-to-machine-learning/";
             },},{
         id: 'social-cv',
         title: 'CV',
