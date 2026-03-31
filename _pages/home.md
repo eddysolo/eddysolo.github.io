@@ -99,7 +99,7 @@ fluid: true
 }
 </style>
 
-<div class="container-fluid px-0 mx-auto" style="max-width: 90%; width: 90%; overflow-x: hidden;">
+<div class="container-fluid px-0 mx-auto home-responsive-shell" style="max-width: 90%; width: 90%; overflow-x: hidden;">
   <div class="post mx-auto home-fixed-gap" style="border: none; background: transparent; padding: 0; width: 100%; max-width: 100%;">
     
     <!-- Row 1: Welcome Box -->
@@ -107,8 +107,8 @@ fluid: true
       <div class="col-12">
         
         <!-- Welcome Box -->
-        <div class="glass-section w-100 d-flex flex-column justify-content-center align-items-center text-center" style="border-radius: 24px; padding: 4rem 3rem;">
-          <h1 style="font-weight: 800; font-size: 3.5rem; letter-spacing: -0.02em; margin-bottom: 0.75rem;">Welcome to Solomon MRI Lab</h1>
+        <div class="glass-section home-hero-panel w-100 d-flex flex-column justify-content-center align-items-center text-center" style="border-radius: 24px; padding: 4rem 3rem;">
+          <h1 class="responsive-page-title responsive-page-title--home" style="font-weight: 800; font-size: 3.5rem; letter-spacing: -0.02em; margin-bottom: 0.75rem;">Welcome to Solomon MRI Lab</h1>
           <h3 style="font-weight: 600; font-size: 1.75rem; color: var(--global-theme-color); margin-bottom: 0;">Faster, Smarter, and More Accessible MRI</h3>
         </div>
       </div>

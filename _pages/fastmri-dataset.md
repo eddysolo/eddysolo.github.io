@@ -98,7 +98,7 @@ no_hero: true
           Example Breast MRI Slice
         </h4>
         <img
-          src="{{ '/assets/img/publication_preview/breast%20scan%20example.png' | relative_url }}"
+          src="{{ '/assets/img/breast%20scan%20example.png' | relative_url }}"
           alt="Breast MRI scan example"
           class="w-100"
           style="border-radius: 14px; object-fit: cover;"

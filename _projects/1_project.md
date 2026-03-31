@@ -2,7 +2,7 @@
 layout: page
 title: Tissue Segmentation Model (ELITE)
 description: Segmentation-guided reconstruction for accelerated breast DCE MRI.
-img: assets/img/publication_preview/breast scan example.png
+img: assets/img/breast scan example.png
 importance: 1
 category: work
 related_publications: true
@@ -29,7 +29,7 @@ published: false
         <div class="col-lg-5">
             <div class="glass-box p-4 h-100 d-flex align-items-center justify-content-center" style="border-radius: 24px; background: rgba(0,0,0,0.05);">
                 <img
-                    src="{{ '/assets/img/publication_preview/breast%20scan%20example.png' | relative_url }}"
+                    src="{{ '/assets/img/breast%20scan%20example.png' | relative_url }}"
                     alt="Breast tissue segmentation project preview"
                     style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);"
                 >

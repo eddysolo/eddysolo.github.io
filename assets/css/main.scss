@@ -37,3 +37,784 @@
 @use "font-awesome/brands";
 @use "font-awesome/solid";
 @use "font-awesome/regular";
+
+/* ==========================================================================
+   Responsive Device Tiers
+   Tier 3 (1024px to 1600px) is the baseline/default site state.
+   Add device-specific overrides only inside the buckets below.
+   ========================================================================== */
+
+/* Tier 1: Smartphone (up to 767px) */
+@media (max-width: 767px) {
+  /* Tune phone layouts around a ~375px viewport width. */
+
+  /* Mobile navbar container */
+  .navbar {
+    width: calc(100% - 0.75rem);
+    max-width: calc(100% - 0.75rem);
+    margin: 0.35rem auto;
+    border-radius: 18px;
+  }
+
+  .navbar .container-fluid {
+    padding: 0.4rem 0.85rem;
+    align-items: center;
+    row-gap: 0.55rem;
+  }
+
+  .navbar.navbar-light .navbar-brand {
+    max-width: calc(100vw - 8.9rem);
+    font-size: clamp(0.98rem, 4.4vw, 1.1rem);
+    line-height: 1.08;
+  }
+
+  .navbar.navbar-light .navbar-brand .site-wordmark {
+    display: inline-block;
+    font-size: inherit;
+    white-space: normal;
+  }
+
+  .navbar.navbar-light .navbar-brand.social {
+    display: inline-flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 0.35rem;
+    padding: 0.2rem 0;
+    font-size: 1.05rem;
+  }
+
+  .navbar-toggler {
+    padding: 0.35rem 0.5rem;
+    border-radius: 12px;
+  }
+
+  .navbar-collapse {
+    width: 100%;
+    flex-basis: 100%;
+    margin-top: 0.25rem;
+    padding: 0.15rem 0 0;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .navbar-nav {
+    width: 100%;
+    gap: 0.2rem;
+  }
+
+  .navbar.navbar-light .navbar-nav .nav-item .nav-link {
+    display: block;
+    width: 100%;
+    border-radius: 12px;
+    padding: 0.45rem 0.7rem;
+    font-size: 0.94rem;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.16);
+  }
+
+  .navbar-nav .toggle-container {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 0.3rem 0.1rem 0;
+  }
+  .home-responsive-shell > .post > .row:nth-of-type(2) .glass-section {
+    padding-left: 0.8rem !important;
+    padding-right: 0.8rem !important;
+  }
+
+  .home-responsive-shell > .post > .row:nth-of-type(2) .glass-section p {
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+
+  /* Mobile section spacing */
+  .home-hero-panel,
+  .research-page-hero {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  /* Mobile headings */
+  .responsive-page-title {
+    font-size: clamp(1.78rem, 7.8vw, 2.12rem) !important;
+    line-height: 1.12 !important;
+    letter-spacing: -0.02em !important;
+    white-space: normal;
+    text-wrap: balance;
+  }
+
+  .home-hero-panel h3,
+  .research-page-hero h3 {
+    font-size: clamp(1.08rem, 4.9vw, 1.28rem) !important;
+  }
+
+  .home-responsive-shell .glass-section p,
+  .home-responsive-shell .glass-box p {
+    font-size: clamp(0.98rem, 4.1vw, 1.1rem) !important;
+    line-height: 1.58 !important;
+  }
+
+  .home-responsive-shell h2 {
+    font-size: clamp(1.3rem, 5.8vw, 1.65rem) !important;
+    line-height: 1.18 !important;
+  }
+
+  .home-responsive-shell h4,
+  .home-news-title {
+    font-size: clamp(1.02rem, 4.6vw, 1.18rem) !important;
+    line-height: 1.28 !important;
+  }
+
+  .home-news-date {
+    font-size: 0.82rem !important;
+  }
+
+  .home-news-text {
+    font-size: clamp(0.95rem, 4vw, 1.04rem) !important;
+    line-height: 1.55 !important;
+  }
+
+  .collaborators-section h2,
+  .home-responsive-shell a[href$="/contact/"] h2 {
+    font-size: clamp(1.34rem, 6vw, 1.7rem) !important;
+  }
+
+
+}
+
+/* Tier 2: Tablet/iPad (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Tablet overrides go here */
+  .navbar.navbar-light .navbar-nav .nav-item .nav-link {
+    font-size: 0.92rem;
+    padding-left: 0.42rem;
+    padding-right: 0.42rem;
+    white-space: nowrap;
+  }
+
+  .research-grid > [class*="col-"] {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .research-card {
+    padding: 1.25rem 1.15rem;
+  }
+
+  .research-card h2 {
+    font-size: 1.45rem;
+  }
+}
+
+/* Tier 3: 12" Laptop (1024px to 1600px) — BASELINE */
+/* No media query needed. This is the site's default state. Do not modify. */
+
+/* Tier 4: 31" Screen (1601px and above) */
+@media (min-width: 1601px) {
+  /* Large monitor overrides go here */
+  .navbar {
+    width: min(95vw, 2040px);
+    max-width: 2040px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .navbar .container-fluid {
+    padding: 0.95rem 1.85rem;
+  }
+
+  .navbar.navbar-light .navbar-brand {
+    font-size: 1.72rem;
+    font-weight: 800;
+  }
+
+  .navbar.navbar-light .navbar-brand.social {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .navbar-nav {
+    gap: 0.3rem;
+  }
+
+  .navbar.navbar-light .navbar-nav .nav-item .nav-link {
+    font-size: 1.38rem;
+    font-weight: 700;
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+  }
+  body.layout-default .container-fluid[role="main"],
+  .layout-page .container[role="main"],
+  .layout-profile .container[role="main"] {
+    width: min(95vw, 2040px) !important;
+    max-width: 2040px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .home-responsive-shell {
+    width: min(95vw, 2040px) !important;
+    max-width: 2040px !important;
+    margin: 0 auto !important;
+  }
+
+  .home-fixed-gap {
+    gap: 1rem;
+  }
+
+  .home-responsive-shell > .post > .row.gx-2 {
+    margin-left: -0.55rem !important;
+    margin-right: -0.55rem !important;
+  }
+
+  .home-responsive-shell > .post > .row.gx-2 > [class*="col-"] {
+    padding-left: 0.55rem !important;
+    padding-right: 0.55rem !important;
+  }
+
+  .home-responsive-shell .glass-section,
+  .home-responsive-shell .glass-box,
+  .home-responsive-shell a[href$="/contact/"] > section,
+  .research-page-hero,
+  .cmri-hero {
+    border-radius: 28px !important;
+  }
+
+  .home-hero-panel,
+  .research-page-hero {
+    padding: 5.4rem 5rem !important;
+  }
+
+  .responsive-page-title {
+    font-size: clamp(4.35rem, 3.35vw, 5.4rem) !important;
+    line-height: 1.08 !important;
+  }
+
+  .home-hero-panel h3,
+  .research-page-hero h3 {
+    font-size: clamp(2.15rem, 1.7vw, 2.7rem) !important;
+  }
+
+  .home-responsive-shell > .post > .row:nth-of-type(2) .glass-section {
+    padding: 3.1rem 4.9rem !important;
+  }
+
+  .home-responsive-shell > .post > .row:nth-of-type(2) .glass-section p {
+    max-width: 1480px !important;
+    font-size: 1.62rem !important;
+    line-height: 1.8 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .home-responsive-shell h2 {
+    font-size: clamp(2.3rem, 1.8vw, 2.8rem) !important;
+  }
+
+  .home-responsive-shell h4,
+  .home-news-title {
+    font-size: clamp(1.32rem, 1.08vw, 1.55rem) !important;
+    line-height: 1.32 !important;
+  }
+
+  .home-responsive-shell .glass-box p,
+  .home-news-text {
+    font-size: 1.18rem !important;
+    line-height: 1.6 !important;
+  }
+
+  .home-news-stack {
+    gap: 0.9rem;
+  }
+
+  .home-news-card {
+    padding: 1.2rem 1.35rem;
+  }
+
+  .home-news-date {
+    font-size: 1.02rem !important;
+  }
+
+  .home-responsive-shell a[href$="/contact/"] > section {
+    padding: 5.15rem 4.75rem !important;
+  }
+
+  .home-responsive-shell a[href$="/contact/"] h2,
+  .collaborators-section h2 {
+    font-size: clamp(2.7rem, 2.1vw, 3.35rem) !important;
+  }
+
+  .home-responsive-shell a[href$="/contact/"] p {
+    max-width: 1080px !important;
+    font-size: 1.5rem !important;
+    line-height: 1.7 !important;
+  }
+
+  .collaborators-section {
+    padding: 4rem 3.75rem !important;
+  }
+
+  .collaborators-section .row {
+    row-gap: 1.2rem !important;
+  }
+
+  .collaborators-section .collaborators-logo-card {
+    padding: 2.35rem !important;
+    border-radius: 24px !important;
+  }
+
+  .collaborators-section .collaborators-logo-image {
+    max-height: 132px !important;
+  }
+
+  .cmri-shell {
+    width: min(93vw, 1820px) !important;
+  }
+
+  .cmri-hero {
+    padding: 2.9rem !important;
+  }
+
+  .cmri-title {
+    font-size: clamp(2.55rem, 2.2vw, 3.3rem) !important;
+  }
+
+  .cmri-body {
+    max-width: 84ch !important;
+    font-size: 1.34rem !important;
+  }
+
+  .cmri-media-grid {
+    gap: 1.2rem !important;
+  }
+
+  .cmri-media-grid .cmri-media-tile {
+    padding: 1.1rem !important;
+  }
+
+  .publications {
+    max-width: 1840px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .pub-page-note {
+    max-width: 1220px;
+    font-size: 1.18rem;
+  }
+
+  .pub-tabs-wrap {
+    padding: 1.15rem;
+    margin: 1.5rem 0 1.8rem;
+  }
+
+  .pub-tabs-wrap .nav-link {
+    padding: 1.02rem 1.95rem;
+    font-size: 1.08rem;
+  }
+
+  .publications h2,
+  .publications h2.year {
+    margin-top: 2rem;
+    margin-bottom: 1.15rem;
+    font-size: clamp(1.35rem, 1.12vw, 1.7rem);
+  }
+
+  body.layout-profiles .container[role="main"] {
+    width: min(96vw, 2300px) !important;
+    max-width: 2300px !important;
+  }
+
+  .layout-profiles .post article {
+    width: 100% !important;
+    max-width: none !important;
+    padding: 3.4rem 3.2rem !important;
+  }
+
+  .layout-profiles .profile-grid {
+    --bs-gutter-x: 2.25rem;
+    --bs-gutter-y: 2.25rem;
+    margin-top: 0.75rem;
+  }
+
+  .layout-profiles .profile-grid.row-cols-md-3 > * {
+    flex: 0 0 33.333333%;
+    width: 33.333333%;
+    max-width: 33.333333%;
+  }
+
+  .layout-profiles .profile-card {
+    border-radius: 28px !important;
+    min-height: 100%;
+  }
+
+  .layout-profiles .profile-card .card-img-top {
+    min-height: 520px;
+  }
+
+  .layout-profiles .profile-card .card-body {
+    padding: 1.8rem 1.8rem 2rem !important;
+  }
+
+  .layout-profiles .profile-card .card-title {
+    font-size: 2rem !important;
+    line-height: 1.2 !important;
+    margin-bottom: 0.55rem !important;
+  }
+
+  .layout-profiles .profile-card .card-text {
+    font-size: 1.18rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .layout-profiles h1.post-title,
+  .layout-profiles .post-header .post-title,
+  .layout-profiles .post-title {
+    font-size: clamp(3.3rem, 2.7vw, 4.4rem) !important;
+  }
+
+  .layout-profiles h2 {
+    font-size: clamp(2.3rem, 1.9vw, 3rem) !important;
+  }
+
+  .layout-profiles .alumni-simple-list {
+    max-width: 1320px;
+    margin-top: 2rem;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    text-align: left !important;
+  }
+
+  .layout-profiles .alumni-simple-item {
+    padding: 1.15rem 0;
+    font-size: 1.38rem;
+    line-height: 1.6;
+  }
+
+  body.layout-page .container[role="main"]:has(.pub-page-note) {
+    width: min(96vw, 2300px) !important;
+    max-width: 2300px !important;
+  }
+
+  .layout-profiles .post-header,
+  .layout-profiles .post-header .post-title,
+  .layout-profiles .post-header .post-description,
+  .layout-profiles .post-header .post-description p,
+  .layout-profiles .post-header p {
+    text-align: left !important;
+  }
+
+  .layout-profiles .post-header {
+    width: 100% !important;
+    max-width: none !important;
+    padding: 2.4rem 2.8rem !important;
+  }
+
+  .layout-profiles .post-header .post-description,
+  .layout-profiles .post-header .post-description p,
+  .layout-profiles .post-header p {
+    display: block !important;
+    font-size: 1.72rem !important;
+    line-height: 1.82 !important;
+    max-width: 1500px !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+
+  .layout-profiles .alumni-simple-item strong,
+  .layout-profiles .alumni-simple-link strong {
+    font-size: 2rem;
+    font-weight: 800;
+  }
+
+  .layout-profiles .alumni-simple-item .text-muted,
+  .layout-profiles .alumni-simple-link .text-muted {
+    font-size: 1.18rem;
+  }
+
+  .layout-page .pub-page-note {
+    max-width: 1540px !important;
+    font-size: 1.35rem !important;
+    line-height: 1.75 !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .layout-page .publications {
+    max-width: 2200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .layout-page .pub-tabs-wrap {
+    padding: 1.6rem !important;
+    margin: 1.95rem 0 2.4rem !important;
+    border-radius: 30px !important;
+  }
+
+  .layout-page .pub-tabs-wrap .nav-link {
+    font-size: 1.4rem !important;
+    font-weight: 800 !important;
+    padding: 1.28rem 2.45rem !important;
+  }
+
+  .layout-page .publications h2,
+  .layout-page .publications h2.year {
+    font-size: clamp(1.8rem, 1.5vw, 2.3rem) !important;
+    margin-top: 2.7rem !important;
+    margin-bottom: 1.5rem !important;
+    padding-bottom: 0.65rem !important;
+  }
+
+  .layout-page .publications .bibliography .row {
+    margin-bottom: 1.7rem;
+    align-items: flex-start;
+    padding: 0.45rem 0;
+  }
+
+  .layout-page .publications .bibliography .abbr {
+    flex: 0 0 220px;
+    max-width: 220px;
+  }
+
+  .layout-page .publications .bibliography .col-sm-2,
+  .layout-page .publications .bibliography .col-sm-10 {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+  }
+
+  .layout-page .publications .bibliography .title {
+    font-size: 1.72rem;
+    line-height: 1.45;
+    font-weight: 700;
+  }
+
+  .layout-page .publications .bibliography .author,
+  .layout-page .publications .bibliography .periodical,
+  .layout-page .publications .bibliography .links,
+  .layout-page .publications .bibliography .links a,
+  .layout-page .publications .bibliography li,
+  .layout-page .publications .bibliography p {
+    font-size: 1.24rem;
+    line-height: 1.8;
+  }
+
+  .layout-page .publications .bibliography .award,
+  .layout-page .publications .bibliography .award strong {
+    font-size: 1.08rem;
+  }
+
+  .layout-page .publications .bibliography .links {
+    margin-top: 0.55rem;
+    gap: 0.45rem;
+  }
+
+  .layout-page .publications .bibliography .links a {
+    padding: 0.5rem 0.95rem;
+  }
+
+  .layout-page .publications .bibliography abbr.badge {
+    font-size: 1rem;
+    padding: 0.8rem 0.85rem;
+  }
+
+  body.layout-page .container[role="main"]:has(.research-grid) {
+    width: min(96vw, 2300px) !important;
+    max-width: 2300px !important;
+  }
+
+  .layout-page .research-page-hero {
+    padding: 4.8rem 4.6rem !important;
+    border-radius: 30px !important;
+    margin-bottom: 2rem !important;
+  }
+
+  .layout-page .research-page-hero .responsive-page-title {
+    font-size: clamp(4rem, 3vw, 5.1rem) !important;
+    margin-bottom: 0.9rem !important;
+  }
+
+  .layout-page .research-page-hero h3 {
+    font-size: 1.8rem !important;
+  }
+
+  .layout-page .research-grid {
+    --bs-gutter-x: 2rem;
+    --bs-gutter-y: 2rem;
+    row-gap: 2rem !important;
+  }
+
+  .layout-page .research-card {
+    border-radius: 34px !important;
+    padding: 2.8rem 2.55rem !important;
+    min-height: 100%;
+    gap: 1rem !important;
+  }
+
+  .layout-page .research-icon {
+    font-size: 3.2rem !important;
+    margin-bottom: 0.55rem !important;
+  }
+
+  .layout-page .research-card h2 {
+    font-size: 2.35rem !important;
+    line-height: 1.24 !important;
+  }
+
+  .layout-page .research-card p {
+    font-size: 1.4rem !important;
+    line-height: 1.8 !important;
+  }
+
+  .cmri-kicker {
+    font-size: 1.26rem !important;
+    padding: 0.62rem 1.15rem !important;
+  }
+
+  .cmri-caption {
+    margin-top: 1rem !important;
+    font-size: 1.08rem !important;
+    line-height: 1.7 !important;
+  }
+
+  .cmri-references {
+    margin-top: 1.6rem !important;
+  }
+
+  .cmri-references h3 {
+    font-size: 2rem !important;
+    margin-bottom: 1.6rem !important;
+  }
+
+  .cmri-references .row {
+    row-gap: 2rem !important;
+  }
+
+  .cmri-paper {
+    border-radius: 24px !important;
+    padding: 1.3rem !important;
+    column-gap: 1.1rem !important;
+  }
+
+  .cmri-paper-icon {
+    width: 56px !important;
+    height: 56px !important;
+    border-radius: 14px !important;
+    font-size: 1.15rem;
+  }
+
+  .cmri-paper h5 {
+    font-size: 1.26rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .cmri-paper p {
+    font-size: 1.08rem !important;
+    line-height: 1.65 !important;
+  }
+
+  .cmri-media-frame {
+    min-height: 420px !important;
+    padding: 1rem !important;
+  }
+
+  body.layout-default .container-fluid[role="main"]:has(.open-source-tabs-wrap) {
+    width: min(96vw, 2300px) !important;
+    max-width: 2300px !important;
+  }
+
+  body.layout-default .container-fluid[role="main"]:has(.open-source-tabs-wrap) > .container-fluid {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .open-source-tabs-wrap {
+    padding: 1.4rem !important;
+    margin-top: 0 !important;
+    margin-bottom: 2rem !important;
+    border-radius: 28px !important;
+  }
+
+  .open-source-tabs-wrap .nav-link {
+    font-size: 1.24rem !important;
+    font-weight: 800 !important;
+    padding: 1.05rem 2rem !important;
+  }
+
+  .open-source-code-grid {
+    gap: 2rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .open-source-code-grid .open-source-repo-card {
+    border-radius: 34px !important;
+    padding: 2.35rem !important;
+  }
+
+  .open-source-repo-card .repo-title-row {
+    gap: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .open-source-repo-card .repo-title-row i {
+    font-size: 2.45rem !important;
+  }
+
+  .open-source-repo-card .repo-title-row h3 {
+    font-size: 1.62rem !important;
+    line-height: 1.42 !important;
+  }
+
+  .open-source-code-grid .open-source-repo-card p {
+    font-size: 1.42rem !important;
+    line-height: 1.78 !important;
+  }
+
+  .open-source-code-grid .open-source-repo-card .btn {
+    font-size: 1.18rem !important;
+    font-weight: 700 !important;
+    padding: 1.05rem 1.2rem !important;
+    border-radius: 16px !important;
+  }
+
+  .open-source-popular-grid {
+    gap: 1.9rem !important;
+  }
+
+  .open-source-popular-card {
+    border-radius: 34px !important;
+    padding: 2.35rem !important;
+    gap: 2.2rem !important;
+  }
+
+  .open-source-popular-card .popular-thumb {
+    width: min(340px, 100%) !important;
+    border-radius: 16px !important;
+    margin-bottom: 0 !important;
+  }
+
+  .open-source-popular-card .popular-title {
+    font-size: 1.9rem !important;
+    line-height: 1.38 !important;
+  }
+
+  .open-source-popular-card .popular-meta {
+    font-size: 1.18rem !important;
+    line-height: 1.6 !important;
+    margin-top: 0.65rem !important;
+  }
+
+  .open-source-popular-card .popular-summary {
+    font-size: 1.34rem !important;
+    line-height: 1.82 !important;
+    margin-top: 1rem !important;
+  }
+
+  .open-source-popular-card .popular-link {
+    font-size: 1.08rem !important;
+    padding-top: 0.8rem !important;
+  }
+}
