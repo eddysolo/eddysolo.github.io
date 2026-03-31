@@ -15,10 +15,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js ⚙️
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
+        with:
+          node-version: 24
 
       - name: Install Prettier 💾
         run: npm install --save-dev --save-exact prettier @shopify/prettier-plugin-liquid
@@ -38,6 +42,12 @@ jobs:
           fi
 
           if [[ -z "$BASE_SHA" || "$BASE_SHA" == "0000000000000000000000000000000000000000" ]]; then
+            git ls-files -z > changed-files.txt
+          elif ! git cat-file -e "${BASE_SHA}^{commit}" 2>/dev/null; then
+            echo "Base SHA $BASE_SHA is not available in this checkout; checking all tracked files instead."
+            git ls-files -z > changed-files.txt
+          elif ! git cat-file -e "${HEAD_SHA}^{commit}" 2>/dev/null; then
+            echo "Head SHA $HEAD_SHA is not available in this checkout; checking all tracked files instead."
             git ls-files -z > changed-files.txt
           else
             git diff --name-only --diff-filter=ACMRT -z "$BASE_SHA" "$HEAD_SHA" > changed-files.txt
