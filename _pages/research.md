@@ -76,8 +76,8 @@ horizontal: false
 </style>
 
 <div class="projects">
-  <div class="glass-section w-100 d-flex flex-column justify-content-center align-items-center text-center mb-4" style="border-radius: 24px; padding: 3.2rem 2.6rem;">
-    <h1 style="font-weight: 800; font-size: 3rem; margin-bottom: 0.65rem;">Our Research</h1>
+  <div class="glass-section research-page-hero w-100 d-flex flex-column justify-content-center align-items-center text-center mb-4" style="border-radius: 24px; padding: 3.2rem 2.6rem;">
+    <h1 class="responsive-page-title responsive-page-title--research" style="font-weight: 800; font-size: 3rem; margin-bottom: 0.65rem;">Our Research</h1>
     <h3 style="font-weight: 600; font-size: 1.35rem; color: var(--global-theme-color); margin-bottom: 0;"></h3>
   </div>
 
@@ -129,6 +129,7 @@ horizontal: false
         </div>
       </a>
     </div>
+
   </div>
 
   <div style="display: none;" aria-hidden="true">
@@ -143,7 +144,7 @@ horizontal: false
           <div class="card-body d-flex flex-column align-items-start">
             <h2 class="card-title">Tissue Segmentation Model (ELITE)</h2>
             <p class="card-text mb-3">Segmentation-guided reconstruction pipeline for accelerated breast DCE MRI with robust temporal fidelity and reduced undersampling artifacts.</p>
-            <img src="{{ '/assets/img/publication_preview/breast%20scan%20example.png' | relative_url }}" alt="Tissue segmentation model preview" style="width: 100%; max-width: 230px; height: auto; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.12);">
+            <img src="{{ '/assets/img/breast%20scan%20example.png' | relative_url }}" alt="Tissue segmentation model preview" style="width: 100%; max-width: 230px; height: auto; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.12);">
             <p class="card-text mt-3 mb-0" style="opacity: 0.85;">The project integrates tissue-prior segmentation with ELITE reconstruction to improve image quality in highly accelerated dynamic MRI scans.</p>
           </div>
         </div>
@@ -160,5 +161,6 @@ horizontal: false
         </div>
       </div>
     </div>
+
   </div>
 </div>

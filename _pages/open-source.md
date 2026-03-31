@@ -210,7 +210,7 @@ fluid: true
       <div class="open-source-popular-grid">
         <a href="https://cai2r.net/fastmri-dataset-adds-breast-imaging-data-to-encourage-new-directions-in-ai-research-on-mri/" target="_blank" rel="noopener noreferrer" class="glass-box p-4 h-100 d-flex flex-column flex-md-row align-items-md-center open-source-popular-card" style="gap: 1.6rem;">
           <div class="popular-thumb flex-shrink-0 m-0" style="width: min(260px, 100%);">
-            <img src="{{ '/assets/img/publication_preview/breast scan example.png' | relative_url }}" alt="fastMRI breast dataset preview image">
+            <img src="{{ '/assets/img/breast scan example.png' | relative_url }}" alt="fastMRI breast dataset preview image">
           </div>
           <div class="d-flex flex-column h-100 flex-grow-1 justify-content-center">
             <div class="mb-2">
