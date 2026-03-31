@@ -495,6 +495,9 @@ html[data-theme="dark"] .card {
 }
 
 .collaborators-section .collaborators-logo-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.1);
   transition:
     background-color 0.25s ease,
     border-color 0.25s ease,
@@ -505,16 +508,10 @@ html[data-theme="dark"] .card {
   transition: filter 0.25s ease;
 }
 
-.collaborators-section .collaborators-logo-card {
-  background: var(--global-glass-box-surface) !important;
-  border: 1px solid var(--global-glass-box-border);
-  box-shadow: var(--global-glass-box-shadow);
-}
-
 html[data-theme="dark"] .collaborators-section .collaborators-logo-card {
-  background: var(--global-glass-box-surface) !important;
-  border: 1px solid var(--global-glass-box-border);
-  box-shadow: var(--global-glass-box-shadow);
+  background: #ffffff !important;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.14);
 }
 
 html[data-theme="dark"] .collaborators-section .collaborators-logo-image {
