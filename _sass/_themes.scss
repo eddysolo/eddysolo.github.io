@@ -172,6 +172,17 @@ html[data-theme-setting="light"] {
   }
 }
 
+#light-toggle-light.navbar-sun-icon {
+  width: 1.14rem;
+  height: 1.14rem;
+  display: inline-block;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .fa-half-sun-moon {
   position: relative;
   display: inline-block;

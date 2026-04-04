@@ -117,14 +117,25 @@
                 </li>
               {% endif %}
             {% endif %}
-          {% endfor %}
+          {% endfor %}
+
           {% if site.enable_darkmode %}
             <!-- Toogle theme mode -->
             <li class="toggle-container">
               <button id="light-toggle" title="Change theme">
                 <i class="fa-half-sun-moon" id="light-toggle-system"></i>
                 <i class="fa-solid fa-moon" id="light-toggle-dark"></i>
-                <i class="fa-solid fa-sun" id="light-toggle-light"></i>
+                <svg id="light-toggle-light" class="navbar-sun-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <circle cx="12" cy="12" r="4.4" fill="currentColor" stroke="none"></circle>
+                  <path d="M12 1.9v3.15"></path>
+                  <path d="M12 18.95v3.15"></path>
+                  <path d="M1.9 12h3.15"></path>
+                  <path d="M18.95 12h3.15"></path>
+                  <path d="M4.86 4.86l2.23 2.23"></path>
+                  <path d="M16.91 16.91l2.23 2.23"></path>
+                  <path d="M19.14 4.86l-2.23 2.23"></path>
+                  <path d="M7.09 16.91l-2.23 2.23"></path>
+                </svg>
               </button>
             </li>
           {% endif %}
