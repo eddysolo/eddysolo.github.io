@@ -209,7 +209,7 @@ fluid: true
         <div style="position: relative; z-index: 2;">
           <h2 style="font-weight: 800; font-size: 2.5rem; color: white; margin-bottom: 1.5rem; text-shadow: 0 2px 10px rgba(0,0,0,0.5);">Intreseted to join us?</h2>
           <p style="font-size: 1.25rem; max-width: 800px; margin: 0 auto; color: #f0f8ff; text-shadow: 0 1px 5px rgba(0,0,0,0.5);">
-            We are always looking for motivated students and postdocs to join our team. If you are passionate about medical imaging and AI, we'd love to hear from you.
+            We are always looking for motivated students and postdocs to join our team. If you are passionate about medical imaging and AI, let's connect.
           </p>
         </div>
       </section>

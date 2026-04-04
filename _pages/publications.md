@@ -21,8 +21,8 @@ _styles: |
   }
 
   .pub-tabs-wrap {
-    background: linear-gradient(135deg, rgba(0, 150, 199, 0.1) 0%, rgba(0, 150, 199, 0.03) 100%);
-    border: 1px solid rgba(0, 150, 199, 0.18);
+    background: linear-gradient(135deg, rgba(0, 150, 199, 0.16) 0%, rgba(0, 150, 199, 0.08) 100%);
+    border: 1px solid rgba(0, 150, 199, 0.28);
     border-radius: 20px;
     padding: 0.8rem;
     margin: 1rem 0 1.1rem;
@@ -34,13 +34,14 @@ _styles: |
     font-weight: 700;
     margin: 0 0.3rem;
     color: var(--global-text-color);
-    border: 1px solid transparent;
+    background: rgba(0, 150, 199, 0.12);
+    border: 1px solid rgba(0, 150, 199, 0.24);
     transition: all 0.2s ease;
   }
 
   .pub-tabs-wrap .nav-link:hover {
-    border-color: rgba(0, 150, 199, 0.35);
-    background: rgba(0, 150, 199, 0.08);
+    border-color: rgba(0, 150, 199, 0.5);
+    background: rgba(0, 150, 199, 0.18);
   }
 
   .pub-tabs-wrap .nav-link.active {
@@ -82,6 +83,8 @@ _styles: |
 
 <!-- _pages/publications.md -->
 
+<div class="glass-section pub-page-shell">
+  <div class="glass-section-body">
 <p class="pub-page-note">For a full list, you can visit <a href="https://scholar.google.com/citations?user=tAOr0VwAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a> or <a href="https://pubmed.ncbi.nlm.nih.gov/?term=eddy+solomon&sort=date&utm_source=Pubmed" target="_blank" rel="noopener noreferrer">PubMed</a>.</p>
 
 <!-- Bibsearch Feature -->
@@ -109,6 +112,8 @@ _styles: |
     <div class="tab-pane fade" id="peer-pane" role="tabpanel" aria-labelledby="peer-tab">
       {% bibliography --query @inproceedings{*} --group_by year --sort_by year --order descending %}
     </div>
+  </div>
+</div>
   </div>
 </div>
 
