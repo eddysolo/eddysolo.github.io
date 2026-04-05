@@ -95,6 +95,7 @@ _styles: |
 <p class="pub-page-note">For a full list, you can visit <a href="https://scholar.google.com/citations?user=tAOr0VwAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a> or <a href="https://pubmed.ncbi.nlm.nih.gov/?term=eddy+solomon&sort=date&utm_source=Pubmed" target="_blank" rel="noopener noreferrer">PubMed</a>.</p>
 
 <!-- Bibsearch Feature -->
+
 {% include bib_search.liquid %}
 
 <div class="publications">
