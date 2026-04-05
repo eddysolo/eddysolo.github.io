@@ -62,6 +62,13 @@ _styles: |
     border-bottom: 1px solid rgba(111, 118, 129, 0.35);
   }
 
+  .publications ol.bibliography li .periodical,
+  .publications ol.bibliography li .periodical em,
+  html[data-theme="dark"] .publications ol.bibliography li .periodical,
+  html[data-theme="dark"] .publications ol.bibliography li .periodical em {
+    color: #111424 !important;
+  }
+
   /* Peer Reviewed tab: remove preview figure column and expand content cards. */
   #peer-pane .abbr {
     display: none;
@@ -215,6 +222,31 @@ document.addEventListener("DOMContentLoaded", function() {
     const label = (link.textContent || "").trim().toLowerCase();
     if (label === "pdf") {
       link.remove();
+    }
+  });
+
+  ["solomon20134288robustdiffusionwe"].forEach(function(entryId) {
+    const entry = document.getElementById(entryId);
+    const card = entry?.closest("li") || entry?.closest(".row");
+    if (card) {
+      card.remove();
+    }
+  });
+
+  // Remove any peer-reviewed cards that render with no visible citation content.
+  peerPane.querySelectorAll(".bibliography .row").forEach(function(row) {
+    const titleText = (row.querySelector(".title")?.textContent || "").replace(/\s+/g, " ").trim();
+    const authorText = (row.querySelector(".author")?.textContent || "").replace(/\s+/g, " ").trim();
+    const periodicalText = Array.from(row.querySelectorAll(".periodical"))
+      .map(function(node) {
+        return (node.textContent || "").replace(/\s+/g, " ").trim();
+      })
+      .join(" ")
+      .trim();
+
+    if (!titleText || !authorText || !periodicalText) {
+      const card = row.closest("li") || row;
+      card.remove();
     }
   });
 
