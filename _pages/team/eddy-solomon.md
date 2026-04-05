@@ -10,7 +10,7 @@ research_fields:
   - Quantitative MRI
   - AI for Medical Imaging
   - Breast DCE-MRI
-email: eddy.solomon@bm.technion.ac.il
+email: eddy.solomon@technion.ac.il
 links:
   - label: Lab Publications
     url: /publications/
