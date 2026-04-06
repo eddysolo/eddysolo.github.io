@@ -95,6 +95,7 @@ _styles: |
 <p class="pub-page-note">For a full list, you can visit <a href="https://scholar.google.com/citations?user=tAOr0VwAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a> or <a href="https://pubmed.ncbi.nlm.nih.gov/?term=eddy+solomon&sort=date&utm_source=Pubmed" target="_blank" rel="noopener noreferrer">PubMed</a>.</p>
 
 <!-- Bibsearch Feature -->
+
 {% include bib_search.liquid %}
 
 <div class="publications">
@@ -161,7 +162,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-  // Remove duplicate bibliography cards by DOI first, and by normalized title as fallback.
+  // Remove duplicate bibliography cards by DOI first, and use title + venue + year as a fallback.
+  // If we remove a duplicate, remove the full card wrapper instead of only the inner row.
   const seen = new Set();
   const allRows = Array.from(document.querySelectorAll("#journal-pane .bibliography .row, #peer-pane .bibliography .row"));
 
@@ -170,6 +172,12 @@ document.addEventListener("DOMContentLoaded", function() {
     if (!titleNode) return;
 
     const titleText = titleNode.textContent.trim().toLowerCase().replace(/\s+/g, " ");
+    const periodicalText = Array.from(row.querySelectorAll(".periodical"))
+      .map(function(node) {
+        return (node.textContent || "").replace(/\s+/g, " ").trim().toLowerCase();
+      })
+      .filter(Boolean)
+      .join(" | ");
 
     let doi = "";
     const titleLink = titleNode.querySelector("a[href]");
@@ -182,7 +190,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     if (!doi) {
-      const doiButton = row.querySelector('.links a[href*="doi.org/"]');
+      const doiButton = row.querySelector(".links a[href*=\"doi.org/\"]");
       if (doiButton) {
         const href = doiButton.getAttribute("href") || "";
         const doiMatch = href.match(/doi\.org\/(.+)$/i);
@@ -192,9 +200,10 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     }
 
-    const dedupeKey = doi ? `doi:${doi}` : `title:${titleText}`;
+    const dedupeKey = doi ? `doi:${doi}` : `title:${titleText}|periodical:${periodicalText}`;
     if (seen.has(dedupeKey)) {
-      row.remove();
+      const card = row.closest("li") || row;
+      card.remove();
       return;
     }
     seen.add(dedupeKey);
