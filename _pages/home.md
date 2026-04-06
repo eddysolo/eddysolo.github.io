@@ -8,6 +8,7 @@ permalink: /
 hero_image: assets/img/mri_hero_new.png
 fluid: true
 ---
+
 <style>
 @keyframes scanline {
   0% { top: -100px; }
