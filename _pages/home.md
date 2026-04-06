@@ -2,11 +2,12 @@
 layout: default
 title: Home
 main_title: "Solomon MRI Lab - Advanced Imaging to Magnetic Resonance"
+description: "Advanced MRI research from Solomon MRI Lab, spanning motion-robust imaging, computational MRI, diffusion MRI, and open science."
+og_image: https://eddysolo.github.io/assets/img/mri_hero_new.png
 permalink: /
 hero_image: assets/img/mri_hero_new.png
 fluid: true
 ---
-
 <style>
 @keyframes scanline {
   0% { top: -100px; }
