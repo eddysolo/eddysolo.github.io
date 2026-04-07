@@ -111,7 +111,7 @@ fluid: true
         <!-- Welcome Box -->
         <div class="glass-section home-hero-panel w-100 d-flex flex-column justify-content-center align-items-center text-center" style="border-radius: 24px; padding: 4rem 3rem;">
           <h1 class="responsive-page-title responsive-page-title--home" style="font-weight: 800; font-size: 3.5rem; letter-spacing: -0.02em; margin-bottom: 0.75rem;">Welcome to Solomon MRI Lab</h1>
-          <h3 style="font-weight: 600; font-size: 1.75rem; color: var(--global-theme-color); margin-bottom: 0;">Faster, Smarter, and More Accessible MRI</h3>
+          <h3 style="font-weight: 600; font-size: 1.75rem; color: var(--global-theme-color); margin-bottom: 0;">Faster, Smarter, and More Accessible Medical Imaging</h3>
         </div>
       </div>
     </div>
