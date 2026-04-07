@@ -3,4 +3,4 @@ function gtag() {
   window.dataLayer.push(arguments);
 }
 gtag("js", new Date());
-gtag("config", "G-PLACEHOLDER");
+gtag("config", "G-DEYJMT6B0L");
