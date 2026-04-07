@@ -191,7 +191,7 @@ no_hero: true
         <div class="cmri-media-frame">
           <img src="{{ '/assets/img/publication_preview/Diffusion‐weighted breast MRI of malignancies with submillimeter resolution and immunity to artifacts by spatiotemporal encoding at 3T.png' | relative_url }}" alt="Diffusion-weighted breast MRI with SPEN encoding at submillimeter resolution">
           <p class="cmri-caption">
-          Figure. 2 from
+          From
           <a href="https://pubmed.ncbi.nlm.nih.gov/32077516/" target="_blank" rel="noopener">Diffusion-weighted breast MRI of malignancies with submillimeter resolution and immunity to artifacts by spatiotemporal encoding at 3T</a>.
           </p>
         </div>

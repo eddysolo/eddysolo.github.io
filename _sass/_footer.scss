@@ -2,7 +2,7 @@
  * Footer styles
  ******************************************************************************/
 
-footer.fixed-bottom {
+footer.site-footer-fixed {
   background: rgba(255, 255, 255, 0.62);
   border-top: 1px solid rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(16px);
@@ -26,16 +26,21 @@ footer.fixed-bottom {
   }
 }
 
-html[data-theme="dark"] footer.fixed-bottom {
+html[data-theme="dark"] footer.site-footer-fixed {
   background: rgba(17, 22, 32, 0.66);
   border-top-color: rgba(255, 255, 255, 0.09);
 }
 
-footer.sticky-bottom {
+footer.site-footer-page {
+  position: static;
+  bottom: auto;
+  left: auto;
+  right: auto;
+  width: auto;
   border-top: 1px solid var(--global-divider-color);
-  padding-top: 40px;
-  padding-bottom: 40px;
-  font-size: 0.9rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 0.78rem;
 
   .container {
     text-align: center;
