@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-04-15'
+  last_updated: '2026-04-20'
 papers:
   tAOr0VwAAAAJ:-f6ydRqryjwC:
     citations: 0
@@ -106,7 +106,7 @@ papers:
     title: "A Phase 2 Exploratory Trial Evaluating Computed Tomography\u2013Based Midtreatment Nodal Response to Select for De-escalated Chemoradiation Therapy in the Definitive Management of \u2026"
     year: '2025'
   tAOr0VwAAAAJ:M3NEmzRMIkIC:
-    citations: 11
+    citations: 13
     title: 'fastMRI Breast: A publicly available radial k-space dataset of breast dynamic contrast-enhanced MRI'
     year: '2025'
   tAOr0VwAAAAJ:M3ejUd6NZC8C:
@@ -282,7 +282,7 @@ papers:
     title: "Removing silicone artifacts in diffusion\u2010weighted breast MRI by means of shift\u2010resolved spatiotemporally encoding"
     year: '2016'
   tAOr0VwAAAAJ:mVmsd5A6BfQC:
-    citations: 46
+    citations: 47
     title: "Free\u2010breathing fat and R2* quantification in the liver using a stack\u2010of\u2010stars multi\u2010echo acquisition with respiratory\u2010resolved model\u2010based reconstruction"
     year: '2020'
   tAOr0VwAAAAJ:maZDTaKrznsC:
