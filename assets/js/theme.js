@@ -11,8 +11,11 @@ let toggleThemeSetting = () => {
 };
 
 // Change the theme setting and apply the theme.
-let setThemeSetting = (themeSetting) => {
-  localStorage.setItem("theme", themeSetting);
+let setThemeSetting = (themeSetting, savePreference = true) => {
+  if (savePreference) {
+    localStorage.setItem("theme", themeSetting);
+    localStorage.setItem("theme-preference-explicit", "true");
+  }
 
   document.documentElement.setAttribute("data-theme-setting", themeSetting);
 
@@ -267,10 +270,13 @@ let transTheme = () => {
 // "system". Default is "dark".
 let determineThemeSetting = () => {
   let themeSetting = localStorage.getItem("theme");
-  if (themeSetting != "dark" && themeSetting != "light" && themeSetting != "system") {
-    themeSetting = "dark";
+  let hasExplicitPreference = localStorage.getItem("theme-preference-explicit") == "true";
+
+  if (hasExplicitPreference && (themeSetting == "dark" || themeSetting == "light" || themeSetting == "system")) {
+    return themeSetting;
   }
-  return themeSetting;
+
+  return "dark";
 };
 
 // Determine the computed theme, which can be "dark" or "light". If the theme setting is
@@ -292,7 +298,7 @@ let determineComputedTheme = () => {
 let initTheme = () => {
   let themeSetting = determineThemeSetting();
 
-  setThemeSetting(themeSetting);
+  setThemeSetting(themeSetting, false);
 
   // Add event listener to the theme toggle button.
   document.addEventListener("DOMContentLoaded", function () {
