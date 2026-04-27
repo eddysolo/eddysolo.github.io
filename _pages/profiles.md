@@ -27,7 +27,8 @@ profiles:
     url: /team/yuxin-luo/
   - name: Ori Shahar
     role: MSc Candidate
-    image: anonymous-profile.svg
+    image: ori_shahar.jpg
+    image_position: center 24%
     url: /team/ori-shahar/
 
 alumni_profiles:

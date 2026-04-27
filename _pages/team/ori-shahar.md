@@ -4,7 +4,7 @@ title: Ori Shahar
 permalink: /team/ori-shahar/
 person_key: ori-shahar
 description: M.Sc. Student
-image: anonymous-profile.svg
+image: ori_shahar.jpg
 role_in_lab: M.Sc. Student, Solomon's MRI Lab
 research_fields:
   - MRI Methods

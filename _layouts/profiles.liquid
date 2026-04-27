@@ -6,7 +6,7 @@ layout: page
     aspect-ratio: 1 / 1;
     width: 100%;
     object-fit: cover;
-    object-position: center;
+    object-position: var(--profile-image-position, center);
     display: block;
     transition: filter 0.3s ease;
   }
@@ -56,7 +56,10 @@ layout: page
             {% if profile_links_enabled and profile.url %}
               <a href="{{ profile.url | relative_url }}" class="text-decoration-none">
             {% endif %}
-            <div class="card h-100 border-0 text-center profile-card">
+            <div
+              class="card h-100 border-0 text-center profile-card"
+              style="--profile-image-position: {{ profile.image_position | default: 'center' }};"
+            >
               {% if profile.image %}
                 {% assign profile_image_path = profile.image | prepend: 'assets/img/' %}
                 {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px) 30vw, 95vw{% endcapture %}
