@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-04-29'
+  last_updated: '2026-05-25'
 papers:
   tAOr0VwAAAAJ:-f6ydRqryjwC:
     citations: 0
@@ -25,6 +25,10 @@ papers:
     citations: 0
     title: A CAIPIRINHA-based approach to the referenceless reconstruction of high-definition SPEN images with simultaneous multislice
     year: '2018'
+  tAOr0VwAAAAJ:3s1wT3WcHBgC:
+    citations: 0
+    title: 'Software-defined Radar for MRI Motion Correction: A versatile, vendor-independent Platform'
+    year: '2026'
   tAOr0VwAAAAJ:4DMP91E08xMC:
     citations: 47
     title: "Referenceless reconstruction of spatiotemporally encoded imaging data: principles and applications to real\u2010time MRI"
@@ -42,7 +46,7 @@ papers:
     title: 'Motion detection using Doppler radar: Towards subject-and organ-specific motion correction'
     year: Unknown Year
   tAOr0VwAAAAJ:7PzlFSSx8tAC:
-    citations: 66
+    citations: 69
     title: Free-Breathing Radial Imaging using a Pilot-Tone RF Transmitter for Detection of Respiratory Motion
     year: '2020'
   tAOr0VwAAAAJ:8k81kl-MbHgC:
@@ -58,7 +62,7 @@ papers:
     title: 'Fully refocused multi-shot spatiotemporally encoded MRI: robust imaging in the presence of metallic implants'
     year: '2012'
   tAOr0VwAAAAJ:BqipwSGYUEgC:
-    citations: 0
+    citations: 1
     title: 'An open-source platform for simulating internal organ motion: Preliminary results'
     year: Unknown Year
   tAOr0VwAAAAJ:GnPB-g6toBAC:
@@ -78,7 +82,7 @@ papers:
     title: "Overcoming limitations in diffusion\u2010weighted MRI of breast by spatio\u2010temporal encoding"
     year: '2015'
   tAOr0VwAAAAJ:IjCSPb-OGe4C:
-    citations: 31
+    citations: 32
     title: 'fMRI contrast at high and ultrahigh magnetic fields: insight from complementary methods'
     year: '2015'
   tAOr0VwAAAAJ:JV2RwH3_ST0C:
@@ -94,7 +98,7 @@ papers:
     title: 'Detecting Respiratory Motion Using Accelerometer Sensors: Preliminary Insight'
     year: '2021'
   tAOr0VwAAAAJ:L8Ckcad2t8MC:
-    citations: 25
+    citations: 27
     title: Method apparatus and system for determining a thermal signature
     year: '2015'
   tAOr0VwAAAAJ:LkGwnXOMwfcC:
@@ -106,7 +110,7 @@ papers:
     title: "A Phase 2 Exploratory Trial Evaluating Computed Tomography\u2013Based Midtreatment Nodal Response to Select for De-escalated Chemoradiation Therapy in the Definitive Management of \u2026"
     year: '2025'
   tAOr0VwAAAAJ:M3NEmzRMIkIC:
-    citations: 13
+    citations: 14
     title: 'fastMRI Breast: A publicly available radial k-space dataset of breast dynamic contrast-enhanced MRI'
     year: '2025'
   tAOr0VwAAAAJ:M3ejUd6NZC8C:
@@ -138,7 +142,7 @@ papers:
     title: 'Dynamic MRI with locally low-rank subspace constraint: Towards 1-second temporal resolution aided by deep learning'
     year: '2025'
   tAOr0VwAAAAJ:Se3iqnhoufwC:
-    citations: 73
+    citations: 74
     title: Training a neural network for Gibbs and noise removal in diffusion MRI
     year: '2021'
   tAOr0VwAAAAJ:SeFeTyx0c_EC:
@@ -197,6 +201,10 @@ papers:
     citations: 0
     title: 1D Convolutional Neural Network as Regularizer for Learning DCE-MRI Reconstruction
     year: '2022'
+  tAOr0VwAAAAJ:ZHo1McVdvXMC:
+    citations: 0
+    title: Dynamic breast MRI with Flexible Temporal Resolution Aided by Deep Learning
+    year: '2026'
   tAOr0VwAAAAJ:ZeXyd9-uunAC:
     citations: 0
     title: in vivo Ultrafast Diffusion Imaging of Stroke at 21.1 T by Spatiotemporal Encoding
@@ -258,7 +266,7 @@ papers:
     title: Measuring cellular-interstitial water exchange time in patients with head and neck cancer using time-dependent diffusion experiments
     year: '2023'
   tAOr0VwAAAAJ:j3f4tGmQtD8C:
-    citations: 13
+    citations: 14
     title: 'mcLARO: Multi-Contrast Learned Acquisition and Reconstruction Optimization for simultaneous quantitative multi-parametric mapping'
     year: '2024'
   tAOr0VwAAAAJ:kNdYIx-mwKoC:
@@ -270,7 +278,7 @@ papers:
     title: 'An open-source platform for simulating internal organ motion: Preliminary results'
     year: '2023'
   tAOr0VwAAAAJ:lSLTfruPkqcC:
-    citations: 3
+    citations: 5
     title: Experience of how to build an MRI machine from scratch
     year: '2025'
   tAOr0VwAAAAJ:ldfaerwXgEUC:
@@ -282,7 +290,7 @@ papers:
     title: "Removing silicone artifacts in diffusion\u2010weighted breast MRI by means of shift\u2010resolved spatiotemporally encoding"
     year: '2016'
   tAOr0VwAAAAJ:mVmsd5A6BfQC:
-    citations: 47
+    citations: 48
     title: "Free\u2010breathing fat and R2* quantification in the liver using a stack\u2010of\u2010stars multi\u2010echo acquisition with respiratory\u2010resolved model\u2010based reconstruction"
     year: '2020'
   tAOr0VwAAAAJ:maZDTaKrznsC:
@@ -318,7 +326,7 @@ papers:
     title: Method apparatus and system for determining a data signature of 3D image
     year: '2019'
   tAOr0VwAAAAJ:u5HHmVD_uO8C:
-    citations: 71
+    citations: 72
     title: Major mouse placental compartments revealed by diffusion-weighted MRI, contrast-enhanced MRI, and fluorescence imaging
     year: '2014'
   tAOr0VwAAAAJ:ufrVoPGSRksC:
@@ -326,7 +334,7 @@ papers:
     title: High resolution diffusion MRI maps of mice with normal and dysfunctional placentas reveal clear fetal differences
     year: '2018'
   tAOr0VwAAAAJ:vV6vV6tmYwMC:
-    citations: 1
+    citations: 2
     title: Free-Breathing Hybrid Technique for Simultaneous Morphological and Quantitative Abdominal Imaging at 0.55 T
     year: '2026'
   tAOr0VwAAAAJ:zYLM7Y9cAGgC:
