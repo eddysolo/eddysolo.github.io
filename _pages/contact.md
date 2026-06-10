@@ -116,7 +116,7 @@ fluid: true
     <div class="bento-card bento-card-main glass-dark p-3 p-md-4 d-flex flex-column justify-content-start text-left" style="height: 100%;">
       <h2 class="mb-3" style="font-weight: 800; color: #ffffff; font-size: 3rem; letter-spacing: -0.02em;">Let's Connect</h2>
       <p class="mb-4" style="font-size: 1.2rem; line-height: 1.6; color: rgba(255,255,255,0.85);">
-        We are always seeking ambitious, motivated, and passionate undergraduates, graduate students,and postdoctoral scholars to join our lab. We also welcome messages from researchers and clinicians interested in initiating collaborations.
+        We are always seeking ambitious, motivated, and passionate undergraduates, graduate students to join our lab. We also welcome messages from researchers and clinicians interested in initiating collaborations.
       </p>
 
       <ul class="list-unstyled mb-0 mt-3">
