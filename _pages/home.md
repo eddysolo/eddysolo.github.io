@@ -56,6 +56,24 @@ fluid: true
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
+  max-height: 27rem;
+  overflow-y: auto;
+  padding-right: 0.35rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--global-theme-color) transparent;
+}
+
+.home-news-stack::-webkit-scrollbar {
+  width: 0.45rem;
+}
+
+.home-news-stack::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.home-news-stack::-webkit-scrollbar-thumb {
+  background: var(--global-theme-color);
+  border-radius: 999px;
 }
 
 .home-news-card {
@@ -67,6 +85,20 @@ fluid: true
   justify-content: flex-start;
   flex: 0 0 auto;
   min-height: 0;
+}
+
+.home-news-card-link {
+  color: var(--global-text-color);
+  text-decoration: none;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.home-news-card-link:hover,
+.home-news-card-link:focus {
+  color: var(--global-text-color);
+  border-color: var(--global-theme-color);
+  transform: translateY(-1px);
+  text-decoration: none;
 }
 
 .home-news-date {
@@ -88,6 +120,16 @@ fluid: true
   margin: 0.2rem 0 0;
   font-size: 0.92rem;
   line-height: 1.33;
+}
+
+.home-news-link-label {
+  color: var(--global-theme-color);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.86rem;
+  font-weight: 700;
+  margin-top: 0.45rem;
 }
 
 @media (max-width: 991.98px) {
@@ -176,8 +218,15 @@ fluid: true
 
           <div class="home-news-stack text-left">
             {% assign latest_news = site.news | reverse %}
-            {% for item in latest_news limit: 3 %}
-              <div class="glass-box home-news-card">
+            {% for item in latest_news %}
+              {% assign publication_link = '' %}
+              {% if item.inline %}
+                {% assign href_parts = item.content | split: 'href="' %}
+                {% if href_parts.size > 1 %}
+                  {% assign publication_link = href_parts[1] | split: '"' | first %}
+                {% endif %}
+              {% endif %}
+              {% capture news_card_content %}
                 <div class="mb-1">
                   <span class="home-news-date">{{ item.date | date: '%b %-d, %Y' }}</span>
                   {% if item.inline %}
@@ -190,7 +239,19 @@ fluid: true
                     <p class="home-news-text">{{ item.excerpt | strip_html | truncate: 240 }}</p>
                   {% endif %}
                 </div>
-              </div>
+                {% if forloop.index <= 2 and publication_link != blank %}
+                  <span class="home-news-link-label">Read publication <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                {% endif %}
+              {% endcapture %}
+              {% if forloop.index <= 2 and publication_link != blank %}
+                <a class="glass-box home-news-card home-news-card-link" href="{{ publication_link }}" target="_blank" rel="noopener noreferrer">
+                  {{ news_card_content }}
+                </a>
+              {% else %}
+                <div class="glass-box home-news-card">
+                  {{ news_card_content }}
+                </div>
+              {% endif %}
             {% endfor %}
           </div>
         </div>
