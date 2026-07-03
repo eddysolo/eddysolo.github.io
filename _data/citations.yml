@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-05-29'
+  last_updated: '2026-07-03'
 papers:
   tAOr0VwAAAAJ:-f6ydRqryjwC:
     citations: 0
@@ -110,7 +110,7 @@ papers:
     title: "A Phase 2 Exploratory Trial Evaluating Computed Tomography\u2013Based Midtreatment Nodal Response to Select for De-escalated Chemoradiation Therapy in the Definitive Management of \u2026"
     year: '2025'
   tAOr0VwAAAAJ:M3NEmzRMIkIC:
-    citations: 14
+    citations: 16
     title: 'fastMRI Breast: A publicly available radial k-space dataset of breast dynamic contrast-enhanced MRI'
     year: '2025'
   tAOr0VwAAAAJ:M3ejUd6NZC8C:
@@ -142,7 +142,7 @@ papers:
     title: 'Dynamic MRI with locally low-rank subspace constraint: Towards 1-second temporal resolution aided by deep learning'
     year: '2025'
   tAOr0VwAAAAJ:Se3iqnhoufwC:
-    citations: 74
+    citations: 75
     title: Training a neural network for Gibbs and noise removal in diffusion MRI
     year: '2021'
   tAOr0VwAAAAJ:SeFeTyx0c_EC:
@@ -202,7 +202,7 @@ papers:
     title: 1D Convolutional Neural Network as Regularizer for Learning DCE-MRI Reconstruction
     year: '2022'
   tAOr0VwAAAAJ:ZHo1McVdvXMC:
-    citations: 0
+    citations: 1
     title: Dynamic breast MRI with Flexible Temporal Resolution Aided by Deep Learning
     year: '2026'
   tAOr0VwAAAAJ:ZeXyd9-uunAC:
@@ -266,7 +266,7 @@ papers:
     title: Measuring cellular-interstitial water exchange time in patients with head and neck cancer using time-dependent diffusion experiments
     year: '2023'
   tAOr0VwAAAAJ:j3f4tGmQtD8C:
-    citations: 14
+    citations: 15
     title: 'mcLARO: Multi-Contrast Learned Acquisition and Reconstruction Optimization for simultaneous quantitative multi-parametric mapping'
     year: '2024'
   tAOr0VwAAAAJ:kNdYIx-mwKoC:
@@ -286,11 +286,11 @@ papers:
     title: MR fingerprinting with implicit neural representation (FINR) for free-breathing 3D whole-liver water T1, water T2, fat fraction, and R2* mapping
     year: Unknown Year
   tAOr0VwAAAAJ:mB3voiENLucC:
-    citations: 14
+    citations: 16
     title: "Removing silicone artifacts in diffusion\u2010weighted breast MRI by means of shift\u2010resolved spatiotemporally encoding"
     year: '2016'
   tAOr0VwAAAAJ:mVmsd5A6BfQC:
-    citations: 48
+    citations: 49
     title: "Free\u2010breathing fat and R2* quantification in the liver using a stack\u2010of\u2010stars multi\u2010echo acquisition with respiratory\u2010resolved model\u2010based reconstruction"
     year: '2020'
   tAOr0VwAAAAJ:maZDTaKrznsC:
@@ -334,8 +334,8 @@ papers:
     title: High resolution diffusion MRI maps of mice with normal and dysfunctional placentas reveal clear fetal differences
     year: '2018'
   tAOr0VwAAAAJ:vV6vV6tmYwMC:
-    citations: 2
-    title: Free-Breathing Hybrid Technique for Simultaneous Morphological and Quantitative Abdominal Imaging at 0.55 T
+    citations: 3
+    title: Free-breathing hybrid technique for simultaneous morphological and quantitative abdominal imaging at 0.55 T
     year: '2026'
   tAOr0VwAAAAJ:zYLM7Y9cAGgC:
     citations: 0
