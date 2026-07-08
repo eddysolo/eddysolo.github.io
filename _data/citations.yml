@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-07-03'
+  last_updated: '2026-07-08'
 papers:
   tAOr0VwAAAAJ:-f6ydRqryjwC:
     citations: 0
@@ -38,7 +38,7 @@ papers:
     title: 'MP-RAVE: IR-Prepared T1 -Weighted Radial Stack-of-Stars 3D GRE imaging with retrospective motion correction'
     year: '2023'
   tAOr0VwAAAAJ:4TOpqqG69KYC:
-    citations: 30
+    citations: 31
     title: "Diffusion\u2010weighted breast MRI of malignancies with submillimeter resolution and immunity to artifacts by spatiotemporal encoding at 3T"
     year: '2020'
   tAOr0VwAAAAJ:70eg2SAEIzsC:
@@ -278,7 +278,7 @@ papers:
     title: 'An open-source platform for simulating internal organ motion: Preliminary results'
     year: '2023'
   tAOr0VwAAAAJ:lSLTfruPkqcC:
-    citations: 5
+    citations: 4
     title: Experience of how to build an MRI machine from scratch
     year: '2025'
   tAOr0VwAAAAJ:ldfaerwXgEUC:
@@ -334,8 +334,8 @@ papers:
     title: High resolution diffusion MRI maps of mice with normal and dysfunctional placentas reveal clear fetal differences
     year: '2018'
   tAOr0VwAAAAJ:vV6vV6tmYwMC:
-    citations: 3
-    title: Free-breathing hybrid technique for simultaneous morphological and quantitative abdominal imaging at 0.55 T
+    citations: 2
+    title: Free-Breathing Hybrid Technique for Simultaneous Morphological and Quantitative Abdominal Imaging at 0.55 T
     year: '2026'
   tAOr0VwAAAAJ:zYLM7Y9cAGgC:
     citations: 0
