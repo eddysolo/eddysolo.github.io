@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-07-08'
+  last_updated: '2026-07-17'
 papers:
   tAOr0VwAAAAJ:-f6ydRqryjwC:
     citations: 0
@@ -18,7 +18,7 @@ papers:
     title: 'Fully-refocused spatiotemporally-encoded MRI: robust MR imaging in the presence of metallic implants'
     year: '2012'
   tAOr0VwAAAAJ:35N4QoGY0k4C:
-    citations: 3
+    citations: 4
     title: "Navigator motion\u2010resolved MR fingerprinting using implicit neural representation: Feasibility for free\u2010breathing three\u2010dimensional whole\u2010liver multiparametric mapping"
     year: '2026'
   tAOr0VwAAAAJ:3fE2CSJIrl8C:
@@ -110,7 +110,7 @@ papers:
     title: "A Phase 2 Exploratory Trial Evaluating Computed Tomography\u2013Based Midtreatment Nodal Response to Select for De-escalated Chemoradiation Therapy in the Definitive Management of \u2026"
     year: '2025'
   tAOr0VwAAAAJ:M3NEmzRMIkIC:
-    citations: 16
+    citations: 17
     title: 'fastMRI Breast: A publicly available radial k-space dataset of breast dynamic contrast-enhanced MRI'
     year: '2025'
   tAOr0VwAAAAJ:M3ejUd6NZC8C:
