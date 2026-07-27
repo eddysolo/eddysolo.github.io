@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-07-17'
+  last_updated: '2026-07-27'
 papers:
   tAOr0VwAAAAJ:-f6ydRqryjwC:
     citations: 0
@@ -30,11 +30,11 @@ papers:
     title: 'Software-defined Radar for MRI Motion Correction: A versatile, vendor-independent Platform'
     year: '2026'
   tAOr0VwAAAAJ:4DMP91E08xMC:
-    citations: 47
+    citations: 48
     title: "Referenceless reconstruction of spatiotemporally encoded imaging data: principles and applications to real\u2010time MRI"
     year: '2014'
   tAOr0VwAAAAJ:4JMBOYKVnBMC:
-    citations: 4
+    citations: 5
     title: 'MP-RAVE: IR-Prepared T1 -Weighted Radial Stack-of-Stars 3D GRE imaging with retrospective motion correction'
     year: '2023'
   tAOr0VwAAAAJ:4TOpqqG69KYC:
@@ -78,7 +78,7 @@ papers:
     title: Rapid quantitative susceptibility mapping using single-shot echo planar time-resolved imaging
     year: '2025'
   tAOr0VwAAAAJ:IWHjjKOFINEC:
-    citations: 36
+    citations: 37
     title: "Overcoming limitations in diffusion\u2010weighted MRI of breast by spatio\u2010temporal encoding"
     year: '2015'
   tAOr0VwAAAAJ:IjCSPb-OGe4C:
@@ -106,11 +106,11 @@ papers:
     title: Robust in vivo DTI by Spatiotemporal Encoding
     year: '2016'
   tAOr0VwAAAAJ:M05iB0D1s5AC:
-    citations: 0
+    citations: 1
     title: "A Phase 2 Exploratory Trial Evaluating Computed Tomography\u2013Based Midtreatment Nodal Response to Select for De-escalated Chemoradiation Therapy in the Definitive Management of \u2026"
     year: '2025'
   tAOr0VwAAAAJ:M3NEmzRMIkIC:
-    citations: 17
+    citations: 19
     title: 'fastMRI Breast: A publicly available radial k-space dataset of breast dynamic contrast-enhanced MRI'
     year: '2025'
   tAOr0VwAAAAJ:M3ejUd6NZC8C:
@@ -223,8 +223,8 @@ papers:
     year: '2013'
   tAOr0VwAAAAJ:aqlVkmm33-oC:
     citations: 23
-    title: "Multiple\u2010coil k\u2010space interpolation enhances resolution in single\u2010shot spatiotemporal MRI"
-    year: '2018'
+    title: Multiple-coil k-space interpolation enhances resolution in single-shot spatiotemporal MRI
+    year: '2017'
   tAOr0VwAAAAJ:blknAaTinKkC:
     citations: 0
     title: Contrast Kinetic Model-based GRASP Reconstruction for Small Animal Imaging at 7T
@@ -278,7 +278,7 @@ papers:
     title: 'An open-source platform for simulating internal organ motion: Preliminary results'
     year: '2023'
   tAOr0VwAAAAJ:lSLTfruPkqcC:
-    citations: 4
+    citations: 5
     title: Experience of how to build an MRI machine from scratch
     year: '2025'
   tAOr0VwAAAAJ:ldfaerwXgEUC:
@@ -294,7 +294,7 @@ papers:
     title: "Free\u2010breathing fat and R2* quantification in the liver using a stack\u2010of\u2010stars multi\u2010echo acquisition with respiratory\u2010resolved model\u2010based reconstruction"
     year: '2020'
   tAOr0VwAAAAJ:maZDTaKrznsC:
-    citations: 3
+    citations: 4
     title: Digital reference object toolkit of breast DCE MRI for quantitative evaluation of image reconstruction and analysis methods
     year: '2024'
   tAOr0VwAAAAJ:ns9cj8rnVeAC:
@@ -334,7 +334,7 @@ papers:
     title: High resolution diffusion MRI maps of mice with normal and dysfunctional placentas reveal clear fetal differences
     year: '2018'
   tAOr0VwAAAAJ:vV6vV6tmYwMC:
-    citations: 2
+    citations: 3
     title: Free-Breathing Hybrid Technique for Simultaneous Morphological and Quantitative Abdominal Imaging at 0.55 T
     year: '2026'
   tAOr0VwAAAAJ:zYLM7Y9cAGgC:
