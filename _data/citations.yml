@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-07-27'
+  last_updated: '2026-08-12'
 papers:
   tAOr0VwAAAAJ:-f6ydRqryjwC:
     citations: 0
@@ -50,7 +50,7 @@ papers:
     title: Free-Breathing Radial Imaging using a Pilot-Tone RF Transmitter for Detection of Respiratory Motion
     year: '2020'
   tAOr0VwAAAAJ:8k81kl-MbHgC:
-    citations: 51
+    citations: 52
     title: 'Diffusion weighted MRI by spatiotemporal encoding: analytical description and in vivo validations'
     year: '2013'
   tAOr0VwAAAAJ:9ZlFYXVOiuMC:
@@ -64,7 +64,7 @@ papers:
   tAOr0VwAAAAJ:BqipwSGYUEgC:
     citations: 1
     title: 'An open-source platform for simulating internal organ motion: Preliminary results'
-    year: Unknown Year
+    year: '2023'
   tAOr0VwAAAAJ:GnPB-g6toBAC:
     citations: 0
     title: 'mcLARO: Multi-Contrast Learned Acquisition and Reconstruction Optimization for simultaneous multi-contrast and multi-parametric mapping'
@@ -78,7 +78,7 @@ papers:
     title: Rapid quantitative susceptibility mapping using single-shot echo planar time-resolved imaging
     year: '2025'
   tAOr0VwAAAAJ:IWHjjKOFINEC:
-    citations: 37
+    citations: 39
     title: "Overcoming limitations in diffusion\u2010weighted MRI of breast by spatio\u2010temporal encoding"
     year: '2015'
   tAOr0VwAAAAJ:IjCSPb-OGe4C:
@@ -98,7 +98,7 @@ papers:
     title: 'Detecting Respiratory Motion Using Accelerometer Sensors: Preliminary Insight'
     year: '2021'
   tAOr0VwAAAAJ:L8Ckcad2t8MC:
-    citations: 27
+    citations: 28
     title: Method apparatus and system for determining a thermal signature
     year: '2015'
   tAOr0VwAAAAJ:LkGwnXOMwfcC:
@@ -110,7 +110,7 @@ papers:
     title: "A Phase 2 Exploratory Trial Evaluating Computed Tomography\u2013Based Midtreatment Nodal Response to Select for De-escalated Chemoradiation Therapy in the Definitive Management of \u2026"
     year: '2025'
   tAOr0VwAAAAJ:M3NEmzRMIkIC:
-    citations: 19
+    citations: 20
     title: 'fastMRI Breast: A publicly available radial k-space dataset of breast dynamic contrast-enhanced MRI'
     year: '2025'
   tAOr0VwAAAAJ:M3ejUd6NZC8C:
@@ -126,7 +126,7 @@ papers:
     title: 'Sub-Second GRASP-LLR DCE: Locally Low-Rank Subspace Constraint aided by Deep Learning'
     year: Unknown Year
   tAOr0VwAAAAJ:QIV2ME_5wuYC:
-    citations: 21
+    citations: 22
     title: Ultrafast in vivo diffusion imaging of stroke at 21.1 T by spatiotemporal encoding
     year: '2015'
   tAOr0VwAAAAJ:R3hNpaxXUhUC:
@@ -135,7 +135,7 @@ papers:
     year: '2022'
   tAOr0VwAAAAJ:RGFaLdJalmkC:
     citations: 3
-    title: 'ezyMRI: How to build an MRI machine from scratch--Experience from a four-day hackathon'
+    title: 'ezyMRI: how to build an MRI machine from scratch--experience from a four-day hackathon'
     year: '2024'
   tAOr0VwAAAAJ:RYcK_YlVTxYC:
     citations: 1
@@ -223,8 +223,8 @@ papers:
     year: '2013'
   tAOr0VwAAAAJ:aqlVkmm33-oC:
     citations: 23
-    title: Multiple-coil k-space interpolation enhances resolution in single-shot spatiotemporal MRI
-    year: '2017'
+    title: "Multiple\u2010coil k\u2010space interpolation enhances resolution in single\u2010shot spatiotemporal MRI"
+    year: '2018'
   tAOr0VwAAAAJ:blknAaTinKkC:
     citations: 0
     title: Contrast Kinetic Model-based GRASP Reconstruction for Small Animal Imaging at 7T
@@ -238,7 +238,7 @@ papers:
     title: "High\u2010resolution diffusion MRI studies of development in pregnant mice visualized by novel spatiotemporal encoding schemes"
     year: '2020'
   tAOr0VwAAAAJ:eQOLeE2rZwMC:
-    citations: 35
+    citations: 34
     title: In vivo direct molecular imaging of early tumorigenesis and malignant progression induced by transgenic expression of GFP-Met
     year: '2006'
   tAOr0VwAAAAJ:g5m5HwL7SMYC:
@@ -290,7 +290,7 @@ papers:
     title: "Removing silicone artifacts in diffusion\u2010weighted breast MRI by means of shift\u2010resolved spatiotemporally encoding"
     year: '2016'
   tAOr0VwAAAAJ:mVmsd5A6BfQC:
-    citations: 49
+    citations: 48
     title: "Free\u2010breathing fat and R2* quantification in the liver using a stack\u2010of\u2010stars multi\u2010echo acquisition with respiratory\u2010resolved model\u2010based reconstruction"
     year: '2020'
   tAOr0VwAAAAJ:maZDTaKrznsC:
@@ -326,7 +326,7 @@ papers:
     title: Method apparatus and system for determining a data signature of 3D image
     year: '2019'
   tAOr0VwAAAAJ:u5HHmVD_uO8C:
-    citations: 73
+    citations: 72
     title: Major mouse placental compartments revealed by diffusion-weighted MRI, contrast-enhanced MRI, and fluorescence imaging
     year: '2014'
   tAOr0VwAAAAJ:ufrVoPGSRksC:
@@ -335,7 +335,7 @@ papers:
     year: '2018'
   tAOr0VwAAAAJ:vV6vV6tmYwMC:
     citations: 3
-    title: Free-Breathing Hybrid Technique for Simultaneous Morphological and Quantitative Abdominal Imaging at 0.55 T
+    title: Free-breathing hybrid technique for simultaneous morphological and quantitative abdominal imaging at 0.55 T
     year: '2026'
   tAOr0VwAAAAJ:zYLM7Y9cAGgC:
     citations: 0
