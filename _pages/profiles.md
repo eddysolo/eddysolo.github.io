@@ -31,6 +31,12 @@ profiles:
     image_position: center 24%
     url: /team/ori-shahar/
 
+intern_profiles:
+  - name: Wildisley Filho
+    role: International Intern
+    image: wildisley_filho.jpeg
+    url: /team/wildisley-filho/
+
 alumni_profiles:
   - name: Chao Li
     role: Weill Cornell University
