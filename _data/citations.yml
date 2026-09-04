@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-08-12'
+  last_updated: '2026-09-04'
 papers:
   tAOr0VwAAAAJ:-f6ydRqryjwC:
     citations: 0
@@ -106,11 +106,11 @@ papers:
     title: Robust in vivo DTI by Spatiotemporal Encoding
     year: '2016'
   tAOr0VwAAAAJ:M05iB0D1s5AC:
-    citations: 1
+    citations: 3
     title: "A Phase 2 Exploratory Trial Evaluating Computed Tomography\u2013Based Midtreatment Nodal Response to Select for De-escalated Chemoradiation Therapy in the Definitive Management of \u2026"
     year: '2025'
   tAOr0VwAAAAJ:M3NEmzRMIkIC:
-    citations: 20
+    citations: 22
     title: 'fastMRI Breast: A publicly available radial k-space dataset of breast dynamic contrast-enhanced MRI'
     year: '2025'
   tAOr0VwAAAAJ:M3ejUd6NZC8C:
@@ -130,7 +130,7 @@ papers:
     title: Ultrafast in vivo diffusion imaging of stroke at 21.1 T by spatiotemporal encoding
     year: '2015'
   tAOr0VwAAAAJ:R3hNpaxXUhUC:
-    citations: 28
+    citations: 29
     title: Time-dependent diffusivity and kurtosis in phantoms and patients with head and neck cancer
     year: '2022'
   tAOr0VwAAAAJ:RGFaLdJalmkC:
@@ -142,7 +142,7 @@ papers:
     title: 'Dynamic MRI with locally low-rank subspace constraint: Towards 1-second temporal resolution aided by deep learning'
     year: '2025'
   tAOr0VwAAAAJ:Se3iqnhoufwC:
-    citations: 75
+    citations: 79
     title: Training a neural network for Gibbs and noise removal in diffusion MRI
     year: '2021'
   tAOr0VwAAAAJ:SeFeTyx0c_EC:
