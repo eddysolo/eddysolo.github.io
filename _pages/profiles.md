@@ -13,6 +13,10 @@ profiles:
     role: Principal Investigator
     image: eddy_solomon.jpg
     url: /team/eddy-solomon/
+  - name: Leonid Odessky
+    role: Lab Engineer
+    image: Leonid_Odessky.png
+    url: /team/leonid-odessky/
   - name: Bar Ben Zino
     role: MSc Student
     image: bar_ben_zino.jpg
